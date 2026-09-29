@@ -1,0 +1,8 @@
+{
+  "name":"family-heritage-tree",
+  "private":true,
+  "version":"1.0.0",
+  "type":"module",
+  "scripts":{"seed":"node scripts/seed.mjs"},
+  "dependencies":{"pg":"^8.16.3"}
+}

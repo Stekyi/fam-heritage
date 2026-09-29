@@ -1,0 +1,4755 @@
+{
+  "people": [
+    {
+      "id": "iA2EN3",
+      "given_name": "Broni",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Son of Kwaki Amoako (Aframa's son) and maternal uncle of Kwasi Badu. In the Akan matrilineal system, his sister's son (Kwasi Badu) was the next in line. Occupied the Oda stool but unfortunately died a week before he was to be outdoored. Succeeded by Kwasi Badu's line (Nana Anyani Buadum III).",
+      "source": "html"
+    },
+    {
+      "id": "iA8RXY",
+      "given_name": "Kyeraa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Second of three ancestral sisters. Origin: Oda Aboho sacred rock near Akyim Oda.",
+      "source": "html"
+    },
+    {
+      "id": "iAD84X",
+      "given_name": "Amaoto",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Asua Akowa.",
+      "source": "html"
+    },
+    {
+      "id": "iAHXG5",
+      "given_name": "Epirato",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Opanyin Anyani. Leader of the Anyani line (formerly the Gyase to the Oda stool). This line does not relate by blood to the main Asankran family but has a friendly association.",
+      "source": "html"
+    },
+    {
+      "id": "iALWSA",
+      "given_name": "Akua",
+      "surname": "Birasso",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iAO2GG",
+      "given_name": "Bossom",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iASCIE",
+      "given_name": "Abukwaw",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kyenesee Tekyi.",
+      "source": "html"
+    },
+    {
+      "id": "iATO4Z",
+      "given_name": "Kwasi",
+      "surname": "Buah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iAWE9I",
+      "given_name": "Duma",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa. Line linked to Aframa.",
+      "source": "html"
+    },
+    {
+      "id": "iAWTIH",
+      "given_name": "Kwasi",
+      "surname": "Tweneboah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iAZKFJ",
+      "given_name": "Papa",
+      "surname": "Darmang",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Amoakoah and J.E. Darmang.",
+      "source": "html"
+    },
+    {
+      "id": "iB053Q",
+      "given_name": "Kwabena",
+      "surname": "Gya",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kuwa.",
+      "source": "html"
+    },
+    {
+      "id": "iB17TJ",
+      "given_name": "Marfua",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Yaa Brafan. Children: Saa Ara, Appiah Attrama.",
+      "source": "html"
+    },
+    {
+      "id": "iBDFCK",
+      "given_name": "Akosua",
+      "surname": "Mensine",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko. Mother of E.B. Cudjoe (author of the 2017 history of Asankran) and 11 other children.",
+      "source": "html"
+    },
+    {
+      "id": "iBL4VR",
+      "given_name": "J.K.",
+      "surname": "Amponsah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Asua Akowa.",
+      "source": "html"
+    },
+    {
+      "id": "iBULV3",
+      "given_name": "Boah",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Koko Sebe.",
+      "source": "html"
+    },
+    {
+      "id": "iC03H0",
+      "given_name": "Gyampraa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Koko Sebe.",
+      "source": "html"
+    },
+    {
+      "id": "iC8CX0",
+      "given_name": "Biyaah",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa — second child. Did not bring forth (no children recorded).",
+      "source": "html"
+    },
+    {
+      "id": "iCDA5K",
+      "given_name": "Foriwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appianimaa. Mother of Nyantah (Tumtum), P.K. Buadee (1935 author of the Asankran history), Kwaku Buadee, and Asi.",
+      "source": "html"
+    },
+    {
+      "id": "iCEWOK",
+      "given_name": "Akua",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "source": "html"
+    },
+    {
+      "id": "iCI91J",
+      "given_name": "Kyi",
+      "surname": "Boadu",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Son of Anima Kyirisuo. Survived when Anima died in the thunderstorm. Became head of the family. Led the great journey — accompanied by grandchildren, slaves and a dog — to find new fertile land. After long journey met Agonahene at Mankaben at Agyakaa; the chief of Bogo allowed them to settle at Gyedua Kankan near the Koto stream.",
+      "source": "html"
+    },
+    {
+      "id": "iCIZBC",
+      "given_name": "Kofi Gyabeng (E.B.",
+      "surname": "Cudjoe)",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine. Author of The History of the Asankran Kona Clan (November 2017).",
+      "source": "html"
+    },
+    {
+      "id": "iCMFFA",
+      "given_name": "Ama",
+      "surname": "Mbra",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa. Brought forth Kojo Ayinor, Kwaninyi, Kwasi Amuah, Akua Ahemah and Amponetamaa.",
+      "source": "html"
+    },
+    {
+      "id": "iCXI6T",
+      "given_name": "Mesuwah",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra. Did not bring forth children.",
+      "source": "html"
+    },
+    {
+      "id": "iDDCJO",
+      "given_name": "Nsowah",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu.",
+      "source": "html"
+    },
+    {
+      "id": "iDIVW5",
+      "given_name": "Kwaninyi",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Mbra.",
+      "source": "html"
+    },
+    {
+      "id": "iDN9P9",
+      "given_name": "Buadu",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Brakoma.",
+      "source": "html"
+    },
+    {
+      "id": "iDR3TF",
+      "given_name": "Dampaah",
+      "surname": null,
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Third chief of the Oda Aboho era. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iDWG09",
+      "given_name": "Attobrah",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra. Did not bring forth children.",
+      "source": "html"
+    },
+    {
+      "id": "iECYCJ",
+      "given_name": "Efi",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ntiwa.",
+      "source": "html"
+    },
+    {
+      "id": "iED2TV",
+      "given_name": "Kyeriwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Bombo (Akua Afra line).",
+      "source": "html"
+    },
+    {
+      "id": "iEN50D",
+      "given_name": "Ama",
+      "surname": "Tano",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iENDHM",
+      "given_name": "Kofi",
+      "surname": "Siwan",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iEP8I3",
+      "given_name": "Twumwaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ntiwa.",
+      "source": "html"
+    },
+    {
+      "id": "iETH0K",
+      "given_name": "Bombo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Koko Sebe (different from Bombo child of Akua Afra).",
+      "source": "html"
+    },
+    {
+      "id": "iEZRXM",
+      "given_name": "Asi",
+      "surname": "Pieduwa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kyenesee Tekyi.",
+      "source": "html"
+    },
+    {
+      "id": "iF4I6L",
+      "given_name": "Daniel Aduabaan",
+      "surname": "Tekyi",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "source": "html"
+    },
+    {
+      "id": "iF7WWV",
+      "given_name": "Ama",
+      "surname": "Duku",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iFCT80",
+      "given_name": "Samuel Albert Kofi",
+      "surname": "Tekyi",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Father of Samuel Asamoah Tekyi.",
+      "source": "html"
+    },
+    {
+      "id": "iFDZY1",
+      "given_name": "Bene",
+      "surname": null,
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Fifth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iFPBHG",
+      "given_name": "Konadu",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Sister of Aframa (sibling, not daughter). Shares the same unknown parents native to Asankran.",
+      "source": "html"
+    },
+    {
+      "id": "iFU5K6",
+      "given_name": "Appiah",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa — followed Biyaah. Had six children: Kruwa, Akua Mra, Nyaa, Akua Afra, Badu, Kwakyem.",
+      "source": "html"
+    },
+    {
+      "id": "iG1256",
+      "given_name": "Akua",
+      "surname": "Amoakoah",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iG6B9E",
+      "given_name": "Nsowah",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kruwa. Did not bring forth.",
+      "source": "html"
+    },
+    {
+      "id": "iGB7CW",
+      "given_name": "Kofi",
+      "surname": "Totwene",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iGCYEQ",
+      "given_name": "Kwaku Yeboah (T.K.",
+      "surname": "Mensah)",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Adjoa Adua.",
+      "source": "html"
+    },
+    {
+      "id": "iGDHVI",
+      "given_name": "Kwaku",
+      "surname": "Mensah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iGVD1B",
+      "given_name": "King",
+      "surname": "Kofuo",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Second chief of the Oda Aboho era. Notable birth: born with fist closed; a fetish priest opened his hand and from it fell a toga with which he could fight many people; named Kofuo for his fighting skills. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iH5SYH",
+      "given_name": "Akua",
+      "surname": "Mra",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appiah. Mother of Nyantah (Kokoo), Amoo, Kwamina.",
+      "source": "html"
+    },
+    {
+      "id": "iH94B3",
+      "given_name": "Asi",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Foriwa.",
+      "source": "html"
+    },
+    {
+      "id": "iHDKXM",
+      "given_name": "Asi",
+      "surname": "Praba",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Asirifua.",
+      "source": "html"
+    },
+    {
+      "id": "iHFN3F",
+      "given_name": "Nsowa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Sister of Aframa (sibling, not daughter). Shares the same unknown parents native to Asankran.",
+      "source": "html"
+    },
+    {
+      "id": "iHJ1OR",
+      "given_name": "Asirifua",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra. Children: Attrama, Abena Anyensua, Asi Praba.",
+      "source": "html"
+    },
+    {
+      "id": "iHNQVM",
+      "given_name": "Unknown Asante Husband of",
+      "surname": "Anima",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Asante man who married Anima Kyirisuo. Unnamed in the historical record.",
+      "source": "html"
+    },
+    {
+      "id": "iI1ME4",
+      "given_name": "Kwabena Agyei",
+      "surname": "Mensah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Hannah Obiri-Yeboah.",
+      "source": "html"
+    },
+    {
+      "id": "iI8HWE",
+      "given_name": "Ampofo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Yaa Gyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iI8PZE",
+      "given_name": "Emra",
+      "surname": "Kyereama",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "First child of Anima Kyirisuo and her Asante husband. Born through help of a fetish priest when Anima was initially barren.",
+      "source": "html"
+    },
+    {
+      "id": "iITU2E",
+      "given_name": "Unknown Mother of Aframa",
+      "surname": "family",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown ancestor — native Asankran woman, descendant of the founding clan.",
+      "source": "html"
+    },
+    {
+      "id": "iIYDO9",
+      "given_name": "Kwaku",
+      "surname": "Buadee",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Foriwa.",
+      "source": "html"
+    },
+    {
+      "id": "iJ1REH",
+      "given_name": "Adjoa",
+      "surname": "Adua",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iJBCCS",
+      "given_name": "Ampofoa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iJCJST",
+      "given_name": "Yaw",
+      "surname": "Bi",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iJCOHV",
+      "given_name": "Kofi",
+      "surname": "Boafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iJDNGX",
+      "given_name": "Abo",
+      "surname": "Kwabina",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Ninth and last named chief of the Oda Aboho era. After Abo Kwabina the clan record transitions to the Asankran Branch beginning with Kye Boadu. Unknown generations connect this era to Kye Boadu.",
+      "source": "html"
+    },
+    {
+      "id": "iJMHPC",
+      "given_name": "Badu",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwakwa.",
+      "source": "html"
+    },
+    {
+      "id": "iJPI7N",
+      "given_name": "Amoo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Mra.",
+      "source": "html"
+    },
+    {
+      "id": "iJQKRF",
+      "given_name": "Ama",
+      "surname": "Boaa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iJVTJG",
+      "given_name": "Opanyin",
+      "surname": "Anyani",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa. Line formerly the Gyase to the Oda stool. Leader was Epirato.",
+      "source": "html"
+    },
+    {
+      "id": "iJX5HR",
+      "given_name": "P.K.",
+      "surname": "Buadee",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Foriwa. Author of the 1935 Asankran Kona clan history document used as a primary source for this tree.",
+      "source": "html"
+    },
+    {
+      "id": "iK20BT",
+      "given_name": "Kwakyi",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwakwa.",
+      "source": "html"
+    },
+    {
+      "id": "iK2YZQ",
+      "given_name": "Kaya",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Bombo (Akua Afra line).",
+      "source": "html"
+    },
+    {
+      "id": "iKB2GN",
+      "given_name": "Unknown",
+      "surname": "ancestor — Oda Aboho era",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown female ancestor descended from Kyekye Ampem (first of the three sisters). Represents the generational gap between the three sisters and the nine named Oda Aboho chiefs. Exact identity not recorded in oral tradition; all nine chiefs are described as descendants of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iKGOY0",
+      "given_name": "Abena",
+      "surname": "Agyeriwa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iKRJ7J",
+      "given_name": "Kwakwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appianimaa. Father/mother of Kwakyi, Kwabena Agya, Ntiwa, Amanfo, and Badu.",
+      "source": "html"
+    },
+    {
+      "id": "iKS3UD",
+      "given_name": "Kofi",
+      "surname": "Forjour",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ahema. Only child.",
+      "source": "html"
+    },
+    {
+      "id": "iKT7IJ",
+      "given_name": "Ampong",
+      "surname": "Sagyefuo",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Sixth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iL34SC",
+      "given_name": "Afua",
+      "surname": "Mansah",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iL468V",
+      "given_name": "Bruma Ankomah Sono",
+      "surname": "Bofoo",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Hunter from Bruma — the elephant hunter (Bofoo). Met Gyapanyin Kyimah at Aboman. The two took oath to share the forest land, boundary marked by a huge silk cotton tree. Key historical figure at the founding of Asankran. Not a blood ancestor of the clan.",
+      "source": "html"
+    },
+    {
+      "id": "iL8T7S",
+      "given_name": "Abena",
+      "surname": "Twumwa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iLHTGE",
+      "given_name": "Amoo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kyenesee Tekyi.",
+      "source": "html"
+    },
+    {
+      "id": "iLJCF7",
+      "given_name": "Unknown Mother of Kye Boadu",
+      "surname": "line",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown ancestor — through the Asankran founding family line descended from the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iLLKUB",
+      "given_name": "Appiah",
+      "surname": "Bosso",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu.",
+      "source": "html"
+    },
+    {
+      "id": "iLNUZS",
+      "given_name": "Kwasi",
+      "surname": "Yane",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu.",
+      "source": "html"
+    },
+    {
+      "id": "iLPNRW",
+      "given_name": "Abena",
+      "surname": "Anyensua",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Asirifua.",
+      "source": "html"
+    },
+    {
+      "id": "iLWDHY",
+      "given_name": "Amuah",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "source": "html"
+    },
+    {
+      "id": "iMIOLP",
+      "given_name": "Joe",
+      "surname": "Atta",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Brakoma.",
+      "source": "html"
+    },
+    {
+      "id": "iMM0IS",
+      "given_name": "Angelina",
+      "surname": "Adams",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Wife of Samuel Asamoah Tekyi.",
+      "source": "html"
+    },
+    {
+      "id": "iMMRXY",
+      "given_name": "Attrama",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Asirifua.",
+      "source": "html"
+    },
+    {
+      "id": "iMP1ZV",
+      "given_name": "Appianimaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Lineage figure in the Asankran family history. Ancestor of P.K. Buadee (1935) who documented the Asankran Kona clan history. No parents named in the record; connected to the Asankran family.",
+      "source": "html"
+    },
+    {
+      "id": "iMQG2G",
+      "given_name": "Koko",
+      "surname": "Sebe",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akoma.",
+      "source": "html"
+    },
+    {
+      "id": "iMQWPS",
+      "given_name": "Kwasi",
+      "surname": "Badu",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Descendant of Kwaki Amoako (Aframa's son). Father of Nana Anyani Buadum III (Ohene of Asankrangwa). Broni (who occupied the Oda stool but died before being outdoored) was Kwasi Badu's maternal uncle — i.e. the brother of Kwasi Badu's mother (Kwaki Amoako's daughter).",
+      "source": "html"
+    },
+    {
+      "id": "iMREY0",
+      "given_name": "Kwamina",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Mra.",
+      "source": "html"
+    },
+    {
+      "id": "iMRURF",
+      "given_name": "Candace Asamoah",
+      "surname": "Tekyi",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": null,
+      "source": "html"
+    },
+    {
+      "id": "iMWCKG",
+      "given_name": "Badu",
+      "surname": "Aso",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kuwa. Brought forth Maabua, Kwodwo Amponsah (Aidoo), and Akua Marko (Mary Buadee).",
+      "source": "html"
+    },
+    {
+      "id": "iN4YB8",
+      "given_name": "Unknown Father of Kye Boadu",
+      "surname": "line",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown ancestor — descendant of the three sisters through the Oda Aboho chief succession. Exact identity not recorded in oral tradition. Represents the generational gap between the Oda Aboho chiefs era and Kye Boadu.",
+      "source": "html"
+    },
+    {
+      "id": "iN52VZ",
+      "given_name": "Afua",
+      "surname": "Aso",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu.",
+      "source": "html"
+    },
+    {
+      "id": "iN6AGH",
+      "given_name": "Nyarko",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kruwa.",
+      "source": "html"
+    },
+    {
+      "id": "iNAEKP",
+      "given_name": "Bombo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra (different from Bombo child of Koko Sebe). Children: Kyeriwa, Kaya.",
+      "source": "html"
+    },
+    {
+      "id": "iNB464",
+      "given_name": "Yaa",
+      "surname": "Brafan",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa. Line linked to Aframa.",
+      "source": "html"
+    },
+    {
+      "id": "iNEF15",
+      "given_name": "Yaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "source": "html"
+    },
+    {
+      "id": "iNJSS9",
+      "given_name": "Nyarko",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ayaa Panin.",
+      "source": "html"
+    },
+    {
+      "id": "iNMPZZ",
+      "given_name": "Kyekye",
+      "surname": "Ampem",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "First of three ancestral sisters. Said to have come into existence from the earth under the sacred rock at Oda Aboho near Akyim Oda. The Asankran family (Kona branch of Ekuona clan) are descendants of these three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iNYFX4",
+      "given_name": "Brakoma",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Koko Sebe.",
+      "source": "html"
+    },
+    {
+      "id": "iO0GIZ",
+      "given_name": "Nyaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appiah.",
+      "source": "html"
+    },
+    {
+      "id": "iO414T",
+      "given_name": "Maabua",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu Aso.",
+      "source": "html"
+    },
+    {
+      "id": "iO57VF",
+      "given_name": "Nyantah",
+      "surname": "(Tumtum)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Foriwa (different from Nyantah Kokoo, child of Akua Mra in the Appiah line).",
+      "source": "html"
+    },
+    {
+      "id": "iO9Z4G",
+      "given_name": "Kwabena",
+      "surname": "Agya",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwakwa.",
+      "source": "html"
+    },
+    {
+      "id": "iOEEJ3",
+      "given_name": "Akua",
+      "surname": "Ahemah",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Mbra. Children: Ayaa Panin, Ama Baaso.",
+      "source": "html"
+    },
+    {
+      "id": "iOK6TF",
+      "given_name": "Amponetamaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Mbra.",
+      "source": "html"
+    },
+    {
+      "id": "iOQWE7",
+      "given_name": "Akua",
+      "surname": "Nyarko",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kruwa. Mother of Kwasi Wiredu, Kwaku Mensah, Akosua Mensine, Adjoa Adua, Kofi Siwan, Akua Amoakoah and Kwasi Afari.",
+      "source": "html"
+    },
+    {
+      "id": "iOSH6D",
+      "given_name": "Anim",
+      "surname": "Berimah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "First named chief of the Oda Aboho era. Descendant of the three sisters. Listed in the Asankran Kona clan succession of chiefs (P.K. Buadee 1935). Specific parent-child links within this chief succession are not recorded; all are descendants of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iOVJY8",
+      "given_name": "Kuwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appianimaa. Mother of Kwayke, Kwabena Gya, and Badu Aso.",
+      "source": "html"
+    },
+    {
+      "id": "iOVQOH",
+      "given_name": "Ayaa",
+      "surname": "Panin",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Ahemah. Children: Ebbah Kojo, Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iOZA1V",
+      "given_name": "Obrempon Asamoah",
+      "surname": "Tekyi",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Samuel Asamoah Tekyi and Angelina Adams.",
+      "source": "html"
+    },
+    {
+      "id": "iP1EZ4",
+      "given_name": "Kyenesee",
+      "surname": "Tekyi",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra. Children: Amoo, Abukwaw, Asi Pieduwa.",
+      "source": "html"
+    },
+    {
+      "id": "iP9S2O",
+      "given_name": "Unknown",
+      "surname": "sister of Kyi Boadu",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown daughter of Anima Kyirisuo and her Asante husband — an unnamed sibling of Kyi Boadu. In Akan matrilineal tradition the leadership passes through the sister's line; Gyapanyin Kyimah (successor to Kye Boadu) is her son, making him the maternal nephew of Kyi Boadu. Exact name not recorded in oral tradition.",
+      "source": "html"
+    },
+    {
+      "id": "iPK6VT",
+      "given_name": "Akoma",
+      "surname": "Tawiah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa and Nana Kurenti.",
+      "source": "html"
+    },
+    {
+      "id": "iPNLIY",
+      "given_name": "Asamoah",
+      "surname": "Kwadwo",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Yaa Brafan.",
+      "source": "html"
+    },
+    {
+      "id": "iPOD4K",
+      "given_name": "Kwoa",
+      "surname": "Abroah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra.",
+      "source": "html"
+    },
+    {
+      "id": "iQ0WG9",
+      "given_name": "Amankwah",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra.",
+      "source": "html"
+    },
+    {
+      "id": "iQA730",
+      "given_name": "Ampong",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu.",
+      "source": "html"
+    },
+    {
+      "id": "iQGMNH",
+      "given_name": "E.K.",
+      "surname": "Armah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ntiwa's unnamed sister. Raised at Prestea Himan.",
+      "source": "html"
+    },
+    {
+      "id": "iQKDDO",
+      "given_name": "Tikwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iQQ07R",
+      "given_name": "Appiah",
+      "surname": "Abukwaw",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Yaa Gyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iQYNID",
+      "given_name": "Bereko",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Yaa Gyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iR216Z",
+      "given_name": "Akumoah",
+      "surname": "Sekyere Pre",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Seventh chief of the Oda Aboho era. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iR4CJP",
+      "given_name": "Kwayke",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kuwa.",
+      "source": "html"
+    },
+    {
+      "id": "iR82L2",
+      "given_name": "Appiah",
+      "surname": "Attrama",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Marfua.",
+      "source": "html"
+    },
+    {
+      "id": "iRBSD1",
+      "given_name": "Atta",
+      "surname": "Kru",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Fourth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iRF5NH",
+      "given_name": "Asi",
+      "surname": "Amowee",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iRG1PZ",
+      "given_name": "Abena",
+      "surname": "Ankora",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kruwa.",
+      "source": "html"
+    },
+    {
+      "id": "iRSL0Z",
+      "given_name": "Kwaki",
+      "surname": "Amoako",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Aframa. Occupied the Oda Stool but later abdicated. His line continues through Kwasi Badu (Ohene of Asankrangwa's ancestor) and Broni (who occupied the Oda stool but died a week before being outdoored).",
+      "source": "html"
+    },
+    {
+      "id": "iRYAIG",
+      "given_name": "Unknown Father of Aframa",
+      "surname": "family",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown ancestor — native of Asankran, descended from the founding clan through Gyapanyin Kyimah's lineage. Represents the gap between Gyapanyin's era and Aframa's generation. Aframa is described as a native of Asankran in the historical record.",
+      "source": "html"
+    },
+    {
+      "id": "iRYETP",
+      "given_name": "Kwaku",
+      "surname": "Badu",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine. Father of Tinewa.",
+      "source": "html"
+    },
+    {
+      "id": "iS2OY4",
+      "given_name": "Oda Aboho",
+      "surname": "Sacred Rock",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "The sacred rock at Oda Aboho near Akyim Oda. The three ancestral sisters (Kyekye Ampem, Kyeraa, Ankyaah) are said to have come into existence from the earth beneath this rock. The place is still worshipped and is named Oda Aboho after the condition of the place. This is the mythological origin of the Asankran Kona clan — one of the seven major Akan families.",
+      "source": "html"
+    },
+    {
+      "id": "iS5982",
+      "given_name": "Kyekye",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyantah (Kokoo).",
+      "source": "html"
+    },
+    {
+      "id": "iSDWL0",
+      "given_name": "Ebbah",
+      "surname": "Kojo",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ayaa Panin.",
+      "source": "html"
+    },
+    {
+      "id": "iSMGL9",
+      "given_name": "Amoo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Amoakoah and J.E. Darmang.",
+      "source": "html"
+    },
+    {
+      "id": "iSNF2U",
+      "given_name": "Badu",
+      "surname": null,
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appiah. Brought forth Ampong, Asua Akowa, Kwasi Yane, Appiah Bosso, Nsowah and Afua Aso.",
+      "source": "html"
+    },
+    {
+      "id": "iSXUNP",
+      "given_name": "Kwasi",
+      "surname": "Afari",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iT7X13",
+      "given_name": "Kwodwo Amponsah",
+      "surname": "(Aidoo)",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu Aso.",
+      "source": "html"
+    },
+    {
+      "id": "iTJ9WH",
+      "given_name": "Nana",
+      "surname": "Kurenti",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Also known as Kruuti. Of Assin line. Came to Asankran and married Aframa (a native of Asankran). Settled at Ahyire. Together had ten children — a landmark in Asankran family history. His descendant is the Tufuhene of Asankrangwa (Nana Bombo).",
+      "source": "html"
+    },
+    {
+      "id": "iTPUSL",
+      "given_name": "Anima",
+      "surname": "Kyirisuo",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Sister of Kye Boadu. Initially barren; gave birth to first child (Emra Kyereama) through help of a fetish priest. Died in thunderstorm while pregnant with second child (going to fetch fish called Tide). Thereafter named Animah Kyeresuo meaning she who does not like water. Her son Kyi Boadu survived and became head of the family.",
+      "source": "html"
+    },
+    {
+      "id": "iU147S",
+      "given_name": "Akua",
+      "surname": "Afra",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appiah.",
+      "source": "html"
+    },
+    {
+      "id": "iU8Y8V",
+      "given_name": "Amissah",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "source": "html"
+    },
+    {
+      "id": "iUEHOO",
+      "given_name": "Asi",
+      "surname": "Madam",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Saa Ara.",
+      "source": "html"
+    },
+    {
+      "id": "iUKL6M",
+      "given_name": "Yaa",
+      "surname": "Gyaa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Nyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iUOBZA",
+      "given_name": "Ntiwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwakwa. Got married at Manso Amenfi. Children: Efi, Twumwaa and others.",
+      "source": "html"
+    },
+    {
+      "id": "iUOWJ3",
+      "given_name": "Rose",
+      "surname": "Agyen",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Adwoa.",
+      "source": "html"
+    },
+    {
+      "id": "iUW3UR",
+      "given_name": "Kokoo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appianimaa. Did not bring forth children.",
+      "source": "html"
+    },
+    {
+      "id": "iUYBG6",
+      "given_name": "Bisaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Amoakoah and J.E. Darmang.",
+      "source": "html"
+    },
+    {
+      "id": "iUYX2Q",
+      "given_name": "Kwasi",
+      "surname": "Wiredu",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Nyarko.",
+      "source": "html"
+    },
+    {
+      "id": "iV7JF4",
+      "given_name": "Ahema",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Afra. Had one son: Kofi Forjour.",
+      "source": "html"
+    },
+    {
+      "id": "iVCD7M",
+      "given_name": "Boi",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Baaso.",
+      "source": "html"
+    },
+    {
+      "id": "iVIGXH",
+      "given_name": "Unknown Son of",
+      "surname": "Adwoa",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Adwoa. Name unknown.",
+      "source": "html"
+    },
+    {
+      "id": "iVTR11",
+      "given_name": "Kye",
+      "surname": "Boadu",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Early ancestor and leader of the Asankran clan. Brother of Anima Kyirisuo. Also known as Nana Kye Buadu I. Came from Asankran with his sister. Died at Gyedua Kankan near the Koto stream during the great migration. Succeeded by Gyapanyin Kyimah. Listed as first chief of the Oda Asankran Branch. The 1990 petition letter confirms: NANA KYE BUADU I led the people from Akim Oda to Wassa Amenfi.",
+      "source": "html"
+    },
+    {
+      "id": "iW2IGA",
+      "given_name": "Tinewa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwaku Badu. The history notes: Tinewa came from Kwasi Badu line.",
+      "source": "html"
+    },
+    {
+      "id": "iW5ZRJ",
+      "given_name": "Kwakyem",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appiah.",
+      "source": "html"
+    },
+    {
+      "id": "iWDKBV",
+      "given_name": "J.E.",
+      "surname": "Darmang",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Spouse of Akua Amoakoah. From Manso Amenfi.",
+      "source": "html"
+    },
+    {
+      "id": "iWEL85",
+      "given_name": "Kofi",
+      "surname": "Amoako",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Eighth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "source": "html"
+    },
+    {
+      "id": "iWG3Z1",
+      "given_name": "Ankyaah",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Third of three ancestral sisters. Origin: Oda Aboho sacred rock near Akyim Oda. The entire Asankran clan traces back to these three sisters. It is their family name from which the name Asankrangwa is derived.",
+      "source": "html"
+    },
+    {
+      "id": "iWH0CA",
+      "given_name": "Attah",
+      "surname": "Baah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Gyampraa.",
+      "source": "html"
+    },
+    {
+      "id": "iWKH0G",
+      "given_name": "Twumasi",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akoma.",
+      "source": "html"
+    },
+    {
+      "id": "iWRGUW",
+      "given_name": "Ankyaa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Yaa Gyaa.",
+      "source": "html"
+    },
+    {
+      "id": "iX7GV2",
+      "given_name": "Amanfo",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwakwa.",
+      "source": "html"
+    },
+    {
+      "id": "iXEDM3",
+      "given_name": "Aframa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Native of Asankran — direct descendant of the founding Asankran clan tracing back to the three sisters at Oda Aboho. Wife of Nana Kurenti (Kruuti) of Assin line. Settled at Ahyire. Gave birth to ten children — a landmark in Asankran history. Remembered: Aframa wo duo nana (Aframa the mother of ten). Two sisters: Konadu and Nsowa.",
+      "source": "html"
+    },
+    {
+      "id": "iXH151",
+      "given_name": "Nana Anyani Buadum",
+      "surname": "III",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Kwasi Badu. Ohene of Asankrangwa.",
+      "source": "html"
+    },
+    {
+      "id": "iXNU1X",
+      "given_name": "Akoma",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akoma Tawiah.",
+      "source": "html"
+    },
+    {
+      "id": "iY290L",
+      "given_name": "Kwasi",
+      "surname": "Amuah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Mbra.",
+      "source": "html"
+    },
+    {
+      "id": "iY2U7I",
+      "given_name": "Kruwa",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Appiah.",
+      "source": "html"
+    },
+    {
+      "id": "iY2VU9",
+      "given_name": "Unknown daughter of Kwaki",
+      "surname": "Amoako",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unknown daughter of Kwaki Amoako (Aframa's son). Her brother was Broni (who occupied the Oda stool). Her son is Kwasi Badu (father of Nana Anyani Buadum III). Exact name not recorded.",
+      "source": "html"
+    },
+    {
+      "id": "iY7KFX",
+      "given_name": "M.K.",
+      "surname": "Ofori",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Brakoma.",
+      "source": "html"
+    },
+    {
+      "id": "iYFKHC",
+      "given_name": "Akua Marko (Mary",
+      "surname": "Buadee)",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu Aso.",
+      "source": "html"
+    },
+    {
+      "id": "iYHSAM",
+      "given_name": "Gyapanyin",
+      "surname": "Kyimah",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Succeeded Kye Boadu as leader. Known as Rover (Kyimah = roaming hunter). Founded the Asankran settlement at Aboman. Met hunter Bruma Ankomah Sono Bofoo at Aboman; took oath to share the forest land marked by a huge silk cotton tree; said me're sankra ha are (I am making complete settlement here) — giving rise to the name Asankran. Listed as second chief of the Oda Asankran Branch. All descendants are called Asankran-fo.",
+      "source": "html"
+    },
+    {
+      "id": "iYNMBK",
+      "given_name": "Saa",
+      "surname": "Ara",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Marfua. Child: Asi Madam.",
+      "source": "html"
+    },
+    {
+      "id": "iYQRTW",
+      "given_name": "Asua",
+      "surname": "Akowa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Badu. Children: Amaoto, J.K. Amponsah.",
+      "source": "html"
+    },
+    {
+      "id": "iYRX4A",
+      "given_name": "Adwoa",
+      "surname": null,
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Baaso. Children: Rose Agyen and one son.",
+      "source": "html"
+    },
+    {
+      "id": "iYS32U",
+      "given_name": "Unknown sister of",
+      "surname": "Ntiwa",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Unnamed sister of Ntiwa (child of Kwakwa). Got married and was taken to Prestea Himan. Mother of E.K. Armah and siblings.",
+      "source": "html"
+    },
+    {
+      "id": "iZ1FRQ",
+      "given_name": "Nyantah",
+      "surname": "(Kokoo)",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Mra. Mother of Mansa and others.",
+      "source": "html"
+    },
+    {
+      "id": "iZ3FS0",
+      "given_name": "Akwaba",
+      "surname": null,
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akosua Mensine.",
+      "source": "html"
+    },
+    {
+      "id": "iZN48O",
+      "given_name": "Ama",
+      "surname": "Baaso",
+      "aliases": [],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Akua Ahemah. Children: Boi, Adwoa.",
+      "source": "html"
+    },
+    {
+      "id": "iZXAB5",
+      "given_name": "Kojo",
+      "surname": "Ayinor",
+      "aliases": [],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Ama Mbra.",
+      "source": "html"
+    },
+    {
+      "id": "excel-001",
+      "given_name": "Kwaku Buafo (Opayin",
+      "surname": "Kankyea)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1907,
+      "death_year": 1978,
+      "notes": "Top couple in the uploaded Excel tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-004",
+      "given_name": "Yaa",
+      "surname": "Brefaa",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1935,
+      "death_year": 2008,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-006",
+      "given_name": "Charles",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1941,
+      "death_year": 2026,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-007",
+      "given_name": "Afua",
+      "surname": "Ampomaa",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1944,
+      "death_year": 2000,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-008",
+      "given_name": "John Kwaku",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1941,
+      "death_year": 2017,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-009",
+      "given_name": "Margaret Buafo",
+      "surname": "(Somaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1951,
+      "death_year": 2014,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-010",
+      "given_name": "Richard",
+      "surname": "Boafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-011",
+      "given_name": "Kwabena",
+      "surname": "Mintah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-012",
+      "given_name": "Kwabena",
+      "surname": "Nyarko",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-013",
+      "given_name": "Ebowe",
+      "surname": "Panin",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-014",
+      "given_name": "Ebowe",
+      "surname": "Kakra",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-015",
+      "given_name": "Helena Baidoo",
+      "surname": "(Agyeiwaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-016",
+      "given_name": "Agnes Baidoo (Maame",
+      "surname": "Efua)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-017",
+      "given_name": "Isaac Baidoo",
+      "surname": "(Boateng)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-018",
+      "given_name": "Matthew Baidoo",
+      "surname": "(Arthur)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-019",
+      "given_name": "Vida Armoo",
+      "surname": "(Afarewaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-025",
+      "given_name": "Althea",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": 1951,
+      "death_year": 2009,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-026",
+      "given_name": "Hunter",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-027",
+      "given_name": "Desiree",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-028",
+      "given_name": "Isaac Odei",
+      "surname": "(Ofosu)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-029",
+      "given_name": "Nancy Odei",
+      "surname": "(Amoakowaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-030",
+      "given_name": "Kingsley Odei (Kwame",
+      "surname": "Oweridu)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-031",
+      "given_name": "Juliana Odei (Nana",
+      "surname": "Mesuwa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-032",
+      "given_name": "Amos Odei (Yaw",
+      "surname": "Baafi)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-033",
+      "given_name": "Janet Odei (Ama",
+      "surname": "Obuo)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-034",
+      "given_name": "Lydia Odei",
+      "surname": "(Yaayaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-035",
+      "given_name": "Buafowaa",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-036",
+      "given_name": "Ofosuwaa",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-037",
+      "given_name": "Maame",
+      "surname": "Dokuwaa",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-038",
+      "given_name": "Kweku Amoah",
+      "surname": "(Papa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-039",
+      "given_name": "Maame",
+      "surname": "Ansaba",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-040",
+      "given_name": "Jennifer Baido",
+      "surname": "(Afumwaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-041",
+      "given_name": "Kwasi",
+      "surname": "Nyame",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-042",
+      "given_name": "Richard Danful",
+      "surname": "(Sule)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-043",
+      "given_name": "Charles Kumi",
+      "surname": "(Kumi)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-044",
+      "given_name": "Naana Yaa",
+      "surname": "Baidoo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-045",
+      "given_name": "Lawrence",
+      "surname": "Baidoo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-046",
+      "given_name": "Annalisa",
+      "surname": "Baidoo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-047",
+      "given_name": "Salome Amoah",
+      "surname": "(Sarpong)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-048",
+      "given_name": "Dorothy Amoah",
+      "surname": "(Somaa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-049",
+      "given_name": "Rahael Boafo",
+      "surname": "(Mansa)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-050",
+      "given_name": "Philemon",
+      "surname": "Boakye",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-051",
+      "given_name": "Philip",
+      "surname": "Asirifi",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-052",
+      "given_name": "Divine Boafo (Nana",
+      "surname": "Boafo)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-053",
+      "given_name": "Silvia Mensah",
+      "surname": "(Mama)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-054",
+      "given_name": "Atta",
+      "surname": "Buafo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-055",
+      "given_name": "Ama",
+      "surname": "Buah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-056",
+      "given_name": "Kwaku",
+      "surname": "Nterful",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-057",
+      "given_name": "Kwabena",
+      "surname": "Adjei",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-058",
+      "given_name": "Sister",
+      "surname": "Boaa",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-064",
+      "given_name": "Aduabaah",
+      "surname": "Tekyi",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-065",
+      "given_name": "Tamar Asidem",
+      "surname": "Tonyo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-066",
+      "given_name": "Kadmiel Elikem",
+      "surname": "Tonyo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-067",
+      "given_name": "Eldard Eryarrm",
+      "surname": "Tonyo",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-068",
+      "given_name": "Jeriel Edem",
+      "surname": "Natsui",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-069",
+      "given_name": "Joseph Delasi",
+      "surname": "Natsui",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-070",
+      "given_name": "David Elorm",
+      "surname": "Natsui",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-071",
+      "given_name": "Pokuaa",
+      "surname": "Yeboah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-072",
+      "given_name": "Kobby",
+      "surname": "Yeboah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-073",
+      "given_name": "Amoakoaa",
+      "surname": "Odei",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-074",
+      "given_name": "Allotey",
+      "surname": "Kwaakye",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-075",
+      "given_name": "Kwasi",
+      "surname": "Kwaakye",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-076",
+      "given_name": "Vanessa",
+      "surname": "Kwakye",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-077",
+      "given_name": "Max",
+      "surname": "Odei",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-078",
+      "given_name": "Yvette",
+      "surname": "Odei",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-079",
+      "given_name": "Stephan",
+      "surname": "Odei",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-080",
+      "given_name": "Bright Kwasi",
+      "surname": "Appiah",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-081",
+      "given_name": "Naomi Attobrah",
+      "surname": "(Akosua)",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-082",
+      "given_name": "Gideon Attobrah",
+      "surname": "Yaw",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "excel-083",
+      "given_name": "Jojo",
+      "surname": "Ford",
+      "aliases": [],
+      "sex": "U",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Imported from the Kankyea and Mansa Excel family tree.",
+      "source": "excel"
+    },
+    {
+      "id": "iCRSRL",
+      "given_name": "Isaac Obiri-Yeboah (Kofi",
+      "surname": "Gyima)",
+      "aliases": [
+        "Gyima Obiri-Yeboah"
+      ],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Maa Abena.",
+      "source": "excel"
+    },
+    {
+      "id": "iEJYR1",
+      "given_name": "Hana Obiri-Yeboah (Nana",
+      "surname": "Akua)",
+      "aliases": [
+        "Hannah Obiri-Yeboah"
+      ],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Maa Abena.",
+      "source": "excel"
+    },
+    {
+      "id": "iGAMTS",
+      "given_name": "Agnes Obiri-Yeboah",
+      "surname": "(Tiwa)",
+      "aliases": [
+        "Agnes Tiwaa Obiri-Yeboah"
+      ],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Maa Abena. Mother of Samuel Asamoah Tekyi and siblings.",
+      "source": "excel"
+    },
+    {
+      "id": "iGCAX8",
+      "given_name": "Esther",
+      "surname": "Tekyi",
+      "aliases": [
+        "Esther Amoaa Tekyi"
+      ],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "source": "excel"
+    },
+    {
+      "id": "iPH0XK",
+      "given_name": "Abena",
+      "surname": "Gyampraa",
+      "aliases": [
+        "Maa Abena"
+      ],
+      "sex": "F",
+      "birth_year": 1938,
+      "death_year": 2012,
+      "notes": "Child of Mansa. Mother of Agnes Obiri-Yeboah, Matthew, Hannah, John, Gyima. Direct grandmother of Samuel Asamoah Tekyi. User-confirmed: Excel Abena Gyampraa is the same person as Maa Abena in the HTML tree and is a daughter of Nana Mansa.",
+      "source": "excel"
+    },
+    {
+      "id": "iSTART",
+      "given_name": "Asamoah",
+      "surname": "Tekyi",
+      "aliases": [
+        "Samuel Asamoah Tekyi"
+      ],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Son of Agnes Obiri-Yeboah and Samuel Albert Kofi Tekyi. Direct line: Samuel — Agnes — Maa Abena — Mansa — Nyantah (Kokoo) — Akua Mra — Appiah — Aframa — [unknown Asankran ancestors] — founding clan of Asankran — Kye Boadu/Kyi Boadu line — descendants of three sisters — Rock at Oda Aboho.",
+      "source": "excel"
+    },
+    {
+      "id": "iUGYKY",
+      "given_name": "Panin Asirifua",
+      "surname": "Tekyi",
+      "aliases": [
+        "Panin Asirifuah Tekyi"
+      ],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "source": "excel"
+    },
+    {
+      "id": "iVRDQ9",
+      "given_name": "John Obiri-Yeboah (Kwasi",
+      "surname": "Appianin)",
+      "aliases": [
+        "John Obiri-Yeboah"
+      ],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Maa Abena.",
+      "source": "excel"
+    },
+    {
+      "id": "iVRRYO",
+      "given_name": "Ama",
+      "surname": "Buah",
+      "aliases": [
+        "Mansa",
+        "Nana Mansa"
+      ],
+      "sex": "F",
+      "birth_year": 1910,
+      "death_year": 1977,
+      "notes": "Child of Nyantah (Kokoo). Mother of Maa Abena. Top couple in the uploaded Excel tree. User-confirmed: Excel Ama Buah (Nana Mansa) is the same person as Mansa in the HTML tree.",
+      "source": "excel"
+    },
+    {
+      "id": "iXJO6H",
+      "given_name": "Matthew Obiri-Yeboah (Adansi",
+      "surname": "Bona)",
+      "aliases": [
+        "Matthew Obiri-Yeboah"
+      ],
+      "sex": "M",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Maa Abena.",
+      "source": "excel"
+    },
+    {
+      "id": "iZ02CG",
+      "given_name": "Agyapomaa",
+      "surname": "Tekyi",
+      "aliases": [
+        "Grace Agyapoma Tekyi"
+      ],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "source": "excel"
+    },
+    {
+      "id": "iZT0SR",
+      "given_name": "Kakra Asirifua",
+      "surname": "Tekyi",
+      "aliases": [
+        "Kakra Asirifuah Tekyi"
+      ],
+      "sex": "F",
+      "birth_year": null,
+      "death_year": null,
+      "notes": "",
+      "source": "excel"
+    }
+  ],
+  "relationships": [
+    {
+      "from_person_id": "iS2OY4",
+      "to_person_id": "iNMPZZ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iS2OY4",
+      "to_person_id": "iA8RXY",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iS2OY4",
+      "to_person_id": "iWG3Z1",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iOSH6D",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iGVD1B",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iDR3TF",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iRBSD1",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iFDZY1",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iKT7IJ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iR216Z",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iWEL85",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKB2GN",
+      "to_person_id": "iJDNGX",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iN4YB8",
+      "to_person_id": "iLJCF7",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iJDNGX",
+      "to_person_id": "iLJCF7",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iLJCF7",
+      "to_person_id": "iN4YB8",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iLJCF7",
+      "to_person_id": "iVTR11",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iN4YB8",
+      "to_person_id": "iVTR11",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iLJCF7",
+      "to_person_id": "iTPUSL",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iN4YB8",
+      "to_person_id": "iTPUSL",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTPUSL",
+      "to_person_id": "iHNQVM",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHNQVM",
+      "to_person_id": "iTPUSL",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTPUSL",
+      "to_person_id": "iI8PZE",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHNQVM",
+      "to_person_id": "iI8PZE",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTPUSL",
+      "to_person_id": "iCI91J",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHNQVM",
+      "to_person_id": "iCI91J",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iP9S2O",
+      "to_person_id": "iYHSAM",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRYAIG",
+      "to_person_id": "iITU2E",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYHSAM",
+      "to_person_id": "iITU2E",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iITU2E",
+      "to_person_id": "iRYAIG",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iITU2E",
+      "to_person_id": "iXEDM3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRYAIG",
+      "to_person_id": "iXEDM3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iTJ9WH",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iXEDM3",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iITU2E",
+      "to_person_id": "iFPBHG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRYAIG",
+      "to_person_id": "iFPBHG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iITU2E",
+      "to_person_id": "iHFN3F",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRYAIG",
+      "to_person_id": "iHFN3F",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iPK6VT",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iPK6VT",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iC8CX0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iC8CX0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iFU5K6",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iFU5K6",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iRSL0Z",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iRSL0Z",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iNB464",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iNB464",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iAWE9I",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iAWE9I",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iJVTJG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iJVTJG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXEDM3",
+      "to_person_id": "iCMFFA",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTJ9WH",
+      "to_person_id": "iCMFFA",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iPK6VT",
+      "to_person_id": "iXNU1X",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXNU1X",
+      "to_person_id": "iMQG2G",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iXNU1X",
+      "to_person_id": "iWKH0G",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMQG2G",
+      "to_person_id": "iC03H0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMQG2G",
+      "to_person_id": "iBULV3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMQG2G",
+      "to_person_id": "iNYFX4",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMQG2G",
+      "to_person_id": "iETH0K",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iC03H0",
+      "to_person_id": "iWH0CA",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNYFX4",
+      "to_person_id": "iY7KFX",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNYFX4",
+      "to_person_id": "iMIOLP",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNYFX4",
+      "to_person_id": "iDN9P9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iETH0K",
+      "to_person_id": "iU8Y8V",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iETH0K",
+      "to_person_id": "iNEF15",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iETH0K",
+      "to_person_id": "iLWDHY",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iETH0K",
+      "to_person_id": "iCEWOK",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFU5K6",
+      "to_person_id": "iH5SYH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFU5K6",
+      "to_person_id": "iY2U7I",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFU5K6",
+      "to_person_id": "iO0GIZ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFU5K6",
+      "to_person_id": "iU147S",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFU5K6",
+      "to_person_id": "iSNF2U",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFU5K6",
+      "to_person_id": "iW5ZRJ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iH5SYH",
+      "to_person_id": "iZ1FRQ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iH5SYH",
+      "to_person_id": "iJPI7N",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iH5SYH",
+      "to_person_id": "iMREY0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iAO2GG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iJBCCS",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iJCJST",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iS5982",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iJQKRF",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iALWSA",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZ1FRQ",
+      "to_person_id": "iATO4Z",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iVRRYO",
+      "to_person_id": "iPH0XK",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iPH0XK",
+      "to_person_id": "iGAMTS",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iFCT80",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iGAMTS",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iPH0XK",
+      "to_person_id": "iXJO6H",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iPH0XK",
+      "to_person_id": "iEJYR1",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iPH0XK",
+      "to_person_id": "iVRDQ9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iPH0XK",
+      "to_person_id": "iCRSRL",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iSTART",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iSTART",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSTART",
+      "to_person_id": "iMM0IS",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMM0IS",
+      "to_person_id": "iSTART",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iGCAX8",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iGCAX8",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iF4I6L",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iF4I6L",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iZ02CG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iZ02CG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iUGYKY",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iUGYKY",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iZT0SR",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iFCT80",
+      "to_person_id": "iZT0SR",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMM0IS",
+      "to_person_id": "iMRURF",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSTART",
+      "to_person_id": "iMRURF",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMM0IS",
+      "to_person_id": "iOZA1V",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSTART",
+      "to_person_id": "iOZA1V",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iEJYR1",
+      "to_person_id": "iI1ME4",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iY2U7I",
+      "to_person_id": "iN6AGH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iY2U7I",
+      "to_person_id": "iRG1PZ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iY2U7I",
+      "to_person_id": "iG6B9E",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iY2U7I",
+      "to_person_id": "iOQWE7",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iUYX2Q",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iGDHVI",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iBDFCK",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iJ1REH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iENDHM",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iG1256",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iG1256",
+      "to_person_id": "iWDKBV",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iWDKBV",
+      "to_person_id": "iG1256",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOQWE7",
+      "to_person_id": "iSXUNP",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iO0GIZ",
+      "to_person_id": "iAWTIH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iO0GIZ",
+      "to_person_id": "iUKL6M",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iO0GIZ",
+      "to_person_id": "iQKDDO",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iHJ1OR",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iCXI6T",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iDWG09",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iQ0WG9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iV7JF4",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iP1EZ4",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iNAEKP",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iU147S",
+      "to_person_id": "iPOD4K",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSNF2U",
+      "to_person_id": "iQA730",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSNF2U",
+      "to_person_id": "iYQRTW",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSNF2U",
+      "to_person_id": "iLNUZS",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSNF2U",
+      "to_person_id": "iLLKUB",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSNF2U",
+      "to_person_id": "iDDCJO",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iSNF2U",
+      "to_person_id": "iN52VZ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iCIZBC",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iL8T7S",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iEN50D",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iKGOY0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iL34SC",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iGB7CW",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iRF5NH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iZ3FS0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iRYETP",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iF7WWV",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iBDFCK",
+      "to_person_id": "iJCOHV",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iY2VU9",
+      "to_person_id": "iMQWPS",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iJ1REH",
+      "to_person_id": "iGCYEQ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iG1256",
+      "to_person_id": "iAZKFJ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iWDKBV",
+      "to_person_id": "iAZKFJ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iG1256",
+      "to_person_id": "iSMGL9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iWDKBV",
+      "to_person_id": "iSMGL9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iG1256",
+      "to_person_id": "iUYBG6",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iWDKBV",
+      "to_person_id": "iUYBG6",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iUKL6M",
+      "to_person_id": "iQYNID",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iUKL6M",
+      "to_person_id": "iWRGUW",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iUKL6M",
+      "to_person_id": "iQQ07R",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iUKL6M",
+      "to_person_id": "iI8HWE",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHJ1OR",
+      "to_person_id": "iMMRXY",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHJ1OR",
+      "to_person_id": "iLPNRW",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHJ1OR",
+      "to_person_id": "iHDKXM",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iV7JF4",
+      "to_person_id": "iKS3UD",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iP1EZ4",
+      "to_person_id": "iLHTGE",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iP1EZ4",
+      "to_person_id": "iASCIE",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iP1EZ4",
+      "to_person_id": "iEZRXM",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNAEKP",
+      "to_person_id": "iED2TV",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNAEKP",
+      "to_person_id": "iK2YZQ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYQRTW",
+      "to_person_id": "iAD84X",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYQRTW",
+      "to_person_id": "iBL4VR",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCMFFA",
+      "to_person_id": "iZXAB5",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCMFFA",
+      "to_person_id": "iDIVW5",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCMFFA",
+      "to_person_id": "iY290L",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCMFFA",
+      "to_person_id": "iOEEJ3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCMFFA",
+      "to_person_id": "iOK6TF",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOEEJ3",
+      "to_person_id": "iOVQOH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOEEJ3",
+      "to_person_id": "iZN48O",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOVQOH",
+      "to_person_id": "iSDWL0",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOVQOH",
+      "to_person_id": "iNJSS9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZN48O",
+      "to_person_id": "iVCD7M",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iZN48O",
+      "to_person_id": "iYRX4A",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYRX4A",
+      "to_person_id": "iUOWJ3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYRX4A",
+      "to_person_id": "iVIGXH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNB464",
+      "to_person_id": "iPNLIY",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNB464",
+      "to_person_id": "iB17TJ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iB17TJ",
+      "to_person_id": "iYNMBK",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iB17TJ",
+      "to_person_id": "iR82L2",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYNMBK",
+      "to_person_id": "iUEHOO",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iJVTJG",
+      "to_person_id": "iAHXG5",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRYETP",
+      "to_person_id": "iW2IGA",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMQWPS",
+      "to_person_id": "iXH151",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRSL0Z",
+      "to_person_id": "iA2EN3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iNMPZZ",
+      "to_person_id": "iKB2GN",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iTPUSL",
+      "to_person_id": "iP9S2O",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iHNQVM",
+      "to_person_id": "iP9S2O",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iRSL0Z",
+      "to_person_id": "iY2VU9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMP1ZV",
+      "to_person_id": "iUW3UR",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMP1ZV",
+      "to_person_id": "iOVJY8",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMP1ZV",
+      "to_person_id": "iCDA5K",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMP1ZV",
+      "to_person_id": "iKRJ7J",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOVJY8",
+      "to_person_id": "iR4CJP",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOVJY8",
+      "to_person_id": "iB053Q",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iOVJY8",
+      "to_person_id": "iMWCKG",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMWCKG",
+      "to_person_id": "iO414T",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMWCKG",
+      "to_person_id": "iT7X13",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iMWCKG",
+      "to_person_id": "iYFKHC",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCDA5K",
+      "to_person_id": "iO57VF",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCDA5K",
+      "to_person_id": "iJX5HR",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCDA5K",
+      "to_person_id": "iIYDO9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iCDA5K",
+      "to_person_id": "iH94B3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKRJ7J",
+      "to_person_id": "iK20BT",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKRJ7J",
+      "to_person_id": "iO9Z4G",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKRJ7J",
+      "to_person_id": "iUOBZA",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iUOBZA",
+      "to_person_id": "iECYCJ",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iUOBZA",
+      "to_person_id": "iEP8I3",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iYS32U",
+      "to_person_id": "iQGMNH",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKRJ7J",
+      "to_person_id": "iX7GV2",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "iKRJ7J",
+      "to_person_id": "iJMHPC",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "html"
+    },
+    {
+      "from_person_id": "excel-001",
+      "to_person_id": "iVRRYO",
+      "relationship_type": "spouse",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-001",
+      "to_person_id": "excel-004",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iVRRYO",
+      "to_person_id": "excel-004",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-001",
+      "to_person_id": "iPH0XK",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-001",
+      "to_person_id": "excel-006",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iVRRYO",
+      "to_person_id": "excel-006",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-001",
+      "to_person_id": "excel-007",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iVRRYO",
+      "to_person_id": "excel-007",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-001",
+      "to_person_id": "excel-008",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iVRRYO",
+      "to_person_id": "excel-008",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-004",
+      "to_person_id": "excel-009",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-009",
+      "to_person_id": "excel-010",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-009",
+      "to_person_id": "excel-011",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-009",
+      "to_person_id": "excel-012",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-009",
+      "to_person_id": "excel-013",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-009",
+      "to_person_id": "excel-014",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-009",
+      "to_person_id": "excel-015",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-015",
+      "to_person_id": "excel-016",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-016",
+      "to_person_id": "excel-017",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-017",
+      "to_person_id": "excel-018",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-018",
+      "to_person_id": "excel-019",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iEJYR1",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iVRDQ9",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iXJO6H",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "iGAMTS",
+      "to_person_id": "iCRSRL",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-006",
+      "to_person_id": "excel-025",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-025",
+      "to_person_id": "excel-026",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-025",
+      "to_person_id": "excel-027",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-007",
+      "to_person_id": "excel-028",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-028",
+      "to_person_id": "excel-029",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-029",
+      "to_person_id": "excel-030",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-030",
+      "to_person_id": "excel-031",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-031",
+      "to_person_id": "excel-032",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-032",
+      "to_person_id": "excel-033",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-033",
+      "to_person_id": "excel-034",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-008",
+      "to_person_id": "excel-035",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    },
+    {
+      "from_person_id": "excel-008",
+      "to_person_id": "excel-036",
+      "relationship_type": "parent",
+      "status": "approved",
+      "source": "excel"
+    }
+  ]
+}

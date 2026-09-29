@@ -1,0 +1,4772 @@
+{
+  "version": 1,
+  "html_people": [
+    {
+      "id": "iS2OY4",
+      "source": "html",
+      "raw": [
+        "iS2OY4",
+        "pOda Aboho",
+        "qSacred Rock",
+        "oThe sacred rock at Oda Aboho near Akyim Oda. The three ancestral sisters (Kyekye Ampem, Kyeraa, Ankyaah) are said to have come into existence from the earth beneath this rock. The place is still worshipped and is named Oda Aboho after the condition of the place. This is the mythological origin of the Asankran Kona clan — one of the seven major Akan families."
+      ],
+      "given": "Oda Aboho",
+      "surname": "Sacred Rock",
+      "notes": "The sacred rock at Oda Aboho near Akyim Oda. The three ancestral sisters (Kyekye Ampem, Kyeraa, Ankyaah) are said to have come into existence from the earth beneath this rock. The place is still worshipped and is named Oda Aboho after the condition of the place. This is the mythological origin of the Asankran Kona clan — one of the seven major Akan families.",
+      "parents": [],
+      "spouses": []
+    },
+    {
+      "id": "iNMPZZ",
+      "source": "html",
+      "raw": [
+        "iNMPZZ",
+        "pKyekye",
+        "qAmpem",
+        "gf",
+        "oFirst of three ancestral sisters. Said to have come into existence from the earth under the sacred rock at Oda Aboho near Akyim Oda. The Asankran family (Kona branch of Ekuona clan) are descendants of these three sisters.",
+        "fS2OY4"
+      ],
+      "given": "Kyekye",
+      "surname": "Ampem",
+      "sex": "F",
+      "notes": "First of three ancestral sisters. Said to have come into existence from the earth under the sacred rock at Oda Aboho near Akyim Oda. The Asankran family (Kona branch of Ekuona clan) are descendants of these three sisters.",
+      "parents": [
+        [
+          "father",
+          "S2OY4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iA8RXY",
+      "source": "html",
+      "raw": [
+        "iA8RXY",
+        "pKyeraa",
+        "gf",
+        "oSecond of three ancestral sisters. Origin: Oda Aboho sacred rock near Akyim Oda.",
+        "fS2OY4"
+      ],
+      "given": "Kyeraa",
+      "sex": "F",
+      "notes": "Second of three ancestral sisters. Origin: Oda Aboho sacred rock near Akyim Oda.",
+      "parents": [
+        [
+          "father",
+          "S2OY4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iWG3Z1",
+      "source": "html",
+      "raw": [
+        "iWG3Z1",
+        "pAnkyaah",
+        "gf",
+        "oThird of three ancestral sisters. Origin: Oda Aboho sacred rock near Akyim Oda. The entire Asankran clan traces back to these three sisters. It is their family name from which the name Asankrangwa is derived.",
+        "fS2OY4"
+      ],
+      "given": "Ankyaah",
+      "sex": "F",
+      "notes": "Third of three ancestral sisters. Origin: Oda Aboho sacred rock near Akyim Oda. The entire Asankran clan traces back to these three sisters. It is their family name from which the name Asankrangwa is derived.",
+      "parents": [
+        [
+          "father",
+          "S2OY4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOSH6D",
+      "source": "html",
+      "raw": [
+        "iOSH6D",
+        "pAnim",
+        "qBerimah",
+        "gm",
+        "oFirst named chief of the Oda Aboho era. Descendant of the three sisters. Listed in the Asankran Kona clan succession of chiefs (P.K. Buadee 1935). Specific parent-child links within this chief succession are not recorded; all are descendants of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Anim",
+      "surname": "Berimah",
+      "sex": "M",
+      "notes": "First named chief of the Oda Aboho era. Descendant of the three sisters. Listed in the Asankran Kona clan succession of chiefs (P.K. Buadee 1935). Specific parent-child links within this chief succession are not recorded; all are descendants of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iGVD1B",
+      "source": "html",
+      "raw": [
+        "iGVD1B",
+        "pKing",
+        "qKofuo",
+        "gm",
+        "oSecond chief of the Oda Aboho era. Notable birth: born with fist closed; a fetish priest opened his hand and from it fell a toga with which he could fight many people; named Kofuo for his fighting skills. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "King",
+      "surname": "Kofuo",
+      "sex": "M",
+      "notes": "Second chief of the Oda Aboho era. Notable birth: born with fist closed; a fetish priest opened his hand and from it fell a toga with which he could fight many people; named Kofuo for his fighting skills. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iDR3TF",
+      "source": "html",
+      "raw": [
+        "iDR3TF",
+        "pDampaah",
+        "gm",
+        "oThird chief of the Oda Aboho era. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Dampaah",
+      "sex": "M",
+      "notes": "Third chief of the Oda Aboho era. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iRBSD1",
+      "source": "html",
+      "raw": [
+        "iRBSD1",
+        "pAtta",
+        "qKru",
+        "gm",
+        "oFourth chief of the Oda Aboho era. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Atta",
+      "surname": "Kru",
+      "sex": "M",
+      "notes": "Fourth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iFDZY1",
+      "source": "html",
+      "raw": [
+        "iFDZY1",
+        "pBene",
+        "gm",
+        "oFifth chief of the Oda Aboho era. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Bene",
+      "sex": "M",
+      "notes": "Fifth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iKT7IJ",
+      "source": "html",
+      "raw": [
+        "iKT7IJ",
+        "pAmpong",
+        "qSagyefuo",
+        "gm",
+        "oSixth chief of the Oda Aboho era. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Ampong",
+      "surname": "Sagyefuo",
+      "sex": "M",
+      "notes": "Sixth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iR216Z",
+      "source": "html",
+      "raw": [
+        "iR216Z",
+        "pAkumoah",
+        "qSekyere Pre",
+        "oSeventh chief of the Oda Aboho era. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Akumoah",
+      "surname": "Sekyere Pre",
+      "notes": "Seventh chief of the Oda Aboho era. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iWEL85",
+      "source": "html",
+      "raw": [
+        "iWEL85",
+        "pKofi",
+        "qAmoako",
+        "gm",
+        "oEighth chief of the Oda Aboho era. Descendant of the three sisters.",
+        "mKB2GN"
+      ],
+      "given": "Kofi",
+      "surname": "Amoako",
+      "sex": "M",
+      "notes": "Eighth chief of the Oda Aboho era. Descendant of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJDNGX",
+      "source": "html",
+      "raw": [
+        "iJDNGX",
+        "pAbo",
+        "qKwabina",
+        "gm",
+        "oNinth and last named chief of the Oda Aboho era. After Abo Kwabina the clan record transitions to the Asankran Branch beginning with Kye Boadu. Unknown generations connect this era to Kye Boadu.",
+        "mKB2GN"
+      ],
+      "given": "Abo",
+      "surname": "Kwabina",
+      "sex": "M",
+      "notes": "Ninth and last named chief of the Oda Aboho era. After Abo Kwabina the clan record transitions to the Asankran Branch beginning with Kye Boadu. Unknown generations connect this era to Kye Boadu.",
+      "parents": [
+        [
+          "mother",
+          "KB2GN"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iN4YB8",
+      "source": "html",
+      "raw": [
+        "iN4YB8",
+        "pUnknown Father of Kye Boadu",
+        "qline",
+        "gm",
+        "oUnknown ancestor — descendant of the three sisters through the Oda Aboho chief succession. Exact identity not recorded in oral tradition. Represents the generational gap between the Oda Aboho chiefs era and Kye Boadu.",
+        "sLJCF7"
+      ],
+      "given": "Unknown Father of Kye Boadu",
+      "surname": "line",
+      "sex": "M",
+      "notes": "Unknown ancestor — descendant of the three sisters through the Oda Aboho chief succession. Exact identity not recorded in oral tradition. Represents the generational gap between the Oda Aboho chiefs era and Kye Boadu.",
+      "parents": [],
+      "spouses": [
+        "LJCF7"
+      ]
+    },
+    {
+      "id": "iLJCF7",
+      "source": "html",
+      "raw": [
+        "iLJCF7",
+        "sN4YB8",
+        "pUnknown Mother of Kye Boadu",
+        "qline",
+        "gf",
+        "oUnknown ancestor — through the Asankran founding family line descended from the three sisters.",
+        "fJDNGX"
+      ],
+      "given": "Unknown Mother of Kye Boadu",
+      "surname": "line",
+      "sex": "F",
+      "notes": "Unknown ancestor — through the Asankran founding family line descended from the three sisters.",
+      "parents": [
+        [
+          "father",
+          "JDNGX"
+        ]
+      ],
+      "spouses": [
+        "N4YB8"
+      ]
+    },
+    {
+      "id": "iVTR11",
+      "source": "html",
+      "raw": [
+        "iVTR11",
+        "pKye",
+        "qBoadu",
+        "gm",
+        "oEarly ancestor and leader of the Asankran clan. Brother of Anima Kyirisuo. Also known as Nana Kye Buadu I. Came from Asankran with his sister. Died at Gyedua Kankan near the Koto stream during the great migration. Succeeded by Gyapanyin Kyimah. Listed as first chief of the Oda Asankran Branch. The 1990 petition letter confirms: NANA KYE BUADU I led the people from Akim Oda to Wassa Amenfi.",
+        "mLJCF7",
+        "fN4YB8"
+      ],
+      "given": "Kye",
+      "surname": "Boadu",
+      "sex": "M",
+      "notes": "Early ancestor and leader of the Asankran clan. Brother of Anima Kyirisuo. Also known as Nana Kye Buadu I. Came from Asankran with his sister. Died at Gyedua Kankan near the Koto stream during the great migration. Succeeded by Gyapanyin Kyimah. Listed as first chief of the Oda Asankran Branch. The 1990 petition letter confirms: NANA KYE BUADU I led the people from Akim Oda to Wassa Amenfi.",
+      "parents": [
+        [
+          "mother",
+          "LJCF7"
+        ],
+        [
+          "father",
+          "N4YB8"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iTPUSL",
+      "source": "html",
+      "raw": [
+        "iTPUSL",
+        "pAnima",
+        "qKyirisuo",
+        "gf",
+        "oSister of Kye Boadu. Initially barren; gave birth to first child (Emra Kyereama) through help of a fetish priest. Died in thunderstorm while pregnant with second child (going to fetch fish called Tide). Thereafter named Animah Kyeresuo meaning she who does not like water. Her son Kyi Boadu survived and became head of the family.",
+        "mLJCF7",
+        "fN4YB8",
+        "sHNQVM"
+      ],
+      "given": "Anima",
+      "surname": "Kyirisuo",
+      "sex": "F",
+      "notes": "Sister of Kye Boadu. Initially barren; gave birth to first child (Emra Kyereama) through help of a fetish priest. Died in thunderstorm while pregnant with second child (going to fetch fish called Tide). Thereafter named Animah Kyeresuo meaning she who does not like water. Her son Kyi Boadu survived and became head of the family.",
+      "parents": [
+        [
+          "mother",
+          "LJCF7"
+        ],
+        [
+          "father",
+          "N4YB8"
+        ]
+      ],
+      "spouses": [
+        "HNQVM"
+      ]
+    },
+    {
+      "id": "iHNQVM",
+      "source": "html",
+      "raw": [
+        "iHNQVM",
+        "sTPUSL",
+        "pUnknown Asante Husband of",
+        "qAnima",
+        "gm",
+        "oAsante man who married Anima Kyirisuo. Unnamed in the historical record."
+      ],
+      "given": "Unknown Asante Husband of",
+      "surname": "Anima",
+      "sex": "M",
+      "notes": "Asante man who married Anima Kyirisuo. Unnamed in the historical record.",
+      "parents": [],
+      "spouses": [
+        "TPUSL"
+      ]
+    },
+    {
+      "id": "iI8PZE",
+      "source": "html",
+      "raw": [
+        "iI8PZE",
+        "pEmra",
+        "qKyereama",
+        "gf",
+        "oFirst child of Anima Kyirisuo and her Asante husband. Born through help of a fetish priest when Anima was initially barren.",
+        "mTPUSL",
+        "fHNQVM"
+      ],
+      "given": "Emra",
+      "surname": "Kyereama",
+      "sex": "F",
+      "notes": "First child of Anima Kyirisuo and her Asante husband. Born through help of a fetish priest when Anima was initially barren.",
+      "parents": [
+        [
+          "mother",
+          "TPUSL"
+        ],
+        [
+          "father",
+          "HNQVM"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCI91J",
+      "source": "html",
+      "raw": [
+        "iCI91J",
+        "pKyi",
+        "qBoadu",
+        "gm",
+        "oSon of Anima Kyirisuo. Survived when Anima died in the thunderstorm. Became head of the family. Led the great journey — accompanied by grandchildren, slaves and a dog — to find new fertile land. After long journey met Agonahene at Mankaben at Agyakaa; the chief of Bogo allowed them to settle at Gyedua Kankan near the Koto stream.",
+        "mTPUSL",
+        "fHNQVM"
+      ],
+      "given": "Kyi",
+      "surname": "Boadu",
+      "sex": "M",
+      "notes": "Son of Anima Kyirisuo. Survived when Anima died in the thunderstorm. Became head of the family. Led the great journey — accompanied by grandchildren, slaves and a dog — to find new fertile land. After long journey met Agonahene at Mankaben at Agyakaa; the chief of Bogo allowed them to settle at Gyedua Kankan near the Koto stream.",
+      "parents": [
+        [
+          "mother",
+          "TPUSL"
+        ],
+        [
+          "father",
+          "HNQVM"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iYHSAM",
+      "source": "html",
+      "raw": [
+        "iYHSAM",
+        "pGyapanyin",
+        "qKyimah",
+        "gm",
+        "oSucceeded Kye Boadu as leader. Known as Rover (Kyimah = roaming hunter). Founded the Asankran settlement at Aboman. Met hunter Bruma Ankomah Sono Bofoo at Aboman; took oath to share the forest land marked by a huge silk cotton tree; said me're sankra ha are (I am making complete settlement here) — giving rise to the name Asankran. Listed as second chief of the Oda Asankran Branch. All descendants are called Asankran-fo.",
+        "mP9S2O"
+      ],
+      "given": "Gyapanyin",
+      "surname": "Kyimah",
+      "sex": "M",
+      "notes": "Succeeded Kye Boadu as leader. Known as Rover (Kyimah = roaming hunter). Founded the Asankran settlement at Aboman. Met hunter Bruma Ankomah Sono Bofoo at Aboman; took oath to share the forest land marked by a huge silk cotton tree; said me're sankra ha are (I am making complete settlement here) — giving rise to the name Asankran. Listed as second chief of the Oda Asankran Branch. All descendants are called Asankran-fo.",
+      "parents": [
+        [
+          "mother",
+          "P9S2O"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iL468V",
+      "source": "html",
+      "raw": [
+        "iL468V",
+        "pBruma Ankomah Sono",
+        "qBofoo",
+        "gm",
+        "oHunter from Bruma — the elephant hunter (Bofoo). Met Gyapanyin Kyimah at Aboman. The two took oath to share the forest land, boundary marked by a huge silk cotton tree. Key historical figure at the founding of Asankran. Not a blood ancestor of the clan."
+      ],
+      "given": "Bruma Ankomah Sono",
+      "surname": "Bofoo",
+      "sex": "M",
+      "notes": "Hunter from Bruma — the elephant hunter (Bofoo). Met Gyapanyin Kyimah at Aboman. The two took oath to share the forest land, boundary marked by a huge silk cotton tree. Key historical figure at the founding of Asankran. Not a blood ancestor of the clan.",
+      "parents": [],
+      "spouses": []
+    },
+    {
+      "id": "iRYAIG",
+      "source": "html",
+      "raw": [
+        "iRYAIG",
+        "pUnknown Father of Aframa",
+        "qfamily",
+        "gm",
+        "oUnknown ancestor — native of Asankran, descended from the founding clan through Gyapanyin Kyimah's lineage. Represents the gap between Gyapanyin's era and Aframa's generation. Aframa is described as a native of Asankran in the historical record.",
+        "sITU2E"
+      ],
+      "given": "Unknown Father of Aframa",
+      "surname": "family",
+      "sex": "M",
+      "notes": "Unknown ancestor — native of Asankran, descended from the founding clan through Gyapanyin Kyimah's lineage. Represents the gap between Gyapanyin's era and Aframa's generation. Aframa is described as a native of Asankran in the historical record.",
+      "parents": [],
+      "spouses": [
+        "ITU2E"
+      ]
+    },
+    {
+      "id": "iITU2E",
+      "source": "html",
+      "raw": [
+        "iITU2E",
+        "sRYAIG",
+        "pUnknown Mother of Aframa",
+        "qfamily",
+        "gf",
+        "oUnknown ancestor — native Asankran woman, descendant of the founding clan.",
+        "fYHSAM"
+      ],
+      "given": "Unknown Mother of Aframa",
+      "surname": "family",
+      "sex": "F",
+      "notes": "Unknown ancestor — native Asankran woman, descendant of the founding clan.",
+      "parents": [
+        [
+          "father",
+          "YHSAM"
+        ]
+      ],
+      "spouses": [
+        "RYAIG"
+      ]
+    },
+    {
+      "id": "iXEDM3",
+      "source": "html",
+      "raw": [
+        "iXEDM3",
+        "pAframa",
+        "gf",
+        "oNative of Asankran — direct descendant of the founding Asankran clan tracing back to the three sisters at Oda Aboho. Wife of Nana Kurenti (Kruuti) of Assin line. Settled at Ahyire. Gave birth to ten children — a landmark in Asankran history. Remembered: Aframa wo duo nana (Aframa the mother of ten). Two sisters: Konadu and Nsowa.",
+        "mITU2E",
+        "fRYAIG",
+        "sTJ9WH"
+      ],
+      "given": "Aframa",
+      "sex": "F",
+      "notes": "Native of Asankran — direct descendant of the founding Asankran clan tracing back to the three sisters at Oda Aboho. Wife of Nana Kurenti (Kruuti) of Assin line. Settled at Ahyire. Gave birth to ten children — a landmark in Asankran history. Remembered: Aframa wo duo nana (Aframa the mother of ten). Two sisters: Konadu and Nsowa.",
+      "parents": [
+        [
+          "mother",
+          "ITU2E"
+        ],
+        [
+          "father",
+          "RYAIG"
+        ]
+      ],
+      "spouses": [
+        "TJ9WH"
+      ]
+    },
+    {
+      "id": "iTJ9WH",
+      "source": "html",
+      "raw": [
+        "iTJ9WH",
+        "sXEDM3",
+        "pNana",
+        "qKurenti",
+        "gm",
+        "oAlso known as Kruuti. Of Assin line. Came to Asankran and married Aframa (a native of Asankran). Settled at Ahyire. Together had ten children — a landmark in Asankran family history. His descendant is the Tufuhene of Asankrangwa (Nana Bombo)."
+      ],
+      "given": "Nana",
+      "surname": "Kurenti",
+      "sex": "M",
+      "notes": "Also known as Kruuti. Of Assin line. Came to Asankran and married Aframa (a native of Asankran). Settled at Ahyire. Together had ten children — a landmark in Asankran family history. His descendant is the Tufuhene of Asankrangwa (Nana Bombo).",
+      "parents": [],
+      "spouses": [
+        "XEDM3"
+      ]
+    },
+    {
+      "id": "iFPBHG",
+      "source": "html",
+      "raw": [
+        "iFPBHG",
+        "pKonadu",
+        "gf",
+        "oSister of Aframa (sibling, not daughter). Shares the same unknown parents native to Asankran.",
+        "mITU2E",
+        "fRYAIG"
+      ],
+      "given": "Konadu",
+      "sex": "F",
+      "notes": "Sister of Aframa (sibling, not daughter). Shares the same unknown parents native to Asankran.",
+      "parents": [
+        [
+          "mother",
+          "ITU2E"
+        ],
+        [
+          "father",
+          "RYAIG"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iHFN3F",
+      "source": "html",
+      "raw": [
+        "iHFN3F",
+        "pNsowa",
+        "gf",
+        "oSister of Aframa (sibling, not daughter). Shares the same unknown parents native to Asankran.",
+        "mITU2E",
+        "fRYAIG"
+      ],
+      "given": "Nsowa",
+      "sex": "F",
+      "notes": "Sister of Aframa (sibling, not daughter). Shares the same unknown parents native to Asankran.",
+      "parents": [
+        [
+          "mother",
+          "ITU2E"
+        ],
+        [
+          "father",
+          "RYAIG"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iPK6VT",
+      "source": "html",
+      "raw": [
+        "iPK6VT",
+        "pAkoma",
+        "qTawiah",
+        "oChild of Aframa and Nana Kurenti.",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Akoma",
+      "surname": "Tawiah",
+      "notes": "Child of Aframa and Nana Kurenti.",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iC8CX0",
+      "source": "html",
+      "raw": [
+        "iC8CX0",
+        "pBiyaah",
+        "gf",
+        "oChild of Aframa — second child. Did not bring forth (no children recorded).",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Biyaah",
+      "sex": "F",
+      "notes": "Child of Aframa — second child. Did not bring forth (no children recorded).",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iFU5K6",
+      "source": "html",
+      "raw": [
+        "iFU5K6",
+        "pAppiah",
+        "gf",
+        "oChild of Aframa — followed Biyaah. Had six children: Kruwa, Akua Mra, Nyaa, Akua Afra, Badu, Kwakyem.",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Appiah",
+      "sex": "F",
+      "notes": "Child of Aframa — followed Biyaah. Had six children: Kruwa, Akua Mra, Nyaa, Akua Afra, Badu, Kwakyem.",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iRSL0Z",
+      "source": "html",
+      "raw": [
+        "iRSL0Z",
+        "pKwaki",
+        "qAmoako",
+        "gm",
+        "oChild of Aframa. Occupied the Oda Stool but later abdicated. His line continues through Kwasi Badu (Ohene of Asankrangwa's ancestor) and Broni (who occupied the Oda stool but died a week before being outdoored).",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Kwaki",
+      "surname": "Amoako",
+      "sex": "M",
+      "notes": "Child of Aframa. Occupied the Oda Stool but later abdicated. His line continues through Kwasi Badu (Ohene of Asankrangwa's ancestor) and Broni (who occupied the Oda stool but died a week before being outdoored).",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iNB464",
+      "source": "html",
+      "raw": [
+        "iNB464",
+        "pYaa",
+        "qBrafan",
+        "gf",
+        "oChild of Aframa. Line linked to Aframa.",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Yaa",
+      "surname": "Brafan",
+      "sex": "F",
+      "notes": "Child of Aframa. Line linked to Aframa.",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iAWE9I",
+      "source": "html",
+      "raw": [
+        "iAWE9I",
+        "pDuma",
+        "oChild of Aframa. Line linked to Aframa.",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Duma",
+      "notes": "Child of Aframa. Line linked to Aframa.",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJVTJG",
+      "source": "html",
+      "raw": [
+        "iJVTJG",
+        "pOpanyin",
+        "qAnyani",
+        "oChild of Aframa. Line formerly the Gyase to the Oda stool. Leader was Epirato.",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Opanyin",
+      "surname": "Anyani",
+      "notes": "Child of Aframa. Line formerly the Gyase to the Oda stool. Leader was Epirato.",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCMFFA",
+      "source": "html",
+      "raw": [
+        "iCMFFA",
+        "pAma",
+        "qMbra",
+        "gf",
+        "oChild of Aframa. Brought forth Kojo Ayinor, Kwaninyi, Kwasi Amuah, Akua Ahemah and Amponetamaa.",
+        "mXEDM3",
+        "fTJ9WH"
+      ],
+      "given": "Ama",
+      "surname": "Mbra",
+      "sex": "F",
+      "notes": "Child of Aframa. Brought forth Kojo Ayinor, Kwaninyi, Kwasi Amuah, Akua Ahemah and Amponetamaa.",
+      "parents": [
+        [
+          "mother",
+          "XEDM3"
+        ],
+        [
+          "father",
+          "TJ9WH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iXNU1X",
+      "source": "html",
+      "raw": [
+        "iXNU1X",
+        "pAkoma",
+        "oChild of Akoma Tawiah.",
+        "fPK6VT"
+      ],
+      "given": "Akoma",
+      "notes": "Child of Akoma Tawiah.",
+      "parents": [
+        [
+          "father",
+          "PK6VT"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMQG2G",
+      "source": "html",
+      "raw": [
+        "iMQG2G",
+        "pKoko",
+        "qSebe",
+        "oChild of Akoma.",
+        "fXNU1X"
+      ],
+      "given": "Koko",
+      "surname": "Sebe",
+      "notes": "Child of Akoma.",
+      "parents": [
+        [
+          "father",
+          "XNU1X"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iWKH0G",
+      "source": "html",
+      "raw": [
+        "iWKH0G",
+        "pTwumasi",
+        "oChild of Akoma.",
+        "fXNU1X"
+      ],
+      "given": "Twumasi",
+      "notes": "Child of Akoma.",
+      "parents": [
+        [
+          "father",
+          "XNU1X"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iC03H0",
+      "source": "html",
+      "raw": [
+        "iC03H0",
+        "pGyampraa",
+        "oChild of Koko Sebe.",
+        "fMQG2G"
+      ],
+      "given": "Gyampraa",
+      "notes": "Child of Koko Sebe.",
+      "parents": [
+        [
+          "father",
+          "MQG2G"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iBULV3",
+      "source": "html",
+      "raw": [
+        "iBULV3",
+        "pBoah",
+        "oChild of Koko Sebe.",
+        "fMQG2G"
+      ],
+      "given": "Boah",
+      "notes": "Child of Koko Sebe.",
+      "parents": [
+        [
+          "father",
+          "MQG2G"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iNYFX4",
+      "source": "html",
+      "raw": [
+        "iNYFX4",
+        "pBrakoma",
+        "oChild of Koko Sebe.",
+        "fMQG2G"
+      ],
+      "given": "Brakoma",
+      "notes": "Child of Koko Sebe.",
+      "parents": [
+        [
+          "father",
+          "MQG2G"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iETH0K",
+      "source": "html",
+      "raw": [
+        "iETH0K",
+        "pBombo",
+        "oChild of Koko Sebe (different from Bombo child of Akua Afra).",
+        "fMQG2G"
+      ],
+      "given": "Bombo",
+      "notes": "Child of Koko Sebe (different from Bombo child of Akua Afra).",
+      "parents": [
+        [
+          "father",
+          "MQG2G"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iWH0CA",
+      "source": "html",
+      "raw": [
+        "iWH0CA",
+        "pAttah",
+        "qBaah",
+        "oChild of Gyampraa.",
+        "fC03H0"
+      ],
+      "given": "Attah",
+      "surname": "Baah",
+      "notes": "Child of Gyampraa.",
+      "parents": [
+        [
+          "father",
+          "C03H0"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iY7KFX",
+      "source": "html",
+      "raw": [
+        "iY7KFX",
+        "pM.K.",
+        "qOfori",
+        "oChild of Brakoma.",
+        "fNYFX4"
+      ],
+      "given": "M.K.",
+      "surname": "Ofori",
+      "notes": "Child of Brakoma.",
+      "parents": [
+        [
+          "father",
+          "NYFX4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMIOLP",
+      "source": "html",
+      "raw": [
+        "iMIOLP",
+        "pJoe",
+        "qAtta",
+        "oChild of Brakoma.",
+        "fNYFX4"
+      ],
+      "given": "Joe",
+      "surname": "Atta",
+      "notes": "Child of Brakoma.",
+      "parents": [
+        [
+          "father",
+          "NYFX4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iDN9P9",
+      "source": "html",
+      "raw": [
+        "iDN9P9",
+        "pBuadu",
+        "oChild of Brakoma.",
+        "fNYFX4"
+      ],
+      "given": "Buadu",
+      "notes": "Child of Brakoma.",
+      "parents": [
+        [
+          "father",
+          "NYFX4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iU8Y8V",
+      "source": "html",
+      "raw": [
+        "iU8Y8V",
+        "pAmissah",
+        "oChild of Bombo (Koko Sebe line).",
+        "fETH0K"
+      ],
+      "given": "Amissah",
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "parents": [
+        [
+          "father",
+          "ETH0K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iNEF15",
+      "source": "html",
+      "raw": [
+        "iNEF15",
+        "pYaa",
+        "gf",
+        "oChild of Bombo (Koko Sebe line).",
+        "fETH0K"
+      ],
+      "given": "Yaa",
+      "sex": "F",
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "parents": [
+        [
+          "father",
+          "ETH0K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iLWDHY",
+      "source": "html",
+      "raw": [
+        "iLWDHY",
+        "pAmuah",
+        "oChild of Bombo (Koko Sebe line).",
+        "fETH0K"
+      ],
+      "given": "Amuah",
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "parents": [
+        [
+          "father",
+          "ETH0K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCEWOK",
+      "source": "html",
+      "raw": [
+        "iCEWOK",
+        "pAkua",
+        "gf",
+        "oChild of Bombo (Koko Sebe line).",
+        "fETH0K"
+      ],
+      "given": "Akua",
+      "sex": "F",
+      "notes": "Child of Bombo (Koko Sebe line).",
+      "parents": [
+        [
+          "father",
+          "ETH0K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iH5SYH",
+      "source": "html",
+      "raw": [
+        "iH5SYH",
+        "pAkua",
+        "qMra",
+        "gf",
+        "oChild of Appiah. Mother of Nyantah (Kokoo), Amoo, Kwamina.",
+        "mFU5K6"
+      ],
+      "given": "Akua",
+      "surname": "Mra",
+      "sex": "F",
+      "notes": "Child of Appiah. Mother of Nyantah (Kokoo), Amoo, Kwamina.",
+      "parents": [
+        [
+          "mother",
+          "FU5K6"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iY2U7I",
+      "source": "html",
+      "raw": [
+        "iY2U7I",
+        "pKruwa",
+        "oChild of Appiah.",
+        "mFU5K6"
+      ],
+      "given": "Kruwa",
+      "notes": "Child of Appiah.",
+      "parents": [
+        [
+          "mother",
+          "FU5K6"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iO0GIZ",
+      "source": "html",
+      "raw": [
+        "iO0GIZ",
+        "pNyaa",
+        "oChild of Appiah.",
+        "mFU5K6"
+      ],
+      "given": "Nyaa",
+      "notes": "Child of Appiah.",
+      "parents": [
+        [
+          "mother",
+          "FU5K6"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iU147S",
+      "source": "html",
+      "raw": [
+        "iU147S",
+        "pAkua",
+        "qAfra",
+        "gf",
+        "oChild of Appiah.",
+        "mFU5K6"
+      ],
+      "given": "Akua",
+      "surname": "Afra",
+      "sex": "F",
+      "notes": "Child of Appiah.",
+      "parents": [
+        [
+          "mother",
+          "FU5K6"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iSNF2U",
+      "source": "html",
+      "raw": [
+        "iSNF2U",
+        "pBadu",
+        "gm",
+        "oChild of Appiah. Brought forth Ampong, Asua Akowa, Kwasi Yane, Appiah Bosso, Nsowah and Afua Aso.",
+        "mFU5K6"
+      ],
+      "given": "Badu",
+      "sex": "M",
+      "notes": "Child of Appiah. Brought forth Ampong, Asua Akowa, Kwasi Yane, Appiah Bosso, Nsowah and Afua Aso.",
+      "parents": [
+        [
+          "mother",
+          "FU5K6"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iW5ZRJ",
+      "source": "html",
+      "raw": [
+        "iW5ZRJ",
+        "pKwakyem",
+        "oChild of Appiah.",
+        "mFU5K6"
+      ],
+      "given": "Kwakyem",
+      "notes": "Child of Appiah.",
+      "parents": [
+        [
+          "mother",
+          "FU5K6"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iZ1FRQ",
+      "source": "html",
+      "raw": [
+        "iZ1FRQ",
+        "pNyantah",
+        "q(Kokoo)",
+        "gf",
+        "oChild of Akua Mra. Mother of Mansa and others.",
+        "mH5SYH"
+      ],
+      "given": "Nyantah",
+      "surname": "(Kokoo)",
+      "sex": "F",
+      "notes": "Child of Akua Mra. Mother of Mansa and others.",
+      "parents": [
+        [
+          "mother",
+          "H5SYH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJPI7N",
+      "source": "html",
+      "raw": [
+        "iJPI7N",
+        "pAmoo",
+        "oChild of Akua Mra.",
+        "mH5SYH"
+      ],
+      "given": "Amoo",
+      "notes": "Child of Akua Mra.",
+      "parents": [
+        [
+          "mother",
+          "H5SYH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMREY0",
+      "source": "html",
+      "raw": [
+        "iMREY0",
+        "pKwamina",
+        "oChild of Akua Mra.",
+        "mH5SYH"
+      ],
+      "given": "Kwamina",
+      "notes": "Child of Akua Mra.",
+      "parents": [
+        [
+          "mother",
+          "H5SYH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iVRRYO",
+      "source": "html",
+      "raw": [
+        "iVRRYO",
+        "pMansa",
+        "gf",
+        "oChild of Nyantah (Kokoo). Mother of Maa Abena.",
+        "mZ1FRQ"
+      ],
+      "given": "Mansa",
+      "sex": "F",
+      "notes": "Child of Nyantah (Kokoo). Mother of Maa Abena.",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iAO2GG",
+      "source": "html",
+      "raw": [
+        "iAO2GG",
+        "pBossom",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Bossom",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJBCCS",
+      "source": "html",
+      "raw": [
+        "iJBCCS",
+        "pAmpofoa",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Ampofoa",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJCJST",
+      "source": "html",
+      "raw": [
+        "iJCJST",
+        "pYaw",
+        "qBi",
+        "gm",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Yaw",
+      "surname": "Bi",
+      "sex": "M",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iS5982",
+      "source": "html",
+      "raw": [
+        "iS5982",
+        "pKyekye",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Kyekye",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJQKRF",
+      "source": "html",
+      "raw": [
+        "iJQKRF",
+        "pAma",
+        "qBoaa",
+        "gf",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Ama",
+      "surname": "Boaa",
+      "sex": "F",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iALWSA",
+      "source": "html",
+      "raw": [
+        "iALWSA",
+        "pAkua",
+        "qBirasso",
+        "gf",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Akua",
+      "surname": "Birasso",
+      "sex": "F",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iATO4Z",
+      "source": "html",
+      "raw": [
+        "iATO4Z",
+        "pKwasi",
+        "qBuah",
+        "gm",
+        "oChild of Nyantah (Kokoo).",
+        "mZ1FRQ"
+      ],
+      "given": "Kwasi",
+      "surname": "Buah",
+      "sex": "M",
+      "notes": "Child of Nyantah (Kokoo).",
+      "parents": [
+        [
+          "mother",
+          "Z1FRQ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iPH0XK",
+      "source": "html",
+      "raw": [
+        "iPH0XK",
+        "pMaa",
+        "qAbena",
+        "gf",
+        "oChild of Mansa. Mother of Agnes Obiri-Yeboah, Matthew, Hannah, John, Gyima. Direct grandmother of Samuel Asamoah Tekyi.",
+        "mVRRYO"
+      ],
+      "given": "Maa",
+      "surname": "Abena",
+      "sex": "F",
+      "notes": "Child of Mansa. Mother of Agnes Obiri-Yeboah, Matthew, Hannah, John, Gyima. Direct grandmother of Samuel Asamoah Tekyi.",
+      "parents": [
+        [
+          "mother",
+          "VRRYO"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iGAMTS",
+      "source": "html",
+      "raw": [
+        "iGAMTS",
+        "pAgnes Tiwaa",
+        "qObiri-Yeboah",
+        "gf",
+        "vAsankragua, Western Region, Ghana",
+        "jRetired Educationist",
+        "oChild of Maa Abena. Mother of Samuel Asamoah Tekyi and siblings.",
+        "mPH0XK",
+        "sFCT80"
+      ],
+      "given": "Agnes Tiwaa",
+      "surname": "Obiri-Yeboah",
+      "sex": "F",
+      "place": "Asankragua, Western Region, Ghana",
+      "occupation": "Retired Educationist",
+      "notes": "Child of Maa Abena. Mother of Samuel Asamoah Tekyi and siblings.",
+      "parents": [
+        [
+          "mother",
+          "PH0XK"
+        ]
+      ],
+      "spouses": [
+        "FCT80"
+      ]
+    },
+    {
+      "id": "iFCT80",
+      "source": "html",
+      "raw": [
+        "iFCT80",
+        "sGAMTS",
+        "pSamuel Albert Kofi",
+        "qTekyi",
+        "gm",
+        "vAsankragua, Western Region, Ghana",
+        "jEducationist",
+        "oFather of Samuel Asamoah Tekyi."
+      ],
+      "given": "Samuel Albert Kofi",
+      "surname": "Tekyi",
+      "sex": "M",
+      "place": "Asankragua, Western Region, Ghana",
+      "occupation": "Educationist",
+      "notes": "Father of Samuel Asamoah Tekyi.",
+      "parents": [],
+      "spouses": [
+        "GAMTS"
+      ]
+    },
+    {
+      "id": "iXJO6H",
+      "source": "html",
+      "raw": [
+        "iXJO6H",
+        "pMatthew",
+        "qObiri-Yeboah",
+        "gm",
+        "oChild of Maa Abena.",
+        "mPH0XK"
+      ],
+      "given": "Matthew",
+      "surname": "Obiri-Yeboah",
+      "sex": "M",
+      "notes": "Child of Maa Abena.",
+      "parents": [
+        [
+          "mother",
+          "PH0XK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iEJYR1",
+      "source": "html",
+      "raw": [
+        "iEJYR1",
+        "pHannah",
+        "qObiri-Yeboah",
+        "gf",
+        "oChild of Maa Abena.",
+        "mPH0XK"
+      ],
+      "given": "Hannah",
+      "surname": "Obiri-Yeboah",
+      "sex": "F",
+      "notes": "Child of Maa Abena.",
+      "parents": [
+        [
+          "mother",
+          "PH0XK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iVRDQ9",
+      "source": "html",
+      "raw": [
+        "iVRDQ9",
+        "pJohn",
+        "qObiri-Yeboah",
+        "gm",
+        "oChild of Maa Abena.",
+        "mPH0XK"
+      ],
+      "given": "John",
+      "surname": "Obiri-Yeboah",
+      "sex": "M",
+      "notes": "Child of Maa Abena.",
+      "parents": [
+        [
+          "mother",
+          "PH0XK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCRSRL",
+      "source": "html",
+      "raw": [
+        "iCRSRL",
+        "pGyima",
+        "qObiri-Yeboah",
+        "gm",
+        "oChild of Maa Abena.",
+        "mPH0XK"
+      ],
+      "given": "Gyima",
+      "surname": "Obiri-Yeboah",
+      "sex": "M",
+      "notes": "Child of Maa Abena.",
+      "parents": [
+        [
+          "mother",
+          "PH0XK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iSTART",
+      "source": "html",
+      "raw": [
+        "iSTART",
+        "NOsofo",
+        "pSamuel Asamoah",
+        "qTekyi",
+        "gm",
+        "b19890000",
+        "vCatholic Hospital, Asankragua, Western Region, Ghana",
+        "jEngineer",
+        "oSon of Agnes Obiri-Yeboah and Samuel Albert Kofi Tekyi. Direct line: Samuel — Agnes — Maa Abena — Mansa — Nyantah (Kokoo) — Akua Mra — Appiah — Aframa — [unknown Asankran ancestors] — founding clan of Asankran — Kye Boadu/Kyi Boadu line — descendants of three sisters — Rock at Oda Aboho.",
+        "mGAMTS",
+        "fFCT80",
+        "sMM0IS"
+      ],
+      "given": "Samuel Asamoah",
+      "surname": "Tekyi",
+      "sex": "M",
+      "birth": "19890000",
+      "place": "Catholic Hospital, Asankragua, Western Region, Ghana",
+      "occupation": "Engineer",
+      "notes": "Son of Agnes Obiri-Yeboah and Samuel Albert Kofi Tekyi. Direct line: Samuel — Agnes — Maa Abena — Mansa — Nyantah (Kokoo) — Akua Mra — Appiah — Aframa — [unknown Asankran ancestors] — founding clan of Asankran — Kye Boadu/Kyi Boadu line — descendants of three sisters — Rock at Oda Aboho.",
+      "parents": [
+        [
+          "mother",
+          "GAMTS"
+        ],
+        [
+          "father",
+          "FCT80"
+        ]
+      ],
+      "spouses": [
+        "MM0IS"
+      ]
+    },
+    {
+      "id": "iMM0IS",
+      "source": "html",
+      "raw": [
+        "iMM0IS",
+        "sSTART",
+        "pAngelina",
+        "qAdams",
+        "gf",
+        "oWife of Samuel Asamoah Tekyi."
+      ],
+      "given": "Angelina",
+      "surname": "Adams",
+      "sex": "F",
+      "notes": "Wife of Samuel Asamoah Tekyi.",
+      "parents": [],
+      "spouses": [
+        "START"
+      ]
+    },
+    {
+      "id": "iGCAX8",
+      "source": "html",
+      "raw": [
+        "iGCAX8",
+        "pEsther Amoaa",
+        "qTekyi",
+        "gf",
+        "b19920813",
+        "vAsankragua, Western Region, Ghana",
+        "jNurse",
+        "oChild of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+        "mGAMTS",
+        "fFCT80"
+      ],
+      "given": "Esther Amoaa",
+      "surname": "Tekyi",
+      "sex": "F",
+      "birth": "19920813",
+      "place": "Asankragua, Western Region, Ghana",
+      "occupation": "Nurse",
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "parents": [
+        [
+          "mother",
+          "GAMTS"
+        ],
+        [
+          "father",
+          "FCT80"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iF4I6L",
+      "source": "html",
+      "raw": [
+        "iF4I6L",
+        "pDaniel Aduabaan",
+        "qTekyi",
+        "gm",
+        "b19940424",
+        "vCatholic Hospital, Asankragua, Western Region, Ghana",
+        "jEngineer",
+        "oChild of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+        "mGAMTS",
+        "fFCT80"
+      ],
+      "given": "Daniel Aduabaan",
+      "surname": "Tekyi",
+      "sex": "M",
+      "birth": "19940424",
+      "place": "Catholic Hospital, Asankragua, Western Region, Ghana",
+      "occupation": "Engineer",
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "parents": [
+        [
+          "mother",
+          "GAMTS"
+        ],
+        [
+          "father",
+          "FCT80"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iZ02CG",
+      "source": "html",
+      "raw": [
+        "iZ02CG",
+        "pGrace Agyapoma",
+        "qTekyi",
+        "gf",
+        "jEducationist",
+        "oChild of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+        "mGAMTS",
+        "fFCT80"
+      ],
+      "given": "Grace Agyapoma",
+      "surname": "Tekyi",
+      "sex": "F",
+      "occupation": "Educationist",
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "parents": [
+        [
+          "mother",
+          "GAMTS"
+        ],
+        [
+          "father",
+          "FCT80"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUGYKY",
+      "source": "html",
+      "raw": [
+        "iUGYKY",
+        "pPanin Asirifuah",
+        "qTekyi",
+        "gf",
+        "jLecturer",
+        "oChild of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+        "mGAMTS",
+        "fFCT80"
+      ],
+      "given": "Panin Asirifuah",
+      "surname": "Tekyi",
+      "sex": "F",
+      "occupation": "Lecturer",
+      "notes": "Child of Agnes and Samuel Albert Tekyi. Sibling of Samuel Asamoah Tekyi.",
+      "parents": [
+        [
+          "mother",
+          "GAMTS"
+        ],
+        [
+          "father",
+          "FCT80"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iZT0SR",
+      "source": "html",
+      "raw": [
+        "iZT0SR",
+        "pKakra Asirifuah",
+        "qTekyi",
+        "gf",
+        "jEntrepreneur",
+        "mGAMTS",
+        "fFCT80"
+      ],
+      "given": "Kakra Asirifuah",
+      "surname": "Tekyi",
+      "sex": "F",
+      "occupation": "Entrepreneur",
+      "parents": [
+        [
+          "mother",
+          "GAMTS"
+        ],
+        [
+          "father",
+          "FCT80"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMRURF",
+      "source": "html",
+      "raw": [
+        "iMRURF",
+        "pCandace Asamoah",
+        "qTekyi",
+        "gf",
+        "b20180602",
+        "vLiberty Maternity Home, Accra, Greater Accra Region, Ghana",
+        "mMM0IS",
+        "fSTART"
+      ],
+      "given": "Candace Asamoah",
+      "surname": "Tekyi",
+      "sex": "F",
+      "birth": "20180602",
+      "place": "Liberty Maternity Home, Accra, Greater Accra Region, Ghana",
+      "parents": [
+        [
+          "mother",
+          "MM0IS"
+        ],
+        [
+          "father",
+          "START"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOZA1V",
+      "source": "html",
+      "raw": [
+        "iOZA1V",
+        "pObrempon Asamoah",
+        "qTekyi",
+        "gm",
+        "b20230524",
+        "vSamj Hospital, Accra, Greater Accra Region, Ghana",
+        "oChild of Samuel Asamoah Tekyi and Angelina Adams.",
+        "mMM0IS",
+        "fSTART"
+      ],
+      "given": "Obrempon Asamoah",
+      "surname": "Tekyi",
+      "sex": "M",
+      "birth": "20230524",
+      "place": "Samj Hospital, Accra, Greater Accra Region, Ghana",
+      "notes": "Child of Samuel Asamoah Tekyi and Angelina Adams.",
+      "parents": [
+        [
+          "mother",
+          "MM0IS"
+        ],
+        [
+          "father",
+          "START"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iI1ME4",
+      "source": "html",
+      "raw": [
+        "iI1ME4",
+        "pKwabena Agyei",
+        "qMensah",
+        "gm",
+        "oChild of Hannah Obiri-Yeboah.",
+        "mEJYR1"
+      ],
+      "given": "Kwabena Agyei",
+      "surname": "Mensah",
+      "sex": "M",
+      "notes": "Child of Hannah Obiri-Yeboah.",
+      "parents": [
+        [
+          "mother",
+          "EJYR1"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iN6AGH",
+      "source": "html",
+      "raw": [
+        "iN6AGH",
+        "pNyarko",
+        "oChild of Kruwa.",
+        "fY2U7I"
+      ],
+      "given": "Nyarko",
+      "notes": "Child of Kruwa.",
+      "parents": [
+        [
+          "father",
+          "Y2U7I"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iRG1PZ",
+      "source": "html",
+      "raw": [
+        "iRG1PZ",
+        "pAbena",
+        "qAnkora",
+        "gf",
+        "oChild of Kruwa.",
+        "fY2U7I"
+      ],
+      "given": "Abena",
+      "surname": "Ankora",
+      "sex": "F",
+      "notes": "Child of Kruwa.",
+      "parents": [
+        [
+          "father",
+          "Y2U7I"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iG6B9E",
+      "source": "html",
+      "raw": [
+        "iG6B9E",
+        "pNsowah",
+        "gf",
+        "oChild of Kruwa. Did not bring forth.",
+        "fY2U7I"
+      ],
+      "given": "Nsowah",
+      "sex": "F",
+      "notes": "Child of Kruwa. Did not bring forth.",
+      "parents": [
+        [
+          "father",
+          "Y2U7I"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOQWE7",
+      "source": "html",
+      "raw": [
+        "iOQWE7",
+        "pAkua",
+        "qNyarko",
+        "gf",
+        "oChild of Kruwa. Mother of Kwasi Wiredu, Kwaku Mensah, Akosua Mensine, Adjoa Adua, Kofi Siwan, Akua Amoakoah and Kwasi Afari.",
+        "fY2U7I"
+      ],
+      "given": "Akua",
+      "surname": "Nyarko",
+      "sex": "F",
+      "notes": "Child of Kruwa. Mother of Kwasi Wiredu, Kwaku Mensah, Akosua Mensine, Adjoa Adua, Kofi Siwan, Akua Amoakoah and Kwasi Afari.",
+      "parents": [
+        [
+          "father",
+          "Y2U7I"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUYX2Q",
+      "source": "html",
+      "raw": [
+        "iUYX2Q",
+        "pKwasi",
+        "qWiredu",
+        "oChild of Akua Nyarko.",
+        "mOQWE7"
+      ],
+      "given": "Kwasi",
+      "surname": "Wiredu",
+      "notes": "Child of Akua Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iGDHVI",
+      "source": "html",
+      "raw": [
+        "iGDHVI",
+        "pKwaku",
+        "qMensah",
+        "gm",
+        "oChild of Akua Nyarko.",
+        "mOQWE7"
+      ],
+      "given": "Kwaku",
+      "surname": "Mensah",
+      "sex": "M",
+      "notes": "Child of Akua Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iBDFCK",
+      "source": "html",
+      "raw": [
+        "iBDFCK",
+        "pAkosua",
+        "qMensine",
+        "gf",
+        "oChild of Akua Nyarko. Mother of E.B. Cudjoe (author of the 2017 history of Asankran) and 11 other children.",
+        "mOQWE7"
+      ],
+      "given": "Akosua",
+      "surname": "Mensine",
+      "sex": "F",
+      "notes": "Child of Akua Nyarko. Mother of E.B. Cudjoe (author of the 2017 history of Asankran) and 11 other children.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJ1REH",
+      "source": "html",
+      "raw": [
+        "iJ1REH",
+        "pAdjoa",
+        "qAdua",
+        "gf",
+        "oChild of Akua Nyarko.",
+        "mOQWE7"
+      ],
+      "given": "Adjoa",
+      "surname": "Adua",
+      "sex": "F",
+      "notes": "Child of Akua Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iENDHM",
+      "source": "html",
+      "raw": [
+        "iENDHM",
+        "pKofi",
+        "qSiwan",
+        "oChild of Akua Nyarko.",
+        "mOQWE7"
+      ],
+      "given": "Kofi",
+      "surname": "Siwan",
+      "notes": "Child of Akua Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iG1256",
+      "source": "html",
+      "raw": [
+        "iG1256",
+        "pAkua",
+        "qAmoakoah",
+        "gf",
+        "oChild of Akua Nyarko.",
+        "mOQWE7",
+        "sWDKBV"
+      ],
+      "given": "Akua",
+      "surname": "Amoakoah",
+      "sex": "F",
+      "notes": "Child of Akua Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": [
+        "WDKBV"
+      ]
+    },
+    {
+      "id": "iWDKBV",
+      "source": "html",
+      "raw": [
+        "iWDKBV",
+        "sG1256",
+        "pJ.E.",
+        "qDarmang",
+        "gm",
+        "oSpouse of Akua Amoakoah. From Manso Amenfi."
+      ],
+      "given": "J.E.",
+      "surname": "Darmang",
+      "sex": "M",
+      "notes": "Spouse of Akua Amoakoah. From Manso Amenfi.",
+      "parents": [],
+      "spouses": [
+        "G1256"
+      ]
+    },
+    {
+      "id": "iSXUNP",
+      "source": "html",
+      "raw": [
+        "iSXUNP",
+        "pKwasi",
+        "qAfari",
+        "oChild of Akua Nyarko.",
+        "mOQWE7"
+      ],
+      "given": "Kwasi",
+      "surname": "Afari",
+      "notes": "Child of Akua Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OQWE7"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iAWTIH",
+      "source": "html",
+      "raw": [
+        "iAWTIH",
+        "pKwasi",
+        "qTweneboah",
+        "oChild of Nyaa.",
+        "fO0GIZ"
+      ],
+      "given": "Kwasi",
+      "surname": "Tweneboah",
+      "notes": "Child of Nyaa.",
+      "parents": [
+        [
+          "father",
+          "O0GIZ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUKL6M",
+      "source": "html",
+      "raw": [
+        "iUKL6M",
+        "pYaa",
+        "qGyaa",
+        "gf",
+        "oChild of Nyaa.",
+        "fO0GIZ"
+      ],
+      "given": "Yaa",
+      "surname": "Gyaa",
+      "sex": "F",
+      "notes": "Child of Nyaa.",
+      "parents": [
+        [
+          "father",
+          "O0GIZ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iQKDDO",
+      "source": "html",
+      "raw": [
+        "iQKDDO",
+        "pTikwa",
+        "gf",
+        "oChild of Nyaa.",
+        "fO0GIZ"
+      ],
+      "given": "Tikwa",
+      "sex": "F",
+      "notes": "Child of Nyaa.",
+      "parents": [
+        [
+          "father",
+          "O0GIZ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iHJ1OR",
+      "source": "html",
+      "raw": [
+        "iHJ1OR",
+        "pAsirifua",
+        "gf",
+        "oChild of Akua Afra. Children: Attrama, Abena Anyensua, Asi Praba.",
+        "mU147S"
+      ],
+      "given": "Asirifua",
+      "sex": "F",
+      "notes": "Child of Akua Afra. Children: Attrama, Abena Anyensua, Asi Praba.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCXI6T",
+      "source": "html",
+      "raw": [
+        "iCXI6T",
+        "pMesuwah",
+        "gf",
+        "oChild of Akua Afra. Did not bring forth children.",
+        "mU147S"
+      ],
+      "given": "Mesuwah",
+      "sex": "F",
+      "notes": "Child of Akua Afra. Did not bring forth children.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iDWG09",
+      "source": "html",
+      "raw": [
+        "iDWG09",
+        "pAttobrah",
+        "oChild of Akua Afra. Did not bring forth children.",
+        "mU147S"
+      ],
+      "given": "Attobrah",
+      "notes": "Child of Akua Afra. Did not bring forth children.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iQ0WG9",
+      "source": "html",
+      "raw": [
+        "iQ0WG9",
+        "pAmankwah",
+        "oChild of Akua Afra.",
+        "mU147S"
+      ],
+      "given": "Amankwah",
+      "notes": "Child of Akua Afra.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iV7JF4",
+      "source": "html",
+      "raw": [
+        "iV7JF4",
+        "pAhema",
+        "gf",
+        "oChild of Akua Afra. Had one son: Kofi Forjour.",
+        "mU147S"
+      ],
+      "given": "Ahema",
+      "sex": "F",
+      "notes": "Child of Akua Afra. Had one son: Kofi Forjour.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iP1EZ4",
+      "source": "html",
+      "raw": [
+        "iP1EZ4",
+        "pKyenesee",
+        "qTekyi",
+        "oChild of Akua Afra. Children: Amoo, Abukwaw, Asi Pieduwa.",
+        "mU147S"
+      ],
+      "given": "Kyenesee",
+      "surname": "Tekyi",
+      "notes": "Child of Akua Afra. Children: Amoo, Abukwaw, Asi Pieduwa.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iNAEKP",
+      "source": "html",
+      "raw": [
+        "iNAEKP",
+        "pBombo",
+        "oChild of Akua Afra (different from Bombo child of Koko Sebe). Children: Kyeriwa, Kaya.",
+        "mU147S"
+      ],
+      "given": "Bombo",
+      "notes": "Child of Akua Afra (different from Bombo child of Koko Sebe). Children: Kyeriwa, Kaya.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iPOD4K",
+      "source": "html",
+      "raw": [
+        "iPOD4K",
+        "pKwoa",
+        "qAbroah",
+        "oChild of Akua Afra.",
+        "mU147S"
+      ],
+      "given": "Kwoa",
+      "surname": "Abroah",
+      "notes": "Child of Akua Afra.",
+      "parents": [
+        [
+          "mother",
+          "U147S"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iQA730",
+      "source": "html",
+      "raw": [
+        "iQA730",
+        "pAmpong",
+        "oChild of Badu.",
+        "fSNF2U"
+      ],
+      "given": "Ampong",
+      "notes": "Child of Badu.",
+      "parents": [
+        [
+          "father",
+          "SNF2U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iYQRTW",
+      "source": "html",
+      "raw": [
+        "iYQRTW",
+        "pAsua",
+        "qAkowa",
+        "gf",
+        "oChild of Badu. Children: Amaoto, J.K. Amponsah.",
+        "fSNF2U"
+      ],
+      "given": "Asua",
+      "surname": "Akowa",
+      "sex": "F",
+      "notes": "Child of Badu. Children: Amaoto, J.K. Amponsah.",
+      "parents": [
+        [
+          "father",
+          "SNF2U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iLNUZS",
+      "source": "html",
+      "raw": [
+        "iLNUZS",
+        "pKwasi",
+        "qYane",
+        "oChild of Badu.",
+        "fSNF2U"
+      ],
+      "given": "Kwasi",
+      "surname": "Yane",
+      "notes": "Child of Badu.",
+      "parents": [
+        [
+          "father",
+          "SNF2U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iLLKUB",
+      "source": "html",
+      "raw": [
+        "iLLKUB",
+        "pAppiah",
+        "qBosso",
+        "oChild of Badu.",
+        "fSNF2U"
+      ],
+      "given": "Appiah",
+      "surname": "Bosso",
+      "notes": "Child of Badu.",
+      "parents": [
+        [
+          "father",
+          "SNF2U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iDDCJO",
+      "source": "html",
+      "raw": [
+        "iDDCJO",
+        "pNsowah",
+        "gf",
+        "oChild of Badu.",
+        "fSNF2U"
+      ],
+      "given": "Nsowah",
+      "sex": "F",
+      "notes": "Child of Badu.",
+      "parents": [
+        [
+          "father",
+          "SNF2U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iN52VZ",
+      "source": "html",
+      "raw": [
+        "iN52VZ",
+        "pAfua",
+        "qAso",
+        "gf",
+        "oChild of Badu.",
+        "fSNF2U"
+      ],
+      "given": "Afua",
+      "surname": "Aso",
+      "sex": "F",
+      "notes": "Child of Badu.",
+      "parents": [
+        [
+          "father",
+          "SNF2U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCIZBC",
+      "source": "html",
+      "raw": [
+        "iCIZBC",
+        "pKofi Gyabeng (E.B.",
+        "qCudjoe)",
+        "gm",
+        "oChild of Akosua Mensine. Author of The History of the Asankran Kona Clan (November 2017).",
+        "mBDFCK"
+      ],
+      "given": "Kofi Gyabeng (E.B.",
+      "surname": "Cudjoe)",
+      "sex": "M",
+      "notes": "Child of Akosua Mensine. Author of The History of the Asankran Kona Clan (November 2017).",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iL8T7S",
+      "source": "html",
+      "raw": [
+        "iL8T7S",
+        "pAbena",
+        "qTwumwa",
+        "gf",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Abena",
+      "surname": "Twumwa",
+      "sex": "F",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iEN50D",
+      "source": "html",
+      "raw": [
+        "iEN50D",
+        "pAma",
+        "qTano",
+        "gf",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Ama",
+      "surname": "Tano",
+      "sex": "F",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iKGOY0",
+      "source": "html",
+      "raw": [
+        "iKGOY0",
+        "pAbena",
+        "qAgyeriwa",
+        "gf",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Abena",
+      "surname": "Agyeriwa",
+      "sex": "F",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iL34SC",
+      "source": "html",
+      "raw": [
+        "iL34SC",
+        "pAfua",
+        "qMansah",
+        "gf",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Afua",
+      "surname": "Mansah",
+      "sex": "F",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iGB7CW",
+      "source": "html",
+      "raw": [
+        "iGB7CW",
+        "pKofi",
+        "qTotwene",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Kofi",
+      "surname": "Totwene",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iRF5NH",
+      "source": "html",
+      "raw": [
+        "iRF5NH",
+        "pAsi",
+        "qAmowee",
+        "gf",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Asi",
+      "surname": "Amowee",
+      "sex": "F",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iZ3FS0",
+      "source": "html",
+      "raw": [
+        "iZ3FS0",
+        "pAkwaba",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Akwaba",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iRYETP",
+      "source": "html",
+      "raw": [
+        "iRYETP",
+        "pKwaku",
+        "qBadu",
+        "gm",
+        "oChild of Akosua Mensine. Father of Tinewa.",
+        "mBDFCK"
+      ],
+      "given": "Kwaku",
+      "surname": "Badu",
+      "sex": "M",
+      "notes": "Child of Akosua Mensine. Father of Tinewa.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iF7WWV",
+      "source": "html",
+      "raw": [
+        "iF7WWV",
+        "pAma",
+        "qDuku",
+        "gf",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Ama",
+      "surname": "Duku",
+      "sex": "F",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJCOHV",
+      "source": "html",
+      "raw": [
+        "iJCOHV",
+        "pKofi",
+        "qBoafo",
+        "oChild of Akosua Mensine.",
+        "mBDFCK"
+      ],
+      "given": "Kofi",
+      "surname": "Boafo",
+      "notes": "Child of Akosua Mensine.",
+      "parents": [
+        [
+          "mother",
+          "BDFCK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMQWPS",
+      "source": "html",
+      "raw": [
+        "iMQWPS",
+        "pKwasi",
+        "qBadu",
+        "gm",
+        "oDescendant of Kwaki Amoako (Aframa's son). Father of Nana Anyani Buadum III (Ohene of Asankrangwa). Broni (who occupied the Oda stool but died before being outdoored) was Kwasi Badu's maternal uncle — i.e. the brother of Kwasi Badu's mother (Kwaki Amoako's daughter).",
+        "mY2VU9"
+      ],
+      "given": "Kwasi",
+      "surname": "Badu",
+      "sex": "M",
+      "notes": "Descendant of Kwaki Amoako (Aframa's son). Father of Nana Anyani Buadum III (Ohene of Asankrangwa). Broni (who occupied the Oda stool but died before being outdoored) was Kwasi Badu's maternal uncle — i.e. the brother of Kwasi Badu's mother (Kwaki Amoako's daughter).",
+      "parents": [
+        [
+          "mother",
+          "Y2VU9"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iGCYEQ",
+      "source": "html",
+      "raw": [
+        "iGCYEQ",
+        "pKwaku Yeboah (T.K.",
+        "qMensah)",
+        "gm",
+        "oChild of Adjoa Adua.",
+        "mJ1REH"
+      ],
+      "given": "Kwaku Yeboah (T.K.",
+      "surname": "Mensah)",
+      "sex": "M",
+      "notes": "Child of Adjoa Adua.",
+      "parents": [
+        [
+          "mother",
+          "J1REH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iAZKFJ",
+      "source": "html",
+      "raw": [
+        "iAZKFJ",
+        "pPapa",
+        "qDarmang",
+        "oChild of Akua Amoakoah and J.E. Darmang.",
+        "mG1256",
+        "fWDKBV"
+      ],
+      "given": "Papa",
+      "surname": "Darmang",
+      "notes": "Child of Akua Amoakoah and J.E. Darmang.",
+      "parents": [
+        [
+          "mother",
+          "G1256"
+        ],
+        [
+          "father",
+          "WDKBV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iSMGL9",
+      "source": "html",
+      "raw": [
+        "iSMGL9",
+        "pAmoo",
+        "oChild of Akua Amoakoah and J.E. Darmang.",
+        "mG1256",
+        "fWDKBV"
+      ],
+      "given": "Amoo",
+      "notes": "Child of Akua Amoakoah and J.E. Darmang.",
+      "parents": [
+        [
+          "mother",
+          "G1256"
+        ],
+        [
+          "father",
+          "WDKBV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUYBG6",
+      "source": "html",
+      "raw": [
+        "iUYBG6",
+        "pBisaa",
+        "oChild of Akua Amoakoah and J.E. Darmang.",
+        "mG1256",
+        "fWDKBV"
+      ],
+      "given": "Bisaa",
+      "notes": "Child of Akua Amoakoah and J.E. Darmang.",
+      "parents": [
+        [
+          "mother",
+          "G1256"
+        ],
+        [
+          "father",
+          "WDKBV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iQYNID",
+      "source": "html",
+      "raw": [
+        "iQYNID",
+        "pBereko",
+        "oChild of Yaa Gyaa.",
+        "mUKL6M"
+      ],
+      "given": "Bereko",
+      "notes": "Child of Yaa Gyaa.",
+      "parents": [
+        [
+          "mother",
+          "UKL6M"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iWRGUW",
+      "source": "html",
+      "raw": [
+        "iWRGUW",
+        "pAnkyaa",
+        "gf",
+        "oChild of Yaa Gyaa.",
+        "mUKL6M"
+      ],
+      "given": "Ankyaa",
+      "sex": "F",
+      "notes": "Child of Yaa Gyaa.",
+      "parents": [
+        [
+          "mother",
+          "UKL6M"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iQQ07R",
+      "source": "html",
+      "raw": [
+        "iQQ07R",
+        "pAppiah",
+        "qAbukwaw",
+        "oChild of Yaa Gyaa.",
+        "mUKL6M"
+      ],
+      "given": "Appiah",
+      "surname": "Abukwaw",
+      "notes": "Child of Yaa Gyaa.",
+      "parents": [
+        [
+          "mother",
+          "UKL6M"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iI8HWE",
+      "source": "html",
+      "raw": [
+        "iI8HWE",
+        "pAmpofo",
+        "oChild of Yaa Gyaa.",
+        "mUKL6M"
+      ],
+      "given": "Ampofo",
+      "notes": "Child of Yaa Gyaa.",
+      "parents": [
+        [
+          "mother",
+          "UKL6M"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMMRXY",
+      "source": "html",
+      "raw": [
+        "iMMRXY",
+        "pAttrama",
+        "oChild of Asirifua.",
+        "mHJ1OR"
+      ],
+      "given": "Attrama",
+      "notes": "Child of Asirifua.",
+      "parents": [
+        [
+          "mother",
+          "HJ1OR"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iLPNRW",
+      "source": "html",
+      "raw": [
+        "iLPNRW",
+        "pAbena",
+        "qAnyensua",
+        "gf",
+        "oChild of Asirifua.",
+        "mHJ1OR"
+      ],
+      "given": "Abena",
+      "surname": "Anyensua",
+      "sex": "F",
+      "notes": "Child of Asirifua.",
+      "parents": [
+        [
+          "mother",
+          "HJ1OR"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iHDKXM",
+      "source": "html",
+      "raw": [
+        "iHDKXM",
+        "pAsi",
+        "qPraba",
+        "gf",
+        "oChild of Asirifua.",
+        "mHJ1OR"
+      ],
+      "given": "Asi",
+      "surname": "Praba",
+      "sex": "F",
+      "notes": "Child of Asirifua.",
+      "parents": [
+        [
+          "mother",
+          "HJ1OR"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iKS3UD",
+      "source": "html",
+      "raw": [
+        "iKS3UD",
+        "pKofi",
+        "qForjour",
+        "gm",
+        "oChild of Ahema. Only child.",
+        "mV7JF4"
+      ],
+      "given": "Kofi",
+      "surname": "Forjour",
+      "sex": "M",
+      "notes": "Child of Ahema. Only child.",
+      "parents": [
+        [
+          "mother",
+          "V7JF4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iLHTGE",
+      "source": "html",
+      "raw": [
+        "iLHTGE",
+        "pAmoo",
+        "oChild of Kyenesee Tekyi.",
+        "fP1EZ4"
+      ],
+      "given": "Amoo",
+      "notes": "Child of Kyenesee Tekyi.",
+      "parents": [
+        [
+          "father",
+          "P1EZ4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iASCIE",
+      "source": "html",
+      "raw": [
+        "iASCIE",
+        "pAbukwaw",
+        "oChild of Kyenesee Tekyi.",
+        "fP1EZ4"
+      ],
+      "given": "Abukwaw",
+      "notes": "Child of Kyenesee Tekyi.",
+      "parents": [
+        [
+          "father",
+          "P1EZ4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iEZRXM",
+      "source": "html",
+      "raw": [
+        "iEZRXM",
+        "pAsi",
+        "qPieduwa",
+        "gf",
+        "oChild of Kyenesee Tekyi.",
+        "fP1EZ4"
+      ],
+      "given": "Asi",
+      "surname": "Pieduwa",
+      "sex": "F",
+      "notes": "Child of Kyenesee Tekyi.",
+      "parents": [
+        [
+          "father",
+          "P1EZ4"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iED2TV",
+      "source": "html",
+      "raw": [
+        "iED2TV",
+        "pKyeriwa",
+        "gf",
+        "oChild of Bombo (Akua Afra line).",
+        "fNAEKP"
+      ],
+      "given": "Kyeriwa",
+      "sex": "F",
+      "notes": "Child of Bombo (Akua Afra line).",
+      "parents": [
+        [
+          "father",
+          "NAEKP"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iK2YZQ",
+      "source": "html",
+      "raw": [
+        "iK2YZQ",
+        "pKaya",
+        "gf",
+        "oChild of Bombo (Akua Afra line).",
+        "fNAEKP"
+      ],
+      "given": "Kaya",
+      "sex": "F",
+      "notes": "Child of Bombo (Akua Afra line).",
+      "parents": [
+        [
+          "father",
+          "NAEKP"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iAD84X",
+      "source": "html",
+      "raw": [
+        "iAD84X",
+        "pAmaoto",
+        "gf",
+        "oChild of Asua Akowa.",
+        "mYQRTW"
+      ],
+      "given": "Amaoto",
+      "sex": "F",
+      "notes": "Child of Asua Akowa.",
+      "parents": [
+        [
+          "mother",
+          "YQRTW"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iBL4VR",
+      "source": "html",
+      "raw": [
+        "iBL4VR",
+        "pJ.K.",
+        "qAmponsah",
+        "gm",
+        "oChild of Asua Akowa.",
+        "mYQRTW"
+      ],
+      "given": "J.K.",
+      "surname": "Amponsah",
+      "sex": "M",
+      "notes": "Child of Asua Akowa.",
+      "parents": [
+        [
+          "mother",
+          "YQRTW"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iZXAB5",
+      "source": "html",
+      "raw": [
+        "iZXAB5",
+        "pKojo",
+        "qAyinor",
+        "gm",
+        "oChild of Ama Mbra.",
+        "mCMFFA"
+      ],
+      "given": "Kojo",
+      "surname": "Ayinor",
+      "sex": "M",
+      "notes": "Child of Ama Mbra.",
+      "parents": [
+        [
+          "mother",
+          "CMFFA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iDIVW5",
+      "source": "html",
+      "raw": [
+        "iDIVW5",
+        "pKwaninyi",
+        "oChild of Ama Mbra.",
+        "mCMFFA"
+      ],
+      "given": "Kwaninyi",
+      "notes": "Child of Ama Mbra.",
+      "parents": [
+        [
+          "mother",
+          "CMFFA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iY290L",
+      "source": "html",
+      "raw": [
+        "iY290L",
+        "pKwasi",
+        "qAmuah",
+        "oChild of Ama Mbra.",
+        "mCMFFA"
+      ],
+      "given": "Kwasi",
+      "surname": "Amuah",
+      "notes": "Child of Ama Mbra.",
+      "parents": [
+        [
+          "mother",
+          "CMFFA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOEEJ3",
+      "source": "html",
+      "raw": [
+        "iOEEJ3",
+        "pAkua",
+        "qAhemah",
+        "gf",
+        "oChild of Ama Mbra. Children: Ayaa Panin, Ama Baaso.",
+        "mCMFFA"
+      ],
+      "given": "Akua",
+      "surname": "Ahemah",
+      "sex": "F",
+      "notes": "Child of Ama Mbra. Children: Ayaa Panin, Ama Baaso.",
+      "parents": [
+        [
+          "mother",
+          "CMFFA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOK6TF",
+      "source": "html",
+      "raw": [
+        "iOK6TF",
+        "pAmponetamaa",
+        "gf",
+        "oChild of Ama Mbra.",
+        "mCMFFA"
+      ],
+      "given": "Amponetamaa",
+      "sex": "F",
+      "notes": "Child of Ama Mbra.",
+      "parents": [
+        [
+          "mother",
+          "CMFFA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOVQOH",
+      "source": "html",
+      "raw": [
+        "iOVQOH",
+        "pAyaa",
+        "qPanin",
+        "gf",
+        "oChild of Akua Ahemah. Children: Ebbah Kojo, Nyarko.",
+        "mOEEJ3"
+      ],
+      "given": "Ayaa",
+      "surname": "Panin",
+      "sex": "F",
+      "notes": "Child of Akua Ahemah. Children: Ebbah Kojo, Nyarko.",
+      "parents": [
+        [
+          "mother",
+          "OEEJ3"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iZN48O",
+      "source": "html",
+      "raw": [
+        "iZN48O",
+        "pAma",
+        "qBaaso",
+        "gf",
+        "oChild of Akua Ahemah. Children: Boi, Adwoa.",
+        "mOEEJ3"
+      ],
+      "given": "Ama",
+      "surname": "Baaso",
+      "sex": "F",
+      "notes": "Child of Akua Ahemah. Children: Boi, Adwoa.",
+      "parents": [
+        [
+          "mother",
+          "OEEJ3"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iSDWL0",
+      "source": "html",
+      "raw": [
+        "iSDWL0",
+        "pEbbah",
+        "qKojo",
+        "gm",
+        "oChild of Ayaa Panin.",
+        "mOVQOH"
+      ],
+      "given": "Ebbah",
+      "surname": "Kojo",
+      "sex": "M",
+      "notes": "Child of Ayaa Panin.",
+      "parents": [
+        [
+          "mother",
+          "OVQOH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iNJSS9",
+      "source": "html",
+      "raw": [
+        "iNJSS9",
+        "pNyarko",
+        "oChild of Ayaa Panin.",
+        "mOVQOH"
+      ],
+      "given": "Nyarko",
+      "notes": "Child of Ayaa Panin.",
+      "parents": [
+        [
+          "mother",
+          "OVQOH"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iVCD7M",
+      "source": "html",
+      "raw": [
+        "iVCD7M",
+        "pBoi",
+        "oChild of Ama Baaso.",
+        "mZN48O"
+      ],
+      "given": "Boi",
+      "notes": "Child of Ama Baaso.",
+      "parents": [
+        [
+          "mother",
+          "ZN48O"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iYRX4A",
+      "source": "html",
+      "raw": [
+        "iYRX4A",
+        "pAdwoa",
+        "gf",
+        "oChild of Ama Baaso. Children: Rose Agyen and one son.",
+        "mZN48O"
+      ],
+      "given": "Adwoa",
+      "sex": "F",
+      "notes": "Child of Ama Baaso. Children: Rose Agyen and one son.",
+      "parents": [
+        [
+          "mother",
+          "ZN48O"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUOWJ3",
+      "source": "html",
+      "raw": [
+        "iUOWJ3",
+        "pRose",
+        "qAgyen",
+        "gf",
+        "oChild of Adwoa.",
+        "mYRX4A"
+      ],
+      "given": "Rose",
+      "surname": "Agyen",
+      "sex": "F",
+      "notes": "Child of Adwoa.",
+      "parents": [
+        [
+          "mother",
+          "YRX4A"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iVIGXH",
+      "source": "html",
+      "raw": [
+        "iVIGXH",
+        "pUnknown Son of",
+        "qAdwoa",
+        "gm",
+        "oChild of Adwoa. Name unknown.",
+        "mYRX4A"
+      ],
+      "given": "Unknown Son of",
+      "surname": "Adwoa",
+      "sex": "M",
+      "notes": "Child of Adwoa. Name unknown.",
+      "parents": [
+        [
+          "mother",
+          "YRX4A"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iPNLIY",
+      "source": "html",
+      "raw": [
+        "iPNLIY",
+        "pAsamoah",
+        "qKwadwo",
+        "gm",
+        "oChild of Yaa Brafan.",
+        "mNB464"
+      ],
+      "given": "Asamoah",
+      "surname": "Kwadwo",
+      "sex": "M",
+      "notes": "Child of Yaa Brafan.",
+      "parents": [
+        [
+          "mother",
+          "NB464"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iB17TJ",
+      "source": "html",
+      "raw": [
+        "iB17TJ",
+        "pMarfua",
+        "gf",
+        "oChild of Yaa Brafan. Children: Saa Ara, Appiah Attrama.",
+        "mNB464"
+      ],
+      "given": "Marfua",
+      "sex": "F",
+      "notes": "Child of Yaa Brafan. Children: Saa Ara, Appiah Attrama.",
+      "parents": [
+        [
+          "mother",
+          "NB464"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iYNMBK",
+      "source": "html",
+      "raw": [
+        "iYNMBK",
+        "pSaa",
+        "qAra",
+        "gf",
+        "oChild of Marfua. Child: Asi Madam.",
+        "mB17TJ"
+      ],
+      "given": "Saa",
+      "surname": "Ara",
+      "sex": "F",
+      "notes": "Child of Marfua. Child: Asi Madam.",
+      "parents": [
+        [
+          "mother",
+          "B17TJ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iR82L2",
+      "source": "html",
+      "raw": [
+        "iR82L2",
+        "pAppiah",
+        "qAttrama",
+        "oChild of Marfua.",
+        "mB17TJ"
+      ],
+      "given": "Appiah",
+      "surname": "Attrama",
+      "notes": "Child of Marfua.",
+      "parents": [
+        [
+          "mother",
+          "B17TJ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUEHOO",
+      "source": "html",
+      "raw": [
+        "iUEHOO",
+        "pAsi",
+        "qMadam",
+        "gf",
+        "oChild of Saa Ara.",
+        "mYNMBK"
+      ],
+      "given": "Asi",
+      "surname": "Madam",
+      "sex": "F",
+      "notes": "Child of Saa Ara.",
+      "parents": [
+        [
+          "mother",
+          "YNMBK"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iAHXG5",
+      "source": "html",
+      "raw": [
+        "iAHXG5",
+        "pEpirato",
+        "oChild of Opanyin Anyani. Leader of the Anyani line (formerly the Gyase to the Oda stool). This line does not relate by blood to the main Asankran family but has a friendly association.",
+        "fJVTJG"
+      ],
+      "given": "Epirato",
+      "notes": "Child of Opanyin Anyani. Leader of the Anyani line (formerly the Gyase to the Oda stool). This line does not relate by blood to the main Asankran family but has a friendly association.",
+      "parents": [
+        [
+          "father",
+          "JVTJG"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iW2IGA",
+      "source": "html",
+      "raw": [
+        "iW2IGA",
+        "pTinewa",
+        "oChild of Kwaku Badu. The history notes: Tinewa came from Kwasi Badu line.",
+        "fRYETP"
+      ],
+      "given": "Tinewa",
+      "notes": "Child of Kwaku Badu. The history notes: Tinewa came from Kwasi Badu line.",
+      "parents": [
+        [
+          "father",
+          "RYETP"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iXH151",
+      "source": "html",
+      "raw": [
+        "iXH151",
+        "pNana Anyani Buadum",
+        "qIII",
+        "gm",
+        "oChild of Kwasi Badu. Ohene of Asankrangwa.",
+        "fMQWPS"
+      ],
+      "given": "Nana Anyani Buadum",
+      "surname": "III",
+      "sex": "M",
+      "notes": "Child of Kwasi Badu. Ohene of Asankrangwa.",
+      "parents": [
+        [
+          "father",
+          "MQWPS"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iA2EN3",
+      "source": "html",
+      "raw": [
+        "iA2EN3",
+        "pBroni",
+        "oSon of Kwaki Amoako (Aframa's son) and maternal uncle of Kwasi Badu. In the Akan matrilineal system, his sister's son (Kwasi Badu) was the next in line. Occupied the Oda stool but unfortunately died a week before he was to be outdoored. Succeeded by Kwasi Badu's line (Nana Anyani Buadum III).",
+        "fRSL0Z"
+      ],
+      "given": "Broni",
+      "notes": "Son of Kwaki Amoako (Aframa's son) and maternal uncle of Kwasi Badu. In the Akan matrilineal system, his sister's son (Kwasi Badu) was the next in line. Occupied the Oda stool but unfortunately died a week before he was to be outdoored. Succeeded by Kwasi Badu's line (Nana Anyani Buadum III).",
+      "parents": [
+        [
+          "father",
+          "RSL0Z"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iKB2GN",
+      "source": "html",
+      "raw": [
+        "iKB2GN",
+        "pUnknown",
+        "qancestor — Oda Aboho era",
+        "gf",
+        "oUnknown female ancestor descended from Kyekye Ampem (first of the three sisters). Represents the generational gap between the three sisters and the nine named Oda Aboho chiefs. Exact identity not recorded in oral tradition; all nine chiefs are described as descendants of the three sisters.",
+        "mNMPZZ"
+      ],
+      "given": "Unknown",
+      "surname": "ancestor — Oda Aboho era",
+      "sex": "F",
+      "notes": "Unknown female ancestor descended from Kyekye Ampem (first of the three sisters). Represents the generational gap between the three sisters and the nine named Oda Aboho chiefs. Exact identity not recorded in oral tradition; all nine chiefs are described as descendants of the three sisters.",
+      "parents": [
+        [
+          "mother",
+          "NMPZZ"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iP9S2O",
+      "source": "html",
+      "raw": [
+        "iP9S2O",
+        "pUnknown",
+        "qsister of Kyi Boadu",
+        "gf",
+        "oUnknown daughter of Anima Kyirisuo and her Asante husband — an unnamed sibling of Kyi Boadu. In Akan matrilineal tradition the leadership passes through the sister's line; Gyapanyin Kyimah (successor to Kye Boadu) is her son, making him the maternal nephew of Kyi Boadu. Exact name not recorded in oral tradition.",
+        "mTPUSL",
+        "fHNQVM"
+      ],
+      "given": "Unknown",
+      "surname": "sister of Kyi Boadu",
+      "sex": "F",
+      "notes": "Unknown daughter of Anima Kyirisuo and her Asante husband — an unnamed sibling of Kyi Boadu. In Akan matrilineal tradition the leadership passes through the sister's line; Gyapanyin Kyimah (successor to Kye Boadu) is her son, making him the maternal nephew of Kyi Boadu. Exact name not recorded in oral tradition.",
+      "parents": [
+        [
+          "mother",
+          "TPUSL"
+        ],
+        [
+          "father",
+          "HNQVM"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iY2VU9",
+      "source": "html",
+      "raw": [
+        "iY2VU9",
+        "pUnknown daughter of Kwaki",
+        "qAmoako",
+        "gf",
+        "oUnknown daughter of Kwaki Amoako (Aframa's son). Her brother was Broni (who occupied the Oda stool). Her son is Kwasi Badu (father of Nana Anyani Buadum III). Exact name not recorded.",
+        "fRSL0Z"
+      ],
+      "given": "Unknown daughter of Kwaki",
+      "surname": "Amoako",
+      "sex": "F",
+      "notes": "Unknown daughter of Kwaki Amoako (Aframa's son). Her brother was Broni (who occupied the Oda stool). Her son is Kwasi Badu (father of Nana Anyani Buadum III). Exact name not recorded.",
+      "parents": [
+        [
+          "father",
+          "RSL0Z"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMP1ZV",
+      "source": "html",
+      "raw": [
+        "iMP1ZV",
+        "pAppianimaa",
+        "gf",
+        "oLineage figure in the Asankran family history. Ancestor of P.K. Buadee (1935) who documented the Asankran Kona clan history. No parents named in the record; connected to the Asankran family."
+      ],
+      "given": "Appianimaa",
+      "sex": "F",
+      "notes": "Lineage figure in the Asankran family history. Ancestor of P.K. Buadee (1935) who documented the Asankran Kona clan history. No parents named in the record; connected to the Asankran family.",
+      "parents": [],
+      "spouses": []
+    },
+    {
+      "id": "iUW3UR",
+      "source": "html",
+      "raw": [
+        "iUW3UR",
+        "pKokoo",
+        "oChild of Appianimaa. Did not bring forth children.",
+        "mMP1ZV"
+      ],
+      "given": "Kokoo",
+      "notes": "Child of Appianimaa. Did not bring forth children.",
+      "parents": [
+        [
+          "mother",
+          "MP1ZV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iOVJY8",
+      "source": "html",
+      "raw": [
+        "iOVJY8",
+        "pKuwa",
+        "oChild of Appianimaa. Mother of Kwayke, Kwabena Gya, and Badu Aso.",
+        "mMP1ZV"
+      ],
+      "given": "Kuwa",
+      "notes": "Child of Appianimaa. Mother of Kwayke, Kwabena Gya, and Badu Aso.",
+      "parents": [
+        [
+          "mother",
+          "MP1ZV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iCDA5K",
+      "source": "html",
+      "raw": [
+        "iCDA5K",
+        "pForiwa",
+        "gf",
+        "oChild of Appianimaa. Mother of Nyantah (Tumtum), P.K. Buadee (1935 author of the Asankran history), Kwaku Buadee, and Asi.",
+        "mMP1ZV"
+      ],
+      "given": "Foriwa",
+      "sex": "F",
+      "notes": "Child of Appianimaa. Mother of Nyantah (Tumtum), P.K. Buadee (1935 author of the Asankran history), Kwaku Buadee, and Asi.",
+      "parents": [
+        [
+          "mother",
+          "MP1ZV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iKRJ7J",
+      "source": "html",
+      "raw": [
+        "iKRJ7J",
+        "pKwakwa",
+        "oChild of Appianimaa. Father/mother of Kwakyi, Kwabena Agya, Ntiwa, Amanfo, and Badu.",
+        "mMP1ZV"
+      ],
+      "given": "Kwakwa",
+      "notes": "Child of Appianimaa. Father/mother of Kwakyi, Kwabena Agya, Ntiwa, Amanfo, and Badu.",
+      "parents": [
+        [
+          "mother",
+          "MP1ZV"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iR4CJP",
+      "source": "html",
+      "raw": [
+        "iR4CJP",
+        "pKwayke",
+        "oChild of Kuwa.",
+        "mOVJY8"
+      ],
+      "given": "Kwayke",
+      "notes": "Child of Kuwa.",
+      "parents": [
+        [
+          "mother",
+          "OVJY8"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iB053Q",
+      "source": "html",
+      "raw": [
+        "iB053Q",
+        "pKwabena",
+        "qGya",
+        "oChild of Kuwa.",
+        "mOVJY8"
+      ],
+      "given": "Kwabena",
+      "surname": "Gya",
+      "notes": "Child of Kuwa.",
+      "parents": [
+        [
+          "mother",
+          "OVJY8"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iMWCKG",
+      "source": "html",
+      "raw": [
+        "iMWCKG",
+        "pBadu",
+        "qAso",
+        "oChild of Kuwa. Brought forth Maabua, Kwodwo Amponsah (Aidoo), and Akua Marko (Mary Buadee).",
+        "mOVJY8"
+      ],
+      "given": "Badu",
+      "surname": "Aso",
+      "notes": "Child of Kuwa. Brought forth Maabua, Kwodwo Amponsah (Aidoo), and Akua Marko (Mary Buadee).",
+      "parents": [
+        [
+          "mother",
+          "OVJY8"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iO414T",
+      "source": "html",
+      "raw": [
+        "iO414T",
+        "pMaabua",
+        "gf",
+        "oChild of Badu Aso.",
+        "mMWCKG"
+      ],
+      "given": "Maabua",
+      "sex": "F",
+      "notes": "Child of Badu Aso.",
+      "parents": [
+        [
+          "mother",
+          "MWCKG"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iT7X13",
+      "source": "html",
+      "raw": [
+        "iT7X13",
+        "pKwodwo Amponsah",
+        "q(Aidoo)",
+        "gm",
+        "oChild of Badu Aso.",
+        "mMWCKG"
+      ],
+      "given": "Kwodwo Amponsah",
+      "surname": "(Aidoo)",
+      "sex": "M",
+      "notes": "Child of Badu Aso.",
+      "parents": [
+        [
+          "mother",
+          "MWCKG"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iYFKHC",
+      "source": "html",
+      "raw": [
+        "iYFKHC",
+        "pAkua Marko (Mary",
+        "qBuadee)",
+        "gf",
+        "oChild of Badu Aso.",
+        "mMWCKG"
+      ],
+      "given": "Akua Marko (Mary",
+      "surname": "Buadee)",
+      "sex": "F",
+      "notes": "Child of Badu Aso.",
+      "parents": [
+        [
+          "mother",
+          "MWCKG"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iO57VF",
+      "source": "html",
+      "raw": [
+        "iO57VF",
+        "pNyantah",
+        "q(Tumtum)",
+        "oChild of Foriwa (different from Nyantah Kokoo, child of Akua Mra in the Appiah line).",
+        "mCDA5K"
+      ],
+      "given": "Nyantah",
+      "surname": "(Tumtum)",
+      "notes": "Child of Foriwa (different from Nyantah Kokoo, child of Akua Mra in the Appiah line).",
+      "parents": [
+        [
+          "mother",
+          "CDA5K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJX5HR",
+      "source": "html",
+      "raw": [
+        "iJX5HR",
+        "pP.K.",
+        "qBuadee",
+        "gm",
+        "oChild of Foriwa. Author of the 1935 Asankran Kona clan history document used as a primary source for this tree.",
+        "mCDA5K"
+      ],
+      "given": "P.K.",
+      "surname": "Buadee",
+      "sex": "M",
+      "notes": "Child of Foriwa. Author of the 1935 Asankran Kona clan history document used as a primary source for this tree.",
+      "parents": [
+        [
+          "mother",
+          "CDA5K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iIYDO9",
+      "source": "html",
+      "raw": [
+        "iIYDO9",
+        "pKwaku",
+        "qBuadee",
+        "oChild of Foriwa.",
+        "mCDA5K"
+      ],
+      "given": "Kwaku",
+      "surname": "Buadee",
+      "notes": "Child of Foriwa.",
+      "parents": [
+        [
+          "mother",
+          "CDA5K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iH94B3",
+      "source": "html",
+      "raw": [
+        "iH94B3",
+        "pAsi",
+        "gf",
+        "oChild of Foriwa.",
+        "mCDA5K"
+      ],
+      "given": "Asi",
+      "sex": "F",
+      "notes": "Child of Foriwa.",
+      "parents": [
+        [
+          "mother",
+          "CDA5K"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iK20BT",
+      "source": "html",
+      "raw": [
+        "iK20BT",
+        "pKwakyi",
+        "oChild of Kwakwa.",
+        "mKRJ7J"
+      ],
+      "given": "Kwakyi",
+      "notes": "Child of Kwakwa.",
+      "parents": [
+        [
+          "mother",
+          "KRJ7J"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iO9Z4G",
+      "source": "html",
+      "raw": [
+        "iO9Z4G",
+        "pKwabena",
+        "qAgya",
+        "oChild of Kwakwa.",
+        "mKRJ7J"
+      ],
+      "given": "Kwabena",
+      "surname": "Agya",
+      "notes": "Child of Kwakwa.",
+      "parents": [
+        [
+          "mother",
+          "KRJ7J"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iUOBZA",
+      "source": "html",
+      "raw": [
+        "iUOBZA",
+        "pNtiwa",
+        "oChild of Kwakwa. Got married at Manso Amenfi. Children: Efi, Twumwaa and others.",
+        "mKRJ7J"
+      ],
+      "given": "Ntiwa",
+      "notes": "Child of Kwakwa. Got married at Manso Amenfi. Children: Efi, Twumwaa and others.",
+      "parents": [
+        [
+          "mother",
+          "KRJ7J"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iECYCJ",
+      "source": "html",
+      "raw": [
+        "iECYCJ",
+        "pEfi",
+        "gf",
+        "oChild of Ntiwa.",
+        "mUOBZA"
+      ],
+      "given": "Efi",
+      "sex": "F",
+      "notes": "Child of Ntiwa.",
+      "parents": [
+        [
+          "mother",
+          "UOBZA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iEP8I3",
+      "source": "html",
+      "raw": [
+        "iEP8I3",
+        "pTwumwaa",
+        "gf",
+        "oChild of Ntiwa.",
+        "mUOBZA"
+      ],
+      "given": "Twumwaa",
+      "sex": "F",
+      "notes": "Child of Ntiwa.",
+      "parents": [
+        [
+          "mother",
+          "UOBZA"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iYS32U",
+      "source": "html",
+      "raw": [
+        "iYS32U",
+        "pUnknown sister of",
+        "qNtiwa",
+        "gf",
+        "oUnnamed sister of Ntiwa (child of Kwakwa). Got married and was taken to Prestea Himan. Mother of E.K. Armah and siblings."
+      ],
+      "given": "Unknown sister of",
+      "surname": "Ntiwa",
+      "sex": "F",
+      "notes": "Unnamed sister of Ntiwa (child of Kwakwa). Got married and was taken to Prestea Himan. Mother of E.K. Armah and siblings.",
+      "parents": [],
+      "spouses": []
+    },
+    {
+      "id": "iQGMNH",
+      "source": "html",
+      "raw": [
+        "iQGMNH",
+        "pE.K.",
+        "qArmah",
+        "gm",
+        "oChild of Ntiwa's unnamed sister. Raised at Prestea Himan.",
+        "mYS32U"
+      ],
+      "given": "E.K.",
+      "surname": "Armah",
+      "sex": "M",
+      "notes": "Child of Ntiwa's unnamed sister. Raised at Prestea Himan.",
+      "parents": [
+        [
+          "mother",
+          "YS32U"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iX7GV2",
+      "source": "html",
+      "raw": [
+        "iX7GV2",
+        "pAmanfo",
+        "oChild of Kwakwa.",
+        "mKRJ7J"
+      ],
+      "given": "Amanfo",
+      "notes": "Child of Kwakwa.",
+      "parents": [
+        [
+          "mother",
+          "KRJ7J"
+        ]
+      ],
+      "spouses": []
+    },
+    {
+      "id": "iJMHPC",
+      "source": "html",
+      "raw": [
+        "iJMHPC",
+        "pBadu",
+        "oChild of Kwakwa.",
+        "mKRJ7J"
+      ],
+      "given": "Badu",
+      "notes": "Child of Kwakwa.",
+      "parents": [
+        [
+          "mother",
+          "KRJ7J"
+        ]
+      ],
+      "spouses": []
+    }
+  ],
+  "excel_people": [
+    {
+      "id": "excel-001",
+      "name": "Kwaku Buafo (Opayin Kankyea)",
+      "dates": "1907 - 1978",
+      "source": "excel",
+      "notes": "Top couple in the uploaded Excel tree."
+    },
+    {
+      "id": "excel-002",
+      "name": "Ama Buah (Nana Mansa)",
+      "dates": "1910 - 1977",
+      "source": "excel",
+      "notes": "Top couple in the uploaded Excel tree."
+    },
+    {
+      "id": "excel-003",
+      "name": "Kwaku Buafo (Opayin Kankyea)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-004",
+      "name": "Yaa Brefaa",
+      "source": "excel",
+      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+    },
+    {
+      "id": "excel-005",
+      "name": "Abena Gyampraa",
+      "source": "excel",
+      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+    },
+    {
+      "id": "excel-006",
+      "name": "Charles Buafo",
+      "source": "excel",
+      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+    },
+    {
+      "id": "excel-007",
+      "name": "Afua Ampomaa",
+      "source": "excel",
+      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+    },
+    {
+      "id": "excel-008",
+      "name": "John Kwaku Buafo",
+      "source": "excel",
+      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+    },
+    {
+      "id": "excel-009",
+      "name": "Margaret Buafo (Somaa)",
+      "source": "excel",
+      "parent_name": "Yaa Brefaa"
+    },
+    {
+      "id": "excel-010",
+      "name": "Richard Boafo",
+      "source": "excel",
+      "parent_name": "Margaret Buafo (Somaa)"
+    },
+    {
+      "id": "excel-011",
+      "name": "Kwabena Mintah",
+      "source": "excel",
+      "parent_name": "Margaret Buafo (Somaa)"
+    },
+    {
+      "id": "excel-012",
+      "name": "Kwabena Nyarko",
+      "source": "excel",
+      "parent_name": "Margaret Buafo (Somaa)"
+    },
+    {
+      "id": "excel-013",
+      "name": "Ebowe Panin",
+      "source": "excel",
+      "parent_name": "Margaret Buafo (Somaa)"
+    },
+    {
+      "id": "excel-014",
+      "name": "Ebowe Kakra",
+      "source": "excel",
+      "parent_name": "Margaret Buafo (Somaa)"
+    },
+    {
+      "id": "excel-015",
+      "name": "Helena Baidoo (Agyeiwaa)",
+      "source": "excel",
+      "parent_name": "Margaret Buafo (Somaa)"
+    },
+    {
+      "id": "excel-016",
+      "name": "Agnes Baidoo (Maame Efua)",
+      "source": "excel",
+      "parent_name": "Helena Baidoo (Agyeiwaa)"
+    },
+    {
+      "id": "excel-017",
+      "name": "Isaac Baidoo (Boateng)",
+      "source": "excel",
+      "parent_name": "Agnes Baidoo (Maame Efua)"
+    },
+    {
+      "id": "excel-018",
+      "name": "Matthew Baidoo (Arthur)",
+      "source": "excel",
+      "parent_name": "Isaac Baidoo (Boateng)"
+    },
+    {
+      "id": "excel-019",
+      "name": "Vida Armoo (Afarewaa)",
+      "source": "excel",
+      "parent_name": "Matthew Baidoo (Arthur)"
+    },
+    {
+      "id": "excel-020",
+      "name": "Agnes Obiri-Yeboah (Tiwa)",
+      "source": "excel",
+      "parent_name": "Abena Gyampraa"
+    },
+    {
+      "id": "excel-021",
+      "name": "Hana Obiri-Yeboah (Nana Akua)",
+      "source": "excel",
+      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+    },
+    {
+      "id": "excel-022",
+      "name": "John Obiri-Yeboah (Kwasi Appianin)",
+      "source": "excel",
+      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+    },
+    {
+      "id": "excel-023",
+      "name": "Matthew Obiri-Yeboah (Adansi Bona)",
+      "source": "excel",
+      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+    },
+    {
+      "id": "excel-024",
+      "name": "Isaac Obiri-Yeboah (Kofi Gyima)",
+      "source": "excel",
+      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+    },
+    {
+      "id": "excel-025",
+      "name": "Althea Buafo",
+      "source": "excel",
+      "parent_name": "Charles Buafo"
+    },
+    {
+      "id": "excel-026",
+      "name": "Hunter Buafo",
+      "source": "excel",
+      "parent_name": "Althea Buafo"
+    },
+    {
+      "id": "excel-027",
+      "name": "Desiree Buafo",
+      "source": "excel",
+      "parent_name": "Althea Buafo"
+    },
+    {
+      "id": "excel-028",
+      "name": "Isaac Odei (Ofosu)",
+      "source": "excel",
+      "parent_name": "Afua Ampomaa"
+    },
+    {
+      "id": "excel-029",
+      "name": "Nancy Odei (Amoakowaa)",
+      "source": "excel",
+      "parent_name": "Isaac Odei (Ofosu)"
+    },
+    {
+      "id": "excel-030",
+      "name": "Kingsley Odei (Kwame Oweridu)",
+      "source": "excel",
+      "parent_name": "Nancy Odei (Amoakowaa)"
+    },
+    {
+      "id": "excel-031",
+      "name": "Juliana Odei (Nana Mesuwa)",
+      "source": "excel",
+      "parent_name": "Kingsley Odei (Kwame Oweridu)"
+    },
+    {
+      "id": "excel-032",
+      "name": "Amos Odei (Yaw Baafi)",
+      "source": "excel",
+      "parent_name": "Juliana Odei (Nana Mesuwa)"
+    },
+    {
+      "id": "excel-033",
+      "name": "Janet Odei (Ama Obuo)",
+      "source": "excel",
+      "parent_name": "Amos Odei (Yaw Baafi)"
+    },
+    {
+      "id": "excel-034",
+      "name": "Lydia Odei (Yaayaa)",
+      "source": "excel",
+      "parent_name": "Janet Odei (Ama Obuo)"
+    },
+    {
+      "id": "excel-035",
+      "name": "Buafowaa Buafo",
+      "source": "excel",
+      "parent_name": "John Kwaku Buafo"
+    },
+    {
+      "id": "excel-036",
+      "name": "Ofosuwaa Buafo",
+      "source": "excel",
+      "parent_name": "John Kwaku Buafo"
+    },
+    {
+      "id": "excel-037",
+      "name": "Maame Dokuwaa",
+      "source": "excel"
+    },
+    {
+      "id": "excel-038",
+      "name": "Kweku Amoah (Papa)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-039",
+      "name": "Maame Ansaba",
+      "source": "excel"
+    },
+    {
+      "id": "excel-040",
+      "name": "Jennifer Baido (Afumwaa)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-041",
+      "name": "Kwasi Nyame",
+      "source": "excel"
+    },
+    {
+      "id": "excel-042",
+      "name": "Richard Danful (Sule)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-043",
+      "name": "Charles Kumi (Kumi)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-044",
+      "name": "Naana Yaa Baidoo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-045",
+      "name": "Lawrence Baidoo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-046",
+      "name": "Annalisa Baidoo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-047",
+      "name": "Salome Amoah (Sarpong)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-048",
+      "name": "Dorothy Amoah (Somaa)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-049",
+      "name": "Rahael Boafo (Mansa)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-050",
+      "name": "Philemon Boakye",
+      "source": "excel"
+    },
+    {
+      "id": "excel-051",
+      "name": "Philip Asirifi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-052",
+      "name": "Divine Boafo (Nana Boafo)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-053",
+      "name": "Silvia Mensah (Mama)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-054",
+      "name": "Atta Buafo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-055",
+      "name": "Ama Buah",
+      "source": "excel"
+    },
+    {
+      "id": "excel-056",
+      "name": "Kwaku Nterful",
+      "source": "excel"
+    },
+    {
+      "id": "excel-057",
+      "name": "Kwabena Adjei",
+      "source": "excel"
+    },
+    {
+      "id": "excel-058",
+      "name": "Sister Boaa",
+      "source": "excel"
+    },
+    {
+      "id": "excel-059",
+      "name": "Panin Asirifua Tekyi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-060",
+      "name": "Kakra Asirifua Tekyi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-061",
+      "name": "Agyapomaa Tekyi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-062",
+      "name": "Asamoah Tekyi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-063",
+      "name": "Esther Tekyi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-064",
+      "name": "Aduabaah Tekyi",
+      "source": "excel"
+    },
+    {
+      "id": "excel-065",
+      "name": "Tamar Asidem Tonyo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-066",
+      "name": "Kadmiel Elikem Tonyo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-067",
+      "name": "Eldard Eryarrm Tonyo",
+      "source": "excel"
+    },
+    {
+      "id": "excel-068",
+      "name": "Jeriel Edem Natsui",
+      "source": "excel"
+    },
+    {
+      "id": "excel-069",
+      "name": "Joseph Delasi Natsui",
+      "source": "excel"
+    },
+    {
+      "id": "excel-070",
+      "name": "David Elorm Natsui",
+      "source": "excel"
+    },
+    {
+      "id": "excel-071",
+      "name": "Pokuaa Yeboah",
+      "source": "excel"
+    },
+    {
+      "id": "excel-072",
+      "name": "Kobby Yeboah",
+      "source": "excel"
+    },
+    {
+      "id": "excel-073",
+      "name": "Amoakoaa Odei",
+      "source": "excel"
+    },
+    {
+      "id": "excel-074",
+      "name": "Allotey Kwaakye",
+      "source": "excel"
+    },
+    {
+      "id": "excel-075",
+      "name": "Kwasi Kwaakye",
+      "source": "excel"
+    },
+    {
+      "id": "excel-076",
+      "name": "Vanessa Kwakye",
+      "source": "excel"
+    },
+    {
+      "id": "excel-077",
+      "name": "Max Odei",
+      "source": "excel"
+    },
+    {
+      "id": "excel-078",
+      "name": "Yvette Odei",
+      "source": "excel"
+    },
+    {
+      "id": "excel-079",
+      "name": "Stephan Odei",
+      "source": "excel"
+    },
+    {
+      "id": "excel-080",
+      "name": "Bright Kwasi Appiah",
+      "source": "excel"
+    },
+    {
+      "id": "excel-081",
+      "name": "Naomi Attobrah (Akosua)",
+      "source": "excel"
+    },
+    {
+      "id": "excel-082",
+      "name": "Gideon Attobrah Yaw",
+      "source": "excel"
+    },
+    {
+      "id": "excel-083",
+      "name": "Jojo Ford",
+      "source": "excel"
+    }
+  ],
+  "excel_matches": []
+}
