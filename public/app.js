@@ -80,7 +80,19 @@ function familyUnits(people,index){
 }
 function renderGeneration(g,index,direction){
   const units=familyUnits(g.people,index);
-  return `<section class="generation"><div class="generation-heading"><span>${esc(generationLabel(g.distance,direction))}</span><small>${g.people.length} ${g.people.length===1?'person':'people'}</small></div><div class="generation-units">${units.map(unit=>`<div class="family-unit">${unit.map((p,i)=>`${i?'<span class="union">&amp;</span>':''}${personCard(p,{compact:true})}`).join('')}</div>`).join('')}</div></section>`;
+  const count=g.people.length;
+  const label=generationLabel(g.distance,direction);
+  return `<section class="generation" data-generation-count="${count}">
+    <div class="generation-heading">
+      <span>${esc(label)}</span>
+      <small>${count} ${count===1?'person':'people'}${count>8?' • scroll horizontally to see all':''}</small>
+    </div>
+    <div class="generation-scroll" role="region" aria-label="${esc(label)} — ${count} people">
+      <div class="generation-units">
+        ${units.map(unit=>`<div class="family-unit">${unit.map((p,i)=>`${i?'<span class="union">&amp;</span>':''}${personCard(p,{compact:true})}`).join('')}</div>`).join('')}
+      </div>
+    </div>
+  </section>`;
 }
 function findSearchMatches(){
   if(!state.search)return [];const q=norm(state.search);const people=state.data.people||[];
