@@ -3,6 +3,7 @@ const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const full=p=>[p?.given_name,p?.surname].filter(Boolean).join(' ')||'Unnamed';
 const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const aliases=p=>[...(p?.aliases||[])].filter(Boolean).map(String).filter(a=>norm(a)!==norm(full(p)));
 const api=async(path,opts={})=>{const r=await fetch(path,{headers:{'Content-Type':'application/json',...(opts.headers||{})},...opts});const j=await r.json().catch(()=>({}));if(!r.ok)throw Error(j.error||`Request failed (${r.status})`);return j};
 function notice(msg){$('#notice').innerHTML=msg?`<div class="notice">${esc(msg)}</div>`:''}
 function saveToken(v){state.token=v.replace(/\D/g,'').slice(0,5);localStorage.setItem('familyToken',state.token);$('#token').value=state.token}
@@ -42,7 +43,8 @@ function personCard(p,{selected=false,compact=false,modal=true}={}){
   const years=p.birth_year||p.death_year?`${p.birth_year||'?'}${p.death_year?` — ${p.death_year}`:''}`:'Dates unknown';
   const source=p.source==='excel'?'Excel import':'Family record';
   const dot=p.sex==='M'?'male':p.sex==='F'?'female':'unknown';
-  return `<button class="gene-person ${selected?'is-selected':''} ${compact?'compact':''}" data-node="${esc(p.id)}" data-open-tree="${modal?'1':'0'}" type="button"><span class="person-avatar ${dot}">${esc((p.given_name||'?').charAt(0).toUpperCase())}</span><span class="person-copy"><strong>${esc(full(p))}</strong><small>${esc(years)}</small><em>${esc(source)}</em></span></button>`;
+  const aka=aliases(p);
+  return `<button class="gene-person ${selected?'is-selected':''} ${compact?'compact':''}" data-node="${esc(p.id)}" data-open-tree="${modal?'1':'0'}" type="button"><span class="person-avatar ${dot}">${esc((p.given_name||'?').charAt(0).toUpperCase())}</span><span class="person-copy"><strong>${esc(full(p))}</strong>${aka.length?`<span class="person-aka"><b>AKA</b> ${esc(aka.join(', '))}</span>`:''}<small>${esc(years)}</small><em>${esc(source)}</em></span></button>`;
 }
 function generationLabel(distance,direction){
   if(direction==='ancestor'){if(distance===1)return 'Parents';if(distance===2)return 'Grandparents';if(distance===3)return 'Great-grandparents';return `${'Great-'.repeat(Math.max(0,distance-2))}grandparents`;}
@@ -80,19 +82,7 @@ function familyUnits(people,index){
 }
 function renderGeneration(g,index,direction){
   const units=familyUnits(g.people,index);
-  const count=g.people.length;
-  const label=generationLabel(g.distance,direction);
-  return `<section class="generation" data-generation-count="${count}">
-    <div class="generation-heading">
-      <span>${esc(label)}</span>
-      <small>${count} ${count===1?'person':'people'}${count>8?' • scroll horizontally to see all':''}</small>
-    </div>
-    <div class="generation-scroll" role="region" aria-label="${esc(label)} — ${count} people">
-      <div class="generation-units">
-        ${units.map(unit=>`<div class="family-unit">${unit.map((p,i)=>`${i?'<span class="union">&amp;</span>':''}${personCard(p,{compact:true})}`).join('')}</div>`).join('')}
-      </div>
-    </div>
-  </section>`;
+  return `<section class="generation"><div class="generation-heading"><span>${esc(generationLabel(g.distance,direction))}</span><small>${g.people.length} ${g.people.length===1?'person':'people'}</small></div><div class="generation-units">${units.map(unit=>`<div class="family-unit">${unit.map((p,i)=>`${i?'<span class="union">&amp;</span>':''}${personCard(p,{compact:true})}`).join('')}</div>`).join('')}</div></section>`;
 }
 function findSearchMatches(){
   if(!state.search)return [];const q=norm(state.search);const people=state.data.people||[];
@@ -100,7 +90,7 @@ function findSearchMatches(){
 }
 function renderSearchResults(){
   const box=$('#searchResults');if(!box)return;const matches=findSearchMatches();
-  box.innerHTML=matches.length?matches.map(p=>`<button data-person="${esc(p.id)}" type="button"><span>${esc(full(p))}</span><small>${esc(p.birth_year||'')}</small></button>`).join(''):(state.search?'<p class="muted">No matching family member.</p>':'');
+  box.innerHTML=matches.length?matches.map(p=>{const aka=aliases(p);return `<button data-person="${esc(p.id)}" type="button"><span class="result-person"><strong>${esc(full(p))}</strong>${aka.length?`<small class="result-aka">AKA: ${esc(aka.join(', '))}</small>`:''}</span><small class="result-year">${esc(p.birth_year||'')}</small></button>`}).join(''):(state.search?'<p class="muted">No matching family member.</p>':'');
   box.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>{const id=b.dataset.person;state.search='';const input=$('#search');if(input)input.value='';renderSearchResults();openTreeModal(id)});
 }
 function bindSearch(){const input=$('#search');if(!input)return;input.oninput=e=>{state.search=e.target.value;renderSearchResults()};input.onkeydown=e=>{if(e.key==='Escape'){state.search='';input.value='';renderSearchResults()}};renderSearchResults()}
