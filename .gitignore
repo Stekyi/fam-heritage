@@ -3,3 +3,6 @@ dist
 .env
 .netlify
 .DS_Store
+data/source/
+SEED_NOTES.md
+test/

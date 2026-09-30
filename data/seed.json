@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "html_people": [
     {
       "id": "iS2OY4",
@@ -4320,217 +4320,314 @@
       "name": "Kwaku Buafo (Opayin Kankyea)",
       "dates": "1907 - 1978",
       "source": "excel",
-      "notes": "Top couple in the uploaded Excel tree."
+      "notes": "Top couple in the uploaded Excel tree. Also known as: Opayin Kankyea.",
+      "aliases": [
+        "Opayin Kankyea"
+      ]
     },
     {
       "id": "excel-002",
       "name": "Ama Buah (Nana Mansa)",
       "dates": "1910 - 1977",
       "source": "excel",
-      "notes": "Top couple in the uploaded Excel tree."
+      "notes": "Top couple in the uploaded Excel tree. Also known as: Nana Mansa.",
+      "aliases": [
+        "Nana Mansa"
+      ]
     },
     {
       "id": "excel-003",
       "name": "Kwaku Buafo (Opayin Kankyea)",
-      "source": "excel"
+      "source": "excel",
+      "dates": "1907 - 1978",
+      "aliases": [
+        "Opayin Kankyea"
+      ],
+      "notes": "Also known as: Opayin Kankyea."
     },
     {
       "id": "excel-004",
       "name": "Yaa Brefaa",
       "source": "excel",
-      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+      "dates": "1935 - 2008"
     },
     {
       "id": "excel-005",
       "name": "Abena Gyampraa",
       "source": "excel",
-      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+      "dates": "1938 - 2012"
     },
     {
       "id": "excel-006",
       "name": "Charles Buafo",
       "source": "excel",
-      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+      "dates": "1941 - 2026"
     },
     {
       "id": "excel-007",
       "name": "Afua Ampomaa",
       "source": "excel",
-      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+      "dates": "1944 - 2000"
     },
     {
       "id": "excel-008",
       "name": "John Kwaku Buafo",
       "source": "excel",
-      "parent_name": "Kwaku Buafo (Opayin Kankyea)"
+      "dates": "1947 - 2017"
     },
     {
       "id": "excel-009",
       "name": "Margaret Buafo (Somaa)",
       "source": "excel",
-      "parent_name": "Yaa Brefaa"
+      "parent_name": "Yaa Brefaa",
+      "dates": "1951 - 2014",
+      "aliases": [
+        "Somaa"
+      ],
+      "notes": "Also known as: Somaa."
     },
     {
       "id": "excel-010",
       "name": "Richard Boafo",
-      "source": "excel",
-      "parent_name": "Margaret Buafo (Somaa)"
+      "source": "excel"
     },
     {
       "id": "excel-011",
       "name": "Kwabena Mintah",
-      "source": "excel",
-      "parent_name": "Margaret Buafo (Somaa)"
+      "source": "excel"
     },
     {
       "id": "excel-012",
       "name": "Kwabena Nyarko",
-      "source": "excel",
-      "parent_name": "Margaret Buafo (Somaa)"
+      "source": "excel"
     },
     {
       "id": "excel-013",
       "name": "Ebowe Panin",
-      "source": "excel",
-      "parent_name": "Margaret Buafo (Somaa)"
+      "source": "excel"
     },
     {
       "id": "excel-014",
       "name": "Ebowe Kakra",
-      "source": "excel",
-      "parent_name": "Margaret Buafo (Somaa)"
+      "source": "excel"
     },
     {
       "id": "excel-015",
       "name": "Helena Baidoo (Agyeiwaa)",
       "source": "excel",
-      "parent_name": "Margaret Buafo (Somaa)"
+      "parent_name": "Yaa Brefaa",
+      "dates": "1954 -",
+      "aliases": [
+        "Agyeiwaa"
+      ],
+      "notes": "Also known as: Agyeiwaa."
     },
     {
       "id": "excel-016",
       "name": "Agnes Baidoo (Maame Efua)",
       "source": "excel",
-      "parent_name": "Helena Baidoo (Agyeiwaa)"
+      "parent_name": "Yaa Brefaa",
+      "dates": "1957 -",
+      "aliases": [
+        "Maame Efua"
+      ],
+      "notes": "Also known as: Maame Efua."
     },
     {
       "id": "excel-017",
       "name": "Isaac Baidoo (Boateng)",
       "source": "excel",
-      "parent_name": "Agnes Baidoo (Maame Efua)"
+      "parent_name": "Yaa Brefaa",
+      "dates": "1961 -",
+      "aliases": [
+        "Boateng"
+      ],
+      "notes": "Also known as: Boateng."
     },
     {
       "id": "excel-018",
       "name": "Matthew Baidoo (Arthur)",
       "source": "excel",
-      "parent_name": "Isaac Baidoo (Boateng)"
+      "parent_name": "Yaa Brefaa",
+      "dates": "1964 -",
+      "aliases": [
+        "Arthur"
+      ],
+      "notes": "Also known as: Arthur."
     },
     {
       "id": "excel-019",
       "name": "Vida Armoo (Afarewaa)",
       "source": "excel",
-      "parent_name": "Matthew Baidoo (Arthur)"
+      "parent_name": "Yaa Brefaa",
+      "dates": "1973 -",
+      "aliases": [
+        "Afarewaa"
+      ],
+      "notes": "Also known as: Afarewaa."
     },
     {
       "id": "excel-020",
       "name": "Agnes Obiri-Yeboah (Tiwa)",
       "source": "excel",
-      "parent_name": "Abena Gyampraa"
+      "parent_name": "Abena Gyampraa",
+      "dates": "1954 -",
+      "aliases": [
+        "Tiwa"
+      ],
+      "notes": "Also known as: Tiwa."
     },
     {
       "id": "excel-021",
       "name": "Hana Obiri-Yeboah (Nana Akua)",
       "source": "excel",
-      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+      "parent_name": "Abena Gyampraa",
+      "dates": "1957 - 2019",
+      "aliases": [
+        "Nana Akua"
+      ],
+      "notes": "Also known as: Nana Akua."
     },
     {
       "id": "excel-022",
       "name": "John Obiri-Yeboah (Kwasi Appianin)",
       "source": "excel",
-      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+      "parent_name": "Abena Gyampraa",
+      "dates": "1960 -",
+      "aliases": [
+        "Kwasi Appianin"
+      ],
+      "notes": "Also known as: Kwasi Appianin."
     },
     {
       "id": "excel-023",
       "name": "Matthew Obiri-Yeboah (Adansi Bona)",
       "source": "excel",
-      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+      "parent_name": "Abena Gyampraa",
+      "dates": "1965 -",
+      "aliases": [
+        "Adansi Bona"
+      ],
+      "notes": "Also known as: Adansi Bona."
     },
     {
       "id": "excel-024",
       "name": "Isaac Obiri-Yeboah (Kofi Gyima)",
       "source": "excel",
-      "parent_name": "Agnes Obiri-Yeboah (Tiwa)"
+      "parent_name": "Abena Gyampraa",
+      "dates": "1968 -",
+      "aliases": [
+        "Kofi Gyima"
+      ],
+      "notes": "Also known as: Kofi Gyima."
     },
     {
       "id": "excel-025",
       "name": "Althea Buafo",
       "source": "excel",
-      "parent_name": "Charles Buafo"
+      "parent_name": "Charles Buafo",
+      "dates": "1961 - 2009"
     },
     {
       "id": "excel-026",
       "name": "Hunter Buafo",
-      "source": "excel",
-      "parent_name": "Althea Buafo"
+      "source": "excel"
     },
     {
       "id": "excel-027",
       "name": "Desiree Buafo",
-      "source": "excel",
-      "parent_name": "Althea Buafo"
+      "source": "excel"
     },
     {
       "id": "excel-028",
       "name": "Isaac Odei (Ofosu)",
       "source": "excel",
-      "parent_name": "Afua Ampomaa"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1961 -",
+      "aliases": [
+        "Ofosu"
+      ],
+      "notes": "Also known as: Ofosu."
     },
     {
       "id": "excel-029",
       "name": "Nancy Odei (Amoakowaa)",
       "source": "excel",
-      "parent_name": "Isaac Odei (Ofosu)"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1963 -",
+      "aliases": [
+        "Amoakowaa"
+      ],
+      "notes": "Also known as: Amoakowaa."
     },
     {
       "id": "excel-030",
       "name": "Kingsley Odei (Kwame Oweridu)",
       "source": "excel",
-      "parent_name": "Nancy Odei (Amoakowaa)"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1966 -",
+      "aliases": [
+        "Kwame Oweridu"
+      ],
+      "notes": "Also known as: Kwame Oweridu."
     },
     {
       "id": "excel-031",
       "name": "Juliana Odei (Nana Mesuwa)",
       "source": "excel",
-      "parent_name": "Kingsley Odei (Kwame Oweridu)"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1968 -",
+      "aliases": [
+        "Nana Mesuwa"
+      ],
+      "notes": "Also known as: Nana Mesuwa."
     },
     {
       "id": "excel-032",
       "name": "Amos Odei (Yaw Baafi)",
       "source": "excel",
-      "parent_name": "Juliana Odei (Nana Mesuwa)"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1971 -",
+      "aliases": [
+        "Yaw Baafi"
+      ],
+      "notes": "Also known as: Yaw Baafi."
     },
     {
       "id": "excel-033",
       "name": "Janet Odei (Ama Obuo)",
       "source": "excel",
-      "parent_name": "Amos Odei (Yaw Baafi)"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1973 -",
+      "aliases": [
+        "Ama Obuo"
+      ],
+      "notes": "Also known as: Ama Obuo."
     },
     {
       "id": "excel-034",
       "name": "Lydia Odei (Yaayaa)",
       "source": "excel",
-      "parent_name": "Janet Odei (Ama Obuo)"
+      "parent_name": "Afua Ampomaa",
+      "dates": "1976 -",
+      "aliases": [
+        "Yaayaa"
+      ],
+      "notes": "Also known as: Yaayaa."
     },
     {
       "id": "excel-035",
       "name": "Buafowaa Buafo",
       "source": "excel",
-      "parent_name": "John Kwaku Buafo"
+      "parent_name": "John Kwaku Buafo",
+      "dates": "1974 -"
     },
     {
       "id": "excel-036",
       "name": "Ofosuwaa Buafo",
       "source": "excel",
-      "parent_name": "John Kwaku Buafo"
+      "parent_name": "John Kwaku Buafo",
+      "dates": "1979 -"
     },
     {
       "id": "excel-037",
@@ -4540,7 +4637,11 @@
     {
       "id": "excel-038",
       "name": "Kweku Amoah (Papa)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Papa"
+      ],
+      "notes": "Also known as: Papa."
     },
     {
       "id": "excel-039",
@@ -4550,7 +4651,11 @@
     {
       "id": "excel-040",
       "name": "Jennifer Baido (Afumwaa)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Afumwaa"
+      ],
+      "notes": "Also known as: Afumwaa."
     },
     {
       "id": "excel-041",
@@ -4560,12 +4665,20 @@
     {
       "id": "excel-042",
       "name": "Richard Danful (Sule)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Sule"
+      ],
+      "notes": "Also known as: Sule."
     },
     {
       "id": "excel-043",
       "name": "Charles Kumi (Kumi)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Kumi"
+      ],
+      "notes": "Also known as: Kumi."
     },
     {
       "id": "excel-044",
@@ -4585,17 +4698,29 @@
     {
       "id": "excel-047",
       "name": "Salome Amoah (Sarpong)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Sarpong"
+      ],
+      "notes": "Also known as: Sarpong."
     },
     {
       "id": "excel-048",
       "name": "Dorothy Amoah (Somaa)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Somaa"
+      ],
+      "notes": "Also known as: Somaa."
     },
     {
       "id": "excel-049",
       "name": "Rahael Boafo (Mansa)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Mansa"
+      ],
+      "notes": "Also known as: Mansa."
     },
     {
       "id": "excel-050",
@@ -4610,12 +4735,20 @@
     {
       "id": "excel-052",
       "name": "Divine Boafo (Nana Boafo)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Nana Boafo"
+      ],
+      "notes": "Also known as: Nana Boafo."
     },
     {
       "id": "excel-053",
       "name": "Silvia Mensah (Mama)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Mama"
+      ],
+      "notes": "Also known as: Mama."
     },
     {
       "id": "excel-054",
@@ -4755,7 +4888,11 @@
     {
       "id": "excel-081",
       "name": "Naomi Attobrah (Akosua)",
-      "source": "excel"
+      "source": "excel",
+      "aliases": [
+        "Akosua"
+      ],
+      "notes": "Also known as: Akosua."
     },
     {
       "id": "excel-082",

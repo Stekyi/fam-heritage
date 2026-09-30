@@ -1,100 +1,320 @@
 {
-  "identity_matches": {
-    "Ama Buah (Nana Mansa)": {
-      "html_id": "iVRRYO",
-      "canonical_name": "Ama Buah",
-      "aliases": [
-        "Ama Buah (Nana Mansa)",
-        "Mansa",
-        "Nana Mansa"
+  "_readme": "Everything the merge needs that the two sources cannot say for themselves. Edit this file, not the code.",
+  "idPrefix": {
+    "html": "fe_"
+  },
+  "excel": {
+    "sheetName": "Buafo Family Lineage",
+    "gen1MaxY": 3000000,
+    "gen2MaxY": 5500000,
+    "stackTolerance": 600000,
+    "linkedMaxDistance": 4500000
+  },
+  "excelExpectations": {
+    "_note": "Regression guard. Verified by reading a rendered copy of the sheet and by comparing against the earlier Markdown extraction. The import aborts if the sheet no longer produces exactly this structure.",
+    "counts": {
+      "tier1": 2,
+      "tier2": 5,
+      "tier3": 21,
+      "linked": 64
+    },
+    "childrenOf": {
+      "Yaa Brefaa": [
+        "Margaret Buafo (Somaa)",
+        "Helena Baidoo (Agyeiwaa)",
+        "Agnes Baidoo (Maame Efua)",
+        "Isaac Baidoo (Boateng)",
+        "Matthew Baidoo (Arthur)",
+        "Vida Armoo (Afarewaa)"
       ],
-      "reason": "User-confirmed: Excel Ama Buah (Nana Mansa) is the same person as Mansa in the HTML tree."
-    },
-    "Abena Gyampraa": {
-      "html_id": "iPH0XK",
-      "canonical_name": "Abena Gyampraa",
-      "aliases": [
-        "Maa Abena"
+      "Abena Gyampraa": [
+        "Agnes Obiri-Yeboah (Tiwa)",
+        "Hana Obiri-Yeboah(Nana Akua)",
+        "John Obiri-Yeboah (Kwasi Appianin)",
+        "Matthew Obiri-Yeboah (Adansi Bona)",
+        "Isaac Obiri-Yeboah (Kofi Gyima)"
       ],
-      "reason": "User-confirmed: Excel Abena Gyampraa is the same person as Maa Abena in the HTML tree and is a daughter of Nana Mansa."
-    },
-    "Agnes Obiri-Yeboah (Tiwa)": {
-      "html_id": "iGAMTS",
-      "aliases": [
-        "Tiwa"
+      "Charles Buafo": [
+        "Althea Buafo"
+      ],
+      "Afua Ampomaa": [
+        "Isaac Odei (Ofosu)",
+        "Nancy Odei (Amoakowaa)",
+        "Kingsley Odei (Kwame Oweridu)",
+        "Juliana Odei (Nana Mesuwa)",
+        "Amos Odei (Yaw Baafi)",
+        "Janet Odei (Ama Obuo)",
+        "Lydia Odei (Yaayaa)"
+      ],
+      "John Kwaku Buafo": [
+        "Buafowaa Buafo",
+        "Ofosuwaa Buafo"
       ]
     },
-    "Hana Obiri-Yeboah (Nana Akua)": {
-      "html_id": "iEJYR1",
-      "aliases": [
-        "Nana Akua"
+    "linkedBeside": {
+      "Margaret Buafo (Somaa)": [
+        "Richard Boafo",
+        "Kwabena Mintah",
+        "Kwabena Nyarko",
+        "Ebowe Panin",
+        "Ebowe Kakra"
+      ],
+      "Helena Baidoo (Agyeiwaa)": [
+        "Maame Dokuwaa",
+        "Kweku Amoah (Papa)",
+        "Maame Ansaba"
+      ],
+      "Agnes Baidoo (Maame Efua)": [
+        "Jennifer Baido (Afumwaa)",
+        "Kwasi Nyame",
+        "Richard Danful (Sule)",
+        "Charles Kumi (Kumi)"
+      ],
+      "Isaac Baidoo (Boateng)": [
+        "Naana Yaa Baidoo",
+        "Lawrence Baidoo"
+      ],
+      "Matthew Baidoo (Arthur)": [
+        "Annalisa Baidoo"
+      ],
+      "Vida Armoo (Afarewaa)": [
+        "Salome Amoah (Sarpong)",
+        "Dorothy Amoah (Somaa)",
+        "Rahael Boafo (Mansa)",
+        "Philemon Boakye",
+        "Philip Asirifi",
+        "Divine Boafo (Nana Boafo)"
+      ],
+      "Agnes Obiri-Yeboah (Tiwa)": [
+        "Panin Asirifua Tekyi",
+        "Kakra Asirifua Tekyi",
+        "Agyapomaa Tekyi",
+        "Asamoah Tekyi",
+        "Esther Tekyi",
+        "Aduabaah Tekyi"
+      ],
+      "Hana Obiri-Yeboah(Nana Akua)": [
+        "Silvia Mensah (Mama)",
+        "Atta Buafo",
+        "Ama Buah",
+        "Kwaku Nterful",
+        "Kwabena Adjei",
+        "Sister Boaa"
+      ],
+      "John Obiri-Yeboah (Kwasi Appianin)": [
+        "Charles Obiri-Yeboah",
+        "Christian Obiri-Yeboah"
+      ],
+      "Matthew Obiri-Yeboah (Adansi Bona)": [
+        "Appianin Obiri-Yeboah",
+        "Bona Obiri-Yeboah",
+        "Takyiwa Obiri-Yeboah",
+        "Harriette Obiri-Yeboah",
+        "Bernice Obiri-Yeboah",
+        "Wendy Obiri-Yeboah"
+      ],
+      "Isaac Obiri-Yeboah (Kofi Gyima)": [],
+      "Althea Buafo": [
+        "Hunter Buafo",
+        "Desiree Buafo"
+      ],
+      "Isaac Odei (Ofosu)": [
+        "Ampoma Odei",
+        "Kofi Odei"
+      ],
+      "Nancy Odei (Amoakowaa)": [
+        "Pokuaa Yeboah",
+        "Kobby Yeboah"
+      ],
+      "Kingsley Odei (Kwame Oweridu)": [
+        "Amoakoaa Odei"
+      ],
+      "Juliana Odei (Nana Mesuwa)": [
+        "Kwasi Kwaakye",
+        "Allotey Kwaakye",
+        "Vanessa Kwakye"
+      ],
+      "Amos Odei (Yaw Baafi)": [
+        "Yvette Odei",
+        "Max Odei",
+        "Stephan Odei"
+      ],
+      "Janet Odei (Ama Obuo)": [
+        "Naomi Attobrah (Akosua)",
+        "Bright Kwasi Appiah",
+        "Gideon Attobrah Yaw"
+      ],
+      "Buafowaa Buafo": [
+        "Tamar Asidem Tonyo",
+        "Kadmiel Elikem Tonyo",
+        "Eldard Eryarrm Tonyo"
+      ],
+      "Ofosuwaa Buafo": [
+        "Jeriel Edem Natsui",
+        "Joseph Delasi Natsui",
+        "David Elorm Natsui"
+      ],
+      "Lydia Odei (Yaayaa)": [
+        "Jojo Ford"
       ]
-    },
-    "John Obiri-Yeboah (Kwasi Appianin)": {
-      "html_id": "iVRDQ9",
-      "aliases": [
-        "Kwasi Appianin"
-      ]
-    },
-    "Matthew Obiri-Yeboah (Adansi Bona)": {
-      "html_id": "iXJO6H",
-      "aliases": [
-        "Adansi Bona"
-      ]
-    },
-    "Isaac Obiri-Yeboah (Kofi Gyima)": {
-      "html_id": "iCRSRL",
-      "aliases": [
-        "Kofi Gyima"
-      ]
-    },
-    "Panin Asirifua Tekyi": {
-      "html_id": "iUGYKY"
-    },
-    "Kakra Asirifua Tekyi": {
-      "html_id": "iZT0SR"
-    },
-    "Agyapomaa Tekyi": {
-      "html_id": "iZ02CG"
-    },
-    "Asamoah Tekyi": {
-      "html_id": "iSTART"
-    },
-    "Esther Tekyi": {
-      "html_id": "iGCAX8"
     }
   },
-  "excel_root_replacement": {
-    "description": "For the Mansa branch, the Excel tree is authoritative for the root and detailed branch information. Excel supplies the detailed Mansa-branch names and dates; Ama Buah (Nana Mansa) is the canonical identity for HTML Mansa, and Abena Gyampraa is the canonical identity for HTML Maa Abena. Kwaku Buafo is recorded as Ama Buah's spouse/partner, not as her parent.",
-    "remove_html_parent_relationships_for": [],
-    "top_couple": [
-      "Kwaku Buafo (Opayin Kankyea)",
-      "Ama Buah (Nana Mansa)"
-    ],
-    "top_couple_children": [
-      "Yaa Brefaa",
-      "Abena Gyampraa",
-      "Charles Buafo",
-      "Afua Ampomaa",
-      "John Kwaku Buafo"
-    ]
+  "anchors": {
+    "_note": "Family Echo ids (GEDCOM xrefs) of the people the validation report checks by name.",
+    "nyantahKokoo": "I58",
+    "nyantahTumtum": "I182",
+    "mansa": "I61",
+    "mansaNameInHtml": "Mansa",
+    "abena": "I69"
   },
-  "excel_dates": {
-    "Kwaku Buafo (Opayin Kankyea)": "1907 - 1978",
-    "Ama Buah (Nana Mansa)": "1910 - 1977",
-    "Yaa Brefaa": "1935 - 2008",
-    "Abena Gyampraa": "1938 - 2012",
-    "Charles Buafo": "1941 - 2026",
-    "Afua Ampomaa": "1944 - 2000",
-    "John Kwaku Buafo": "1947 - 2017",
-    "Margaret Buafo (Somaa)": "1951 - 2014",
-    "Althea Buafo": "1961 - 2009"
-  },
-  "relationship_review": [
+  "merges": [
     {
-      "status": "authoritative_parent_map",
-      "source": "Kankyea_and_Mansa_Family_Tree.md",
-      "note": "Only explicit Generation 3 parent-child relationships from the Claude extraction are loaded. Linked names are not assigned as spouse/child because the source says their relationship type is unspecified."
+      "excel": "Ama Buah (Nana Mansa)",
+      "html": "I61",
+      "canonicalName": "Ama Buah",
+      "confirmedBy": "user",
+      "basis": "User-confirmed: HTML 'Mansa' is Excel 'Ama Buah (Nana Mansa)', 1910-1977, daughter of Nyantah (Kokoo)."
+    },
+    {
+      "excel": "Abena Gyampraa",
+      "html": "I69",
+      "canonicalName": "Abena Gyampraa",
+      "confirmedBy": "user",
+      "basis": "User-confirmed: HTML 'Maa Abena' is Excel 'Abena Gyampraa'."
+    },
+    {
+      "excel": "Agnes Obiri-Yeboah (Tiwa)",
+      "html": "I70",
+      "canonicalName": "Agnes Obiri-Yeboah",
+      "confirmedBy": "relationship-evidence",
+      "basis": "Child of Maa Abena in both sources; same surname; HTML given name 'Tiwaa' = Excel AKA 'Tiwa'."
+    },
+    {
+      "excel": "Hana Obiri-Yeboah(Nana Akua)",
+      "html": "I73",
+      "canonicalName": "Hana Obiri-Yeboah",
+      "confirmedBy": "relationship-evidence",
+      "basis": "Child of Maa Abena in both sources; same surname; HTML 'Hannah' vs Excel 'Hana'."
+    },
+    {
+      "excel": "John Obiri-Yeboah (Kwasi Appianin)",
+      "html": "I74",
+      "canonicalName": "John Obiri-Yeboah",
+      "confirmedBy": "relationship-evidence",
+      "basis": "Child of Maa Abena in both sources; identical name."
+    },
+    {
+      "excel": "Matthew Obiri-Yeboah (Adansi Bona)",
+      "html": "I72",
+      "canonicalName": "Matthew Obiri-Yeboah",
+      "confirmedBy": "relationship-evidence",
+      "basis": "Child of Maa Abena in both sources; identical name."
+    },
+    {
+      "excel": "Isaac Obiri-Yeboah (Kofi Gyima)",
+      "html": "I75",
+      "canonicalName": "Isaac Obiri-Yeboah",
+      "confirmedBy": "relationship-evidence",
+      "basis": "Child of Maa Abena in both sources; HTML 'Gyima' = Excel AKA 'Kofi Gyima'."
+    },
+    {
+      "excel": "Panin Asirifua Tekyi",
+      "html": "I81",
+      "confirmedBy": "relationship-evidence",
+      "basis": "Family Echo lists exactly these six Tekyi children under Agnes; the Excel lists six Tekyi boxes beside her. Matched one-to-one by given name."
+    },
+    {
+      "excel": "Kakra Asirifua Tekyi",
+      "html": "I82",
+      "confirmedBy": "relationship-evidence",
+      "basis": "As above (Kakra Asirifuah Tekyi)."
+    },
+    {
+      "excel": "Agyapomaa Tekyi",
+      "html": "I80",
+      "confirmedBy": "relationship-evidence",
+      "basis": "As above (Grace Agyapoma Tekyi)."
+    },
+    {
+      "excel": "Asamoah Tekyi",
+      "html": "I76",
+      "confirmedBy": "relationship-evidence",
+      "basis": "As above (Samuel Asamoah Tekyi)."
+    },
+    {
+      "excel": "Esther Tekyi",
+      "html": "I78",
+      "confirmedBy": "relationship-evidence",
+      "basis": "As above (Esther Amoaa Tekyi)."
+    },
+    {
+      "excel": "Aduabaah Tekyi",
+      "html": "I79",
+      "confirmedBy": "relationship-evidence",
+      "basis": "As above (Daniel Aduabaan Tekyi); only Tekyi child left unmatched."
+    },
+    {
+      "excel": "Kwabena Adjei",
+      "html": "I85",
+      "confirmedBy": "user",
+      "basis": "User-confirmed: Excel 'Kwabena Adjei' is Family Echo 'Kwabena Agyei Mensah', son of Hana Obiri-Yeboah."
+    }
+  ],
+  "candidates": [],
+  "acceptedNameCollisions": [
+    {
+      "name": "Ama Buah",
+      "reason": "Hana Obiri-Yeboah's child 'Ama Buah' (undated Excel box) is a different person from Ama Buah / Mansa (1910-1977), presumably named after her."
+    }
+  ],
+  "spellingFlags": [
+    {
+      "excel": "Jennifer Baido (Afumwaa)",
+      "note": "Source spelling preserved. Other Baidoo entries have a double 'o'."
+    },
+    {
+      "excel": "Allotey Kwaakye",
+      "note": "Source spelling preserved. Spelled 'Kwakye' on Vanessa's box."
+    },
+    {
+      "excel": "Kwasi Kwaakye",
+      "note": "Source spelling preserved. Spelled 'Kwakye' on Vanessa's box."
+    },
+    {
+      "excel": "Vanessa Kwakye",
+      "note": "Source spelling preserved. Spelled 'Kwaakye' on the other two boxes."
+    },
+    {
+      "excel": "Amoakoaa Odei",
+      "note": "Source spelling preserved. Nancy Odei's AKA is spelled 'Amoakowaa'."
+    },
+    {
+      "excel": "Eldard Eryarrm Tonyo",
+      "note": "Source spelling preserved. Looks like it may contain a typo."
+    }
+  ],
+  "confirmedRelationships": [
+    {
+      "parent": "Isaac Obiri-Yeboah (Kofi Gyima)",
+      "children": [
+        "Harriette Obiri-Yeboah",
+        "Bernice Obiri-Yeboah",
+        "Wendy Obiri-Yeboah"
+      ],
+      "confirmedBy": "user",
+      "basis": "User-confirmed: these three are daughters of Isaac Obiri-Yeboah (Kofi Gyima), not of Matthew, although the sheet draws their boxes beside Matthew."
+    },
+    {
+      "parent": "Hana Obiri-Yeboah(Nana Akua)",
+      "children": [
+        "Silvia Mensah (Mama)",
+        "Atta Buafo",
+        "Ama Buah",
+        "Kwaku Nterful",
+        "Sister Boaa"
+      ],
+      "confirmedBy": "user",
+      "basis": "User-confirmed: siblings of Kwabena Agyei Mensah, all children of Hana Obiri-Yeboah."
     }
   ]
 }
