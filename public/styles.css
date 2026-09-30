@@ -5,3 +5,42 @@
 .home-button{width:100%;margin-top:18px;background:#17352f;color:#fffaf2;border-color:#17352f;font-weight:700}.home-button:hover{background:#285047;color:#fff}.toolbar-actions{display:flex;gap:8px;flex-wrap:wrap}.open-prompt{text-align:center;margin-top:16px;padding:28px;border:1px dashed #cfc4b5;border-radius:16px;background:#fffdf8}.open-prompt h3{margin:0 0 6px}.open-prompt p{color:var(--muted);margin:0 0 14px}.home-preview{min-height:240px}.preview-desc{margin-top:16px}.modal-open{overflow:hidden}.tree-modal{position:fixed;inset:0;z-index:1000;background:rgba(20,31,28,.68);display:flex;align-items:stretch;justify-content:center;padding:18px}.modal-tree-shell{width:min(1500px,100%);height:100%;background:#fbf9f4;border:1px solid #d7cec0;border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.28)}.modal-toolbar{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:18px 22px;background:#fffdf9;border-bottom:1px solid #ddd5ca}.modal-toolbar h2{margin:3px 0 2px;font-size:1.45rem}.modal-toolbar p{margin:0;color:var(--muted);font-size:.86rem}.modal-close{width:42px;height:42px;padding:0;border-radius:50%;font-size:1.6rem;line-height:1;background:#f5efe5}.tree-controls{display:flex;align-items:end;gap:10px;flex-wrap:wrap;padding:12px 18px;background:#f5f0e7;border-bottom:1px solid #ddd5ca}.tree-controls label{display:grid;gap:4px;font-size:.72rem;font-weight:800;color:#68736e;text-transform:uppercase;letter-spacing:.06em}.tree-controls select{min-width:88px;padding:8px 10px;border:1px solid #cfc5b7;border-radius:8px;background:#fffdf8;color:var(--ink)}.tree-controls button{padding:8px 11px}.modal-tree-scroll{flex:1;overflow:auto;overscroll-behavior:contain;padding:30px 34px 80px}.modal-tree-canvas{width:max-content;min-width:100%;margin:0 auto}.modal-tree-canvas>.lineage-section,.modal-tree-canvas>.focus-section,.modal-tree-canvas>.siblings-section,.modal-tree-canvas>.empty-lineage{min-width:720px}.modal-tree-canvas .generation-people{flex-wrap:nowrap;align-items:flex-start}.modal-tree-canvas .family-unit{min-width:max-content}.modal-tree-canvas .section-title{position:sticky;left:0}.modal-focus{box-shadow:0 8px 28px rgba(163,107,48,.10)}.modal-tree-canvas .gene-person{width:190px}.modal-tree-canvas .gene-person.compact{width:180px}.modal-tree-canvas .generation{padding:0 8px}.modal-tree-canvas .generation-heading{justify-content:center}.modal-tree-canvas .sibling-list{flex-wrap:nowrap}.modal-tree-canvas .focus-family{min-width:700px}.modal-tree-canvas .focus-note{max-width:950px}.modal-tree-shell .gene-person:hover{transform:translateY(-1px)}
 @media(max-width:800px){.tree-toolbar{align-items:flex-start;flex-direction:column}.toolbar-actions{width:100%}.toolbar-actions button{flex:1}.tree-modal{padding:6px}.modal-tree-shell{border-radius:12px}.modal-toolbar{padding:14px}.modal-tree-scroll{padding:20px 18px 60px}.modal-tree-canvas>.lineage-section,.modal-tree-canvas>.focus-section,.modal-tree-canvas>.siblings-section,.modal-tree-canvas>.empty-lineage{min-width:620px}}
 @media(max-width:650px){.gene-person,.gene-person.compact{width:175px}.focus-person .gene-person{width:230px}.modal-tree-canvas>.lineage-section,.modal-tree-canvas>.focus-section,.modal-tree-canvas>.siblings-section,.modal-tree-canvas>.empty-lineage{min-width:560px}.modal-tree-canvas .gene-person{width:175px}.modal-tree-canvas .gene-person.compact{width:165px}.modal-tree-canvas .focus-family{min-width:540px}.tree-controls{align-items:stretch}.tree-controls label{flex:1}.tree-controls select{width:100%}.tree-controls button{flex:1}}
+
+/* Family tree v3: genealogy layout, unlimited generation inputs, and zoomable modal */
+.level-control-group{display:flex;align-items:end}
+.tree-controls .level-control-group label{display:grid;gap:4px}
+.level-input{width:120px!important;min-width:120px!important;padding:8px 10px!important;border:1px solid #cfc5b7!important;border-radius:8px!important;background:#fffdf8!important;color:var(--ink)!important;font:inherit!important}
+.level-input:focus{outline:2px solid #c59b61;outline-offset:1px}
+.zoom-controls{display:flex;align-items:center;gap:5px;margin-left:auto;padding:5px 7px;background:#fffdf8;border:1px solid #d5ccbf;border-radius:9px}
+.zoom-controls span{font-size:.72rem;font-weight:800;color:#68736e;text-transform:uppercase;letter-spacing:.06em;margin-right:3px}
+.zoom-controls button{min-width:32px;height:32px;padding:4px 8px}
+.zoom-controls output{min-width:48px;text-align:center;font-size:.78rem;font-weight:700;color:#5d665f}
+.modal-tree-scroll{background:#f8f5ee}
+.modal-tree-canvas{width:max-content;min-width:100%;margin:0 auto;transform-origin:top left;zoom:var(--tree-scale, .72)}
+.modal-tree-canvas .tree-flow{display:flex;flex-direction:column;align-items:stretch;min-width:760px;gap:0}
+.modal-tree-canvas .lineage-section,.modal-tree-canvas .focus-section,.modal-tree-canvas .siblings-section,.modal-tree-canvas .open-prompt{min-width:760px}
+.modal-tree-canvas .generation-units{display:flex;justify-content:center;align-items:flex-start;flex-wrap:nowrap;gap:24px;padding:4px 18px 8px}
+.modal-tree-canvas .family-unit{display:flex;align-items:center;justify-content:center;gap:8px;min-width:max-content;padding:5px 8px 7px;background:rgba(255,255,255,.55);border:1px solid #e3dbcf;border-radius:13px}
+.modal-tree-canvas .family-unit .gene-person{border-color:#d3c8ba}
+.modal-tree-canvas .family-unit .gene-person.compact{width:178px}
+.modal-tree-canvas .generation-heading{justify-content:center;margin-top:4px}
+.modal-tree-canvas .generation-arrow{height:34px;display:grid;place-items:center;color:#a77b48;font-size:1.4rem}
+.modal-tree-canvas .flow-arrow{height:48px;display:grid;place-items:center;color:#a77b48;font-size:1.55rem}
+.modal-tree-canvas .focus-family{gap:14px;flex-wrap:nowrap}
+.modal-tree-canvas .focus-spouses{display:flex;align-items:center;gap:8px;flex-wrap:nowrap}
+.modal-tree-canvas .focus-person .gene-person{width:225px}
+.modal-tree-canvas .sibling-list{flex-wrap:nowrap;gap:14px}
+.modal-tree-canvas .sibling-list .gene-person{width:178px}
+.modal-tree-canvas .section-title{margin-bottom:12px}
+.lineage-error{max-width:760px;margin:auto;text-align:center;padding:50px 30px;background:#fffdf9;border:1px solid #dfd2c3;border-radius:18px;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.error-icon{width:44px;height:44px;margin:0 auto 14px;display:grid;place-items:center;border-radius:50%;background:#ead6b9;color:#79552d;font-weight:900;font-size:1.3rem}
+.lineage-error h3{margin:0 0 8px;font-family:Georgia,serif;font-size:1.35rem}
+.lineage-error p{color:#70685f;line-height:1.55;margin:6px 0}
+.lineage-error .error-detail{font-size:.82rem;background:#f6f0e7;padding:9px 12px;border-radius:8px;display:inline-block;max-width:100%;overflow-wrap:anywhere}
+.error-actions{display:flex;justify-content:center;gap:9px;margin-top:18px;flex-wrap:wrap}
+.modal-error-wrap{flex:1;overflow:auto;display:grid;place-items:center;padding:30px;background:#f8f5ee}
+.open-prompt{margin-top:16px;text-align:center;padding:28px;border:1px dashed #cfc4b5;border-radius:16px;background:#fffdf8}
+.open-prompt h3{margin:0 0 7px;font-family:Georgia,serif}
+.open-prompt p{margin:0;color:var(--muted);line-height:1.5}
+@media(max-width:900px){.zoom-controls{margin-left:0}.tree-controls{align-items:flex-end}.modal-tree-canvas .tree-flow,.modal-tree-canvas .lineage-section,.modal-tree-canvas .focus-section,.modal-tree-canvas .siblings-section,.modal-tree-canvas .open-prompt{min-width:680px}.modal-tree-canvas .generation-units{gap:16px}.modal-tree-canvas .family-unit .gene-person.compact,.modal-tree-canvas .sibling-list .gene-person{width:165px}}
+@media(max-width:650px){.tree-controls{display:flex}.level-input{width:105px!important;min-width:105px!important}.zoom-controls{width:100%;justify-content:center}.modal-tree-canvas .tree-flow,.modal-tree-canvas .lineage-section,.modal-tree-canvas .focus-section,.modal-tree-canvas .siblings-section,.modal-tree-canvas .open-prompt{min-width:570px}.modal-tree-canvas .generation-units{gap:10px}.modal-tree-canvas .family-unit .gene-person.compact,.modal-tree-canvas .sibling-list .gene-person{width:155px}.modal-tree-canvas .focus-person .gene-person{width:200px}}

@@ -1,4 +1,4 @@
-const state={data:{people:[],relationships:[]},selected:null,search:'',token:localStorage.getItem('familyToken')||'',history:null,adminSecret:'',homeRootId:null,modalOpen:false,ancestorLevels:3,descendantLevels:4};
+const state={data:{people:[],relationships:[]},selected:null,search:'',token:localStorage.getItem('familyToken')||'',history:null,adminSecret:'',homeRootId:null,modalOpen:false,ancestorLevels:3,descendantLevels:4,zoom:0.72};
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const full=p=>[p?.given_name,p?.surname].filter(Boolean).join(' ')||'Unnamed';
@@ -18,13 +18,11 @@ function buildIndexes(){
     if(r.relationship_type==='parent'){
       if(!parents.has(r.to_person_id))parents.set(r.to_person_id,[]);
       if(!children.has(r.from_person_id))children.set(r.from_person_id,[]);
-      parents.get(r.to_person_id).push(r.from_person_id);
-      children.get(r.from_person_id).push(r.to_person_id);
+      parents.get(r.to_person_id).push(r.from_person_id);children.get(r.from_person_id).push(r.to_person_id);
     }else if(r.relationship_type==='spouse'){
       if(!spouses.has(r.from_person_id))spouses.set(r.from_person_id,[]);
       if(!spouses.has(r.to_person_id))spouses.set(r.to_person_id,[]);
-      spouses.get(r.from_person_id).push(r.to_person_id);
-      spouses.get(r.to_person_id).push(r.from_person_id);
+      spouses.get(r.from_person_id).push(r.to_person_id);spouses.get(r.to_person_id).push(r.from_person_id);
     }
   }
   for(const map of [parents,children,spouses])for(const [id,ids] of map)map.set(id,[...new Set(ids)]);
@@ -44,24 +42,16 @@ function personCard(p,{selected=false,compact=false,modal=true}={}){
   const years=p.birth_year||p.death_year?`${p.birth_year||'?'}${p.death_year?` — ${p.death_year}`:''}`:'Dates unknown';
   const source=p.source==='excel'?'Excel import':'Family record';
   const dot=p.sex==='M'?'male':p.sex==='F'?'female':'unknown';
-  return `<button class="gene-person ${selected?'is-selected':''} ${compact?'compact':''}" data-node="${esc(p.id)}" data-open-tree="${modal?'1':'0'}" type="button">
-    <span class="person-avatar ${dot}">${esc((p.given_name||'?').charAt(0).toUpperCase())}</span>
-    <span class="person-copy"><strong>${esc(full(p))}</strong><small>${esc(years)}</small><em>${esc(source)}</em></span>
-  </button>`;
+  return `<button class="gene-person ${selected?'is-selected':''} ${compact?'compact':''}" data-node="${esc(p.id)}" data-open-tree="${modal?'1':'0'}" type="button"><span class="person-avatar ${dot}">${esc((p.given_name||'?').charAt(0).toUpperCase())}</span><span class="person-copy"><strong>${esc(full(p))}</strong><small>${esc(years)}</small><em>${esc(source)}</em></span></button>`;
 }
 function generationLabel(distance,direction){
-  if(direction==='ancestor'){
-    if(distance===1)return 'Parents'; if(distance===2)return 'Grandparents'; if(distance===3)return 'Great-grandparents';
-    return `${'Great-'.repeat(Math.max(0,distance-2))}grandparents`;
-  }
-  if(distance===1)return 'Children'; if(distance===2)return 'Grandchildren'; if(distance===3)return 'Great-grandchildren';
-  return `${'Great-'.repeat(Math.max(0,distance-2))}grandchildren`;
+  if(direction==='ancestor'){if(distance===1)return 'Parents';if(distance===2)return 'Grandparents';if(distance===3)return 'Great-grandparents';return `${'Great-'.repeat(Math.max(0,distance-2))}grandparents`;}
+  if(distance===1)return 'Children';if(distance===2)return 'Grandchildren';if(distance===3)return 'Great-grandchildren';return `${'Great-'.repeat(Math.max(0,distance-2))}grandchildren`;
 }
 function ancestorGenerations(root,index,maxLevels=3){
   const generations=[];let frontier=[root];const seen=new Set([root.id]);let distance=0;
   while(frontier.length&&distance<maxLevels){
-    const next=[];
-    for(const person of frontier)for(const id of index.parents.get(person.id)||[]){if(seen.has(id))continue;seen.add(id);const p=index.people.get(id);if(p)next.push(p)}
+    const next=[];for(const person of frontier)for(const id of index.parents.get(person.id)||[]){if(seen.has(id))continue;seen.add(id);const p=index.people.get(id);if(p)next.push(p)}
     if(!next.length)break;distance++;const unique=[...new Map(next.map(p=>[p.id,p])).values()];generations.push({distance,people:unique});frontier=unique;
   }
   return generations.reverse();
@@ -69,98 +59,79 @@ function ancestorGenerations(root,index,maxLevels=3){
 function descendantGenerations(root,index,maxLevels=4){
   const generations=[];let frontier=[root];const seen=new Set([root.id]);let distance=0;
   while(frontier.length&&distance<maxLevels){
-    const next=[];
-    for(const person of frontier)for(const id of index.children.get(person.id)||[]){if(seen.has(id))continue;seen.add(id);const p=index.people.get(id);if(p)next.push(p)}
+    const next=[];for(const person of frontier)for(const id of index.children.get(person.id)||[]){if(seen.has(id))continue;seen.add(id);const p=index.people.get(id);if(p)next.push(p)}
     if(!next.length)break;distance++;const unique=[...new Map(next.map(p=>[p.id,p])).values()];generations.push({distance,people:unique});frontier=unique;
   }
   return generations;
 }
 function siblings(root,index){
-  const ids=new Set();
-  for(const parentId of index.parents.get(root.id)||[])for(const childId of index.children.get(parentId)||[])if(childId!==root.id)ids.add(childId);
+  const ids=new Set();for(const parentId of index.parents.get(root.id)||[])for(const childId of index.children.get(parentId)||[])if(childId!==root.id)ids.add(childId);
   return [...ids].map(id=>index.people.get(id)).filter(Boolean).sort((a,b)=>full(a).localeCompare(full(b)));
 }
+function familyUnits(people,index){
+  const ids=new Set(people.map(p=>p.id));const units=[];const used=new Set();
+  for(const p of people){
+    if(used.has(p.id))continue;
+    const partner=(index.spouses.get(p.id)||[]).map(id=>index.people.get(id)).find(s=>s&&ids.has(s.id)&&!used.has(s.id));
+    if(partner){used.add(p.id);used.add(partner.id);const pair=[p,partner].sort((a,b)=>full(a).localeCompare(full(b)));units.push(pair);}
+    else{used.add(p.id);units.push([p]);}
+  }
+  return units.sort((a,b)=>full(a[0]).localeCompare(full(b[0])));
+}
 function renderGeneration(g,index,direction){
-  const people=[...g.people].sort((a,b)=>full(a).localeCompare(full(b)));
-  return `<section class="generation"><div class="generation-heading"><span>${esc(generationLabel(g.distance,direction))}</span><small>${people.length} ${people.length===1?'person':'people'}</small></div><div class="generation-people">${people.map(p=>{
-    const ss=(index.spouses.get(p.id)||[]).map(id=>index.people.get(id)).filter(Boolean);
-    return `<div class="family-unit"><div class="person-pair">${personCard(p)}${ss.length?`<div class="unit-spouses">${ss.map(s=>`<span class="union">&amp;</span>${personCard(s,{compact:true})}`).join('')}</div>`:''}</div></div>`;
-  }).join('')}</div></section>`;
+  const units=familyUnits(g.people,index);
+  return `<section class="generation"><div class="generation-heading"><span>${esc(generationLabel(g.distance,direction))}</span><small>${g.people.length} ${g.people.length===1?'person':'people'}</small></div><div class="generation-units">${units.map(unit=>`<div class="family-unit">${unit.map((p,i)=>`${i?'<span class="union">&amp;</span>':''}${personCard(p,{compact:true})}`).join('')}</div>`).join('')}</div></section>`;
 }
 function findSearchMatches(){
-  if(!state.search)return [];
-  const q=norm(state.search);const people=state.data.people||[];
+  if(!state.search)return [];const q=norm(state.search);const people=state.data.people||[];
   return people.filter(p=>norm(full(p)).includes(q)||(p.aliases||[]).some(a=>norm(a).includes(q))).slice(0,20);
 }
 function renderSearchResults(){
-  const box=$('#searchResults');if(!box)return;
-  const matches=findSearchMatches();
+  const box=$('#searchResults');if(!box)return;const matches=findSearchMatches();
   box.innerHTML=matches.length?matches.map(p=>`<button data-person="${esc(p.id)}" type="button"><span>${esc(full(p))}</span><small>${esc(p.birth_year||'')}</small></button>`).join(''):(state.search?'<p class="muted">No matching family member.</p>':'');
-  box.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>{state.search='';renderSearchResults();openTreeModal(b.dataset.person)});
+  box.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>{const id=b.dataset.person;state.search='';const input=$('#search');if(input)input.value='';renderSearchResults();openTreeModal(id)});
 }
+function bindSearch(){const input=$('#search');if(!input)return;input.oninput=e=>{state.search=e.target.value;renderSearchResults()};input.onkeydown=e=>{if(e.key==='Escape'){state.search='';input.value='';renderSearchResults()}};renderSearchResults()}
 function homeRoot(){const index=buildIndexes();return index.people.get(state.homeRootId)||ensureHomeRoot()}
 function renderTree(){
-  const people=state.data.people||[];ensureHomeRoot();
-  if(!state.selected)state.selected=state.homeRootId||people[0]?.id;
+  const people=state.data.people||[];ensureHomeRoot();if(!state.selected)state.selected=state.homeRootId||people[0]?.id;
   const selected=people.find(p=>p.id===state.selected)||homeRoot()||people[0];if(!selected)return;state.selected=selected.id;
   const index=buildIndexes();const ancestors=ancestorGenerations(selected,index,2);const descendants=descendantGenerations(selected,index,3);const sibs=siblings(selected,index);const spouses=(index.spouses.get(selected.id)||[]).map(id=>index.people.get(id)).filter(Boolean);const root=homeRoot();
-  $('#main').innerHTML=`<main class="tree-page">
-    <aside class="tree-sidebar">
-      <div class="sidebar-title"><span class="eyebrow">FAMILY TREE</span><h2>Find a person</h2></div>
-      <input id="search" value="${esc(state.search)}" placeholder="Search by name…" autocomplete="off">
-      <div id="searchResults" class="results"></div>
-      <button id="homeTree" class="home-button" type="button">⌂ View family from the roots</button>
-      <div class="tree-help"><strong>How to read the tree</strong><p>Choose a person to open a full family view. In that view you can choose how many generations of ancestors and descendants to display.</p><p>The tree opens in a scrollable window so large families can be explored without shrinking the cards.</p></div>
-      <div class="legend"><div><i class="legend-dot male"></i> Male</div><div><i class="legend-dot female"></i> Female</div><div><i class="legend-dot unknown"></i> Not recorded</div></div>
-    </aside>
-    <section class="tree-area">
-      <div class="tree-toolbar"><div><strong>${esc(full(selected))}</strong><span>${selected.id===root?.id?'Family roots':'Family member preview'}</span></div><div class="toolbar-actions"><button id="openSelected" type="button">Open full tree</button><button id="homeTreeTop" type="button">⌂ Roots</button></div></div>
-      <div class="lineage-scroll"><div class="lineage">
-        <section class="focus-section home-preview"><div class="section-title"><span>${selected.id===root?.id?'FAMILY ROOT':'SELECTED FAMILY MEMBER'}</span><small>${selected.id===root?.id?'Beginning of the recorded clan line':'Preview — open the full tree for more generations'}</small></div>
-          <div class="focus-family"><div class="focus-person">${personCard(selected,{selected:true})}</div>${spouses.length?`<div class="focus-spouses">${spouses.map(s=>`<span class="union">&amp;</span>${personCard(s,{compact:true})}`).join('')}</div>`:''}</div>
-          ${selected.notes?`<div class="focus-note">${esc(selected.notes)}</div>`:''}
-        </section>
-        ${selected.id===root?.id&&descendants.length?`<div class="lineage-section descendants preview-desc"><div class="section-title"><span>ROOT LINE</span><small>First ${descendants.length} recorded generations</small></div>${descendants.map(g=>renderGeneration(g,index,'descendant')).join('<div class="generation-arrow">↓</div>')}</div>`:''}
-        ${selected.id!==root?.id?`<section class="open-prompt"><h3>Explore ${esc(full(selected))}'s family</h3><p>Open the full tree to choose the number of ancestor and descendant generations.</p><button id="openSelected2" class="primary" type="button">Open family tree</button></section>`:''}
-      </div></div>
-    </section>
-  </main>`;
-  $('#search').addEventListener('input',e=>{state.search=e.target.value;renderSearchResults()});
-  renderSearchResults();
-  $('#homeTree').onclick=()=>{state.selected=state.homeRootId;state.search='';renderTree()};
-  $('#homeTreeTop').onclick=()=>{state.selected=state.homeRootId;state.search='';renderTree()};
-  $('#openSelected').onclick=()=>openTreeModal(selected.id);
-  $('#openSelected2')?.addEventListener('click',()=>openTreeModal(selected.id));
-  document.querySelectorAll('[data-node]').forEach(b=>b.addEventListener('click',()=>openTreeModal(b.dataset.node)));
+  $('#main').innerHTML=`<main class="tree-page"><aside class="tree-sidebar"><div class="sidebar-title"><span class="eyebrow">FAMILY TREE</span><h2>Find a person</h2></div><input id="search" value="${esc(state.search)}" placeholder="Search by name…" autocomplete="off"><div id="searchResults" class="results"></div><button id="homeTree" class="home-button" type="button">⌂ View family from the roots</button><div class="tree-help"><strong>How to read the tree</strong><p>Search for a family member and open the full tree. Set any number of parent and descendant generations, then zoom the tree to the level you prefer.</p><p>Parents are grouped as couples rather than repeated as a matrix. Spouses are shown beside each other; generations run vertically.</p></div><div class="legend"><div><i class="legend-dot male"></i> Male</div><div><i class="legend-dot female"></i> Female</div><div><i class="legend-dot unknown"></i> Not recorded</div></div></aside><section class="tree-area"><div class="tree-toolbar"><div><strong>${esc(full(selected))}</strong><span>${selected.id===root?.id?'Family roots':'Family member preview'}</span></div><div class="toolbar-actions"><button id="openSelected" type="button">Open full tree</button><button id="homeTreeTop" type="button">⌂ Roots</button></div></div><div class="lineage-scroll"><div class="lineage"><section class="focus-section home-preview"><div class="section-title"><span>${selected.id===root?.id?'FAMILY ROOT':'SELECTED FAMILY MEMBER'}</span><small>${selected.id===root?.id?'Beginning of the recorded clan line':'Preview — open the full tree for more generations'}</small></div><div class="focus-family"><div class="focus-person">${personCard(selected,{selected:true})}</div>${spouses.length?`<div class="focus-spouses">${spouses.map(s=>`<span class="union">&amp;</span>${personCard(s,{compact:true})}`).join('')}</div>`:''}</div>${selected.notes?`<div class="focus-note">${esc(selected.notes)}</div>`:''}</section>${ancestors.length?`<div class="preview-desc"><div class="section-title"><span>ANCESTORS</span><small>Preview</small></div>${ancestors.map(g=>renderGeneration(g,index,'ancestor')).join('<div class="generation-arrow">↓</div>')}</div>`:''}${sibs.length?`<section class="siblings-section"><div class="section-title"><span>SIBLINGS</span><small>Children of the same parent(s)</small></div><div class="sibling-list">${sibs.map(p=>personCard(p,{compact:true})).join('')}</div></section>`:''}${descendants.length?`<div class="lineage-section descendants"><div class="section-title"><span>DESCENDANTS</span><small>Preview</small></div>${descendants.map(g=>renderGeneration(g,index,'descendant')).join('<div class="generation-arrow">↓</div>')}</div>`:''}</div></div></section></main>`;
+  bindSearch();$('#homeTree').onclick=()=>{state.selected=state.homeRootId;state.search='';renderTree()};$('#homeTreeTop').onclick=()=>{state.selected=state.homeRootId;state.search='';renderTree()};$('#openSelected').onclick=()=>openTreeModal(selected.id);document.querySelectorAll('#main [data-node]').forEach(b=>b.onclick=()=>openTreeModal(b.dataset.node));
 }
+function numericLevelInput(id,value){return `<label>${id==='ancestorLevel'?'Parent generations':'Offspring generations'}<input id="${id}" class="level-input" type="number" min="0" step="1" value="${Number.isFinite(value)?value:0}" inputmode="numeric" aria-label="${id==='ancestorLevel'?'Parent generations':'Offspring generations'}"></label>`}
+function lineageError(personId,error){const p=buildIndexes().people.get(personId);const name=p?full(p):'This family member';return `<div class="lineage-error"><div class="error-icon">!</div><h3>We could not display this lineage</h3><p>We found <strong>${esc(name)}</strong>, but the family relationships could not be displayed correctly.</p><p class="error-detail">${esc(error?.message||'No usable relationship data was returned.')}</p><div class="error-actions"><button id="errorRetry" type="button">Try again</button><button id="errorRoots" type="button">⌂ View family roots</button></div></div>`}
 function renderModalTree(personId){
-  const index=buildIndexes();const selected=index.people.get(personId)||homeRoot();if(!selected)return '';
-  state.selected=selected.id;
-  const ancestors=ancestorGenerations(selected,index,state.ancestorLevels);const descendants=descendantGenerations(selected,index,state.descendantLevels);const sibs=siblings(selected,index);const spouses=(index.spouses.get(selected.id)||[]).map(id=>index.people.get(id)).filter(Boolean);
-  return `<div class="modal-tree-shell">
-    <div class="modal-toolbar"><div><span class="eyebrow">FAMILY LINEAGE</span><h2>${esc(full(selected))}</h2><p>Use the controls to choose how far up and down the family tree you want to see.</p></div><button id="closeTreeModal" class="modal-close" type="button">×</button></div>
-    <div class="tree-controls"><label>Parent generations<select id="ancestorLevel">${[0,1,2,3,4,5,6].map(n=>`<option value="${n}" ${state.ancestorLevels===n?'selected':''}>${n}</option>`).join('')}</select></label><label>Offspring generations<select id="descendantLevel">${[0,1,2,3,4,5,6].map(n=>`<option value="${n}" ${state.descendantLevels===n?'selected':''}>${n}</option>`).join('')}</select></label><button id="modalHome" type="button">⌂ Roots</button><button id="modalFocus" type="button">◎ Centre on ${esc(full(selected))}</button></div>
-    <div class="modal-tree-scroll"><div class="modal-tree-canvas">
-      ${ancestors.length?`<div class="lineage-section ancestors"><div class="section-title"><span>ANCESTORS</span><small>${state.ancestorLevels} generation${state.ancestorLevels===1?'':'s'} upward</small></div>${ancestors.map(g=>renderGeneration(g,index,'ancestor')).join('<div class="generation-arrow">↓</div>')}<div class="generation-arrow">↓</div></div>`:''}
-      <section class="focus-section modal-focus"><div class="section-title"><span>CENTRE OF THE TREE</span><small>Selected family member</small></div><div class="focus-family"><div class="focus-person">${personCard(selected,{selected:true})}</div>${spouses.length?`<div class="focus-spouses">${spouses.map(s=>`<span class="union">&amp;</span>${personCard(s,{compact:true})}`).join('')}</div>`:''}</div>${selected.notes?`<div class="focus-note">${esc(selected.notes)}</div>`:''}</section>
-      ${sibs.length?`<section class="siblings-section"><div class="section-title"><span>SIBLINGS</span><small>Children of the same parent(s)</small></div><div class="sibling-list">${sibs.map(p=>personCard(p,{compact:true})).join('')}</div></section>`:''}
-      ${descendants.length?`<div class="lineage-section descendants"><div class="section-title"><span>DESCENDANTS</span><small>${state.descendantLevels} generation${state.descendantLevels===1?'':'s'} downward</small></div>${descendants.map(g=>renderGeneration(g,index,'descendant')).join('<div class="generation-arrow">↓</div>')}</div>`:`<section class="empty-lineage"><h3>No recorded descendants</h3><p>No child relationship is currently recorded for ${esc(full(selected))}.</p></section>`}
-    </div></div>
-  </div>`;
+  try{
+    const index=buildIndexes();const root=index.people.get(personId);if(!root)throw Error('The selected family member is not present in the loaded family data.');
+    const ancestors=ancestorGenerations(root,index,state.ancestorLevels);const descendants=descendantGenerations(root,index,state.descendantLevels);const sibs=siblings(root,index);const spouses=(index.spouses.get(root.id)||[]).map(id=>index.people.get(id)).filter(Boolean);const parentCount=(index.parents.get(root.id)||[]).length;const childCount=(index.children.get(root.id)||[]).length;
+    if(!ancestors.length&&!descendants.length&&!sibs.length&&!spouses.length&&parentCount+childCount===0&&state.ancestorLevels+state.descendantLevels>0)throw Error('This person is in the family data, but no parent/child relationship is currently recorded for them.');
+    const totalVisible=ancestors.reduce((n,g)=>n+g.people.length,0)+descendants.reduce((n,g)=>n+g.people.length,0)+sibs.length+1+spouses.length;
+    return `<div class="modal-tree-shell"><div class="modal-toolbar"><div><span class="eyebrow">FAMILY LINEAGE</span><h2>${esc(full(root))}</h2><p>${totalVisible} people visible • scroll horizontally and vertically to explore</p></div><button id="closeTreeModal" class="modal-close" type="button" aria-label="Close">×</button></div><div class="tree-controls"><div class="level-control-group">${numericLevelInput('ancestorLevel',state.ancestorLevels)}</div><div class="level-control-group">${numericLevelInput('descendantLevel',state.descendantLevels)}</div><button id="applyLevels" class="primary" type="button">Apply generations</button><div class="zoom-controls"><span>Zoom</span><button id="zoomOut" type="button" aria-label="Zoom out">−</button><output id="zoomValue">${Math.round(state.zoom*100)}%</output><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="zoomReset" type="button">Reset</button></div><button id="modalFocus" type="button">◎ Centre person</button><button id="modalHome" type="button">⌂ Roots</button></div><div class="modal-tree-scroll" id="modalTreeScroll"><div class="modal-tree-canvas" id="modalTreeCanvas" style="--tree-scale:${state.zoom}"><div class="tree-flow">${ancestors.length?`<div class="lineage-section ancestor-section"><div class="section-title"><span>ANCESTORS</span><small>${state.ancestorLevels} level${state.ancestorLevels===1?'':'s'} requested</small></div>${ancestors.map(g=>renderGeneration(g,index,'ancestor')).join('<div class="generation-arrow">↓</div>')}</div><div class="flow-arrow">↓</div>`:''}<section class="focus-section modal-focus"><div class="section-title"><span>CENTRE OF THE TREE</span><small>Selected family member</small></div><div class="focus-family"><div class="focus-person">${personCard(root,{selected:true})}</div>${spouses.length?`<div class="focus-spouses">${spouses.map(s=>`<span class="union">&amp;</span>${personCard(s,{compact:true})}`).join('')}</div>`:''}</div>${root.notes?`<div class="focus-note">${esc(root.notes)}</div>`:''}</section>${sibs.length?`<section class="siblings-section"><div class="section-title"><span>SIBLINGS</span><small>Children of the same parent(s)</small></div><div class="sibling-list">${sibs.map(p=>personCard(p,{compact:true})).join('')}</div></section>`:''}${descendants.length?`<div class="flow-arrow">↓</div><div class="lineage-section descendant-section"><div class="section-title"><span>DESCENDANTS</span><small>${state.descendantLevels} level${state.descendantLevels===1?'':'s'} requested</small></div>${descendants.map(g=>renderGeneration(g,index,'descendant')).join('<div class="generation-arrow">↓</div>')}</div>`:''}${!ancestors.length&&!descendants.length&&!sibs.length?`<div class="open-prompt"><h3>No lineage recorded yet</h3><p>${esc(full(root))} is in the family database, but no connected relatives were found for the requested direction.</p></div>`:''}</div></div></div></div>`;
+  }catch(e){return `<div class="modal-tree-shell"><div class="modal-toolbar"><div><span class="eyebrow">FAMILY LINEAGE</span><h2>Lineage unavailable</h2><p>Something prevented the selected family member's tree from being displayed.</p></div><button id="closeTreeModal" class="modal-close" type="button" aria-label="Close">×</button></div><div class="modal-error-wrap">${lineageError(personId,e)}</div></div>`}
 }
-function openTreeModal(personId){
-  state.modalOpen=true;const existing=$('#treeModal');if(existing)existing.remove();const wrap=document.createElement('div');wrap.id='treeModal';wrap.className='tree-modal';wrap.innerHTML=renderModalTree(personId);document.body.appendChild(wrap);document.body.classList.add('modal-open');bindModal();}
+function openTreeModal(personId){state.selected=personId;state.modalOpen=true;state.zoom=0.72;const existing=$('#treeModal');if(existing)existing.remove();const wrap=document.createElement('div');wrap.id='treeModal';wrap.className='tree-modal';wrap.innerHTML=renderModalTree(personId);document.body.appendChild(wrap);document.body.classList.add('modal-open');bindModal();setTimeout(()=>centreModalFocus(false),40)}
+function applyZoom(){const canvas=$('#modalTreeCanvas');if(!canvas)return;canvas.style.setProperty('--tree-scale',state.zoom);$('#zoomValue').textContent=`${Math.round(state.zoom*100)}%`}
+function centreModalFocus(smooth=true){const focus=$('#treeModal .modal-focus');if(focus)focus.scrollIntoView({behavior:smooth?'smooth':'auto',block:'center',inline:'center'})}
 function bindModal(){
-  $('#closeTreeModal').onclick=closeTreeModal;
-  $('#treeModal').addEventListener('click',e=>{if(e.target.id==='treeModal')closeTreeModal()},{once:true});
-  $('#ancestorLevel').onchange=e=>{state.ancestorLevels=Number(e.target.value);refreshModal()};
-  $('#descendantLevel').onchange=e=>{state.descendantLevels=Number(e.target.value);refreshModal()};
+  const close=$('#closeTreeModal');if(close)close.onclick=closeTreeModal;
+  const modal=$('#treeModal');if(!modal)return;
+  modal.onclick=e=>{if(e.target.id==='treeModal')closeTreeModal()};
+  const apply=()=>{const a=Math.floor(Number($('#ancestorLevel')?.value));const d=Math.floor(Number($('#descendantLevel')?.value));if(!Number.isFinite(a)||a<0||!Number.isFinite(d)||d<0){return notice('Generation levels must be whole numbers of 0 or greater.');}state.ancestorLevels=a;state.descendantLevels=d;refreshModal()};
+  $('#applyLevels').onclick=apply;
+  ['ancestorLevel','descendantLevel'].forEach(id=>{$('#'+id).addEventListener('keydown',e=>{if(e.key==='Enter')apply()})});
+  $('#zoomOut').onclick=()=>{state.zoom=Math.max(.25,Math.round((state.zoom-.1)*100)/100);applyZoom()};
+  $('#zoomIn').onclick=()=>{state.zoom=Math.min(3,Math.round((state.zoom+.1)*100)/100);applyZoom()};
+  $('#zoomReset').onclick=()=>{state.zoom=.72;applyZoom()};
   $('#modalHome').onclick=()=>{closeTreeModal();state.selected=state.homeRootId;state.search='';renderTree()};
-  $('#modalFocus').onclick=()=>$('#treeModal .modal-focus')?.scrollIntoView({behavior:'smooth',block:'center',inline:'center'});
-  document.querySelectorAll('#treeModal [data-node]').forEach(b=>b.onclick=()=>openTreeModal(b.dataset.node));
+  $('#modalFocus').onclick=()=>centreModalFocus(true);
+  $('#errorRetry')?.addEventListener('click',()=>refreshModal());
+  $('#errorRoots')?.addEventListener('click',()=>{$('#modalHome')?.click()});
+  document.querySelectorAll('#treeModal [data-node]').forEach(b=>b.onclick=e=>{e.stopPropagation();openTreeModal(b.dataset.node)});
 }
-function refreshModal(){const modal=$('#treeModal');if(!modal)return;const id=state.selected;modal.innerHTML=renderModalTree(id);bindModal();}
-function closeTreeModal(){const m=$('#treeModal');if(m)m.remove();state.modalOpen=false;document.body.classList.remove('modal-open');}
+function refreshModal(){const modal=$('#treeModal');if(!modal)return;modal.innerHTML=renderModalTree(state.selected);bindModal();setTimeout(()=>centreModalFocus(false),20)}
+function closeTreeModal(){const m=$('#treeModal');if(m)m.remove();state.modalOpen=false;document.body.classList.remove('modal-open')}
 function personPanel(p){return `<div class="person-panel"><div><span class="pill">${p.source==='excel'?'Excel import':'Family record'}</span><h2>${esc(full(p))}</h2><p>${esc(p.birth_year||'Unknown')}${p.death_year?` — ${esc(p.death_year)}`:''}</p></div><button id="addRelative" type="button">Add relative</button><div id="relativeForm" class="mini-form" style="display:none"><select id="relKind"><option value="child">Add child</option><option value="parent">Add parent</option><option value="spouse">Add spouse</option></select><input id="relName" placeholder="Person's name"><button id="relSubmit" class="primary" type="button">Submit for approval</button></div></div>`}
 async function submitRelative(parentId){if(!/^\d{5}$/.test(state.token))return notice('Enter a valid 5-digit contributor token first.');const name=$('#relName').value.trim();if(!name)return;const kind=$('#relKind').value;let payload={given_name:name,notes:'Added through the family archive.'};if(kind==='child')payload.parent_id=parentId;payload.relationship_kind=kind;if(kind!=='child')payload.anchor_id=parentId;try{const r=await api('/api/proposals',{method:'POST',body:JSON.stringify({token:state.token,action:'add_person',payload})});notice(r.message);$('#relName').value=''}catch(e){notice(e.message)}}
 async function renderHistory(){let h;try{h=await api('/api/history')}catch{const body=await (await fetch('/history.txt')).text();h={article:{title:'The History of the Asankran Kona Clan',body,source_note:'Source document: Asankra history.pdf'},comments:[]}}state.history=h;const a=h.article||{};$('#main').innerHTML=`<main class="content history"><article class="card"><div class="eyebrow">FAMILY HISTORY</div><h2>${esc(a.title||'The History of the Asankran Kona Clan')}</h2><div class="source-note">${esc(a.source_note||'Source document: Asankra history.pdf')}</div><div class="article-body">${(a.body||'').split(/\n{2,}/).map(x=>`<p>${esc(x.trim())}</p>`).join('')}</div></article><section class="card"><h3>Family comments</h3>${(h.comments||[]).map(c=>`<div class="comment"><strong>${esc(c.author_name)}</strong><span>${new Date(c.created_at).toLocaleDateString()}</span><p>${esc(c.body)}</p></div>`).join('')}<hr><input id="commentAuthor" placeholder="Your name"><textarea id="commentBody" placeholder="Add a family comment…"></textarea><button id="commentBtn" class="primary" type="button">Submit comment</button></section></main>`;$('#commentBtn').onclick=async()=>{if(!/^\d{5}$/.test(state.token))return notice('A valid 5-digit token is required to comment.');try{const r=await api('/api/comment',{method:'POST',body:JSON.stringify({token:state.token,author_name:$('#commentAuthor').value,body:$('#commentBody').value})});notice(r.message);renderHistory()}catch(e){notice(e.message)}}}
