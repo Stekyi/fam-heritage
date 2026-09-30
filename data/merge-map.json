@@ -3,31 +3,81 @@
     "Ama Buah (Nana Mansa)": {
       "html_id": "iVRRYO",
       "canonical_name": "Ama Buah",
-      "aliases": ["Mansa", "Nana Mansa"],
+      "aliases": [
+        "Ama Buah (Nana Mansa)",
+        "Mansa",
+        "Nana Mansa"
+      ],
       "reason": "User-confirmed: Excel Ama Buah (Nana Mansa) is the same person as Mansa in the HTML tree."
     },
     "Abena Gyampraa": {
       "html_id": "iPH0XK",
       "canonical_name": "Abena Gyampraa",
-      "aliases": ["Maa Abena"],
+      "aliases": [
+        "Maa Abena"
+      ],
       "reason": "User-confirmed: Excel Abena Gyampraa is the same person as Maa Abena in the HTML tree and is a daughter of Nana Mansa."
     },
-    "Agnes Obiri-Yeboah (Tiwa)": {"html_id":"iGAMTS"},
-    "Hana Obiri-Yeboah (Nana Akua)": {"html_id":"iEJYR1"},
-    "John Obiri-Yeboah (Kwasi Appianin)": {"html_id":"iVRDQ9"},
-    "Matthew Obiri-Yeboah (Adansi Bona)": {"html_id":"iXJO6H"},
-    "Isaac Obiri-Yeboah (Kofi Gyima)": {"html_id":"iCRSRL"},
-    "Panin Asirifua Tekyi": {"html_id":"iUGYKY"},
-    "Kakra Asirifua Tekyi": {"html_id":"iZT0SR"},
-    "Agyapomaa Tekyi": {"html_id":"iZ02CG"},
-    "Asamoah Tekyi": {"html_id":"iSTART"},
-    "Esther Tekyi": {"html_id":"iGCAX8"}
+    "Agnes Obiri-Yeboah (Tiwa)": {
+      "html_id": "iGAMTS",
+      "aliases": [
+        "Tiwa"
+      ]
+    },
+    "Hana Obiri-Yeboah (Nana Akua)": {
+      "html_id": "iEJYR1",
+      "aliases": [
+        "Nana Akua"
+      ]
+    },
+    "John Obiri-Yeboah (Kwasi Appianin)": {
+      "html_id": "iVRDQ9",
+      "aliases": [
+        "Kwasi Appianin"
+      ]
+    },
+    "Matthew Obiri-Yeboah (Adansi Bona)": {
+      "html_id": "iXJO6H",
+      "aliases": [
+        "Adansi Bona"
+      ]
+    },
+    "Isaac Obiri-Yeboah (Kofi Gyima)": {
+      "html_id": "iCRSRL",
+      "aliases": [
+        "Kofi Gyima"
+      ]
+    },
+    "Panin Asirifua Tekyi": {
+      "html_id": "iUGYKY"
+    },
+    "Kakra Asirifua Tekyi": {
+      "html_id": "iZT0SR"
+    },
+    "Agyapomaa Tekyi": {
+      "html_id": "iZ02CG"
+    },
+    "Asamoah Tekyi": {
+      "html_id": "iSTART"
+    },
+    "Esther Tekyi": {
+      "html_id": "iGCAX8"
+    }
   },
   "excel_root_replacement": {
     "description": "For the Mansa branch, the Excel tree is authoritative for the root and detailed branch information. Excel supplies the detailed Mansa-branch names and dates; Ama Buah (Nana Mansa) is the canonical identity for HTML Mansa, and Abena Gyampraa is the canonical identity for HTML Maa Abena. Kwaku Buafo is recorded as Ama Buah's spouse/partner, not as her parent.",
     "remove_html_parent_relationships_for": [],
-    "top_couple": ["Kwaku Buafo (Opayin Kankyea)", "Ama Buah (Nana Mansa)"],
-    "top_couple_children": ["Yaa Brefaa", "Abena Gyampraa", "Charles Buafo", "Afua Ampomaa", "John Kwaku Buafo"]
+    "top_couple": [
+      "Kwaku Buafo (Opayin Kankyea)",
+      "Ama Buah (Nana Mansa)"
+    ],
+    "top_couple_children": [
+      "Yaa Brefaa",
+      "Abena Gyampraa",
+      "Charles Buafo",
+      "Afua Ampomaa",
+      "John Kwaku Buafo"
+    ]
   },
   "excel_dates": {
     "Kwaku Buafo (Opayin Kankyea)": "1907 - 1978",
@@ -36,9 +86,15 @@
     "Abena Gyampraa": "1938 - 2012",
     "Charles Buafo": "1941 - 2026",
     "Afua Ampomaa": "1944 - 2000",
-    "John Kwaku Buafo": "1941 - 2017",
+    "John Kwaku Buafo": "1947 - 2017",
     "Margaret Buafo (Somaa)": "1951 - 2014",
-    "Althea Buafo": "1951 - 2009"
+    "Althea Buafo": "1961 - 2009"
   },
-  "relationship_review": []
+  "relationship_review": [
+    {
+      "status": "authoritative_parent_map",
+      "source": "Kankyea_and_Mansa_Family_Tree.md",
+      "note": "Only explicit Generation 3 parent-child relationships from the Claude extraction are loaded. Linked names are not assigned as spouse/child because the source says their relationship type is unspecified."
+    }
+  ]
 }
