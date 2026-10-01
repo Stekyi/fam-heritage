@@ -234,8 +234,9 @@ export async function openPersonSheet(personId, { edit = false } = {}) {
       ${cur.notes ? `<div class="focus-note">${esc(cur.notes)}</div>` : ''}
       ${detail.profile ? `<section class="sheet-section"><h3>About ${esc(cur.given_name)}</h3><div class="prose">${esc(detail.profile.about).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/g, '<br>')}</p>`).join('')}</div></section>` : ''}
       ${detail.stories.length ? `<section class="sheet-section"><h3>Stories</h3><ul class="plain-list">${detail.stories.map((st) => `<li><a href="#/story/${esc(st.id)}" data-close>${esc(st.title)}</a> <small class="muted">${esc(fmtWhen(st.created_at))}</small></li>`).join('')}</ul></section>` : ''}
-      <div class="sheet-actions"><a class="btn primary" href="#/tree/${esc(cur.id)}" data-close>View in Family Tree</a><a class="btn" href="#/person/${esc(cur.id)}" data-close>Full profile page</a><button class="btn" type="button" id="editPerson">${canEdit() ? 'Edit details' : '🔒 Edit details'}</button></div>`;
+      <div class="sheet-actions"><a class="btn primary" href="#/tree/${esc(cur.id)}" data-close>View in Family Tree</a><a class="btn" href="#/person/${esc(cur.id)}" data-close>Full profile page</a><button class="btn" type="button" id="suggestFix">Suggest a correction</button><button class="btn" type="button" id="editPerson">${canEdit() ? 'Edit details' : '🔒 Edit details'}</button></div>`;
     $$('[data-close]', body).forEach((b) => b.addEventListener('click', s.close));
+    $('#suggestFix', body).onclick = () => { if (!canEdit()) return toast('You need a contributor token to make changes.', 'info'); s.close(); openCorrectionSheet(personId); };
     $('#editPerson', body).onclick = () => {
       if (!canEdit()) return toast('You need a contributor token to make changes.', 'info');
       drawEdit();
@@ -325,3 +326,45 @@ function bindEditForm(root, person, { onCancel, onSaved }) {
 }
 
 export { reportError, errorView };
+
+// ---------------------------------------------------------------- suggest a correction (links)
+export function openCorrectionSheet(personId) {
+  const person = state.data.people.find((x) => x.id === personId);
+  if (!person) return;
+  const index = buildIndex();
+  const nameOf = (id) => fullName(index.people.get(id));
+  const rels = (state.data.relationships || []).filter((r) => r.id && (r.from_person_id === personId || r.to_person_id === personId));
+  const label = (r) => {
+    if (r.relationship_type === 'spouse') return `Partner: ${nameOf(r.from_person_id === personId ? r.to_person_id : r.from_person_id)}`;
+    return r.from_person_id === personId ? `Child: ${nameOf(r.to_person_id)}` : `Parent: ${nameOf(r.from_person_id)}`;
+  };
+  const s = openSheet(`<div class="sheet-body"><div class="sheet-head"><div><span class="eyebrow">SUGGEST A CORRECTION</span><h2>${esc(fullName(person))}</h2><p class="muted">The tree only changes after the administrator approves, so nothing is lost if you are unsure.</p></div><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+    <form id="rmForm" class="form" novalidate><h3>A link looks wrong</h3>
+      <label class="field"><span class="label">Which link?</span><select class="input" name="rel">${rels.length ? rels.map((r) => `<option value="${esc(r.id)}">${esc(label(r))}</option>`).join('') : '<option value="">No links recorded</option>'}</select></label>
+      <label class="field"><span class="label">Why is it wrong?</span><textarea class="input" name="reason" rows="3" maxlength="400" placeholder="e.g. She is the daughter of Helena, not of Yaa Brefaa"></textarea><small class="err" data-err="reason"></small></label>
+      <div class="sheet-actions"><button class="btn primary" type="submit" ${rels.length ? '' : 'disabled'}>Suggest removing this link</button></div></form>
+    <hr class="soft">
+    <form id="addForm" class="form" novalidate><h3>A link is missing</h3>
+      <label class="field"><span class="label">${esc(person.given_name)} is...</span><select class="input" name="kind"><option value="parent_of">a parent of</option><option value="child_of">a child of</option><option value="spouse">a partner of</option></select></label>
+      <div class="field"><span class="label">Who?</span><input id="addSearch" class="input" type="search" placeholder="Search family tree..." autocomplete="off"><div id="addResults" class="results"></div><div id="addPicked" class="muted small">No one selected yet.</div></div>
+      <div class="sheet-actions"><button class="btn primary" type="submit">Suggest this link</button></div></form></div>`, { wide: true, label: 'Suggest a correction' });
+  $$('[data-close]', s.el).forEach((b) => b.addEventListener('click', s.close));
+  const send = async (payload, action) => { const r = await api('/api/proposals', { method: 'POST', body: { action, payload } }); toast(r.message || 'Your suggestion has been sent for approval.'); s.close(); };
+  $('#rmForm', s.el).addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const v = Object.fromEntries(new FormData(e.target).entries());
+    if (String(v.reason || '').trim().length < 5) { $('[data-err="reason"]', s.el).textContent = 'Please tell us briefly why this link is wrong.'; return; }
+    try { await send({ relationship_id: v.rel, reason: v.reason }, 'delete_relationship'); } catch (err) { toastError(err); }
+  });
+  let other = null;
+  attachPersonSearch($('#addSearch', s.el), $('#addResults', s.el), { onPick: (p) => { other = p; $('#addPicked', s.el).innerHTML = `Selected: <strong>${esc(fullName(p))}</strong>`; $('#addResults', s.el).innerHTML = ''; } });
+  $('#addForm', s.el).addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!other) return toast('Please select a family member first.', 'error');
+    const kind = new FormData(e.target).get('kind');
+    const payload = kind === 'spouse' ? { from_person_id: personId, to_person_id: other.id, relationship_type: 'spouse' }
+      : kind === 'parent_of' ? { from_person_id: personId, to_person_id: other.id, relationship_type: 'parent' }
+        : { from_person_id: other.id, to_person_id: personId, relationship_type: 'parent' };
+    try { await send(payload, 'add_relationship'); } catch (err) { toastError(err); }
+  });
+}

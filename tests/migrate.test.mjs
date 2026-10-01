@@ -24,7 +24,7 @@ test('migrations run transactionally through a pooled client', async () => {
   assert.ok(log.includes('BEGIN') && log.includes('COMMIT') && log.includes('release'));
   assert.ok(log.some((l) => l.startsWith('select pg_advisory_xact_lock')));
   const v = await pg.query('select version from schema_migrations');
-  assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening']);
+  assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening', '004_features']);
   const t = await pg.query("select count(*)::int n from information_schema.tables where table_name in ('profiles','stories','business_ideas','business_interests','token_person_links','images')");
   assert.equal(t.rows[0].n, 6);
 });

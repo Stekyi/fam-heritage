@@ -11,7 +11,7 @@
                     "seed:dry":  "node scripts/seed.mjs --dry-run",
                     "graph":  "node scripts/build-graph.mjs",
                     "migrate":  "node scripts/migrate.mjs",
-                    "test":  "node --test tests/api.test.mjs tests/unit.test.mjs tests/migrate.test.mjs tests/rich.test.mjs tests/hardening.test.mjs"
+                    "test":  "node --test tests/api.test.mjs tests/unit.test.mjs tests/migrate.test.mjs tests/rich.test.mjs tests/hardening.test.mjs tests/features.test.mjs"
                 },
     "dependencies":  {
                          "pg":  "^8.16.3"

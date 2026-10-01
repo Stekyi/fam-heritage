@@ -2,8 +2,8 @@ import {
   state, $, $$, esc, fullName, aliasesOf, api, toast, toastError, openSheet, confirmDialog, loadingView, emptyView, errorView, reportError,
   fmtWhen, avatar, lifeLine, pager, prepareImage, safeUrl, loadTree, setHelp,
 } from './core.js';
-import { attachPersonSearch, openPersonSheet, personFacts, canEdit } from './tree.js';
-import { refreshMe } from './session.js';
+import { attachPersonSearch, openPersonSheet, personFacts, canEdit, openCorrectionSheet } from './tree.js';
+import { refreshMe, setToken } from './session.js';
 import { richText } from './rich.js';
 
 const paragraphs = (t) => esc(t).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/g, '<br>')}</p>`).join('');
@@ -86,9 +86,10 @@ export async function renderPerson(root, id) {
     if (idx >= 0) state.data.people[idx] = { ...state.data.people[idx], ...p };
     wrap.innerHTML = `<a class="back" href="#/tree">← Family tree</a><section class="card profile-card"><div class="person-hero big">${avatar(p, 'xxl')}<div><span class="eyebrow">FAMILY MEMBER</span><h1>${esc(fullName(p))}</h1>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(p))}</p></div></div>
       ${personFacts(p)}${p.notes ? `<div class="focus-note">${esc(p.notes)}</div>` : ''}
-      <div class="sheet-actions"><a class="btn primary" href="#/tree/${esc(p.id)}">View in Family Tree</a><button class="btn" id="editHere" type="button">${canEdit() ? 'Edit details' : '🔒 Edit details'}</button></div></section>
+      <div class="sheet-actions"><a class="btn primary" href="#/tree/${esc(p.id)}">View in Family Tree</a><button class="btn" id="fixHere" type="button">Suggest a correction</button><button class="btn" id="editHere" type="button">${canEdit() ? 'Edit details' : '🔒 Edit details'}</button></div></section>
       <section class="card"><h2>About ${esc(p.given_name)}</h2>${r.profile ? `<div class="prose">${paragraphs(r.profile.about)}</div><p class="muted small">Last updated ${esc(fmtWhen(r.profile.updated_at))}</p>` : emptyView('No profile has been written yet.', `${p.given_name} has not published a personal profile.`)}</section>
       <section class="card"><h2>Stories</h2>${r.stories.length ? `<ul class="plain-list">${r.stories.map((st) => `<li><a href="#/story/${esc(st.id)}">${esc(st.title)}</a> <small class="muted">${esc(fmtWhen(st.created_at))}</small></li>`).join('')}</ul>` : '<p class="muted">No stories have been published yet.</p>'}</section>`;
+    $('#fixHere', wrap).onclick = () => { if (!canEdit()) return toast('You need a contributor token to make changes.', 'info'); openCorrectionSheet(p.id); };
     $('#editHere', wrap).onclick = () => { if (!canEdit()) return toast('You need a contributor token to make changes.', 'info'); openPersonSheet(p.id, { edit: true }); };
   };
   await render();
@@ -216,4 +217,39 @@ function renderSuggest(box) {
     if (v.kind === 'child') payload.parent_id = picked.id; else payload.anchor_id = picked.id;
     try { const r = await api('/api/proposals', { method: 'POST', body: { action: 'add_person', payload } }); toast(r.message); form.reset(); picked = null; $('#sgPicked', box).textContent = 'No one selected yet.'; } catch (err) { toastError(err); }
   });
+}
+
+// ================================================================= JOIN BY INVITATION
+export async function renderJoin(root, code) {
+  root.innerHTML = `<div class="page narrow">${loadingView('Checking your invitation...')}</div>`;
+  const wrap = $('.page', root);
+  let inv;
+  try { inv = await api(`/api/invite?code=${encodeURIComponent(code || '')}`, { auth: false }); } catch (e) {
+    wrap.innerHTML = `<section class="card state state-error"><div class="state-art" aria-hidden="true">!</div><h2>${esc(e.status === 404 ? 'This invitation cannot be used' : 'Something went wrong')}</h2><p>${esc(e.message)}</p><a class="btn primary" href="#/tree">Browse the family tree</a></section>`;
+    return;
+  }
+  let chosen = inv.person;
+  const draw = () => {
+    wrap.innerHTML = `<header class="page-head"><span class="eyebrow">INVITATION</span><h1>Welcome to the family archive</h1><p>${inv.label ? `${esc(inv.label)}, you have` : 'You have'} been invited to join. Creating your access takes a few seconds.</p></header>
+      <section class="card" id="joinCard">${chosen ? `<span class="eyebrow">IS THIS YOU?</span><div class="person-hero">${avatar(chosen, 'lg')}<div><h2>${esc(fullName(chosen))}</h2><p class="muted">${esc(lifeLine(chosen))}</p></div></div><div class="sheet-actions"><button class="btn primary" id="joinGo" type="button">Yes, create my access</button>${inv.person ? '' : '<button class="btn" id="joinBack" type="button">Choose someone else</button>'}</div>` : `<h2>Find yourself in the family tree</h2><p class="muted">Search for your name and select your entry. Each person can join once.</p><label class="sr-only" for="joinSearch">Search family tree</label><input id="joinSearch" class="input" type="search" placeholder="Search family tree..." autocomplete="off"><div id="joinResults" class="results"></div>`}</section>`;
+    if (!chosen) { attachPersonSearch($('#joinSearch', wrap), $('#joinResults', wrap), { onPick: (p) => { chosen = p; draw(); } }); return; }
+    $('#joinBack', wrap)?.addEventListener('click', () => { chosen = null; draw(); });
+    $('#joinGo', wrap).addEventListener('click', async (e) => {
+      e.target.disabled = true; e.target.textContent = 'Creating your access...';
+      try {
+        const r = await api('/api/invite', { method: 'POST', auth: false, body: { code, person_id: inv.person ? undefined : chosen.id } });
+        setToken(r.token);
+        await refreshMe();
+        done(r);
+      } catch (err) { e.target.disabled = false; e.target.textContent = 'Yes, create my access'; toastError(err); }
+    });
+  };
+  const done = (r) => {
+    wrap.innerHTML = `<header class="page-head"><span class="eyebrow">YOU ARE IN</span><h1>Welcome, ${esc(r.person.given_name)}</h1></header>
+      <section class="card"><p>Your personal contributor token is below. It is already saved in this browser, so you are signed in here. <strong>Keep a copy somewhere safe</strong> to sign in on another device. It cannot be shown again.</p><p class="big-token" aria-label="Your token">${esc(r.token)}</p><div class="sheet-actions"><button class="btn" id="copyMine" type="button">Copy token</button><a class="btn primary" href="#/contribute">Go to My Family Profile</a><a class="btn" href="#/tree/${esc(r.person.id)}">See myself in the tree</a></div></section>`;
+    $('#copyMine', wrap).onclick = async () => { try { await navigator.clipboard.writeText(r.token); toast('Token copied to the clipboard.'); } catch { toast('Please copy the token manually.', 'info'); } };
+    toast(`Welcome, ${r.person.given_name}. You can now edit family members and share your story.`);
+    window.dispatchEvent(new CustomEvent('token-changed'));
+  };
+  draw();
 }

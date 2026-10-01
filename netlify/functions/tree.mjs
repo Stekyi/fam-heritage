@@ -11,7 +11,7 @@ export async function handler(event) {
   const token = await optionalToken(event, pool);
   const [p, r, l] = await Promise.all([
     pool.query(`select ${PERSON_SELECT} from people order by lower(given_name),lower(surname)`),
-    pool.query("select from_person_id,to_person_id,relationship_type from relationships where status='approved'"),
+    pool.query("select id,from_person_id,to_person_id,relationship_type from relationships where status='approved'"),
     pool.query('select person_id from profiles where published=true and length(about)>0'),
   ]);
   const withProfile = new Set(l.rows.map((x) => x.person_id));

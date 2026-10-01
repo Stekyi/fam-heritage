@@ -1,4 +1,5 @@
 import { getDb, json, NO_DB, parseBody, clean, cleanMultiline, readLimit } from '../lib/db.mjs';
+import { notifyAdmin } from '../lib/mail.mjs';
 
 // Anyone can comment. Every comment waits for administrator approval before it appears.
 export async function handler(event) {
@@ -14,5 +15,6 @@ export async function handler(event) {
   const a = await pool.query("select id from articles where slug='asankran-history'");
   if (!a.rows[0]) return json(404, { error: 'Comments are not available yet.' });
   await pool.query('insert into comments(article_id,author_name,body) values($1,$2,$3)', [a.rows[0].id, name, body]);
+  await notifyAdmin(pool, 'New comment waiting for approval', { heading: 'A new comment', lines: [`${name} wrote:`, body.length > 300 ? `${body.slice(0, 300)}...` : body] });
   return json(201, { ok: true, message: 'Thank you. Your comment has been submitted and is awaiting moderation.' });
 }

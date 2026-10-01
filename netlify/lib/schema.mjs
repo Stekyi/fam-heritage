@@ -145,4 +145,22 @@ create index if not exists idx_rev_created on person_revisions(created_at desc);
 create index if not exists idx_attempts_time on token_attempts(attempted_at);
 `,
   },
+  {
+    version: '004_features',
+    sql: `
+create table if not exists invites (
+  id uuid primary key default gen_random_uuid(),
+  code_hash text unique not null,
+  person_id uuid references people(id) on delete cascade,
+  label text,
+  expires_at timestamptz not null,
+  used_at timestamptz,
+  token_id uuid references access_tokens(id) on delete set null,
+  revoked boolean not null default false,
+  created_at timestamptz not null default now()
+);
+create index if not exists idx_invites_person on invites(person_id);
+create index if not exists idx_proposals_pending on proposals(action, status);
+`,
+  },
 ];

@@ -46,7 +46,7 @@ describe('migrations', () => {
     const after = await pg.query('select count(*)::int n from people');
     assert.equal(after.rows[0].n, before.rows[0].n);
     const v = await pg.query('select version from schema_migrations');
-    assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening']);
+    assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening', '004_features']);
     assert.equal(await relationshipSnapshot(pg), baseline);
   });
 });
