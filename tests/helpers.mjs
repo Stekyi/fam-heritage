@@ -1,6 +1,6 @@
 import { PGlite } from '@electric-sql/pglite';
 import fs from 'node:fs';
-import { setPool, getDb, hmacToken } from '../netlify/functions/_db.mjs';
+import { setPool, getDb, hmacToken } from '../netlify/lib/db.mjs';
 
 process.env.ADMIN_SECRET = 'test-admin-secret';
 process.env.TOKEN_PEPPER = 'test-pepper';

@@ -1,6 +1,6 @@
-import { state, $, $$, esc, api, toast, toastError, loadTree, loadingView, errorView, fullName } from './core.js';
+import { state, $, $$, esc, api, toast, toastError, loadTree, loadingView, errorView, fullName, TOKEN_RE } from './core.js';
 import { setToken, refreshMe } from './session.js';
-import { renderTreePage, closeTreeModal, ensureHomeRoot } from './tree.js';
+import { renderTreePage, closeTreeModal, ensureHomeRoot, refreshTreeViews } from './tree.js';
 import { renderHistory, renderStory, renderPerson, renderContribute } from './pages-content.js';
 import { renderNetwork, renderAnalysis } from './pages-network.js';
 import { renderAdmin } from './pages-admin.js';
@@ -50,7 +50,7 @@ function updateChip() {
   const chip = $('#tokenChip'); const box = $('.token-box');
   box.classList.remove('ok', 'bad');
   if (!state.token) { chip.textContent = 'Public view'; chip.title = 'You are viewing a public family profile. You need a contributor token to make changes.'; return; }
-  if (state.token.length < 5) { chip.textContent = 'Enter 5 digits'; return; }
+  if (!TOKEN_RE.test(state.token)) { chip.textContent = 'Keep typing...'; return; }
   if (!state.me) { chip.textContent = 'Checking…'; return; }
   if (!state.me.valid) { chip.textContent = 'Invalid token'; box.classList.add('bad'); chip.title = 'Your token is invalid or has expired.'; return; }
   box.classList.add('ok');
@@ -58,14 +58,20 @@ function updateChip() {
   chip.title = state.me.linked_person ? 'Your token is linked to this family member.' : 'Token accepted. Link it to yourself in Contribute → My Family Profile.';
 }
 
+// Contributors get full details of living relatives; the public tree hides them. Reload when that changes.
+async function reloadTreeData() {
+  if (!state.loaded) return;
+  try { await loadTree(true); refreshTreeViews(); } catch { /* the next navigation will retry */ }
+}
+
 const tokenInput = $('#tokenInput');
 tokenInput.value = state.token;
 let announced = false;
 tokenInput.addEventListener('input', async (e) => {
   setToken(e.target.value); e.target.value = state.token; updateChip();
-  if (state.token.length === 5) {
+  if (TOKEN_RE.test(state.token)) {
     const me = await refreshMe();
-    if (me?.valid) { if (!announced) toast(me.linked_person ? `Welcome back, ${me.linked_person.given_name}.` : 'Token accepted. You can now edit family members.', 'success'); announced = true; }
+    if (me?.valid) { if (!announced) toast(me.linked_person ? `Welcome back, ${me.linked_person.given_name}.` : 'Token accepted. You can now edit family members.', 'success'); announced = true; await reloadTreeData(); }
     else toast('Your token is invalid or has expired.', 'error');
   } else announced = false;
 });
@@ -76,9 +82,11 @@ window.addEventListener('me-changed', () => {
 });
 window.addEventListener('token-invalid', () => { state.me = { valid: false }; updateChip(); });
 window.addEventListener('hashchange', route);
+// Escape closes the full-tree view once any dialog on top of it is closed.
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && $('#treeModal') && !$('.sheet-wrap')) closeTreeModal(); });
 $('#menuBtn').addEventListener('click', () => { const open = $('#nav').classList.toggle('open'); $('#menuBtn').setAttribute('aria-expanded', String(open)); });
-$('#clearToken').addEventListener('click', () => { setToken(''); tokenInput.value = ''; announced = false; window.dispatchEvent(new CustomEvent('me-changed')); toast('Your token has been cleared from this browser.', 'info'); });
+$('#clearToken').addEventListener('click', () => { setToken(''); tokenInput.value = ''; announced = false; window.dispatchEvent(new CustomEvent('me-changed')); toast('Your token has been cleared from this browser.', 'info'); reloadTreeData(); });
 
 updateChip();
 route();
-if (state.token.length === 5) refreshMe().then(() => { announced = true; });
+if (TOKEN_RE.test(state.token)) refreshMe().then(async () => { announced = true; if (state.me?.valid) await reloadTreeData(); });

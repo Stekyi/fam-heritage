@@ -29,7 +29,13 @@ All authorisation is enforced in the Netlify Functions, never in the browser.
 | Suggest new people / relationships (needs approval) | | yes | yes | |
 | Approve suggestions and comments, manage tokens, remove content | | | | yes |
 
-Tokens are stored as an HMAC (`TOKEN_PEPPER`). Failed token guesses are rate limited per IP (20 per 10 minutes); valid use is never throttled. The admin secret is sent only in the `x-admin-secret` header, compared in constant time, and is never embedded in the page.
+Tokens are stored as an HMAC (`TOKEN_PEPPER`; the app refuses to run without `TOKEN_PEPPER` or `ADMIN_SECRET`). New tokens are 8 characters (a letter first, no look-alike characters); legacy 5-digit tokens still work but are much easier to guess, so prefer the 8-character kind.
+
+Brute-force protection (all in Postgres, so it holds across serverless instances): each attempt is recorded before it is checked, failed attempts stay counted, and valid use is never throttled. Limits per 10 minutes: 20 failed tokens per IP, 500 failed tokens sitewide (token checks then pause for everyone, but the administrator is unaffected), 10 failed admin attempts per IP and 100 sitewide. Only the platform-set `x-nf-client-connection-ip` header is trusted. The admin secret is sent only in the `x-admin-secret` header, compared in constant time, and never embedded in the page. Admin -> Security shows recent failures.
+
+Living people are protected in public views: their exact birth date and where they live now are only returned to valid contributor tokens (the public sees the birth year only). Bulk endpoints are limited per IP (tree 60, search 300, network and analysis 120 per 10 minutes), and the data endpoints accept GET only.
+
+Every edit to a person stores the old and new values; Admin -> Edit history shows them and can restore the previous values (a restore is recorded too). Photos: the last four are kept per person so a removed photo can be restored.
 
 There is **no public export** of any kind (no JSON/CSV/Excel/GEDCOM/database dump endpoint, and no static data files are served). The read APIs used by the app refuse to be opened as a page (`Sec-Fetch-Dest: document`), but they necessarily return data to the app itself, so a determined scraper could still read what the tree shows.
 
@@ -48,6 +54,7 @@ Do not change `TOKEN_PEPPER` after tokens have been issued; it would invalidate 
 Schema `001` (original) plus additive migration `002_heritage_platform` (see `netlify/functions/_schema.mjs`):
 
 - `people` gains `birth_date`, `death_date`, `birth_place`, `occupation`, `location`, `living_status`, `updated_by`; gender may now be `M`, `F`, `O` or `U`.
+- Migration `003_hardening`: `people.kind` (person / placeholder / place; unknown ancestors and the sacred rock are left out of Analysis), `person_revisions` (edit history), `images.token_id` (cover ownership).
 - New tables: `images` (profile and cover images stored in Postgres, so they persist across deployments), `token_person_links`, `profiles`, `stories`, `business_ideas`, `business_interests`, plus indexes on names, aliases, occupation, birth place, location, ideas and comments.
 - Nothing is dropped or rewritten. Relationships are not touched.
 
@@ -70,7 +77,7 @@ DATABASE_URL="..." npm run migrate
 
 ```
 npm install
-npm test                      # API integration tests (in-memory Postgres) + unit tests
+npm test                      # API integration, security and unit tests (in-memory Postgres)
 node tests/dev-server.mjs     # local QA server on :8899 (tokens 11111 and 22222, admin secret test-admin-secret)
 ```
 

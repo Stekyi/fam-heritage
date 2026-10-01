@@ -225,7 +225,7 @@ export async function openPersonSheet(personId, { edit = false } = {}) {
   const s = openSheet(`<div class="sheet-body" id="personSheet">${loadingView('Loading this family member…')}</div>`, { wide: true, label: fullName(p) });
   const body = $('#personSheet', s.el);
   let detail = { profile: null, stories: [] };
-  try { detail = await api(`/api/person?id=${personId}`, { auth: false }); } catch { /* shown without profile */ }
+  try { detail = await api(`/api/person?id=${personId}`); if (detail.person) patchPerson(detail.person); } catch { /* shown without profile */ }
   const draw = () => {
     const cur = state.data.people.find((x) => x.id === personId) || p;
     const aka = aliasesOf(cur);

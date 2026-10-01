@@ -2,7 +2,7 @@
 // npm run migrate   applies the additive schema changes (safe to run any number of times).
 // The Netlify Functions also apply them automatically the first time they run.
 import pg from 'pg';
-import { runMigrations } from '../netlify/functions/_db.mjs';
+import { runMigrations } from '../netlify/lib/db.mjs';
 
 const url = process.env.DATABASE_URL;
 if (!url) { console.error('DATABASE_URL is required'); process.exit(1); }

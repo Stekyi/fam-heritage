@@ -207,5 +207,5 @@ export async function renderAnalysis(root) {
     ${chartCard('Most common occupations', 'Occupations recorded on family profiles. Add yours so the picture grows.', barChart(a.occupations, { horizontal: true, label: 'Common occupations' }))}
     ${chartCard('Most common birthplaces', 'Where relatives were born, where a birth place is recorded.', barChart(a.birthplaces, { horizontal: true, color: '#7a5a8a', label: 'Common birthplaces' }))}
   </div>
-  <p class="muted small coverage">Recorded so far: ${nf.format(a.coverage.with_birth_year)} birth years · ${nf.format(a.coverage.with_occupation)} occupations · ${nf.format(a.coverage.with_birthplace)} birth places${a.coverage.excluded_implausible ? ` · ${a.coverage.excluded_implausible} entries left out because the dates look wrong` : ''}.</p>`;
+  <p class="muted small coverage">Recorded so far: ${nf.format(a.coverage.with_birth_year)} birth years · ${nf.format(a.coverage.with_occupation)} occupations · ${nf.format(a.coverage.with_birthplace)} birth places${a.coverage.placeholders ? `. ${a.coverage.placeholders} placeholder entries (unknown ancestors and the sacred rock) are not counted` : ''}${a.coverage.excluded_implausible ? ` · ${a.coverage.excluded_implausible} entries left out because the dates look wrong` : ''}.</p>`;
 }

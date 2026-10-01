@@ -1,7 +1,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeAnalysis, computeGenerations } from '../netlify/functions/_analysis.mjs';
-import { parseFlexDate, validatePersonUpdate, livingClass, cleanAliases } from '../netlify/functions/_people.mjs';
+import { computeAnalysis, computeGenerations } from '../netlify/lib/analysis.mjs';
+import { parseFlexDate, validatePersonUpdate, livingClass, cleanAliases } from '../netlify/lib/people.mjs';
 
 const NOW = new Date('2026-10-01T12:00:00Z');
 const person = (id, extra = {}) => ({ id, given_name: id, surname: null, aliases: [], sex: 'U', birth_year: null, death_year: null, birth_date: null, death_date: null, living_status: null, occupation: null, birth_place: null, ...extra });

@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { PGlite } from '@electric-sql/pglite';
-import { setPool, runMigrations } from '../netlify/functions/_db.mjs';
+import { setPool, runMigrations } from '../netlify/lib/db.mjs';
 
 // Exercises the production path (pool.connect() -> BEGIN / advisory xact lock / DDL / COMMIT) against PGlite.
 test('migrations run transactionally through a pooled client', async () => {
@@ -24,7 +24,7 @@ test('migrations run transactionally through a pooled client', async () => {
   assert.ok(log.includes('BEGIN') && log.includes('COMMIT') && log.includes('release'));
   assert.ok(log.some((l) => l.startsWith('select pg_advisory_xact_lock')));
   const v = await pg.query('select version from schema_migrations');
-  assert.deepEqual(v.rows, [{ version: '002_heritage_platform' }]);
+  assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening']);
   const t = await pg.query("select count(*)::int n from information_schema.tables where table_name in ('profiles','stories','business_ideas','business_interests','token_person_links','images')");
   assert.equal(t.rows[0].n, 6);
 });

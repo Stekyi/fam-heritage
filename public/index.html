@@ -26,9 +26,9 @@
       <a href="#/contribute" data-route="contribute">Contribute</a>
       <a href="#/admin" data-route="admin">Admin</a>
     </nav>
-    <div class="token-box" title="Enter your 5-digit contributor token to edit family members and contribute.">
+    <div class="token-box" title="Enter your contributor token to edit family members and contribute.">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-      <input id="tokenInput" inputmode="numeric" maxlength="5" placeholder="Token" aria-label="Contributor token (5 digits)" autocomplete="off">
+      <input id="tokenInput" inputmode="text" maxlength="8" placeholder="Token" aria-label="Contributor token" autocomplete="off" autocapitalize="characters" spellcheck="false">
       <span id="tokenChip" class="token-chip" aria-live="polite">Public view</span>
       <button id="clearToken" class="token-clear" type="button" aria-label="Clear token from this browser" title="Clear token">×</button>
     </div>

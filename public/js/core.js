@@ -7,6 +7,8 @@ export const state = {
   homeRootId: null,
 };
 
+// Legacy 5-digit tokens, or 8 characters starting with a letter.
+export const TOKEN_RE = /^(\d{5}|[A-HJ-NP-Z][A-HJ-NP-Z2-9]{7})$/;
 export const $ = (s, r = document) => r.querySelector(s);
 export const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 export const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -76,7 +78,7 @@ export function avatar(p, size = 'md') {
 export async function api(path, { method = 'GET', body, admin = false, auth = true } = {}) {
   const headers = {};
   if (body !== undefined) headers['Content-Type'] = 'application/json';
-  if (auth && /^\d{5}$/.test(state.token)) headers['x-family-token'] = state.token;
+  if (auth && TOKEN_RE.test(state.token)) headers['x-family-token'] = state.token;
   if (admin) headers['x-admin-secret'] = state.adminSecret;
   let res;
   try {
@@ -161,7 +163,7 @@ export function buildIndex() {
 
 export async function loadTree(force = false) {
   if (state.loaded && !force) return state.data;
-  state.data = await api('/api/tree', { auth: false });
+  state.data = await api('/api/tree');
   state.loaded = true;
   return state.data;
 }

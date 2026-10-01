@@ -1,4 +1,4 @@
-import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, NEED_LINK, isUuid, cleanMultiline, audit, appOnly } from './_db.mjs';
+import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, NEED_LINK, isUuid, cleanMultiline, audit, appOnly } from '../lib/db.mjs';
 
 // Public short profile ("About me") for a family-tree person.
 export async function handler(event) {

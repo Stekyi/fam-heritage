@@ -1,4 +1,4 @@
-import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, NEED_LINK, isUuid, clean, cleanMultiline, audit, appOnly, pageParams, header, adminOk } from './_db.mjs';
+import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, NEED_LINK, isUuid, clean, cleanMultiline, audit, appOnly, pageParams, header, requireAdmin } from '../lib/db.mjs';
 
 const METHODS = ['email', 'phone', 'whatsapp', 'other'];
 
@@ -30,7 +30,7 @@ export async function handler(event) {
   if (event.httpMethod === 'GET') {
     const blocked = appOnly(event); if (blocked) return blocked;
     const token = hasTokenHeader ? await requireToken(event, pool) : null;
-    const admin = adminOk(event);
+    const admin = header(event, 'x-admin-secret') ? await requireAdmin(event, pool) : false;
 
     if (q.id) {
       if (!isUuid(q.id)) return json(404, { error: 'This business idea could not be found.' });
