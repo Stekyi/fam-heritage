@@ -4,6 +4,7 @@ import {
 } from './core.js';
 import { attachPersonSearch, openPersonSheet, personFacts, canEdit } from './tree.js';
 import { refreshMe } from './session.js';
+import { richText } from './rich.js';
 
 const paragraphs = (t) => esc(t).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/g, '<br>')}</p>`).join('');
 const nav = (h) => { location.hash = h; };
@@ -26,7 +27,7 @@ async function renderClan(body) {
   const a = h.article;
   if (!a) { body.innerHTML = emptyView('The clan history is not available yet.', 'Please check back soon.'); return; }
   const comments = h.comments || [];
-  body.innerHTML = `<div class="split"><div class="stack"><article class="card article"><div class="source-note">${esc(a.source_note || '')}</div><h2>${esc(a.title)}</h2><div class="article-body">${paragraphs(a.body)}</div></article>
+  body.innerHTML = `<div class="split"><div class="stack"><article class="card article"><div class="source-note">${esc(a.source_note || '')}</div><h2>${esc(a.title)}</h2><div class="article-body history-body">${richText(a.body)}</div></article>
   <section class="card originators" aria-labelledby="origTitle"><span class="eyebrow">ORIGINATORS</span><h2 id="origTitle">The people who began this archive</h2><p class="muted">With gratitude to the family members who first gathered and preserved our history.</p><ul class="originator-list">${ORIGINATORS.map((n) => `<li><span class="avatar avatar-md unknown no-photo" aria-hidden="true">${esc(n.charAt(0))}</span><strong>${esc(n)}</strong></li>`).join('')}</ul></section></div>
   <aside class="card comments"><h3>Family comments</h3><p class="muted small">Anyone can leave a comment. New comments are reviewed before they appear.</p>
   <div id="commentList">${comments.length ? comments.map((c) => `<div class="comment"><strong>${esc(c.author_name)}</strong><span>${esc(fmtWhen(c.created_at))}</span><p>${esc(c.body)}</p></div>`).join('') : '<p class="muted">No comments yet. Be the first to share a thought.</p>'}</div>
