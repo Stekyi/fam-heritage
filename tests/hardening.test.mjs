@@ -214,6 +214,17 @@ describe('story cover images', () => {
   });
 });
 
+describe('network is for family members', () => {
+  test('the people search needs a valid token; business ideas stay public', async () => {
+    assert.equal((await call(network, { query: { occupation: 'engineer' } })).status, 401);
+    assert.equal((await call(network, { query: {}, token: '99999', ip: '5.6.7.8' })).status, 401);
+    const r = await call(network, { query: { occupation: 'engineer' }, token: A });
+    assert.equal(r.status, 200);
+    const raw = JSON.stringify(r.data);
+    assert.ok(!raw.includes('birth_date'), 'no exact birth dates in network results');
+  });
+});
+
 describe('placeholders and search', () => {
   test('unknown ancestors and the sacred rock are not counted as people', async () => {
     const kinds = (await pg.query("select kind, count(*)::int n from people group by 1")).rows;
@@ -227,7 +238,7 @@ describe('placeholders and search', () => {
   });
   test('placeholders never appear in Network results', async () => {
     await pg.query("update people set occupation='Ancestor', living_status='living' where kind <> 'person'");
-    const r = await call(network, { query: { occupation: 'Ancestor' } });
+    const r = await call(network, { query: { occupation: 'Ancestor' }, token: A });
     assert.equal(r.data.total, 0);
   });
   test('Akan letters and accents are searchable with plain letters', async () => {

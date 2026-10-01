@@ -1,4 +1,4 @@
-import { getDb, json, NO_DB, appOnly, clean, pageParams, readLimit } from '../lib/db.mjs';
+import { getDb, json, NO_DB, appOnly, clean, pageParams, readLimit, requireToken, NEED_TOKEN } from '../lib/db.mjs';
 
 const esc = (s) => s.replace(/[%_\\]/g, '\\$&');
 
@@ -7,6 +7,8 @@ export async function handler(event) {
   const blocked = appOnly(event); if (blocked) return blocked;
   const pool = await getDb(); if (!pool) return NO_DB();
   const limited = await readLimit(event, pool, 'network'); if (limited) return limited;
+  // Where living relatives work and live is for family members only, so a contributor token is required.
+  const token = await requireToken(event, pool); if (!token) return NEED_TOKEN();
   const q = event.queryStringParameters || {};
   const { limit, offset, page } = pageParams(q, 12, 30);
   const nowYear = new Date().getUTCFullYear();

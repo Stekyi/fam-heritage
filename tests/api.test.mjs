@@ -268,7 +268,7 @@ describe('comments and moderation', () => {
 describe('network', () => {
   test('filters by occupation, location, gender and age and combinations', async () => {
     await call(person, { method: 'PATCH', query: { id: ama }, token: T1, body: { occupation: 'Software Engineer', location: 'Accra, Ghana', sex: 'F', birth: '1985-05-05', death: '', living_status: 'living' } });
-    const n = (query) => call(network, { query });
+    const n = (query) => call(network, { query, token: T1 });
     assert.equal((await n({ occupation: 'engineer' })).data.total, 2);
     assert.equal((await n({ occupation: 'ENGINEER', location: 'ghana' })).data.total, 2);
     assert.equal((await n({ occupation: 'engineer', gender: 'F' })).data.total, 1);
@@ -284,7 +284,7 @@ describe('network', () => {
   });
   test('deceased people are not offered as network contacts', async () => {
     await call(person, { method: 'PATCH', query: { id: isaac }, token: T1, body: { death: '2001' } });
-    assert.equal((await call(network, { query: { occupation: 'engineer', gender: 'M' } })).data.total, 0);
+    assert.equal((await call(network, { query: { occupation: 'engineer', gender: 'M' }, token: T1 })).data.total, 0);
   });
 });
 
