@@ -1,1 +1,42 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123029"><title>Our Family Heritage</title><link rel="stylesheet" href="/styles.css"></head><body><div class="app"><header class="topbar"><a class="brand" href="/" aria-label="Our Family Tree - home" title="Trace a person backwards to their ancestors and forwards through their descendants."><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29V15"/><path d="M16 21c-4 0-7-2.6-7-6.4 0-2.2 1.3-3.9 3.2-4.6C12.6 6.7 15 4 18.2 4c3.6 0 6.3 2.9 6.3 6.4 2.2.8 3.5 2.8 3.5 5C28 19 25 22 21 22c-1.8 0-3.7-.4-5-1z"/><path d="M16 24l-4-3M16 19l4-3"/></svg></span><span class="brand-text"><small>FAMILY HERITAGE ARCHIVE</small><strong>Our Family Tree</strong></span></a><nav id="nav" aria-label="Sections"><button data-tab="tree" class="active">Family Tree</button><button data-tab="history">Family History</button><button data-tab="contribute">Contribute</button><button data-tab="admin">Admin</button></nav><label class="token-box" title="Enter your 5-digit contributor token. Changes are proposed first and only appear after admin approval."><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="token" inputmode="numeric" maxlength="5" placeholder="Token" aria-label="Contributor token (5 digits)" autocomplete="off"></label></header><div id="notice"></div><main id="main"></main><footer><span>Family Heritage Archive</span><span>Sources: family tree record, Kankyea &amp; Mansa family tree, Asankran history.</span></footer></div><script src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123029">
+<meta name="description" content="Our Family Heritage: the family tree, history, stories and network of the Asankran Kona clan.">
+<title>Our Family Heritage</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<div class="app">
+  <header class="topbar">
+    <a class="brand" href="#/tree" aria-label="Our Family Heritage - home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29V15"/><path d="M16 21c-4 0-7-2.6-7-6.4 0-2.2 1.3-3.9 3.2-4.6C12.6 6.7 15 4 18.2 4c3.6 0 6.3 2.9 6.3 6.4 2.2.8 3.5 2.8 3.5 5C28 19 25 22 21 22c-1.8 0-3.7-.4-5-1z"/><path d="M16 24l-4-3M16 19l4-3"/></svg></span>
+      <span class="brand-text"><small>FAMILY HERITAGE ARCHIVE</small><strong>Our Family Heritage</strong></span>
+    </a>
+    <button id="menuBtn" class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav" aria-label="Sections">
+      <a href="#/tree" data-route="tree">Family Tree</a>
+      <a href="#/history" data-route="history">Family History</a>
+      <a href="#/network" data-route="network">Network</a>
+      <a href="#/analysis" data-route="analysis">Analysis</a>
+      <a href="#/contribute" data-route="contribute">Contribute</a>
+      <a href="#/admin" data-route="admin">Admin</a>
+    </nav>
+    <div class="token-box" title="Enter your 5-digit contributor token to edit family members and contribute.">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <input id="tokenInput" inputmode="numeric" maxlength="5" placeholder="Token" aria-label="Contributor token (5 digits)" autocomplete="off">
+      <span id="tokenChip" class="token-chip" aria-live="polite">Public view</span>
+      <button id="clearToken" class="token-clear" type="button" aria-label="Clear token from this browser" title="Clear token">×</button>
+    </div>
+  </header>
+  <main id="view" tabindex="-1"><div class="state state-loading"><span class="spinner"></span><p>Loading…</p></div></main>
+  <footer><span>Family Heritage Archive</span><span>Sources: family tree record, Kankyea &amp; Mansa family tree, Asankran history.</span></footer>
+</div>
+<noscript><p style="padding:2rem;text-align:center">Our Family Heritage needs JavaScript to display the family tree.</p></noscript>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

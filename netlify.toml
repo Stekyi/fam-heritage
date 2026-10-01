@@ -2,7 +2,17 @@
   publish = "public"
   functions = "netlify/functions"
 
+[functions]
+  included_files = ["data/history.txt"]
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
