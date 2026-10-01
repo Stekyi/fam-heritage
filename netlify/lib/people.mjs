@@ -1,4 +1,4 @@
-import { clean, cleanMultiline } from './_db.mjs';
+import { clean, cleanMultiline } from './db.mjs';
 
 export const SEX_MAP = { m: 'M', male: 'M', f: 'F', female: 'F', o: 'O', other: 'O', u: 'U', unknown: 'U', '': 'U' };
 export const LIVING = ['living', 'deceased', 'unknown'];
@@ -91,4 +91,26 @@ export function livingClass(p, nowYear = new Date().getUTCFullYear()) {
   if (p.living_status === 'unknown') return 'unknown';
   if (p.birth_year && nowYear - p.birth_year <= 100) return 'presumed_living';
   return 'unknown';
+}
+
+// Public visitors never receive a living person's exact birth date or where they live now.
+// Valid contributor tokens see everything (they need it to edit).
+export function redactPerson(p, viewerIsContributor) {
+  if (viewerIsContributor || livingClass(p) === 'deceased') return p;
+  return { ...p, birth_date: null, location: null };
+}
+
+export const REVERTIBLE = [...EDITABLE, 'photo_url'];
+
+// Records exactly what changed (old and new values) so any edit can be reviewed and reverted by the administrator.
+export async function recordRevision(pool, personId, before, after, { label, actor = 'contributor', action = 'edit', revertedOf = null } = {}) {
+  const b = {}; const a = {};
+  for (const k of Object.keys(after)) {
+    if (JSON.stringify(before[k] ?? null) !== JSON.stringify(after[k] ?? null)) { b[k] = before[k] ?? null; a[k] = after[k] ?? null; }
+  }
+  if (!Object.keys(a).length) return null;
+  const r = await pool.query(
+    'insert into person_revisions(person_id,token_label,actor,action,before,after,reverted_of) values($1,$2,$3,$4,$5,$6,$7) returning id',
+    [personId, label || null, actor, action, JSON.stringify(b), JSON.stringify(a), revertedOf]);
+  return r.rows[0].id;
 }

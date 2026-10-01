@@ -1,4 +1,4 @@
-import { livingClass } from './_people.mjs';
+import { livingClass } from './people.mjs';
 
 const median = (a) => {
   if (!a.length) return null;
@@ -57,8 +57,10 @@ function topValues(list, n) {
     .slice(0, n);
 }
 
-export function computeGenerations(people, relationships) {
+// `counted` limits which people are tallied (placeholders still link generations together).
+export function computeGenerations(people, relationships, counted = () => true) {
   const ids = new Set(people.map((p) => p.id));
+  const P = new Map(people.map((p) => [p.id, p]));
   const parents = new Map(); const children = new Map(); const spouses = new Map();
   const add = (m, k, v) => { if (!m.has(k)) m.set(k, new Set()); m.get(k).add(v); };
   for (const r of relationships) {
@@ -86,12 +88,15 @@ export function computeGenerations(people, relationships) {
     frontier = next;
   }
   const counts = new Map();
-  for (const v of gen.values()) counts.set(v, (counts.get(v) || 0) + 1);
+  let placed = 0;
+  for (const [id, v] of gen) { if (!counted(P.get(id))) continue; placed += 1; counts.set(v, (counts.get(v) || 0) + 1); }
   const rows = [...counts.entries()].sort((a, b) => a[0] - b[0]).map(([n, count]) => ({ label: `Generation ${n}`, from: n, count }));
-  return { rows, unplaced: people.length - gen.size };
+  return { rows, unplaced: people.filter(counted).length - placed };
 }
 
-export function computeAnalysis(people, relationships, now = new Date()) {
+export function computeAnalysis(allPeople, relationships, now = new Date()) {
+  const isReal = (p) => (p.kind || 'person') === 'person';
+  const people = allPeople.filter(isReal);
   const nowYear = now.getUTCFullYear();
   const today = now.toISOString().slice(0, 10);
   const cls = { living: 0, presumed_living: 0, deceased: 0, unknown: 0 };
@@ -115,7 +120,7 @@ export function computeAnalysis(people, relationships, now = new Date()) {
   const ageVals = ages.map((a) => a.age);
   const youngest = ages.length ? ages.reduce((a, b) => (b.age < a.age ? b : a)) : null;
   const oldest = ages.length ? ages.reduce((a, b) => (b.age > a.age ? b : a)) : null;
-  const gens = computeGenerations(people, relationships);
+  const gens = computeGenerations(allPeople, relationships, isReal);
   return {
     generated_at: now.toISOString(),
     totals: { total: people.length, living: cls.living, presumed_living: cls.presumed_living, deceased: cls.deceased, unknown: cls.unknown },
@@ -138,6 +143,7 @@ export function computeAnalysis(people, relationships, now = new Date()) {
       with_occupation: people.filter((p) => p.occupation).length,
       with_birthplace: people.filter((p) => p.birth_place).length,
       excluded_implausible: excluded,
+      placeholders: allPeople.length - people.length,
     },
   };
 }

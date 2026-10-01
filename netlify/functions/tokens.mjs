@@ -1,11 +1,8 @@
-import { getDb, json, NO_DB, adminOk, hmacToken, parseBody, clean, isUuid } from './_db.mjs';
-import crypto from 'node:crypto';
-
-const newToken = () => String(crypto.randomInt(0, 100000)).padStart(5, '0');
+import { getDb, json, NO_DB, requireAdmin, hmacToken, parseBody, clean, isUuid, newStrongToken, newDigitToken } from '../lib/db.mjs';
 
 export async function handler(event) {
   const pool = await getDb(); if (!pool) return NO_DB();
-  if (!adminOk(event)) return json(403, { error: 'Administrator authentication required.' });
+  if (!(await requireAdmin(event, pool))) return json(403, { error: 'Administrator authentication required.' });
 
   if (event.httpMethod === 'GET') {
     const r = await pool.query(
@@ -18,9 +15,10 @@ export async function handler(event) {
   if (event.httpMethod === 'POST') {
     const body = parseBody(event) || {};
     const label = clean(body.label, 80) || 'Family contributor';
+    const make = body.style === 'digits' ? newDigitToken : newStrongToken;
     let token; let tries = 0;
     do {
-      token = newToken();
+      token = make();
       const q = await pool.query('select 1 from access_tokens where token_hash=$1', [hmacToken(token)]);
       if (!q.rowCount) break;
       tries += 1;

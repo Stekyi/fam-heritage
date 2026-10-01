@@ -1,4 +1,4 @@
-import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, isUuid, audit, PERSON_SELECT, appOnly } from './_db.mjs';
+import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, isUuid, audit, PERSON_SELECT, appOnly } from '../lib/db.mjs';
 
 // "My Family Profile": links the caller's contributor token to exactly one person in the tree.
 export async function handler(event) {

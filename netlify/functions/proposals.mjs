@@ -1,13 +1,15 @@
-import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, isUuid, clean } from './_db.mjs';
+import { getDb, json, NO_DB, parseBody, requireToken, requireAdmin, NEED_TOKEN, isUuid, clean } from '../lib/db.mjs';
 
 // Structural changes (new people, new relationships) are still proposals that an administrator approves.
 export async function handler(event) {
   const pool = await getDb(); if (!pool) return NO_DB();
-  const token = await requireToken(event, pool); if (!token) return NEED_TOKEN();
   if (event.httpMethod === 'GET') {
+    // Pending suggestions can identify who submitted what, so only the administrator may list them.
+    if (!(await requireAdmin(event, pool))) return json(403, { error: 'Administrator authentication required.' });
     const r = await pool.query("select id,action,payload,status,token_label,submitted_at from proposals where status='pending' order by submitted_at desc limit 100");
     return json(200, r.rows);
   }
+  const token = await requireToken(event, pool); if (!token) return NEED_TOKEN();
   if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
   const body = parseBody(event); if (!body) return json(400, { error: 'Invalid request.' });
   const allowed = ['add_person', 'add_relationship'];

@@ -16,7 +16,7 @@ import { handler as admin } from '../netlify/functions/admin.mjs';
 import { handler as tokens } from '../netlify/functions/tokens.mjs';
 import { handler as image } from '../netlify/functions/image.mjs';
 import { handler as proposals } from '../netlify/functions/proposals.mjs';
-import { runMigrations } from '../netlify/functions/_db.mjs';
+import { runMigrations } from '../netlify/lib/db.mjs';
 
 let pg;
 let baseline;
@@ -46,7 +46,7 @@ describe('migrations', () => {
     const after = await pg.query('select count(*)::int n from people');
     assert.equal(after.rows[0].n, before.rows[0].n);
     const v = await pg.query('select version from schema_migrations');
-    assert.deepEqual(v.rows.map((r) => r.version), ['002_heritage_platform']);
+    assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening']);
     assert.equal(await relationshipSnapshot(pg), baseline);
   });
 });
@@ -168,7 +168,7 @@ describe('profile images', () => {
     assert.equal(noTok.status, 401);
     const second = await call(image, { method: 'POST', token: T1, body: { kind: 'person', ref_id: isaac, content_type: 'image/png', data: png.toString('base64') } });
     assert.equal(second.status, 201);
-    assert.equal((await pg.query("select count(*)::int n from images where kind='person' and ref_id=$1", [isaac])).rows[0].n, 1);
+    assert.equal((await pg.query("select count(*)::int n from images where kind='person' and ref_id=$1", [isaac])).rows[0].n, 2);
   });
 });
 
@@ -351,11 +351,13 @@ describe('analysis', () => {
     const r = await call(analysis);
     assert.equal(r.status, 200);
     const a = r.data;
-    assert.equal(a.totals.total, 272);
-    assert.equal(a.totals.living + a.totals.presumed_living + a.totals.deceased + a.totals.unknown, 272);
-    assert.equal(a.gender.male + a.gender.female + a.gender.other + a.gender.unknown, 272);
+    const real = (await pg.query("select count(*)::int n from people where kind='person'")).rows[0].n;
+    assert.equal(a.totals.total, real);
+    assert.ok(real < 272, 'placeholders are excluded');
+    assert.equal(a.totals.living + a.totals.presumed_living + a.totals.deceased + a.totals.unknown, real);
+    assert.equal(a.gender.male + a.gender.female + a.gender.other + a.gender.unknown, real);
     const placed = a.generations.reduce((n, g) => n + g.count, 0);
-    assert.equal(placed + a.generations_unplaced, 272);
+    assert.equal(placed + a.generations_unplaced, real);
     assert.ok(a.generations.length >= 3);
     assert.equal(a.current_age.n, a.current_age.distribution.reduce((n, b) => n + b.count, 0));
   });
@@ -374,7 +376,7 @@ describe('security', () => {
   });
   test('admin can create, list, revoke tokens and unlink', async () => {
     const c = await call(tokens, { method: 'POST', admin: true, body: { label: 'New cousin' } });
-    assert.match(c.data.token, /^\d{5}$/);
+    assert.match(c.data.token, /^([A-HJ-NP-Z][A-HJ-NP-Z2-9]{7}|\d{5})$/);
     const list = await call(tokens, { admin: true });
     assert.ok(list.data.some((t) => t.label === 'New cousin'));
     assert.ok(list.data.some((t) => t.person_name === 'Isaac Obiri-Yeboah'));

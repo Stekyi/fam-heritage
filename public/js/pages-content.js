@@ -144,7 +144,7 @@ export async function renderContribute(root) {
 }
 
 function tokenCard(me) {
-  if (!state.token) return `<section class="card callout"><h2>You need a contributor token</h2><p>Anyone can browse the tree, read the history and leave comments. A 5-digit contributor token lets you edit family members, publish a profile and stories, and post business ideas. Ask the family administrator for yours, then enter it in the <strong>Token</strong> box at the top of the page.</p><button class="btn primary" id="focusToken" type="button">Enter my token</button></section>`;
+  if (!state.token) return `<section class="card callout"><h2>You need a contributor token</h2><p>Anyone can browse the tree, read the history and leave comments. A contributor token lets you edit family members, publish a profile and stories, and post business ideas. Ask the family administrator for yours, then enter it in the <strong>Token</strong> box at the top of the page.</p><button class="btn primary" id="focusToken" type="button">Enter my token</button></section>`;
   if (me && me.valid === false) return `<section class="card callout warn"><h2>Your token is invalid or has expired</h2><p>Please check the 5 digits and try again, or ask the administrator for a new token.</p><button class="btn primary" id="focusToken" type="button">Re-enter my token</button></section>`;
   if (!me) return `<section class="card">${loadingView('Checking your token…')}</section>`;
   return '';

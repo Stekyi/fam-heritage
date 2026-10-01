@@ -1,4 +1,4 @@
-import { getDb, json, NO_DB, appOnly, clean, pageParams } from './_db.mjs';
+import { getDb, json, NO_DB, appOnly, clean, pageParams, readLimit } from '../lib/db.mjs';
 
 const esc = (s) => s.replace(/[%_\\]/g, '\\$&');
 
@@ -6,11 +6,12 @@ export async function handler(event) {
   if (event.httpMethod !== 'GET') return json(405, { error: 'Method not allowed' });
   const blocked = appOnly(event); if (blocked) return blocked;
   const pool = await getDb(); if (!pool) return NO_DB();
+  const limited = await readLimit(event, pool, 'network'); if (limited) return limited;
   const q = event.queryStringParameters || {};
   const { limit, offset, page } = pageParams(q, 12, 30);
   const nowYear = new Date().getUTCFullYear();
 
-  const where = ["coalesce(p.death_year,0)=0", "p.death_date is null", "coalesce(p.living_status,'')<>'deceased'"];
+  const where = ["p.kind='person'", "coalesce(p.death_year,0)=0", "p.death_date is null", "coalesce(p.living_status,'')<>'deceased'"];
   const vals = [];
   const push = (v) => { vals.push(v); return `$${vals.length}`; };
 
@@ -44,3 +45,4 @@ export async function handler(event) {
     suggestions: { occupations: occs.rows.map((r) => r.value), locations: locs.rows.map((r) => r.value) },
   });
 }
+

@@ -113,4 +113,36 @@ create index if not exists idx_comments_status on comments(status, created_at de
 create index if not exists idx_tokens_active on access_tokens(active);
 `,
   },
+  {
+    version: '003_hardening',
+    sql: `
+alter table images add column if not exists token_id uuid references access_tokens(id) on delete set null;
+create index if not exists idx_images_token on images(token_id, created_at) where kind = 'story';
+
+alter table people add column if not exists kind text not null default 'person';
+do $$
+begin
+  if not exists (select 1 from pg_constraint where conname = 'people_kind_check') then
+    alter table people add constraint people_kind_check check (kind in ('person','placeholder','place'));
+  end if;
+end $$;
+update people set kind = 'placeholder' where kind = 'person' and given_name ~* '^unknown( |$)';
+update people set kind = 'place' where kind = 'person' and lower(given_name) = 'oda aboho' and lower(coalesce(surname,'')) = 'sacred rock';
+
+create table if not exists person_revisions (
+  id uuid primary key default gen_random_uuid(),
+  person_id uuid not null references people(id) on delete cascade,
+  token_label text,
+  actor text not null default 'contributor',
+  action text not null default 'edit',
+  before jsonb not null,
+  after jsonb not null,
+  reverted_of uuid references person_revisions(id) on delete set null,
+  created_at timestamptz not null default now()
+);
+create index if not exists idx_rev_person on person_revisions(person_id, created_at desc);
+create index if not exists idx_rev_created on person_revisions(created_at desc);
+create index if not exists idx_attempts_time on token_attempts(attempted_at);
+`,
+  },
 ];

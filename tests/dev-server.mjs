@@ -21,7 +21,7 @@ http.createServer(async (req, res) => {
     let mod;
     try { mod = await import(`../netlify/functions/${name}.mjs`); } catch { res.writeHead(404); return res.end('{"error":"not found"}'); }
     const chunks = []; for await (const c of req) chunks.push(c);
-    const out = await mod.handler({ httpMethod: req.method, queryStringParameters: Object.fromEntries(url.searchParams), headers: req.headers, body: chunks.length ? Buffer.concat(chunks).toString() : undefined });
+    const out = await mod.handler({ httpMethod: req.method, queryStringParameters: Object.fromEntries(url.searchParams), headers: { ...req.headers, 'x-nf-client-connection-ip': '127.0.0.1' }, body: chunks.length ? Buffer.concat(chunks).toString() : undefined });
     res.writeHead(out.statusCode, out.headers);
     return res.end(out.isBase64Encoded ? Buffer.from(out.body, 'base64') : out.body);
   }
