@@ -17,6 +17,10 @@ export function renderNetwork(root, tabName = 'people') {
 const NET = { occupation: '', location: '', gender: '', age_min: '', age_max: '', page: 1 };
 
 function renderPeopleSearch(body) {
+  if (!state.me?.valid) {
+    body.innerHTML = `<section class="card callout"><h2>For family members</h2><p>Finding relatives by profession and place is limited to family members with a contributor token, so living relatives' details stay private. Business ideas are open to everyone.</p><div class="sheet-actions"><a class="btn primary" href="#/contribute">Get started</a><a class="btn" href="#/network/ideas">Browse business ideas</a></div></section>`;
+    return;
+  }
   body.innerHTML = `<form id="netForm" class="card filters" novalidate>
     <label class="field"><span class="label">Profession ${setHelp('Matches any part of a recorded occupation, e.g. “engineer”.')}</span><input class="input" name="occupation" list="occList" value="${esc(NET.occupation)}" placeholder="e.g. Engineer"><datalist id="occList"></datalist></label>
     <label class="field"><span class="label">Location ${setHelp('Matches where someone lives now or was born.')}</span><input class="input" name="location" list="locList" value="${esc(NET.location)}" placeholder="e.g. Ghana"><datalist id="locList"></datalist></label>

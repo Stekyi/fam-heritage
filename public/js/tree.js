@@ -14,7 +14,7 @@ function cardMeta(p) {
 export function personCard(p, { selected = false, compact = false } = {}) {
   if (!p) return '';
   const aka = aliasesOf(p);
-  return `<button class="gene-person ${selected ? 'is-selected' : ''} ${compact ? 'compact' : ''}" data-node="${esc(p.id)}" type="button" aria-label="${esc(fullName(p))}">${avatar(p, 'sm')}<span class="person-copy"><strong>${esc(fullName(p))}</strong>${aka.length ? `<span class="person-aka"><b>AKA:</b> ${esc(aka.join(' · '))}</span>` : ''}<small>${esc(lifeLine(p))}</small>${cardMeta(p)}</span></button>`;
+  return `<button class="gene-person ${selected ? 'is-selected' : ''} ${compact ? 'compact' : ''}" data-node="${esc(p.id)}" type="button">${avatar(p, 'sm')}<span class="person-copy"><strong>${esc(fullName(p))}</strong>${aka.length ? `<span class="person-aka"><b>AKA:</b> ${esc(aka.join(' · '))}</span>` : ''}<small>${esc(lifeLine(p))}</small>${cardMeta(p)}</span></button>`;
 }
 
 // ---------------------------------------------------------------- search (server side, debounced)
