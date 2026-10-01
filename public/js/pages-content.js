@@ -8,6 +8,9 @@ import { refreshMe } from './session.js';
 const paragraphs = (t) => esc(t).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/g, '<br>')}</p>`).join('');
 const nav = (h) => { location.hash = h; };
 
+// Shown on Family History. Order as requested by the family.
+const ORIGINATORS = ['E.B Cudjoe', 'Agnes Obiri-Yeboah', 'Matthew Obiri-Yeboah', 'Samuel Tekyi', 'Ursef'];
+
 // ================================================================= FAMILY HISTORY
 export async function renderHistory(root, tabName = 'clan') {
   root.innerHTML = `<div class="page"><header class="page-head"><span class="eyebrow">FAMILY HISTORY</span><h1>Our story</h1><p>The history of the clan, and the stories family members have chosen to share.</p></header>
@@ -23,7 +26,8 @@ async function renderClan(body) {
   const a = h.article;
   if (!a) { body.innerHTML = emptyView('The clan history is not available yet.', 'Please check back soon.'); return; }
   const comments = h.comments || [];
-  body.innerHTML = `<div class="split"><article class="card article"><div class="source-note">${esc(a.source_note || '')}</div><h2>${esc(a.title)}</h2><div class="article-body">${paragraphs(a.body)}</div></article>
+  body.innerHTML = `<div class="split"><div class="stack"><article class="card article"><div class="source-note">${esc(a.source_note || '')}</div><h2>${esc(a.title)}</h2><div class="article-body">${paragraphs(a.body)}</div></article>
+  <section class="card originators" aria-labelledby="origTitle"><span class="eyebrow">ORIGINATORS</span><h2 id="origTitle">The people who began this archive</h2><p class="muted">With gratitude to the family members who first gathered and preserved our history.</p><ul class="originator-list">${ORIGINATORS.map((n) => `<li><span class="avatar avatar-md unknown no-photo" aria-hidden="true">${esc(n.charAt(0))}</span><strong>${esc(n)}</strong></li>`).join('')}</ul></section></div>
   <aside class="card comments"><h3>Family comments</h3><p class="muted small">Anyone can leave a comment. New comments are reviewed before they appear.</p>
   <div id="commentList">${comments.length ? comments.map((c) => `<div class="comment"><strong>${esc(c.author_name)}</strong><span>${esc(fmtWhen(c.created_at))}</span><p>${esc(c.body)}</p></div>`).join('') : '<p class="muted">No comments yet. Be the first to share a thought.</p>'}</div>
   <form id="commentForm" class="form" novalidate><label class="field">Your name<input class="input" name="author_name" maxlength="80" autocomplete="name"><small class="err" data-err="author_name"></small></label>
