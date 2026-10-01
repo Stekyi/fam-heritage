@@ -27,6 +27,6 @@ http.createServer(async (req, res) => {
   }
   let file = path.join(root, 'public', url.pathname === '/' ? 'index.html' : url.pathname);
   if (!file.startsWith(path.join(root, 'public')) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.writeHead(404); return res.end('Not found'); }
-  res.writeHead(200, { 'Content-Type': MIME[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
+  res.writeHead(200, { 'Content-Type': MIME[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store', 'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" });
   fs.createReadStream(file).pipe(res);
 }).listen(port, () => console.log(`Family Heritage QA server on http://localhost:${port}  (tokens 11111, 22222; admin secret: ${process.env.ADMIN_SECRET})`));

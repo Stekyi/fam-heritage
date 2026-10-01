@@ -6,6 +6,8 @@ import { renderNetwork, renderAnalysis } from './pages-network.js';
 import { renderAdmin } from './pages-admin.js';
 
 const view = $('#view');
+// A broken photo falls back to the initial (no inline handlers, so a strict CSP can be used).
+document.addEventListener('error', (e) => { const i = e.target; if (i?.tagName === 'IMG' && i.closest('.avatar')) { i.parentNode.classList.add('no-photo'); i.remove(); } }, true);
 let routeSeq = 0;
 
 const parse = () => {

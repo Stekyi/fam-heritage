@@ -68,7 +68,7 @@ export const genderClass = (s) => (s === 'M' ? 'male' : s === 'F' ? 'female' : '
 export function avatar(p, size = 'md') {
   const url = safeUrl(p.photo_url);
   const cls = `avatar avatar-${size} ${genderClass(p.sex)}`;
-  if (url) return `<span class="${cls}"><img src="${esc(url)}" alt="" loading="lazy" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span>`;
+  if (url) return `<span class="${cls}"><img src="${esc(url)}" alt="" loading="lazy"></span>`;
   return `<span class="${cls} no-photo" aria-hidden="true">${esc((p.given_name || '?').charAt(0).toUpperCase())}</span>`;
 }
 
