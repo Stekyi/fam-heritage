@@ -9,9 +9,9 @@ const paragraphs = (t) => esc(t).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/
 // ================================================================= NETWORK
 export function renderNetwork(root, tabName = 'people') {
   root.innerHTML = `<div class="page"><header class="page-head"><span class="eyebrow">NETWORK</span><h1>Family network</h1><p>Find relatives by profession and place, and discover business ideas shared within the family.</p></header>
-  <div class="tabs" role="tablist"><button role="tab" class="tab ${tabName === 'people' ? 'active' : ''}" data-tab="people">Find family</button><button role="tab" class="tab ${tabName === 'ideas' ? 'active' : ''}" data-tab="ideas">Business ideas</button></div><div id="netBody"></div></div>`;
-  $$('.tab', root).forEach((b) => { b.onclick = () => nav(b.dataset.tab === 'people' ? '#/network' : '#/network/ideas'); });
-  if (tabName === 'ideas') renderIdeas($('#netBody', root)); else renderPeopleSearch($('#netBody', root));
+  <div class="tabs" role="tablist"><button role="tab" class="tab ${tabName === 'people' ? 'active' : ''}" data-tab="people">Find family</button><button role="tab" class="tab ${tabName === 'ideas' ? 'active' : ''}" data-tab="ideas">Business ideas</button><button role="tab" class="tab ${tabName === 'celebrations' ? 'active' : ''}" data-tab="celebrations">Birthdays</button></div><div id="netBody"></div></div>`;
+  $$('.tab', root).forEach((b) => { b.onclick = () => nav({ people: '#/network', ideas: '#/network/ideas', celebrations: '#/network/celebrations' }[b.dataset.tab]); });
+  if (tabName === 'ideas') renderIdeas($('#netBody', root)); else if (tabName === 'celebrations') renderCelebrations($('#netBody', root)); else renderPeopleSearch($('#netBody', root));
 }
 
 const NET = { occupation: '', location: '', gender: '', age_min: '', age_max: '', page: 1 };
@@ -208,4 +208,19 @@ export async function renderAnalysis(root) {
     ${chartCard('Most common birthplaces', 'Where relatives were born, where a birth place is recorded.', barChart(a.birthplaces, { horizontal: true, color: '#7a5a8a', label: 'Common birthplaces' }))}
   </div>
   <p class="muted small coverage">Recorded so far: ${nf.format(a.coverage.with_birth_year)} birth years · ${nf.format(a.coverage.with_occupation)} occupations · ${nf.format(a.coverage.with_birthplace)} birth places${a.coverage.placeholders ? `. ${a.coverage.placeholders} placeholder entries (unknown ancestors and the sacred rock) are not counted` : ''}${a.coverage.excluded_implausible ? ` · ${a.coverage.excluded_implausible} entries left out because the dates look wrong` : ''}.</p>`;
+}
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+async function renderCelebrations(body) {
+  body.innerHTML = loadingView('Looking at the calendar...');
+  let r;
+  try { r = await api('/api/celebrations?days=60'); } catch (e) { return reportError(body, e, () => renderCelebrations(body)); }
+  const when = (x) => (x.days === 0 ? 'Today' : x.days === 1 ? 'Tomorrow' : `In ${x.days} days`);
+  const row = (x, kind) => `<li class="list-row"><div><a href="#/person/${esc(x.id)}"><strong>${esc(x.name)}</strong></a><small class="muted block">${x.day} ${MONTHS[x.month - 1]}${kind === 'b' && x.turning ? ` &middot; turning ${x.turning}` : ''}${kind === 'r' && x.years ? ` &middot; ${x.years} years ago` : ''}</small></div><span class="tag ${x.days <= 7 ? '' : 'tag-quiet'}">${when(x)}</span></li>`;
+  const list = (items, kind, empty) => (items.length ? `<ul class="plain-list">${items.map((x) => row(x, kind)).join('')}</ul>` : `<p class="muted">${esc(empty)}</p>`);
+  const births = r.birthdays === null
+    ? '<p class="muted">Birthdays are shown to family members with a contributor token, to keep living relatives\' details private.</p>'
+    : list(r.birthdays, 'b', 'No birthdays in the next 60 days. Add full birth dates on family profiles to see them here.');
+  body.innerHTML = `<div class="chart-grid"><section class="card"><h3>Birthdays</h3>${births}</section><section class="card"><h3>Remembering</h3>${list(r.remembrances, 'r', 'No remembrance days in the next 60 days. Add full death dates to see them here.')}</section></div>`;
 }

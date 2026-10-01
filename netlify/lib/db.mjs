@@ -115,7 +115,7 @@ export function readOnlyMethods(event) {
 }
 
 // ---------------------------------------------------------------- rate limiting (shared Postgres table)
-export const LIMITS = { tokenIp: 20, tokenGlobal: 500, adminIp: 10, adminGlobal: 100, comment: 5, tree: 60, search: 300, network: 120, analysis: 120 };
+export const LIMITS = { tokenIp: 20, tokenGlobal: 500, adminIp: 10, adminGlobal: 100, comment: 5, tree: 60, search: 300, network: 120, analysis: 120, join: 30, celebrations: 120 };
 
 async function prune(p) {
   if (Math.random() < 0.02) await p.query("delete from token_attempts where attempted_at < now()-interval '1 day'").catch(() => {});

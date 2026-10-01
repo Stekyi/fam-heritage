@@ -1,4 +1,5 @@
 import { state, $, $$, esc, api, toast, toastError, openSheet, confirmDialog, loadingView, emptyView, fmtWhen, fullName } from './core.js';
+import { attachPersonSearch } from './tree.js';
 
 let ADMIN_TAB = 'approvals';
 
@@ -29,7 +30,7 @@ async function load(root, first = false) {
   if (first) toast('Administration unlocked.', 'info');
   const counts = { approvals: q.proposals.length, comments: q.comments.length };
   root.innerHTML = `<div class="page"><header class="page-head row-between wrap"><div><span class="eyebrow">ADMINISTRATOR</span><h1>Administration</h1></div><button class="btn" id="lockAdmin" type="button">Lock</button></header>
-  <div class="tabs" role="tablist">${[['approvals', `Tree suggestions${counts.approvals ? ` (${counts.approvals})` : ''}`], ['comments', `Comments${counts.comments ? ` (${counts.comments})` : ''}`], ['tokens', 'Contributor tokens'], ['history', 'Edit history'], ['content', 'Stories & ideas'], ['quality', `Data quality${q.quality.duplicates.length ? ` (${q.quality.duplicates.length})` : ''}`], ['security', q.security.token_locked || q.security.admin_locked ? 'Security (paused)' : 'Security']].map(([k, l]) => `<button class="tab ${ADMIN_TAB === k ? 'active' : ''}" data-tab="${k}">${esc(l)}</button>`).join('')}</div><div id="adminPane"></div></div>`;
+  <div class="tabs" role="tablist">${[['approvals', `Tree suggestions${counts.approvals ? ` (${counts.approvals})` : ''}`], ['comments', `Comments${counts.comments ? ` (${counts.comments})` : ''}`], ['tokens', 'Contributor tokens'], ['invites', 'Invitations'], ['history', 'Edit history'], ['content', 'Stories & ideas'], ['quality', `Data quality${q.quality.duplicates.length ? ` (${q.quality.duplicates.length})` : ''}`], ['security', q.security.token_locked || q.security.admin_locked ? 'Security (paused)' : 'Security'], ['backup', 'Backup']].map(([k, l]) => `<button class="tab ${ADMIN_TAB === k ? 'active' : ''}" data-tab="${k}">${esc(l)}</button>`).join('')}</div><div id="adminPane"></div></div>`;
   $('#lockAdmin', root).onclick = () => { state.adminSecret = ''; renderAdmin(root); toast('Administration locked.', 'info'); };
   $$('.tab', root).forEach((b) => { b.onclick = () => { ADMIN_TAB = b.dataset.tab; load(root); }; });
   const pane = $('#adminPane', root);
@@ -38,8 +39,8 @@ async function load(root, first = false) {
   const post = (body) => api('/api/admin', { method: 'POST', admin: true, auth: false, body });
 
   if (ADMIN_TAB === 'approvals') {
-    pane.innerHTML = q.proposals.length ? q.proposals.map((p) => `<div class="card queue"><div><strong>${esc(p.action.replace(/_/g, ' '))}</strong><small class="muted block">From ${esc(p.token_label || 'a contributor')} · ${esc(fmtWhen(p.submitted_at))}</small><pre>${esc(JSON.stringify(p.payload, null, 2))}</pre></div><div class="row-actions"><button class="btn primary" data-pa="${esc(p.id)}">Approve</button><button class="btn" data-pr="${esc(p.id)}">Reject</button></div></div>`).join('') : emptyView('No pending tree suggestions.');
-    $$('[data-pa]', pane).forEach((b) => { b.onclick = () => act(() => post({ kind: 'proposal', id: b.dataset.pa, status: 'approved' }), 'Suggestion approved.'); });
+    pane.innerHTML = q.proposals.length ? q.proposals.map((p) => `<div class="card queue"><div><strong>${esc(p.summary || p.action.replace(/_/g, ' '))}</strong><small class="muted block">From ${esc(p.token_label || 'a contributor')} · ${esc(fmtWhen(p.submitted_at))}</small><details><summary class="small muted">Details</summary><pre>${esc(JSON.stringify(p.payload, null, 2))}</pre></details></div><div class="row-actions"><button class="btn primary" data-pa="${esc(p.id)}" data-action="${esc(p.action)}">Approve</button><button class="btn" data-pr="${esc(p.id)}">Reject</button></div></div>`).join('') : emptyView('No pending tree suggestions.');
+    $$('[data-pa]', pane).forEach((b) => { b.onclick = async () => { if (b.dataset.action === 'delete_relationship' && !(await confirmDialog({ title: 'Remove this family link?', message: 'This changes the shape of the tree. The removed link is kept in the audit log.', confirmText: 'Remove link' }))) return; act(() => post({ kind: 'proposal', id: b.dataset.pa, status: 'approved' }), 'Suggestion approved.'); }; });
     $$('[data-pr]', pane).forEach((b) => { b.onclick = () => act(() => post({ kind: 'proposal', id: b.dataset.pr, status: 'rejected' }), 'Suggestion rejected.'); });
   } else if (ADMIN_TAB === 'comments') {
     const row = (c, pending) => `<div class="list-row"><div><strong>${esc(c.author_name)}</strong> <small class="muted">${esc(fmtWhen(c.created_at))}</small><p>${esc(c.body)}</p></div><div class="row-actions">${pending ? `<button class="btn primary" data-ca="${esc(c.id)}">Approve</button>` : ''}<button class="btn ${pending ? '' : 'btn-danger-ghost'}" data-cr="${esc(c.id)}">${pending ? 'Reject' : 'Hide'}</button></div></div>`;
@@ -59,6 +60,46 @@ async function load(root, first = false) {
     });
     $$('[data-toggle]', pane).forEach((b) => { b.onclick = () => act(() => api('/api/tokens', { method: 'PATCH', admin: true, auth: false, body: { id: b.dataset.toggle, active: b.dataset.active === '1' } }), b.dataset.active === '1' ? 'Token enabled.' : 'Token disabled.'); });
     $$('[data-unlink]', pane).forEach((b) => { b.onclick = async () => { if (!(await confirmDialog({ title: 'Unlink this token?', message: 'The contributor will need to link their token to a family member again.', confirmText: 'Unlink' }))) return; act(() => api('/api/tokens', { method: 'PATCH', admin: true, auth: false, body: { id: b.dataset.unlink, unlink: true } }), 'Token unlinked.'); }; });
+  } else if (ADMIN_TAB === 'invites') {
+    const pill = (s) => `<span class="tag ${s === 'open' ? '' : 'tag-quiet'}">${esc(s)}</span>`;
+    pane.innerHTML = `<section class="card"><h2>Invite a family member</h2><p class="muted small">An invitation is a single-use link. When the person opens it, they confirm who they are and receive their own token automatically, so nobody has to pass tokens around.</p>
+      <form id="inviteForm" class="form" novalidate><label class="field"><span class="label">Name for your reference</span><input class="input" name="label" maxlength="80" placeholder="e.g. Cousin Efua"></label>
+      <div class="field"><span class="label">Who is it for? (optional)</span><input id="invSearch" class="input" type="search" placeholder="Search family tree, or leave empty to let them find themselves" autocomplete="off"><div id="invResults" class="results"></div><div id="invPicked" class="muted small">No one selected: they will choose their own entry.</div></div>
+      <label class="field"><span class="label">Valid for</span><select class="input" name="days"><option value="7">7 days</option><option value="14" selected>14 days</option><option value="30">30 days</option></select></label>
+      <div class="sheet-actions"><button class="btn primary" type="submit">Create invitation link</button></div></form></section>
+      <section class="card"><h2>Invitations</h2>${q.invites.length ? q.invites.map((i) => `<div class="list-row"><div><strong>${esc(i.label || 'Invitation')}</strong> ${pill(i.status)}<small class="muted block">Created ${esc(fmtWhen(i.created_at))}${i.status === 'open' ? ` &middot; expires ${esc(fmtWhen(i.expires_at))}` : ''}${i.used_at ? ` &middot; used ${esc(fmtWhen(i.used_at))}` : ''}</small><small class="block">${i.person_name ? `For <strong>${esc(i.person_name)}</strong>` : '<span class="muted">Open: they choose their own entry</span>'}</small></div><div class="row-actions">${i.status === 'open' ? `<button class="btn btn-danger-ghost" data-ir="${esc(i.id)}">Revoke</button>` : ''}</div></div>`).join('') : '<p class="muted">No invitations yet.</p>'}</section>`;
+    let picked = null;
+    attachPersonSearch($('#invSearch', pane), $('#invResults', pane), { onPick: (p) => { picked = p; $('#invPicked', pane).innerHTML = `For: <strong>${esc(fullName(p))}</strong>`; $('#invResults', pane).innerHTML = ''; } });
+    $('#inviteForm', pane).addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const v = Object.fromEntries(new FormData(e.target).entries());
+      try {
+        const r = await post({ kind: 'invite_create', person_id: picked ? picked.id : undefined, label: v.label || (picked ? fullName(picked) : ''), days: Number(v.days) });
+        const link = `${location.origin}/#/join/${r.code}`;
+        const msg = `You are invited to our family archive. Open this link to join (it works once): ${link}`;
+        const s = openSheet(`<div class="confirm"><span class="eyebrow">INVITATION READY</span><h3>${esc(v.label || (picked ? fullName(picked) : 'Invitation'))}</h3><p class="muted">Send this link privately. It can be used once and is shown only now.</p><input class="input" id="invLink" readonly value="${esc(link)}" aria-label="Invitation link"><div class="confirm-actions"><button class="btn" type="button" id="invCopy">Copy link</button><a class="btn" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=${encodeURIComponent(msg)}">Share on WhatsApp</a><button class="btn primary" type="button" data-close>Done</button></div></div>`, { label: 'Invitation', onClose: reload });
+        $('#invCopy', s.el).onclick = async () => { try { await navigator.clipboard.writeText(link); toast('Invitation link copied.'); } catch { $('#invLink', s.el).select(); toast('Please copy the link manually.', 'info'); } };
+      } catch (err) { toastError(err); }
+    });
+    $$('[data-ir]', pane).forEach((b) => { b.onclick = async () => { if (!(await confirmDialog({ title: 'Revoke this invitation?', message: 'The link will stop working.', confirmText: 'Revoke' }))) return; act(() => post({ kind: 'invite_revoke', id: b.dataset.ir }), 'Invitation revoked.'); }; });
+  } else if (ADMIN_TAB === 'backup') {
+    pane.innerHTML = `<section class="card"><h2>Backup</h2><p class="muted small">Download a copy of the family archive. Keep the files somewhere private: the JSON backup contains everything, including contact details people shared on business ideas.</p>
+      <div class="sheet-actions"><button class="btn primary" id="bkJson" type="button">Download full backup (JSON)</button><button class="btn" id="bkGed" type="button">Download family tree (GEDCOM)</button></div>
+      <p class="muted small">Photos stay in the database and are covered by Neon's point-in-time recovery (check it is switched on in your Neon project). GEDCOM opens in programs such as Gramps, Ancestry and MyHeritage.</p></section>`;
+    const download = async (format, btn) => {
+      btn.disabled = true;
+      try {
+        const res = await fetch(`/api/backup?format=${format}`, { headers: { 'x-admin-secret': state.adminSecret } });
+        if (!res.ok) throw new Error('The backup could not be created. Please try again.');
+        const blob = await res.blob();
+        const name = ((res.headers.get('Content-Disposition') || '').match(/filename="([^"]+)"/) || [])[1] || `family-backup.${format === 'gedcom' ? 'ged' : 'json'}`;
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        toast('Your backup has been downloaded.');
+      } catch (err) { toastError(err); } finally { btn.disabled = false; }
+    };
+    $('#bkJson', pane).onclick = (e) => download('json', e.currentTarget);
+    $('#bkGed', pane).onclick = (e) => download('gedcom', e.currentTarget);
   } else if (ADMIN_TAB === 'history') {
     const fmtVal = (v) => (v == null || v === '' ? '(empty)' : Array.isArray(v) ? v.join(', ') : String(v).startsWith('/api/image') ? '(photo)' : String(v));
     const diff = (r) => Object.keys(r.after).map((k) => `<li><strong>${esc(k.replace(/_/g, ' '))}</strong>: <span class="old">${esc(fmtVal(r.before[k]))}</span> &rarr; <span class="new">${esc(fmtVal(r.after[k]))}</span></li>`).join('');

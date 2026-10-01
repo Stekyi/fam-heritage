@@ -1,5 +1,7 @@
 import { getDb, json, NO_DB, requireAdmin, parseBody, isUuid, audit, PERSON_SELECT, LIMITS } from '../lib/db.mjs';
 import { REVERTIBLE, recordRevision } from '../lib/people.mjs';
+import { describeProposal, wouldCreateCycle, relationshipExists } from '../lib/graph.mjs';
+import { newInviteCode, inviteHash } from '../lib/invites.mjs';
 
 const EDIT_FIELDS = ['given_name', 'surname', 'sex', 'birth_year', 'death_year', 'birth_place', 'occupation', 'location', 'notes', 'aliases', 'photo_url'];
 const NAME = "trim(coalesce(p.given_name,'')||' '||coalesce(p.surname,''))";
@@ -32,8 +34,17 @@ async function overview(pool) {
     pool.query("select count(*)::int as n from people where kind <> 'person'"),
   ]);
   const s0 = sec.rows[0];
+  // Readable descriptions of pending suggestions (who and what), so the administrator does not have to read raw data.
+  const ids = new Set();
+  for (const pr of p.rows) { const x = pr.payload || {}; for (const k of ['parent_id', 'anchor_id', 'from_person_id', 'to_person_id']) if (x[k]) ids.add(x[k]); for (const k of ['from_person_id', 'to_person_id']) if (x.relationship?.[k]) ids.add(x.relationship[k]); }
+  const named = ids.size ? (await pool.query('select id,given_name,surname from people where id = any($1::uuid[])', [[...ids]])).rows : [];
+  const nameMap = new Map(named.map((r) => [r.id, r]));
+  const proposals = p.rows.map((pr) => ({ ...pr, summary: describeProposal(pr, nameMap) }));
+  const inv = await pool.query(`select i.id,i.label,i.created_at,i.expires_at,i.used_at,i.revoked, ${NAME} as person_name
+                                   from invites i left join people p on p.id=i.person_id order by i.created_at desc limit 50`);
+  const invites = inv.rows.map((r) => ({ ...r, status: r.revoked ? 'revoked' : r.used_at ? 'used' : new Date(r.expires_at) < new Date() ? 'expired' : 'open' }));
   return {
-    proposals: p.rows, comments: c.rows, approved_comments: ac.rows, stories: s.rows, ideas: i.rows,
+    proposals, invites, comments: c.rows, approved_comments: ac.rows, stories: s.rows, ideas: i.rows,
     revisions: rev.rows,
     security: { ...s0, token_locked: s0.token_recent > LIMITS.tokenGlobal, admin_locked: s0.admin_recent > LIMITS.adminGlobal },
     quality: { duplicates: dup.rows, isolated: iso.rows, placeholders: ph.rows[0].n },
@@ -62,6 +73,27 @@ export async function handler(event) {
   if (b.kind === 'idea_remove') {
     await pool.query("update business_ideas set status='removed', updated_at=now() where id=$1", [b.id]);
     await audit(pool, 'admin_remove_idea', 'business_idea', b.id, null, 'admin');
+    return json(200, { ok: true });
+  }
+  if (b.kind === 'invite_create') {
+    let personId = null;
+    if (b.person_id) {
+      if (!isUuid(b.person_id)) return json(400, { error: 'Invalid family member.' });
+      const per = await pool.query("select 1 from people where id=$1 and kind='person'", [b.person_id]);
+      if (!per.rows[0]) return json(404, { error: 'That family member could not be found.' });
+      const linked = await pool.query('select 1 from token_person_links where person_id=$1', [b.person_id]);
+      if (linked.rows[0]) return json(409, { error: 'That family member already has a linked token.' });
+      personId = b.person_id;
+    }
+    const days = Math.min(60, Math.max(1, parseInt(b.days, 10) || 14));
+    const code = newInviteCode();
+    const label = String(b.label || '').replace(/\s+/g, ' ').trim().slice(0, 80) || null;
+    const ins = await pool.query("insert into invites(code_hash,person_id,label,expires_at) values($1,$2,$3, now() + ($4 || ' days')::interval) returning id, expires_at", [inviteHash(code), personId, label, String(days)]);
+    await audit(pool, 'invite_created', 'invite', ins.rows[0].id, { person_id: personId }, 'admin');
+    return json(201, { id: ins.rows[0].id, code, expires_at: ins.rows[0].expires_at });
+  }
+  if (b.kind === 'invite_revoke') {
+    await pool.query('update invites set revoked=true where id=$1 and used_at is null', [b.id]);
     return json(200, { ok: true });
   }
   if (b.kind === 'revert') {
@@ -113,9 +145,14 @@ export async function handler(event) {
     } else if (pr.action === 'delete_person') {
       await pool.query('delete from people where id=$1', [p.id]);
     } else if (pr.action === 'add_relationship') {
+      if (await relationshipExists(pool, p.from_person_id, p.to_person_id, p.relationship_type)) return json(409, { error: 'That link is already in the tree.' });
+      if (p.relationship_type === 'parent' && (await wouldCreateCycle(pool, p.from_person_id, p.to_person_id))) return json(422, { error: 'That link would make someone their own ancestor, so it was not added.' });
       await pool.query("insert into relationships(from_person_id,to_person_id,relationship_type,status,source,proposed_by) values($1,$2,$3,'approved',$4,$5) on conflict do nothing", [p.from_person_id, p.to_person_id, p.relationship_type, 'contributor', pr.id]);
     } else if (pr.action === 'delete_relationship') {
-      await pool.query('delete from relationships where id=$1', [p.id]);
+      const rid = p.relationship_id || p.id;
+      const gone = await pool.query('delete from relationships where id=$1 returning *', [rid]);
+      // The removed link is kept in the audit log so it can be put back by approving an "add link" suggestion.
+      if (gone.rows[0]) await audit(pool, 'relationship_removed', 'relationship', rid, { relationship: gone.rows[0], reason: p.reason || null }, 'admin');
     }
     await pool.query('update proposals set status=$1,reviewed_at=now(),reviewed_by=$2,review_note=$3 where id=$4', ['approved', 'admin', b.note || null, b.id]);
     return json(200, { ok: true });

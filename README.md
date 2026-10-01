@@ -10,7 +10,7 @@ A family heritage archive and community platform, hosted on Netlify with Neon Po
 | **Family History** | Everyone | The Asankran clan history, public comments (moderated) and family stories. |
 | **Network** | Everyone to view, token holders to act | Find relatives by profession, location, gender and age range. Business Ideas with an "I'm Interested" flow; contact details are visible only to the idea owner. |
 | **Analysis** | Everyone | Statistics from recorded data only: living/deceased, gender, current age vs age at death, births/deaths by decade, generations, occupations, birthplaces. |
-| **Contribute** | Token holders | "My Family Profile": link a token to yourself, publish an About page, write stories, suggest new relatives. |
+| **Contribute** | Token holders | "My Family Profile": link a token to yourself (or join through an invitation), publish an About page, write stories, suggest new relatives and corrections. |
 | **Admin** | Administrator | Moderate comments and tree suggestions, manage tokens (create, disable, unlink), remove stories and ideas. |
 
 Anyone with a valid 5-digit contributor token can edit **any** person's descriptive details (name, AKA, gender, dates, birth place, occupation, location, photo). Saving is immediate, with a toast and no second confirmation. Editing never touches relationships.
@@ -39,6 +39,13 @@ Every edit to a person stores the old and new values; Admin -> Edit history show
 
 There is **no public export** of any kind (no JSON/CSV/Excel/GEDCOM/database dump endpoint, and no static data files are served). The read APIs used by the app refuse to be opened as a page (`Sec-Fetch-Dest: document`), but they necessarily return data to the app itself, so a determined scraper could still read what the tree shows.
 
+## Invitations, alerts, corrections, backup
+
+- **Invitations** (Admin -> Invitations): create a single-use link, optionally for a specific person. The recipient opens it, confirms who they are and gets their own 8-character token automatically (shown once, saved in their browser). Codes are 16 characters, stored only as a keyed hash, expire after 7 to 30 days, and can be revoked.
+- **Email alerts and weekly digest**: the administrator is emailed about new comments, new tree suggestions and people joining, capped at 20 alerts per hour. Every Monday at 13:00 UTC a digest summarises what is waiting, the week's activity, upcoming birthdays and remembrance days, and failed sign-ins. Needs `RESEND_API_KEY` and `ADMIN_EMAIL`; without them nothing is sent and nothing breaks.
+- **Corrections**: any contributor can suggest removing a wrong family link (with a reason) or adding a missing one from a person's profile. The administrator sees a plain-language description, approves or rejects, and a removed link is kept in the audit log. Links that would make someone their own ancestor are refused.
+- **Birthdays and remembrance** (Network -> Birthdays): remembrance days of the deceased are public; birthdays of living relatives are shown only to contributors.
+- **Backup** (Admin -> Backup): download everything as JSON (tokens only as hashes, no photos) or the tree as GEDCOM 5.5.1 for Gramps, Ancestry and similar. Photos stay in the database; make sure Neon point-in-time recovery is enabled for your project.
 ## Environment variables (Netlify)
 
 | Variable | Purpose |
@@ -46,6 +53,10 @@ There is **no public export** of any kind (no JSON/CSV/Excel/GEDCOM/database dum
 | `DATABASE_URL` | Neon connection string |
 | `ADMIN_SECRET` | Long random administrator secret |
 | `TOKEN_PEPPER` | Another long random secret used to hash contributor tokens |
+| `RESEND_API_KEY` | Optional. Enables email alerts and the weekly digest |
+| `ADMIN_EMAIL` | Optional. Where alerts and the digest are sent |
+| `MAIL_FROM` | Optional. Sender, e.g. `Family Heritage <alerts@your-domain>` (the Resend default only reaches the account owner) |
+| `SITE_URL` | Optional. Used for links in emails (defaults to Netlify's `URL`) |
 
 Do not change `TOKEN_PEPPER` after tokens have been issued; it would invalidate every token.
 

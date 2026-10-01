@@ -1,7 +1,7 @@
 import { state, $, $$, esc, api, toast, toastError, loadTree, loadingView, errorView, fullName, TOKEN_RE } from './core.js';
 import { setToken, refreshMe } from './session.js';
 import { renderTreePage, closeTreeModal, ensureHomeRoot, refreshTreeViews } from './tree.js';
-import { renderHistory, renderStory, renderPerson, renderContribute } from './pages-content.js';
+import { renderHistory, renderStory, renderPerson, renderContribute, renderJoin } from './pages-content.js';
 import { renderNetwork, renderAnalysis } from './pages-network.js';
 import { renderAdmin } from './pages-admin.js';
 
@@ -37,7 +37,8 @@ async function route() {
     case 'person': return renderPerson(view, arg);
     case 'history': return renderHistory(view, arg === 'stories' ? 'stories' : 'clan');
     case 'story': return renderStory(view, arg);
-    case 'network': return renderNetwork(view, arg === 'ideas' ? 'ideas' : 'people');
+    case 'network': return renderNetwork(view, arg === 'ideas' ? 'ideas' : arg === 'celebrations' ? 'celebrations' : 'people');
+    case 'join': return renderJoin(view, arg);
     case 'analysis': return renderAnalysis(view);
     case 'contribute': return renderContribute(view);
     case 'admin': return renderAdmin(view);
@@ -76,7 +77,9 @@ tokenInput.addEventListener('input', async (e) => {
   } else announced = false;
 });
 
+window.addEventListener('token-changed', () => reloadTreeData());
 window.addEventListener('me-changed', () => {
+  if (tokenInput.value !== state.token) tokenInput.value = state.token;
   updateChip();
   if (parse().name === 'contribute' && !$('.sheet-wrap')) renderContribute(view);
 });
