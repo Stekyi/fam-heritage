@@ -229,7 +229,7 @@ export async function openPersonSheet(personId, { edit = false } = {}) {
   const draw = () => {
     const cur = state.data.people.find((x) => x.id === personId) || p;
     const aka = aliasesOf(cur);
-    body.innerHTML = `<div class="sheet-head"><div class="person-hero">${avatar(cur, 'xl')}<div><span class="eyebrow">FAMILY MEMBER</span><h2>${esc(fullName(cur))}</h2>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(cur))}</p></div></div><button class="modal-close" type="button" data-close aria-label="Close">×</button></div>
+    body.innerHTML = `<div class="sheet-head"><div class="person-hero">${avatar(cur, 'xl')}<div><span class="eyebrow">FAMILY MEMBER</span><h2>${esc(fullName(cur))}</h2>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(cur))}</p></div></div><span class="sheet-head-actions"><button class="btn" type="button" data-share-person="${esc(cur.id)}" data-share-name="${esc(fullName(cur))}">Share</button><button class="modal-close" type="button" data-close aria-label="Close">×</button></span></div>
       ${personFacts(cur)}
       ${cur.notes ? `<div class="focus-note">${esc(cur.notes)}</div>` : ''}
       ${detail.profile ? `<section class="sheet-section"><h3>About ${esc(cur.given_name)}</h3><div class="prose">${esc(detail.profile.about).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/g, '<br>')}</p>`).join('')}</div></section>` : ''}

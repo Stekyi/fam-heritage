@@ -12,12 +12,12 @@ const pg = await freshDatabase();
 await makeToken(pg, '11111', 'Demo contributor one');
 await makeToken(pg, '22222', 'Demo contributor two');
 
-const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
+const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json' };
 
 http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
-  if (url.pathname.startsWith('/api/')) {
-    const name = url.pathname.slice(5).replace(/[^a-z]/g, '');
+  if (url.pathname.startsWith('/api/') || url.pathname === '/share') {
+    const name = url.pathname === '/share' ? 'share' : url.pathname.slice(5).replace(/[^a-z]/g, '');
     let mod;
     try { mod = await import(`../netlify/functions/${name}.mjs`); } catch { res.writeHead(404); return res.end('{"error":"not found"}'); }
     const chunks = []; for await (const c of req) chunks.push(c);
