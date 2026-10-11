@@ -1,6 +1,9 @@
 import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, isUuid, audit, PERSON_SELECT, appOnly, optionalToken } from '../lib/db.mjs';
 import { validatePersonUpdate, EDITABLE, redactPerson, recordRevision } from '../lib/people.mjs';
 
+// Changing a recorded fact removes the elder's verification, so a stamp never vouches for something it did not see.
+const FACT_FIELDS = ['given_name', 'surname', 'birth_date', 'death_date', 'birth_year', 'death_year', 'birth_place'];
+
 export async function handler(event) {
   const pool = await getDb(); if (!pool) return NO_DB();
   const id = event.queryStringParameters?.id;
@@ -35,7 +38,7 @@ export async function handler(event) {
     const vals = keys.map((k) => fields[k]);
     vals.push(token.label || 'contributor', id);
     // Only descriptive columns are written; relationships are never touched here.
-    await pool.query(`update people set ${sets.join(',')}, updated_by=$${keys.length + 1}, updated_at=now() where id=$${keys.length + 2}`, vals);
+    await pool.query(`update people set ${sets.join(',')}, updated_by=$${keys.length + 1}, updated_at=now()${keys.some((k) => FACT_FIELDS.includes(k)) ? ', verified_by=null, verified_at=null' : ''} where id=$${keys.length + 2}`, vals);
     await audit(pool, 'edit_person', 'person', id, { fields: keys, revision: revId }, token.label);
     const out = await pool.query(`select ${PERSON_SELECT} from people where id=$1`, [id]);
     return json(200, { person: out.rows[0], changed: true, revision: revId });

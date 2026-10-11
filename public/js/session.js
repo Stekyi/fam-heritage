@@ -11,7 +11,7 @@ export async function refreshMe() {
   if (!TOKEN_RE.test(state.token)) { state.me = null; window.dispatchEvent(new CustomEvent('me-changed')); return null; }
   try {
     const r = await api('/api/me');
-    state.me = { valid: true, label: r.token?.label, linked_person: r.linked_person };
+    state.me = { valid: true, label: r.token?.label, role: r.token?.role, linked_person: r.linked_person };
   } catch (e) {
     state.me = e.status === 401 ? { valid: false } : state.me;
   }

@@ -30,3 +30,13 @@ html.simple #nav a{padding:12px 14px;font-size:1.05rem}
   @page{margin:12mm}
 }
 .sheet-head-actions{display:flex;gap:8px;align-items:center}
+
+.verify-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.verified-badge{background:#e1efe6;color:#1f5a43;border:1px solid #b7d6c4;padding:5px 11px;border-radius:999px;font-size:.82rem;font-weight:700}
+.unverified-badge{color:var(--muted);font-size:.82rem}
+.memory{padding:10px 0;border-bottom:1px solid #e8e1d5;display:grid;gap:6px}
+.memory audio,.memory video{width:100%;max-width:520px;border-radius:10px}
+.memory-add{margin-top:12px;padding:12px;background:#f8f4ec;border-radius:12px}
+.memory-add summary{cursor:pointer;font-weight:700}
+.memory-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.role-select{max-width:220px;padding:4px 8px;margin-left:4px}

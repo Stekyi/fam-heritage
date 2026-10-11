@@ -8,7 +8,7 @@ export async function handler(event) {
 
   if (event.httpMethod === 'GET') {
     const blocked = appOnly(event); if (blocked) return blocked;
-    return json(200, { token: { label: token.label }, linked_person: await person(token.person_id) });
+    return json(200, { token: { label: token.label, role: token.role }, linked_person: await person(token.person_id) });
   }
 
   if (event.httpMethod === 'POST') {

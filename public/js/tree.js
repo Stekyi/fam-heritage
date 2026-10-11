@@ -2,6 +2,7 @@ import {
   state, $, $$, esc, norm, fullName, aliasesOf, debounce, api, toast, toastError, openSheet, loadingView, emptyView, errorView,
   buildIndex, patchPerson, lifeLine, avatar, genderLabel, birthText, deathText, ageInfo, livingClass, safeUrl, prepareImage, fmtWhen, setHelp, reportError,
 } from './core.js';
+import { verifyHtml, bindVerify, mountMemories } from './memories.js';
 
 const T = { ancestors: 3, descendants: 4, zoom: 0.72, selected: null, search: '' };
 
@@ -231,11 +232,15 @@ export async function openPersonSheet(personId, { edit = false } = {}) {
     const aka = aliasesOf(cur);
     body.innerHTML = `<div class="sheet-head"><div class="person-hero">${avatar(cur, 'xl')}<div><span class="eyebrow">FAMILY MEMBER</span><h2>${esc(fullName(cur))}</h2>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(cur))}</p></div></div><span class="sheet-head-actions"><button class="btn" type="button" data-share-person="${esc(cur.id)}" data-share-name="${esc(fullName(cur))}">Share</button><button class="modal-close" type="button" data-close aria-label="Close">×</button></span></div>
       ${personFacts(cur)}
+      ${verifyHtml(cur)}
+      <div id="memories"></div>
       ${cur.notes ? `<div class="focus-note">${esc(cur.notes)}</div>` : ''}
       ${detail.profile ? `<section class="sheet-section"><h3>About ${esc(cur.given_name)}</h3><div class="prose">${esc(detail.profile.about).split(/\n{2,}/).map((x) => `<p>${x.replace(/\n/g, '<br>')}</p>`).join('')}</div></section>` : ''}
       ${detail.stories.length ? `<section class="sheet-section"><h3>Stories</h3><ul class="plain-list">${detail.stories.map((st) => `<li><a href="#/story/${esc(st.id)}" data-close>${esc(st.title)}</a> <small class="muted">${esc(fmtWhen(st.created_at))}</small></li>`).join('')}</ul></section>` : ''}
       <div class="sheet-actions"><a class="btn primary" href="#/tree/${esc(cur.id)}" data-close>View in Family Tree</a><a class="btn" href="#/person/${esc(cur.id)}" data-close>Full profile page</a><button class="btn" type="button" id="suggestFix">Suggest a correction</button><button class="btn" type="button" id="editPerson">${canEdit() ? 'Edit details' : '🔒 Edit details'}</button></div>`;
     $$('[data-close]', body).forEach((b) => b.addEventListener('click', s.close));
+    bindVerify(body, cur, draw);
+    mountMemories($('#memories', body), cur);
     $('#suggestFix', body).onclick = () => { if (!canEdit()) return toast('You need a contributor token to make changes.', 'info'); s.close(); openCorrectionSheet(personId); };
     $('#editPerson', body).onclick = () => {
       if (!canEdit()) return toast('You need a contributor token to make changes.', 'info');

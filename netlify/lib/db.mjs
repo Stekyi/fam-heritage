@@ -192,7 +192,7 @@ export async function requireToken(event, p) {
   const h = await hit(p, [`tok:${ip}`, 'tok:*']);
   if ((h.counts[`tok:${ip}`] || 0) > LIMITS.tokenIp || (h.counts['tok:*'] || 0) > LIMITS.tokenGlobal) { await h.release(); return null; }
   const r = await p.query(
-    `select t.id, t.label, l.person_id from access_tokens t
+    `select t.id, t.label, t.role, l.person_id from access_tokens t
        left join token_person_links l on l.token_id=t.id
       where t.token_hash=$1 and t.active=true`, [hmacToken(token)]);
   if (!r.rows[0]) return null; // the failed attempt stays counted
@@ -231,7 +231,7 @@ export const foldSql = (expr) => `regexp_replace(translate(lower(${expr}),'${FOL
 export const clean = (v, max) => { const s = String(v ?? '').replace(/\s+/g, ' ').trim(); return s ? s.slice(0, max) : null; };
 export const cleanMultiline = (v, max) => { const s = String(v ?? '').replace(/\r\n/g, '\n').trim(); return s ? s.slice(0, max) : null; };
 
-export const PERSON_SELECT = "id,given_name,surname,aliases,sex,birth_year,death_year,to_char(birth_date,'YYYY-MM-DD') as birth_date,to_char(death_date,'YYYY-MM-DD') as death_date,birth_place,occupation,location,living_status,notes,source,photo_url,kind";
+export const PERSON_SELECT = "id,given_name,surname,aliases,sex,birth_year,death_year,to_char(birth_date,'YYYY-MM-DD') as birth_date,to_char(death_date,'YYYY-MM-DD') as death_date,birth_place,occupation,location,living_status,notes,source,photo_url,kind,verified_by,verified_at";
 
 export function pageParams(query, defLimit = 20, maxLimit = 50) {
   const limit = Math.min(maxLimit, Math.max(1, parseInt(query?.limit, 10) || defLimit));

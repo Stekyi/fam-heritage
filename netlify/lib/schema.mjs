@@ -163,4 +163,52 @@ create index if not exists idx_invites_person on invites(person_id);
 create index if not exists idx_proposals_pending on proposals(action, status);
 `,
   },
+  {
+    version: '005_app',
+    sql: `
+alter table access_tokens add column if not exists role text not null default 'contributor';
+do $$
+begin
+  if not exists (select 1 from pg_constraint where conname = 'access_tokens_role_check') then
+    alter table access_tokens add constraint access_tokens_role_check check (role in ('contributor','elder'));
+  end if;
+end $$;
+
+alter table people add column if not exists verified_by text;
+alter table people add column if not exists verified_at timestamptz;
+
+create table if not exists person_media (
+  id uuid primary key default gen_random_uuid(),
+  person_id uuid not null references people(id) on delete cascade,
+  token_id uuid references access_tokens(id) on delete set null,
+  uploader_label text,
+  kind text not null check (kind in ('audio','video')),
+  title text not null,
+  content_type text not null,
+  size_bytes integer not null,
+  data bytea not null,
+  created_at timestamptz not null default now()
+);
+create index if not exists idx_media_person on person_media(person_id, created_at desc);
+create index if not exists idx_media_token on person_media(token_id, created_at);
+
+create table if not exists push_subscriptions (
+  id uuid primary key default gen_random_uuid(),
+  endpoint text unique not null,
+  p256dh text not null,
+  auth text not null,
+  token_id uuid references access_tokens(id) on delete set null,
+  contributor boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists backups (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  size_bytes integer not null,
+  counts jsonb,
+  data bytea not null
+);
+`,
+  },
 ];

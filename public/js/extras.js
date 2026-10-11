@@ -1,4 +1,4 @@
-import { state, $, toast } from './core.js';
+import { state, $, toast, api } from './core.js';
 import { t, getLang, setLang, applyLang } from './i18n.js';
 
 const swPost = (msg) => navigator.serviceWorker?.controller?.postMessage(msg);
@@ -29,6 +29,7 @@ function buildTools() {
   tools.className = 'app-tools';
   tools.innerHTML = `<button type="button" id="toolMe" hidden data-i18n="me">${t('me')}</button>
     <button type="button" id="toolInstall" hidden data-i18n="install">${t('install')}</button>
+    <button type="button" id="toolPush" hidden aria-pressed="false" data-i18n="notify">${t('notify')}</button>
     <button type="button" id="toolSimple" aria-pressed="false" data-i18n="simple">${t('simple')}</button>
     <button type="button" id="toolLang" data-i18n="lang">${t('lang')}</button>
     <button type="button" id="toolPrint" data-i18n="print">${t('print')}</button>`;
@@ -46,6 +47,7 @@ function buildTools() {
   window.addEventListener('me-changed', syncMe); syncMe();
   me.onclick = () => { const p = state.me?.linked_person; if (p) location.hash = `#/tree/${p.id}`; };
 
+  setupPush();
   const inst = $('#toolInstall');
   if (!isStandalone()) {
     if (isIos) inst.hidden = false;
@@ -56,6 +58,34 @@ function buildTools() {
     if (installEvent) { installEvent.prompt(); await installEvent.userChoice.catch(() => {}); installEvent = null; inst.hidden = true; }
     else if (isIos) toast('On iPhone: tap the Share icon, then "Add to Home Screen".', 'info', 9000);
   };
+}
+
+// Notifications: birthdays, remembrance days and new stories. The button only appears when the site has notifications switched on.
+const b64ToBytes = (s) => { const pad = '='.repeat((4 - (s.length % 4)) % 4); const raw = atob((s + pad).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from(raw, (c) => c.charCodeAt(0)); };
+async function setupPush() {
+  const btn = $('#toolPush');
+  if (!btn || !('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) return;
+  let cfg; try { cfg = await api('/api/push', { auth: false }); } catch { return; }
+  if (!cfg.enabled || !cfg.publicKey) return;
+  const reg = await navigator.serviceWorker.ready;
+  const sync = async () => { const on = !!(await reg.pushManager.getSubscription()); btn.setAttribute('aria-pressed', String(on)); btn.textContent = on ? t('notifyOn') : t('notify'); };
+  btn.hidden = false; await sync();
+  window.addEventListener('lang-changed', sync);
+  btn.onclick = async () => {
+    const existing = await reg.pushManager.getSubscription();
+    try {
+      if (existing) { await api('/api/push', { method: 'DELETE', body: { endpoint: existing.endpoint } }); await existing.unsubscribe(); toast('Notifications are off.', 'info'); }
+      else {
+        if ((await Notification.requestPermission()) !== 'granted') return toast('Please allow notifications in your browser settings.', 'error');
+        const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(cfg.publicKey) });
+        const r = await api('/api/push', { method: 'POST', body: { subscription: sub.toJSON() } });
+        toast(r.contributor ? 'Notifications are on, including family birthdays.' : 'Notifications are on. Enter your token to also get birthdays.', 'success');
+      }
+    } catch (e) { toast(e.message || 'Notifications could not be changed.', 'error'); }
+    sync();
+  };
+  // A new token means birthday notifications need re-subscribing so the server knows who this is.
+  window.addEventListener('me-changed', async () => { if (state.me?.valid) { const s = await reg.pushManager.getSubscription(); if (s) api('/api/push', { method: 'POST', body: { subscription: s.toJSON() } }).catch(() => {}); } });
 }
 
 // A share button inside each person's sheet sends a link whose preview names the person on WhatsApp.
