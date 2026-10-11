@@ -3,6 +3,7 @@ import { state, api, TOKEN_RE } from './core.js';
 export function setToken(v) {
   state.token = String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
   localStorage.setItem('familyToken', state.token);
+  navigator.serviceWorker?.controller?.postMessage('clear-private');
   state.me = null;
 }
 

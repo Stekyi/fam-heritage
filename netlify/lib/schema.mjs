@@ -202,6 +202,16 @@ create table if not exists push_subscriptions (
   created_at timestamptz not null default now()
 );
 
+alter table access_tokens add column if not exists last_person_id uuid;
+update access_tokens t set last_person_id = l.person_id from token_person_links l where l.token_id = t.id and t.last_person_id is null;
+create or replace function remember_token_person() returns trigger as $fn$
+begin
+  update access_tokens set last_person_id = new.person_id where id = new.token_id;
+  return new;
+end $fn$ language plpgsql;
+drop trigger if exists trg_remember_token_person on token_person_links;
+create trigger trg_remember_token_person after insert on token_person_links for each row execute function remember_token_person();
+
 create table if not exists backups (
   id uuid primary key default gen_random_uuid(),
   created_at timestamptz not null default now(),

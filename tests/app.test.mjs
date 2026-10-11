@@ -15,7 +15,7 @@ import { sniffMedia } from '../netlify/functions/media.mjs';
 
 let pg; let A; let B; let C; let isaac; let ama;
 const WEBM = Buffer.concat([Buffer.from([0x1a, 0x45, 0xdf, 0xa3]), Buffer.alloc(2000, 7)]);
-const sub = (n) => ({ subscription: { endpoint: `https://push.example.org/send/${n}-abcdefghij`, keys: { p256dh: 'p'.repeat(20), auth: 'a'.repeat(10) } } });
+const sub = (n) => ({ subscription: { endpoint: `https://fcm.googleapis.com/fcm/send/${n}-abcdefghij`, keys: { p256dh: 'p'.repeat(20), auth: 'a'.repeat(10) } } });
 
 before(async () => {
   pg = await freshDatabase();
@@ -93,6 +93,7 @@ describe('notifications', () => {
   test('subscribe, tell contributors apart, send, and drop dead subscriptions', async () => {
     process.env.VAPID_PUBLIC_KEY = 'pub'; process.env.VAPID_PRIVATE_KEY = 'priv';
     assert.equal((await call(push, { method: 'POST', body: { subscription: { endpoint: 'http://insecure', keys: {} } } })).status, 422);
+    assert.equal((await call(push, { method: 'POST', body: { subscription: { endpoint: 'https://internal.example.org/hook-abcdefg', keys: { p256dh: 'p'.repeat(20), auth: 'a'.repeat(10) } } } })).status, 422);
     assert.equal((await call(push, { method: 'POST', body: sub(1) })).data.contributor, false);
     assert.equal((await call(push, { method: 'POST', token: '22222', body: sub(2) })).data.contributor, true);
     assert.equal((await call(push, { method: 'POST', body: sub(3) })).status, 201);
@@ -103,6 +104,37 @@ describe('notifications', () => {
     assert.deepEqual(await pushToAll(pg, { title: 'b' }, { contributorOnly: true }), { sent: 1, removed: 0 });
     assert.ok(seen[0].includes('/2-'));
     setPushTransport(null);
+  });
+});
+
+describe('audit fixes', () => {
+  test('a token cannot hop to a different person after unlinking; the administrator can reset it', async () => {
+    assert.equal((await call(me, { method: 'DELETE', token: '22222' })).status, 200);
+    const other = (await pg.query("select id from people where id <> $1 and id not in (select person_id from token_person_links) limit 1", [ama])).rows[0].id;
+    assert.equal((await call(me, { method: 'POST', token: '22222', body: { person_id: other } })).status, 403);
+    assert.equal((await call(me, { method: 'POST', token: '22222', body: { person_id: ama } })).status, 201);
+    assert.equal((await call(me, { method: 'DELETE', token: '22222' })).status, 200);
+    assert.equal((await call(tokens, { method: 'PATCH', admin: true, body: { id: B, unlink: true } })).status, 200);
+    assert.equal((await call(me, { method: 'POST', token: '22222', body: { person_id: other } })).status, 201);
+    assert.equal((await call(me, { method: 'DELETE', token: '22222' })).status, 200);
+    assert.equal((await call(tokens, { method: 'PATCH', admin: true, body: { id: B, unlink: true } })).status, 200);
+    assert.equal((await call(me, { method: 'POST', token: '22222', body: { person_id: ama } })).status, 201);
+  });
+  test('disabling a token removes its notification subscriptions and stops birthday pushes', async () => {
+    process.env.VAPID_PUBLIC_KEY = 'pub'; process.env.VAPID_PRIVATE_KEY = 'priv';
+    assert.equal((await call(push, { method: 'POST', token: '22222', body: sub(9) })).status, 201);
+    setPushTransport(async () => {});
+    assert.equal((await pushToAll(pg, { title: 'b' }, { contributorOnly: true })).sent >= 1, true);
+    assert.equal((await call(tokens, { method: 'PATCH', admin: true, body: { id: B, active: false } })).status, 200);
+    assert.deepEqual(await pushToAll(pg, { title: 'b' }, { contributorOnly: true }), { sent: 0, removed: 0 });
+    await call(tokens, { method: 'PATCH', admin: true, body: { id: B, active: true } });
+    setPushTransport(null);
+  });
+  test('5-digit tokens can be switched off', async () => {
+    process.env.DISABLE_LEGACY_TOKENS = '1';
+    assert.equal((await call(me, { token: '22222' })).status, 401);
+    delete process.env.DISABLE_LEGACY_TOKENS;
+    assert.equal((await call(me, { token: '22222' })).status, 200);
   });
 });
 

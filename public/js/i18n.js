@@ -1,9 +1,9 @@
 // Draft Twi labels for the main navigation. Please have an elder review them before wide release.
 const DICT = {
   en: { tree: 'Family Tree', history: 'Family History', network: 'Network', analysis: 'Analysis', relate: 'Relationship', journey: 'Our Journey', contribute: 'Contribute', admin: 'Admin',
-    brand: 'Our Family Heritage', token: 'Token', install: 'Install app', print: 'Print', share: 'Share', me: 'My place', simple: 'Large text', offline: 'You are offline. Showing saved family information.', lang: 'Twi', notify: 'Notifications', notifyOn: 'Notifications on' },
+    brand: 'Our Family Heritage', token: 'Token', install: 'Install app', print: 'Print', share: 'Share', me: 'My place', simple: 'Large text', offline: 'You are offline. Showing saved family information.', lang: 'Twi', tab_tree: 'Tree', tab_history: 'History', tab_relate: 'Relate', tab_network: 'Network', tab_more: 'More', notify: 'Notifications', notifyOn: 'Notifications on' },
   tw: { tree: 'Abusua Dua', history: 'Abusua Abakɔsɛm', network: 'Abusua Nkitahodi', analysis: 'Akontaabu', relate: 'Abusua Ntam', journey: 'Yɛn Akwantuo', contribute: 'Boa', admin: 'Admin',
-    brand: 'Yɛn Abusua Agyapadeɛ', token: 'Token', install: 'Fa app no si', print: 'Tintim', share: 'Kyɛ', me: 'Me gyinabea', simple: 'Nkyerɛwee akɛse', offline: 'Wonni intanɛt. Ɛno nti na wo hwɛ nsɛm a ɛwɔ hɔ dedaw.', lang: 'English', notify: 'Nkra', notifyOn: 'Nkra no wɔ so' },
+    brand: 'Yɛn Abusua Agyapadeɛ', token: 'Token', install: 'Fa app no si', print: 'Tintim', share: 'Kyɛ', me: 'Me gyinabea', simple: 'Nkyerɛwee akɛse', offline: 'Wonni intanɛt. Ɛno nti na wo hwɛ nsɛm a ɛwɔ hɔ dedaw.', lang: 'English', tab_tree: 'Dua', tab_history: 'Abakɔsɛm', tab_relate: 'Ntam', tab_network: 'Nkitahodi', tab_more: 'Bio', notify: 'Nkra', notifyOn: 'Nkra no wɔ so' },
 };
 let lang = localStorage.getItem('heritageLang') === 'tw' ? 'tw' : 'en';
 export const getLang = () => lang;

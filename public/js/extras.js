@@ -102,7 +102,26 @@ function bindShare() {
   });
 }
 
+// Phone-style bottom tab bar for the four most-used sections, with "More" opening the full menu.
+function buildTabbar() {
+  const bar = document.createElement('nav');
+  bar.id = 'tabbar'; bar.setAttribute('aria-label', 'Main');
+  const ico = (d) => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const items = [
+    ['tree', 'tree', ico('<path d="M12 21v-8"/><circle cx="12" cy="8" r="5"/><path d="M12 15l-3-2M12 13l3-2"/>')],
+    ['history', 'history', ico('<path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"/><path d="M8 9h6M8 13h6"/>')],
+    ['relate', 'relate', ico('<circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M4 20c0-3 2-5 5-5M20 20c0-3-2-5-5-5M10 17h4"/>')],
+    ['network', 'network', ico('<circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="20" r="2"/><path d="M7 7l3.5 3.5M17 7l-3.5 3.5M12 14.5V18"/>')],
+  ];
+  bar.innerHTML = items.map(([r, k, svg]) => `<a href="#/${r}" data-tab="${r}">${svg}<span data-i18n="tab_${k}">${t('tab_' + k)}</span></a>`).join('')
+    + `<button type="button" id="tabMore" aria-expanded="false">${ico('<path d="M4 7h16M4 12h16M4 17h16"/>')}<span data-i18n="tab_more">${t('tab_more')}</span></button>`;
+  document.body.appendChild(bar);
+  const mark = () => { const r = (location.hash.replace(/^#\/?/, '') || 'tree').split('/')[0]; bar.querySelectorAll('a').forEach((a) => { const on = a.dataset.tab === r || (r === 'person' && a.dataset.tab === 'tree') || (r === 'story' && a.dataset.tab === 'history'); a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }); };
+  window.addEventListener('hashchange', mark); mark();
+  $('#tabMore').onclick = () => { $('#menuBtn').click(); const open = $('#nav').classList.contains('open'); $('#tabMore').setAttribute('aria-expanded', String(open)); if (open) window.scrollTo({ top: 0, behavior: 'smooth' }); };
+}
+
 export function initExtras() {
   document.documentElement.lang = getLang() === 'tw' ? 'tw' : 'en';
-  buildTools(); offlineBanner(); registerWorker(); bindShare(); applyLang();
+  buildTools(); buildTabbar(); offlineBanner(); registerWorker(); bindShare(); applyLang();
 }

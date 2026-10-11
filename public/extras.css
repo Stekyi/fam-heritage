@@ -40,3 +40,43 @@ html.simple #nav a{padding:12px 14px;font-size:1.05rem}
 .memory-add summary{cursor:pointer;font-weight:700}
 .memory-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
 .role-select{max-width:220px;padding:4px 8px;margin-left:4px}
+
+/* ---------- phone layout ---------- */
+#tabbar{display:none}
+@media (max-width:700px){
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .topbar{padding:8px 14px;gap:0 12px;padding-top:calc(8px + env(safe-area-inset-top))}
+  .topbar .brand-text small{display:none}
+  .topbar .token-box,.topbar .app-tools{display:none}
+  #nav.open ~ .token-box{display:flex;grid-column:1/-1;margin-top:10px}
+  #nav.open ~ .app-tools{display:flex;grid-column:1/-1;margin:10px 0 4px}
+  .topbar{grid-template-areas:"brand menu" "nav nav" "tokenrow tokenrow" "toolsrow toolsrow"}
+  #tabbar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fffdf8;border-top:1px solid var(--line);padding:4px 4px calc(4px + env(safe-area-inset-bottom));box-shadow:0 -4px 18px rgba(23,53,47,.10)}
+  #tabbar a,#tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;padding:4px 2px;border:0;border-radius:12px;background:transparent;color:#5d6a64;text-decoration:none;font-size:.72rem;font-weight:600}
+  #tabbar a.on{color:var(--green);background:#e9f0eb}
+  #tabbar a:active,#tabbar button:active{background:#e4ebe6}
+  .tree-modal{padding:0}.modal-tree-shell{border-radius:0;height:100dvh}
+  .sheet{max-height:92dvh;border-radius:18px 18px 0 0}
+  .sheet-wrap{align-items:flex-end;padding:0}
+  .modal-close{width:44px;height:44px}
+  .person-copy em,.person-copy .person-aka b,.token-chip,.eyebrow,.vbar-val,.vbar-label,.tip,.result-aka,.legend,.person-copy small{font-size:.75rem!important}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.fact{padding:8px 10px}
+  .person-hero{flex-direction:row;align-items:center;gap:12px}.person-hero .avatar-xl{width:72px;height:72px;font-size:1.6rem;flex:0 0 72px}
+  .back{padding:10px 0;display:inline-flex;align-items:center;min-height:44px}
+  .token-clear{width:44px;height:44px}
+}
+@media (pointer:coarse){
+  button,.btn,select,.tab,#nav a,.result,.gene-person{min-height:44px}
+  input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea{min-height:44px;font-size:16px}
+  .app-tools button{min-height:40px;padding:8px 14px}
+  html{-webkit-tap-highlight-color:rgba(23,53,47,.12)}
+  body{overscroll-behavior-y:none}
+  .tabs{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}.tabs .tab{flex:0 0 auto}
+}
+@media print{#tabbar{display:none!important}}
+@media (max-width:700px){
+  .tree-help{display:none}
+  .legend{display:flex!important;flex-wrap:wrap;gap:6px 14px!important;margin-top:12px!important}
+  .tree-sidebar{padding:16px}
+}

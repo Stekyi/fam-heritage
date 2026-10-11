@@ -115,7 +115,7 @@ export function readOnlyMethods(event) {
 }
 
 // ---------------------------------------------------------------- rate limiting (shared Postgres table)
-export const LIMITS = { tokenIp: 20, tokenGlobal: 500, adminIp: 10, adminGlobal: 100, comment: 5, tree: 60, search: 300, network: 120, analysis: 120, join: 30, celebrations: 120 };
+export const LIMITS = { tokenIp: 20, tokenGlobal: 500, adminIp: 10, adminGlobal: 100, comment: 5, tree: 60, search: 300, network: 120, analysis: 120, join: 30, celebrations: 120, push: 30 };
 
 async function prune(p) {
   if (Math.random() < 0.02) await p.query("delete from token_attempts where attempted_at < now()-interval '1 day'").catch(() => {});
@@ -168,7 +168,8 @@ export function hmacToken(token) {
 // Legacy 5-digit tokens still work. New tokens are 8 characters (a letter first, no look-alike characters).
 const STRONG_ALPHA = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 export const normToken = (t) => String(t ?? '').trim().toUpperCase();
-export function validTokenShape(token) { return /^(\d{5}|[A-HJ-NP-Z][A-HJ-NP-Z2-9]{7})$/.test(normToken(token)); }
+// Set DISABLE_LEGACY_TOKENS=1 once everyone has an 8-character token: 5-digit tokens are easy to guess.
+export function validTokenShape(token) { const t = normToken(token); if (/^\d{5}$/.test(t)) return process.env.DISABLE_LEGACY_TOKENS !== '1'; return /^[A-HJ-NP-Z][A-HJ-NP-Z2-9]{7}$/.test(t); }
 export function newStrongToken() {
   let s = STRONG_ALPHA.slice(0, 24)[crypto.randomInt(0, 24)];
   for (let i = 0; i < 7; i++) s += STRONG_ALPHA[crypto.randomInt(0, STRONG_ALPHA.length)];
