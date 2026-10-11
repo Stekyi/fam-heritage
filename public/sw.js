@@ -8,7 +8,7 @@ const PRIVATE = `heritage-private-${VERSION}`;
 const CACHEABLE_API = /^\/api\/(tree|history|analysis|person|stories|network|celebrations)(\/|$|\?)/;
 const PRECACHE = ['/', '/index.html', '/styles.css', '/app.css', '/extras.css', '/manifest.webmanifest', '/icons/icon-192.png',
   '/js/main.js', '/js/core.js', '/js/session.js', '/js/tree.js', '/js/rich.js', '/js/pages-content.js', '/js/pages-network.js',
-  '/js/pages-admin.js', '/js/extras.js', '/js/i18n.js', '/js/relate.js', '/js/journey.js', '/js/memories.js'];
+  '/js/pages-admin.js', '/js/extras.js', '/js/i18n.js', '/js/relate.js', '/js/journey.js', '/js/memories.js', '/js/photo.js'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => Promise.allSettled(PRECACHE.map((u) => c.add(u)))).then(() => self.skipWaiting()));

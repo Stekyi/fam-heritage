@@ -80,3 +80,25 @@ html.simple #nav a{padding:12px 14px;font-size:1.05rem}
   .legend{display:flex!important;flex-wrap:wrap;gap:6px 14px!important;margin-top:12px!important}
   .tree-sidebar{padding:16px}
 }
+
+/* ---------- photos ---------- */
+.photo-btn{position:relative;display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:transparent;border-radius:50%;cursor:pointer;flex:0 0 auto}
+.photo-btn:hover{background:transparent}.photo-btn:focus-visible{outline:3px solid var(--gold-2);outline-offset:3px}
+.photo-badge{position:absolute;right:-2px;bottom:-2px;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;border:2px solid #fff}
+.photo-add{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);white-space:nowrap;background:var(--gold);color:#fff;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px}
+.person-hero:has(.photo-add){padding-bottom:14px}
+.photo-pick{display:grid;gap:10px;margin:14px 0}.photo-opt{display:flex;justify-content:center;align-items:center;min-height:54px;font-size:1.02rem;cursor:pointer}
+.crop-wrap{position:relative;width:min(280px,100%);aspect-ratio:1;margin:12px auto;touch-action:none;border-radius:14px;overflow:hidden;background:#eee}
+.crop-wrap canvas{width:100%;height:100%;display:block;cursor:grab;touch-action:none}.crop-wrap canvas:active{cursor:grabbing}
+.crop-ring{position:absolute;inset:0;pointer-events:none;border-radius:14px;background:radial-gradient(circle at center,transparent 0,transparent 69%,rgba(15,42,37,.55) 70%)}
+.crop-ring:after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(255,255,255,.9)}
+.photo-sheet input[type=range]{width:100%}
+.progress{height:12px;background:#e8e1d5;border-radius:999px;overflow:hidden;margin:12px 0 4px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--green-2,#285047),var(--gold-2,#c59445));border-radius:999px;transition:width .4s}
+.photo-tools{display:grid;gap:10px;margin:14px 0}.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:7px 14px;border-radius:999px;font-size:.85rem;background:#fffaf2}.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+.photo-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #e8e1d5}
+.photo-who{display:flex;align-items:center;gap:12px;min-width:0}.photo-who span{display:grid;min-width:0}.photo-who small{white-space:normal}
+.photo-done{padding:22px;text-align:center;background:#eef4ef;border-radius:12px}
+@media (max-width:700px){.photo-row .btn{padding:8px 12px;white-space:nowrap}}
+
+.photo-pick[hidden],#phEdit[hidden]{display:none!important}
