@@ -1,0 +1,32 @@
+/* App tools, install, offline, large text, relationship finder, journey, print */
+.app-tools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-left:auto}
+.app-tools button{font-size:.78rem;padding:6px 10px;border-radius:999px;background:#fffaf2}
+.app-tools button[aria-pressed="true"]{background:var(--green);color:#fff;border-color:var(--green)}
+.app-tools button[hidden]{display:none}
+#offlineBar{position:sticky;top:0;z-index:2000;background:#7a4b12;color:#fff;text-align:center;padding:8px 12px;font-size:.88rem}
+#offlineBar[hidden]{display:none}
+html.simple{font-size:19px}
+html.simple .app-tools button,html.simple button,html.simple .btn,html.simple input,html.simple select{min-height:46px;font-size:1rem}
+html.simple .gene-person{width:230px}
+html.simple #nav a{padding:12px 14px;font-size:1.05rem}
+.relate-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.relate-card{display:flex;gap:10px;align-items:center;margin-top:10px;padding:10px 12px;background:var(--gold-soft,#f3e6d1);border-radius:12px}
+.relate-card small{display:block;color:var(--muted)}
+.relate-out{margin-top:18px}
+.relate-answer{font-family:Georgia,serif;font-size:1.25rem;line-height:1.5;padding:16px 18px;background:#eef4ef;border-left:4px solid var(--green);border-radius:0 12px 12px 0;margin:0}
+.relate-none{padding:14px 16px;background:#f8f0e3;border-left:4px solid var(--gold);border-radius:0 12px 12px 0}
+.journey-line{list-style:none;margin:22px 0;padding:0;position:relative}
+.journey-line:before{content:"";position:absolute;left:17px;top:10px;bottom:10px;width:3px;background:linear-gradient(var(--gold),var(--green));border-radius:3px}
+.journey-line li{display:flex;gap:16px;align-items:flex-start;padding:10px 0;position:relative}
+.journey-dot{flex:0 0 36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;border:3px solid var(--paper,#fffdf8)}
+.journey-line p{margin:3px 0 0;color:var(--muted);line-height:1.55}
+@media(max-width:700px){.relate-grid{grid-template-columns:1fr}.app-tools{width:100%;margin:6px 0 0}}
+@media print{
+  .topbar,.app-tools,footer,#offlineBar,.tree-sidebar,.tree-toolbar,.tree-controls,.modal-close,.person-panel,#toasts,.btn,button{display:none!important}
+  body,.app{background:#fff!important}
+  .tree-page{display:block}.lineage-scroll,.modal-tree-scroll{max-height:none!important;overflow:visible!important}
+  .tree-modal{position:static!important;background:#fff!important;padding:0!important}.modal-tree-shell{height:auto!important;border:0!important;box-shadow:none!important}
+  .card,.lineage-section,.focus-section,.siblings-section{box-shadow:none!important;break-inside:avoid}
+  @page{margin:12mm}
+}
+.sheet-head-actions{display:flex;gap:8px;align-items:center}
