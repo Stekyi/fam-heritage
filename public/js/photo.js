@@ -21,11 +21,10 @@ async function decode(file) {
 export function openPhotoSheet(personId, onDone) {
   const p = state.data.people.find((x) => x.id === personId);
   if (!p) return toast('Unable to find this family member.', 'error');
-  if (!canEdit()) return toast('Enter your contributor token to add photos.', 'info');
   const s = openSheet(`<div class="sheet-body photo-sheet"><div class="sheet-head"><div><span class="eyebrow">PHOTO</span><h2>${esc(fullName(p))}</h2></div><button class="modal-close" type="button" data-close aria-label="Close">\u00d7</button></div>
     <div id="phPick" class="photo-pick"><label class="btn primary photo-opt">Take a photo<input type="file" id="phCam" accept="image/jpeg,image/png,image/webp" capture="environment" hidden></label>
       <label class="btn photo-opt">Choose from gallery<input type="file" id="phFile" accept="image/jpeg,image/png,image/webp" hidden></label>
-      <p class="muted small">Old family pictures work too: photograph a printed photo, or choose a scan.</p></div>
+      <p class="muted small">Old family pictures work too: photograph a printed photo, or choose a scan.</p>${canEdit() ? '' : '<label class="field"><span class="label">Your name (so the family knows who sent it)</span><input class="input" id="phName" maxlength="80" autocomplete="name" placeholder="e.g. Efua, Kofi\u2019s daughter"></label><p class="muted small">A family member will check your photo before it appears.</p>'}</div>
     <div id="phEdit" hidden><div class="crop-wrap"><canvas id="phCanvas" width="${VIEW}" height="${VIEW}" aria-label="Photo preview. Drag to position."></canvas><div class="crop-ring" aria-hidden="true"></div></div>
       <label class="field"><span class="label">Zoom</span><input type="range" id="phZoom" min="1" max="4" step="0.01" value="1"></label>
       <p class="muted small">Drag the picture so the face is inside the circle.</p>
@@ -68,7 +67,9 @@ export function openPhotoSheet(personId, onDone) {
       const out = document.createElement('canvas'); out.width = OUT; out.height = OUT;
       paint(out.getContext('2d'), OUT, OUT / VIEW);
       const data = out.toDataURL('image/jpeg', 0.86).split(',')[1];
-      const r = await api('/api/image', { method: 'POST', body: { kind: 'person', ref_id: p.id, content_type: 'image/jpeg', data } });
+      const member = canEdit();
+      const r = await api('/api/image', { method: 'POST', auth: member, body: { kind: 'person', ref_id: p.id, content_type: 'image/jpeg', data, ...(member ? {} : { submitter: $('#phName', root)?.value.trim() || '' }) } });
+      if (r.pending) { toast(`Thank you! Your photo of ${fullName(p)} will appear once the family has approved it.`, 'success', 8000); s.close(); return; }
       patchPerson({ id: p.id, photo_url: r.url });
       window.dispatchEvent(new CustomEvent('person-updated', { detail: { id: p.id } }));
       toast(`Photo saved for ${fullName(p)}.`);
@@ -76,6 +77,24 @@ export function openPhotoSheet(personId, onDone) {
     } catch (err) { toastError(err); btn.disabled = false; btn.textContent = 'Save photo'; }
   };
   return s;
+}
+
+// Photos offered by visitors wait here. Elders see this panel on the Photos page; the administrator sees it in Admin.
+export async function reviewPanel(el, { admin = false } = {}) {
+  const hdr = admin ? { 'x-admin-secret': state.adminSecret } : { 'x-family-token': state.token };
+  let list;
+  try { list = (await api('/api/photos', { admin, auth: !admin })).pending; } catch { el.innerHTML = ''; return; }
+  const urls = [];
+  const draw = async () => {
+    if (!list.length) { el.innerHTML = admin ? '<p class="muted">No photos are waiting.</p>' : ''; return; }
+    for (const u of urls.splice(0)) URL.revokeObjectURL(u);
+    const blobs = await Promise.all(list.map(async (x) => { try { const r = await fetch(`/api/image?id=${x.id}`, { headers: hdr }); if (!r.ok) return ''; const u = URL.createObjectURL(await r.blob()); urls.push(u); return u; } catch { return ''; } }));
+    el.innerHTML = `<div class="review-box"><h3>Photos waiting for approval (${list.length})</h3>${list.map((x, i) => `<div class="review-row"><img src="${esc(blobs[i])}" alt="Photo offered for ${esc(x.person_name)}" width="84" height="84"><div><strong>${esc(x.person_name)}</strong><small class="muted block">from ${esc(x.submitter || 'a visitor')}</small></div><div class="row-actions"><button class="btn primary" type="button" data-ok="${esc(x.id)}">Approve</button><button class="btn" type="button" data-no="${esc(x.id)}">Reject</button></div></div>`).join('')}</div>`;
+    const act = async (id, action) => { try { const r = await api('/api/photos', { method: 'POST', admin, auth: !admin, body: { id, action } }); const item = list.find((y) => y.id === id); list = list.filter((y) => y.id !== id); if (action === 'approve') { patchPerson({ id: item.person_id, photo_url: r.url }); toast('Photo approved.'); } else toast('Photo rejected.', 'info'); draw(); } catch (e) { toastError(e); } };
+    $$('[data-ok]', el).forEach((b) => { b.onclick = () => act(b.dataset.ok, 'approve'); });
+    $$('[data-no]', el).forEach((b) => { b.onclick = () => act(b.dataset.no, 'reject'); });
+  };
+  await draw();
 }
 
 export function initPhoto() {
@@ -112,12 +131,13 @@ export function renderPhotos(root) {
     else if (sort === 'az') list.sort((a, b) => fullName(a).localeCompare(fullName(b)));
     else list.sort((a, b) => descendants(index, b.id, memo) - descendants(index, a.id, memo) || fullName(a).localeCompare(fullName(b)));
     const page = list.slice(0, shown);
-    root.innerHTML = `<section class="content"><div class="card photo-drive"><span class="eyebrow">PHOTO DRIVE</span><h2>Put a face to every name</h2>
+    root.innerHTML = `<section class="content"><div class="card photo-drive"><div id="phReview"></div><span class="eyebrow">PHOTO DRIVE</span><h2>Put a face to every name</h2>
       <p class="muted">${have} of ${total} family members have a photo. Pick a name below and add one. Old pictures count: photograph a printed photo.</p>
-      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Photos added"><span style="width:${pct}%"></span></div><p class="small muted">${pct}% complete${canEdit() ? '' : ' \u00b7 Enter your contributor token to add photos'}</p>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Photos added"><span style="width:${pct}%"></span></div><p class="small muted">${pct}% complete${canEdit() ? '' : ' \u00b7 Photos you add are checked by the family before they appear'}</p>
       <div class="photo-tools"><input class="input" id="phQ" type="search" placeholder="Search a name" value="${esc(q)}" aria-label="Search a name"><div class="chips" role="group" aria-label="Sort">${[['connected', 'Most connected'], ['living', 'Living first'], ['az', 'A to Z']].map(([k, l]) => `<button type="button" class="chip ${sort === k ? 'on' : ''}" data-sort="${k}" aria-pressed="${sort === k}">${l}</button>`).join('')}</div></div>
       <div id="phList">${page.length ? page.map((p) => `<div class="photo-row"><div class="photo-who">${avatar(p, 'md')}<span><strong>${esc(fullName(p))}</strong><small class="muted">${esc([lifeLine(p) !== 'Dates unknown' ? lifeLine(p) : '', hint(p)].filter(Boolean).join(' \u00b7 '))}</small></span></div><button class="btn primary" type="button" data-add="${esc(p.id)}">Add photo</button></div>`).join('') : `<p class="photo-done">${total && !list.length && !q ? '\ud83c\udf89 Everyone has a photo. Thank you!' : 'No one matches that search.'}</p>`}</div>
       ${list.length > shown ? `<div class="sheet-actions"><button class="btn" type="button" id="phMore">Show more (${list.length - shown} left)</button></div>` : ''}</div></section>`;
+    if (state.me?.valid && state.me.role === 'elder') reviewPanel($('#phReview', root));
     $('#phQ', root).oninput = (e) => { q = e.target.value.trim(); shown = PAGE; const pos = e.target.selectionStart; view(); const n = $('#phQ', root); n.focus(); n.setSelectionRange(pos, pos); };
     $$('[data-sort]', root).forEach((b) => { b.onclick = () => { sort = b.dataset.sort; shown = PAGE; view(); }; });
     $('#phMore', root)?.addEventListener('click', () => { shown += PAGE; view(); });

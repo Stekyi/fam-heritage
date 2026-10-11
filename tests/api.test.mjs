@@ -46,7 +46,7 @@ describe('migrations', () => {
     const after = await pg.query('select count(*)::int n from people');
     assert.equal(after.rows[0].n, before.rows[0].n);
     const v = await pg.query('select version from schema_migrations');
-    assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening', '004_features', '005_app']);
+    assert.deepEqual(v.rows.map((r) => r.version).sort(), ['002_heritage_platform', '003_hardening', '004_features', '005_app', '006_public_photos']);
     assert.equal(await relationshipSnapshot(pg), baseline);
   });
 });
@@ -165,7 +165,8 @@ describe('profile images', () => {
     const huge = await call(image, { method: 'POST', token: T1, body: { kind: 'person', ref_id: isaac, content_type: 'image/png', data: big.toString('base64') } });
     assert.equal(huge.status, 413);
     const noTok = await call(image, { method: 'POST', body: { kind: 'person', ref_id: isaac, content_type: 'image/png', data: png.toString('base64') } });
-    assert.equal(noTok.status, 401);
+    assert.equal(noTok.status, 202); // visitors may offer a photo; it waits for approval
+    await pg.query("delete from images where status='pending'");
     const second = await call(image, { method: 'POST', token: T1, body: { kind: 'person', ref_id: isaac, content_type: 'image/png', data: png.toString('base64') } });
     assert.equal(second.status, 201);
     assert.equal((await pg.query("select count(*)::int n from images where kind='person' and ref_id=$1", [isaac])).rows[0].n, 2);

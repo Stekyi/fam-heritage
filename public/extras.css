@@ -102,3 +102,7 @@ html.simple #nav a{padding:12px 14px;font-size:1.05rem}
 @media (max-width:700px){.photo-row .btn{padding:8px 12px;white-space:nowrap}}
 
 .photo-pick[hidden],#phEdit[hidden]{display:none!important}
+
+.review-box{background:#fff7e8;border:1px solid #e6cfa1;border-radius:14px;padding:12px 14px;margin-bottom:18px}.review-box h3{margin:0 0 8px}
+.review-row{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid #efe2c4}.review-row img{width:84px;height:84px;object-fit:cover;border-radius:12px;flex:0 0 auto;background:#eee}
+.review-row>div:nth-child(2){flex:1;min-width:0}.review-row .row-actions{display:flex;gap:6px;flex-wrap:wrap}
