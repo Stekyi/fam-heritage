@@ -6,7 +6,7 @@ export async function handler(event) {
 
   if (event.httpMethod === 'GET') {
     const r = await pool.query(
-      `select t.id,t.label,t.active,t.created_at,t.last_used_at, l.person_id,
+      `select t.id,t.label,t.role,t.active,t.created_at,t.last_used_at, l.person_id,
               trim(coalesce(p.given_name,'')||' '||coalesce(p.surname,'')) as person_name
          from access_tokens t left join token_person_links l on l.token_id=t.id left join people p on p.id=l.person_id
         order by t.created_at desc`);
@@ -30,8 +30,12 @@ export async function handler(event) {
   if (event.httpMethod === 'PATCH') {
     const body = parseBody(event) || {};
     if (!isUuid(body.id)) return json(400, { error: 'Missing token id.' });
-    if (body.unlink) await pool.query('delete from token_person_links where token_id=$1', [body.id]);
-    if (typeof body.active === 'boolean') await pool.query('update access_tokens set active=$1 where id=$2', [body.active, body.id]);
+    if (body.unlink) { await pool.query('delete from token_person_links where token_id=$1', [body.id]); await pool.query('update access_tokens set last_person_id=null where id=$1', [body.id]); }
+    if (['contributor', 'elder'].includes(body.role)) await pool.query('update access_tokens set role=$1 where id=$2', [body.role, body.id]);
+    if (typeof body.active === 'boolean') {
+      await pool.query('update access_tokens set active=$1 where id=$2', [body.active, body.id]);
+      if (!body.active) await pool.query('delete from push_subscriptions where token_id=$1', [body.id]);
+    }
     return json(200, { ok: true });
   }
   return json(405, { error: 'Method not allowed' });

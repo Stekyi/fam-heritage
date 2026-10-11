@@ -1,3 +1,4 @@
+import { pushToAll } from '../lib/push.mjs';
 import { getDb, json, NO_DB, parseBody, requireToken, NEED_TOKEN, NEED_LINK, isUuid, clean, cleanMultiline, audit, appOnly, pageParams } from '../lib/db.mjs';
 
 const SELECT = `s.id, s.title, s.content, s.person_id, s.created_at, s.updated_at,
@@ -59,6 +60,7 @@ export async function handler(event) {
     if (event.httpMethod === 'POST') {
       const r = await pool.query('insert into stories(person_id,token_id,title,content,cover_image_id) values($1,$2,$3,$4,$5) returning id', [token.person_id, token.id, title, content, cover]);
       await audit(pool, 'create_story', 'story', r.rows[0].id, null, token.label);
+      await Promise.race([pushToAll(pool, { title: 'New family story', body: title, url: `/#/story/${r.rows[0].id}` }), new Promise((ok) => setTimeout(ok, 2500))]).catch(() => {});
       return json(201, { id: r.rows[0].id });
     }
     if (!isUuid(q.id)) return json(400, { error: 'Unable to identify this story.' });

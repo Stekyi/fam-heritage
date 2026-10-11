@@ -115,7 +115,7 @@ export function readOnlyMethods(event) {
 }
 
 // ---------------------------------------------------------------- rate limiting (shared Postgres table)
-export const LIMITS = { tokenIp: 20, tokenGlobal: 500, adminIp: 10, adminGlobal: 100, comment: 5, tree: 60, search: 300, network: 120, analysis: 120, join: 30, celebrations: 120 };
+export const LIMITS = { tokenIp: 20, tokenGlobal: 500, adminIp: 10, adminGlobal: 100, comment: 5, tree: 60, search: 300, network: 120, analysis: 120, join: 30, celebrations: 120, push: 30 };
 
 async function prune(p) {
   if (Math.random() < 0.02) await p.query("delete from token_attempts where attempted_at < now()-interval '1 day'").catch(() => {});
@@ -168,7 +168,8 @@ export function hmacToken(token) {
 // Legacy 5-digit tokens still work. New tokens are 8 characters (a letter first, no look-alike characters).
 const STRONG_ALPHA = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 export const normToken = (t) => String(t ?? '').trim().toUpperCase();
-export function validTokenShape(token) { return /^(\d{5}|[A-HJ-NP-Z][A-HJ-NP-Z2-9]{7})$/.test(normToken(token)); }
+// Set DISABLE_LEGACY_TOKENS=1 once everyone has an 8-character token: 5-digit tokens are easy to guess.
+export function validTokenShape(token) { const t = normToken(token); if (/^\d{5}$/.test(t)) return process.env.DISABLE_LEGACY_TOKENS !== '1'; return /^[A-HJ-NP-Z][A-HJ-NP-Z2-9]{7}$/.test(t); }
 export function newStrongToken() {
   let s = STRONG_ALPHA.slice(0, 24)[crypto.randomInt(0, 24)];
   for (let i = 0; i < 7; i++) s += STRONG_ALPHA[crypto.randomInt(0, STRONG_ALPHA.length)];
@@ -192,7 +193,7 @@ export async function requireToken(event, p) {
   const h = await hit(p, [`tok:${ip}`, 'tok:*']);
   if ((h.counts[`tok:${ip}`] || 0) > LIMITS.tokenIp || (h.counts['tok:*'] || 0) > LIMITS.tokenGlobal) { await h.release(); return null; }
   const r = await p.query(
-    `select t.id, t.label, l.person_id from access_tokens t
+    `select t.id, t.label, t.role, l.person_id from access_tokens t
        left join token_person_links l on l.token_id=t.id
       where t.token_hash=$1 and t.active=true`, [hmacToken(token)]);
   if (!r.rows[0]) return null; // the failed attempt stays counted
@@ -231,7 +232,7 @@ export const foldSql = (expr) => `regexp_replace(translate(lower(${expr}),'${FOL
 export const clean = (v, max) => { const s = String(v ?? '').replace(/\s+/g, ' ').trim(); return s ? s.slice(0, max) : null; };
 export const cleanMultiline = (v, max) => { const s = String(v ?? '').replace(/\r\n/g, '\n').trim(); return s ? s.slice(0, max) : null; };
 
-export const PERSON_SELECT = "id,given_name,surname,aliases,sex,birth_year,death_year,to_char(birth_date,'YYYY-MM-DD') as birth_date,to_char(death_date,'YYYY-MM-DD') as death_date,birth_place,occupation,location,living_status,notes,source,photo_url,kind";
+export const PERSON_SELECT = "id,given_name,surname,aliases,sex,birth_year,death_year,to_char(birth_date,'YYYY-MM-DD') as birth_date,to_char(death_date,'YYYY-MM-DD') as death_date,birth_place,occupation,location,living_status,notes,source,photo_url,kind,verified_by,verified_at";
 
 export function pageParams(query, defLimit = 20, maxLimit = 50) {
   const limit = Math.min(maxLimit, Math.max(1, parseInt(query?.limit, 10) || defLimit));

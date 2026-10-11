@@ -8,7 +8,7 @@ const PRIVATE = `heritage-private-${VERSION}`;
 const CACHEABLE_API = /^\/api\/(tree|history|analysis|person|stories|network|celebrations)(\/|$|\?)/;
 const PRECACHE = ['/', '/index.html', '/styles.css', '/app.css', '/extras.css', '/manifest.webmanifest', '/icons/icon-192.png',
   '/js/main.js', '/js/core.js', '/js/session.js', '/js/tree.js', '/js/rich.js', '/js/pages-content.js', '/js/pages-network.js',
-  '/js/pages-admin.js', '/js/extras.js', '/js/i18n.js', '/js/relate.js', '/js/journey.js'];
+  '/js/pages-admin.js', '/js/extras.js', '/js/i18n.js', '/js/relate.js', '/js/journey.js', '/js/memories.js'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => Promise.allSettled(PRECACHE.map((u) => c.add(u)))).then(() => self.skipWaiting()));
@@ -18,6 +18,20 @@ self.addEventListener('activate', (e) => {
   e.waitUntil((async () => {
     for (const k of await caches.keys()) if (![SHELL, PUBLIC, PRIVATE].includes(k)) await caches.delete(k);
     await self.clients.claim();
+  })());
+});
+
+self.addEventListener('push', (e) => {
+  let d = {}; try { d = e.data ? e.data.json() : {}; } catch { d = { title: 'Our Family Heritage', body: e.data?.text() || '' }; }
+  e.waitUntil(self.registration.showNotification(d.title || 'Our Family Heritage', { body: d.body || '', icon: '/icons/icon-192.png', badge: '/icons/icon-192.png', data: { url: d.url || '/' } }));
+});
+
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close();
+  const url = new URL(e.notification.data?.url || '/', location.origin).href;
+  e.waitUntil((async () => {
+    for (const c of await clients.matchAll({ type: 'window', includeUncontrolled: true })) { if (c.url.startsWith(location.origin)) { await c.focus(); return c.navigate(url); } }
+    return clients.openWindow(url);
   })());
 });
 

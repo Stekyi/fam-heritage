@@ -8,7 +8,7 @@ export async function handler(event) {
 
   if (event.httpMethod === 'GET') {
     const blocked = appOnly(event); if (blocked) return blocked;
-    return json(200, { token: { label: token.label }, linked_person: await person(token.person_id) });
+    return json(200, { token: { label: token.label, role: token.role }, linked_person: await person(token.person_id) });
   }
 
   if (event.httpMethod === 'POST') {
@@ -20,6 +20,9 @@ export async function handler(event) {
     if (!isUuid(b.person_id)) return json(422, { error: 'Please select a family member before linking your token.' });
     const target = await person(b.person_id);
     if (!target) return json(404, { error: 'This family member could not be found.' });
+    // After unlinking, a token may only return to the same person. Taking over someone else needs the administrator.
+    const prev = await pool.query('select last_person_id from access_tokens where id=$1', [token.id]);
+    if (prev.rows[0]?.last_person_id && prev.rows[0].last_person_id !== b.person_id) return json(403, { error: 'This token was linked to someone else before. Please ask the administrator to link it to a different person.' });
     const taken = await pool.query('select 1 from token_person_links where person_id=$1', [b.person_id]);
     if (taken.rows[0]) return json(409, { error: 'That family member is already linked to another contributor. Please ask the administrator for help.' });
     await pool.query('insert into token_person_links(token_id,person_id) values($1,$2)', [token.id, b.person_id]);
