@@ -221,4 +221,12 @@ create table if not exists backups (
 );
 `,
   },
+  {
+    version: '006_public_photos',
+    sql: `
+alter table images add column if not exists status text not null default 'approved';
+alter table images add column if not exists submitter text;
+create index if not exists idx_images_pending on images(status, created_at) where status = 'pending';
+`,
+  },
 ];

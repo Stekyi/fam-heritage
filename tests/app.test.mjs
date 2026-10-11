@@ -8,6 +8,8 @@ import { handler as verify } from '../netlify/functions/verify.mjs';
 import { handler as tokens } from '../netlify/functions/tokens.mjs';
 import { handler as media } from '../netlify/functions/media.mjs';
 import { handler as push } from '../netlify/functions/push.mjs';
+import { handler as image } from '../netlify/functions/image.mjs';
+import { handler as photos } from '../netlify/functions/photos.mjs';
 import { handler as backup } from '../netlify/functions/backup.mjs';
 import weeklyBackup from '../netlify/functions/backup-weekly.mjs';
 import { setPushTransport, pushToAll } from '../netlify/lib/push.mjs';
@@ -135,6 +137,46 @@ describe('audit fixes', () => {
     assert.equal((await call(me, { token: '22222' })).status, 401);
     delete process.env.DISABLE_LEGACY_TOKENS;
     assert.equal((await call(me, { token: '22222' })).status, 200);
+  });
+});
+
+describe('public photo offers', () => {
+  const JPG = Buffer.concat([Buffer.from([0xff, 0xd8, 0xff, 0xe0]), Buffer.alloc(3000, 5)]);
+  const offer = (extra = {}, opts = {}) => call(image, { method: 'POST', ...opts, body: { kind: 'person', ref_id: ama, content_type: 'image/jpeg', data: JPG.toString('base64'), ...extra } });
+  let pendingId;
+  test('a visitor can offer a photo, but it stays hidden until approved', async () => {
+    const r = await offer({ submitter: 'Cousin Efua' });
+    assert.equal(r.status, 202); assert.equal(r.data.pending, true);
+    assert.equal((await call(person, { query: { id: ama } })).data.person.photo_url, null);
+    pendingId = (await pg.query("select id from images where status='pending' order by created_at desc limit 1")).rows[0].id;
+    assert.equal((await call(image, { query: { id: pendingId } })).status, 404);
+  });
+  test('only the administrator or an elder can see and review the queue', async () => {
+    assert.equal((await call(photos, {})).status, 401);
+    assert.equal((await call(photos, { token: '22222' })).status, 403);
+    const q = await call(photos, { admin: true });
+    assert.equal(q.data.pending.length, 1); assert.equal(q.data.pending[0].submitter, 'Cousin Efua');
+    assert.equal((await call(image, { query: { id: pendingId }, admin: true })).status, 200);
+    assert.equal((await call(image, { query: { id: pendingId }, token: '11111' })).status, 200);
+  });
+  test('rejecting deletes it; approving sets the profile photo and is logged', async () => {
+    assert.equal((await call(photos, { method: 'POST', admin: true, body: { id: pendingId, action: 'reject' } })).status, 200);
+    assert.equal((await pg.query("select count(*)::int n from images where id=$1", [pendingId])).rows[0].n, 0);
+    await offer(); const id2 = (await pg.query("select id from images where status='pending'")).rows[0].id;
+    const ok = await call(photos, { method: 'POST', token: '11111', body: { id: id2, action: 'approve' } });
+    assert.equal(ok.status, 200);
+    assert.equal((await call(person, { query: { id: ama } })).data.person.photo_url, `/api/image?id=${id2}`);
+    assert.equal((await call(image, { query: { id: id2 } })).status, 200);
+    assert.equal((await call(photos, { method: 'POST', admin: true, body: { id: id2, action: 'approve' } })).status, 404);
+  });
+  test('fakes, oversize, invalid people and floods are refused', async () => {
+    assert.equal((await offer({ data: Buffer.from('not an image at all, honest').toString('base64') })).status, 415);
+    assert.equal((await offer({ data: Buffer.concat([JPG, Buffer.alloc(1.6 * 1024 * 1024)]).toString('base64') })).status, 413);
+    assert.equal((await offer({ ref_id: '00000000-0000-4000-8000-000000000000' })).status, 404);
+    assert.equal((await call(image, { method: 'POST', token: 'ZZZZZZZZ', body: { kind: 'person', ref_id: ama, content_type: 'image/jpeg', data: JPG.toString('base64') } })).status, 401);
+    for (let i = 0; i < 3; i += 1) assert.equal((await offer()).status, 202);
+    assert.equal((await offer()).status, 429);
+    await pg.query("delete from images where status='pending'");
   });
 });
 

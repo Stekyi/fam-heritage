@@ -85,7 +85,7 @@ export async function renderPerson(root, id) {
     const aka = aliasesOf(p);
     const idx = state.data.people.findIndex((x) => x.id === p.id);
     if (idx >= 0) state.data.people[idx] = { ...state.data.people[idx], ...p };
-    wrap.innerHTML = `<a class="back" href="#/tree">← Family tree</a><section class="card profile-card"><div class="person-hero big">${state.me?.valid ? photoBtn(p, 'xxl') : avatar(p, 'xxl')}<div><span class="eyebrow">FAMILY MEMBER</span><h1>${esc(fullName(p))}</h1>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(p))}</p></div></div>
+    wrap.innerHTML = `<a class="back" href="#/tree">← Family tree</a><section class="card profile-card"><div class="person-hero big">${photoBtn(p, 'xxl')}<div><span class="eyebrow">FAMILY MEMBER</span><h1>${esc(fullName(p))}</h1>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(p))}</p></div></div>
       ${personFacts(p)}${p.notes ? `<div class="focus-note">${esc(p.notes)}</div>` : ''}
       <div class="sheet-actions"><a class="btn primary" href="#/tree/${esc(p.id)}">View in Family Tree</a><button class="btn" id="fixHere" type="button">Suggest a correction</button><button class="btn" id="editHere" type="button">${canEdit() ? 'Edit details' : '🔒 Edit details'}</button></div></section>
       <section class="card"><h2>About ${esc(p.given_name)}</h2>${r.profile ? `<div class="prose">${paragraphs(r.profile.about)}</div><p class="muted small">Last updated ${esc(fmtWhen(r.profile.updated_at))}</p>` : emptyView('No profile has been written yet.', `${p.given_name} has not published a personal profile.`)}</section>

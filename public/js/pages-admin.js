@@ -1,5 +1,6 @@
 import { state, $, $$, esc, api, toast, toastError, openSheet, confirmDialog, loadingView, emptyView, fmtWhen, fullName } from './core.js';
 import { attachPersonSearch } from './tree.js';
+import { reviewPanel } from './photo.js';
 
 let ADMIN_TAB = 'approvals';
 
@@ -30,7 +31,7 @@ async function load(root, first = false) {
   if (first) toast('Administration unlocked.', 'info');
   const counts = { approvals: q.proposals.length, comments: q.comments.length };
   root.innerHTML = `<div class="page"><header class="page-head row-between wrap"><div><span class="eyebrow">ADMINISTRATOR</span><h1>Administration</h1></div><button class="btn" id="lockAdmin" type="button">Lock</button></header>
-  <div class="tabs" role="tablist">${[['approvals', `Tree suggestions${counts.approvals ? ` (${counts.approvals})` : ''}`], ['comments', `Comments${counts.comments ? ` (${counts.comments})` : ''}`], ['tokens', 'Contributor tokens'], ['invites', 'Invitations'], ['history', 'Edit history'], ['content', 'Stories & ideas'], ['quality', `Data quality${q.quality.duplicates.length ? ` (${q.quality.duplicates.length})` : ''}`], ['security', q.security.token_locked || q.security.admin_locked ? 'Security (paused)' : 'Security'], ['memories', 'Voice & video'], ['backup', 'Backup']].map(([k, l]) => `<button class="tab ${ADMIN_TAB === k ? 'active' : ''}" data-tab="${k}">${esc(l)}</button>`).join('')}</div><div id="adminPane"></div></div>`;
+  <div class="tabs" role="tablist">${[['approvals', `Tree suggestions${counts.approvals ? ` (${counts.approvals})` : ''}`], ['comments', `Comments${counts.comments ? ` (${counts.comments})` : ''}`], ['tokens', 'Contributor tokens'], ['invites', 'Invitations'], ['history', 'Edit history'], ['content', 'Stories & ideas'], ['quality', `Data quality${q.quality.duplicates.length ? ` (${q.quality.duplicates.length})` : ''}`], ['security', q.security.token_locked || q.security.admin_locked ? 'Security (paused)' : 'Security'], ['photos', 'Photo requests'], ['memories', 'Voice & video'], ['backup', 'Backup']].map(([k, l]) => `<button class="tab ${ADMIN_TAB === k ? 'active' : ''}" data-tab="${k}">${esc(l)}</button>`).join('')}</div><div id="adminPane"></div></div>`;
   $('#lockAdmin', root).onclick = () => { state.adminSecret = ''; renderAdmin(root); toast('Administration locked.', 'info'); };
   $$('.tab', root).forEach((b) => { b.onclick = () => { ADMIN_TAB = b.dataset.tab; load(root); }; });
   const pane = $('#adminPane', root);
@@ -106,6 +107,9 @@ async function load(root, first = false) {
     };
     $('#bkJson', pane).onclick = (e) => download('json', e.currentTarget);
     $('#bkGed', pane).onclick = (e) => download('gedcom', e.currentTarget);
+  } else if (ADMIN_TAB === 'photos') {
+    pane.innerHTML = '<section class="card"><h2>Photo requests</h2><p class="muted small">Anyone can offer a photo from a profile. It only appears after you approve it. Elders can approve them too, from the Photos page.</p><div id="phAdmin">Loading\u2026</div></section>';
+    reviewPanel($('#phAdmin', pane), { admin: true });
   } else if (ADMIN_TAB === 'memories') {
     pane.innerHTML = '<section class="card"><h2>Voice and video memories</h2><p class="muted small">Recordings added by family members. Listen, and remove anything that should not be there.</p><div id="memAdmin">Loading\u2026</div></section>';
     api('/api/media?all=1', { admin: true, auth: false }).then((r) => {
