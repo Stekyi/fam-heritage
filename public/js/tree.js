@@ -3,6 +3,7 @@ import {
   buildIndex, patchPerson, lifeLine, avatar, genderLabel, birthText, deathText, ageInfo, livingClass, safeUrl, prepareImage, fmtWhen, setHelp, reportError,
 } from './core.js';
 import { verifyHtml, bindVerify, mountMemories } from './memories.js';
+import { photoBtn } from './photo.js';
 
 const T = { ancestors: 3, descendants: 4, zoom: 0.72, selected: null, search: '' };
 
@@ -230,7 +231,7 @@ export async function openPersonSheet(personId, { edit = false } = {}) {
   const draw = () => {
     const cur = state.data.people.find((x) => x.id === personId) || p;
     const aka = aliasesOf(cur);
-    body.innerHTML = `<div class="sheet-head"><div class="person-hero">${avatar(cur, 'xl')}<div><span class="eyebrow">FAMILY MEMBER</span><h2>${esc(fullName(cur))}</h2>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(cur))}</p></div></div><span class="sheet-head-actions"><button class="btn" type="button" data-share-person="${esc(cur.id)}" data-share-name="${esc(fullName(cur))}">Share</button><button class="modal-close" type="button" data-close aria-label="Close">×</button></span></div>
+    body.innerHTML = `<div class="sheet-head"><div class="person-hero">${canEdit() ? photoBtn(cur, 'xl') : avatar(cur, 'xl')}<div><span class="eyebrow">FAMILY MEMBER</span><h2>${esc(fullName(cur))}</h2>${aka.length ? `<p class="aka-line"><b>AKA:</b> ${esc(aka.join(' · '))}</p>` : ''}<p class="muted">${esc(lifeLine(cur))}</p></div></div><span class="sheet-head-actions"><button class="btn" type="button" data-share-person="${esc(cur.id)}" data-share-name="${esc(fullName(cur))}">Share</button><button class="modal-close" type="button" data-close aria-label="Close">×</button></span></div>
       ${personFacts(cur)}
       ${verifyHtml(cur)}
       <div id="memories"></div>

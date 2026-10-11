@@ -7,6 +7,7 @@ import { renderAdmin } from './pages-admin.js';
 import { renderRelate } from './relate.js';
 import { renderJourney } from './journey.js';
 import { initExtras } from './extras.js';
+import { renderPhotos, initPhoto } from './photo.js';
 
 const view = $('#view');
 // A broken photo falls back to the initial (no inline handlers, so a strict CSP can be used).
@@ -26,7 +27,7 @@ async function route() {
   $$('#nav a').forEach((a) => { const on = a.dataset.route === (name === 'person' ? 'tree' : name === 'story' ? 'history' : name); a.classList.toggle('active', on); a.toggleAttribute('aria-current', on); if (!on) a.removeAttribute('aria-current'); else a.setAttribute('aria-current', 'page'); });
   $('#nav').classList.remove('open'); $('#menuBtn').setAttribute('aria-expanded', 'false');
   window.scrollTo(0, 0);
-  const needsTree = ['tree', 'person', 'contribute', 'relate'].includes(name);
+  const needsTree = ['tree', 'person', 'contribute', 'relate', 'photos'].includes(name);
   if (needsTree && !state.loaded) {
     view.innerHTML = loadingView(name === 'tree' ? 'Loading the family tree…' : 'Loading…');
     try { await loadTree(); ensureHomeRoot(); } catch (e) {
@@ -35,7 +36,7 @@ async function route() {
     }
     if (my !== routeSeq) return;
   }
-  document.title = { tree: 'Family Tree', person: 'Family member', history: 'Family History', story: 'Story', network: 'Network', analysis: 'Analysis', relate: 'Relationship', journey: 'Our Journey', contribute: 'Contribute', admin: 'Admin' }[name] ? `${{ tree: 'Family Tree', person: 'Family member', history: 'Family History', story: 'Story', network: 'Network', analysis: 'Analysis', relate: 'Relationship finder', journey: 'Our Journey', contribute: 'Contribute', admin: 'Administration' }[name]} · Our Family Heritage` : 'Our Family Heritage';
+  document.title = { tree: 'Family Tree', person: 'Family member', history: 'Family History', story: 'Story', network: 'Network', analysis: 'Analysis', relate: 'Relationship', journey: 'Our Journey', photos: 'Photos', contribute: 'Contribute', admin: 'Admin' }[name] ? `${{ tree: 'Family Tree', person: 'Family member', history: 'Family History', story: 'Story', network: 'Network', analysis: 'Analysis', relate: 'Relationship finder', journey: 'Our Journey', photos: 'Photo drive', contribute: 'Contribute', admin: 'Administration' }[name]} · Our Family Heritage` : 'Our Family Heritage';
   switch (name) {
     case 'person': return renderPerson(view, arg);
     case 'history': return renderHistory(view, arg === 'stories' ? 'stories' : 'clan');
@@ -45,6 +46,7 @@ async function route() {
     case 'analysis': return renderAnalysis(view);
     case 'relate': return renderRelate(view);
     case 'journey': return renderJourney(view);
+    case 'photos': return renderPhotos(view);
     case 'contribute': return renderContribute(view);
     case 'admin': return renderAdmin(view);
     default: return renderTreePage(view, name === 'tree' ? arg : undefined);
@@ -97,5 +99,6 @@ $('#clearToken').addEventListener('click', () => { setToken(''); tokenInput.valu
 
 updateChip();
 initExtras();
+initPhoto();
 route();
 if (TOKEN_RE.test(state.token)) refreshMe().then(async () => { announced = true; if (state.me?.valid) await reloadTreeData(); });
